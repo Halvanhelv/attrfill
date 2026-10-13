@@ -1,0 +1,35 @@
+/.bundle
+/.env*
+!/.env.example
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+/storage/*
+!/storage/.keep
+/public/assets
+/app/assets/builds/*
+!/app/assets/builds/.keep
+!/app/assets/builds/tailwind.css
+/config/*.key
+/data/*
+!/data/sample
+!/data/stress
+.DS_Store
+/.idea/
+/docs/catalog_dump/
+/data/external/
+/.venv-ner/
+__pycache__/
+/docs/catalog_dump/
+/.idea/
+
+# Large learned weights (>100 MB) are kept out of git; distribute them separately.
+/config/context.json.gz
+/results/f1-max/models/context.json.gz
+/research_notes/
+/reports/
+
+# Rebuilt nightly from reviewers' decisions (Extraction::ReviewLearning).
+/config/confirmed.json.gz
+/config/acceptance-groups-learned.yml

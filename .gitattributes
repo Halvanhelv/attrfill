@@ -1,0 +1,4 @@
+# Linux containers and bash scripts need LF; the Windows checkout must not turn it into CRLF.
+* text=auto eol=lf
+# Stress fixtures test unusual encodings and line endings on purpose.
+data/stress/** -text
