@@ -1,0 +1,14 @@
+#!/bin/bash -e
+
+# A secret that survives restarts with the storage volume, unless one is given.
+if [ -z "${SECRET_KEY_BASE}" ]; then
+  [ -s storage/secret_key_base ] || ruby -rsecurerandom -e 'print SecureRandom.hex(64)' > storage/secret_key_base
+  export SECRET_KEY_BASE="$(cat storage/secret_key_base)"
+fi
+
+# If running the rails server then create or migrate existing database
+if [ "${@: -2:1}" == "./bin/rails" ] && [ "${@: -1:1}" == "server" ]; then
+  ./bin/rails db:prepare
+fi
+
+exec "${@}"
