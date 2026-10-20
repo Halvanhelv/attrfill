@@ -1,0 +1,23 @@
+# The names a dataset may give its columns; the first one present is read. Compared lowercased.
+columns:
+  id: [id, card_id, product_id, item_id, offer_id, sku, nm_id, артикул]
+  title: [title, name, product_name, product_title, название, заголовок, наименование]
+  description: [description, desc, text, описание]
+  seller_attributes: [seller_attributes, attributes, attrs, params, characteristics, атрибуты, характеристики, атрибуты продавца]
+  category: [category, category_name, категория]
+
+# Seller attributes given one per column: the prefix is cut off, the rest is the attribute's name.
+seller_prefixes: ["attr_", "attr.", "attr:", "param_", "seller_"]
+
+# A JSON file may keep its cards under one of these keys, and a card its fields one level down.
+containers: [data, items, cards, rows, products, records, results]
+nested: [card, product, item, fields]
+
+# A column holding all gold values of a card as JSON. Gold may also come one column per attribute,
+# named by the attribute (brand), its Russian catalog title, or with a gold_/true_ prefix.
+labels: [labels, gold, target, answers, true_attributes]
+
+# A separate gold file may be tall: one line per card and attribute.
+tall:
+  attribute: [attribute, attribute_name, attr, атрибут]
+  value: [value, attribute_value, значение]
