@@ -1,0 +1,15 @@
+# Publication controls for the pilot, independent of learned model artifacts.
+# These are review gates, not a claim that the remaining values meet 99% precision.
+version: 2026-10-21-pilot
+minimum_confidence: 0.98
+manual_review:
+  attributes: [model, color]
+  categories: [laptop, generic]
+# What reviewers teach (Extraction::Learning). mode: off | shadow | on. In shadow, values a learned policy would publish
+# stay in review, noted "shadow", until reviewers' decisions on them show the policy holds. audit_share: the share of
+# values a policy publishes that still go to review, noted "audit", so trusted groups keep being measured.
+# confirmations: how many people must agree on a value for the same title, none disagreeing, for it to be trusted.
+learning:
+  mode: shadow
+  audit_share: 0.05
+  confirmations: 3

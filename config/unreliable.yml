@@ -1,0 +1,226 @@
+---
+headphones/brand/description:
+  Marshall Major: Marshall
+  written:marshall major: Marshall
+  written:звук:
+  Звук:
+headphones/brand/title:
+  Marshall Major: Marshall
+  written:marshall major: Marshall
+laptop/brand/description:
+  Intel:
+  written:intel:
+  written:см:
+  СМ:
+laptop/brand/title:
+  Xiaomi:
+  written:redmi: Redmi
+laptop/color/description:
+  written:матовый:
+  белый:
+  матовый:
+laptop/color/title:
+  written:midnight:
+  written:starlight:
+  written:полуночный:
+  белый:
+  полуночный:
+laptop/model/title:
+  written:pro fortis m:
+laptop/ram/description:
+  12 ГБ:
+  6 ГБ: 16 ГБ
+  written:6 гб: 16 ГБ
+  written:8gb:
+laptop/ram/title:
+  12 ГБ:
+  6 ГБ: 16 ГБ
+  written:6гб: 16 ГБ
+  written:8 гб:
+  written:8gb:
+  written:8гб:
+laptop/screen_diagonal/description:
+  13": 13.6"
+  written:13: 13.6"
+laptop/screen_diagonal/title:
+  13": 13.6"
+  15": 15.3"
+  written:13: 13.6"
+  written:15: 15.3"
+laptop/storage/description:
+  16 ГБ:
+  32 ГБ:
+  64 ГБ:
+  8 ГБ:
+  written:32 гб:
+  written:32gb: 1 ТБ
+  written:64 гб:
+laptop/storage/title:
+  16 ГБ:
+  32 ГБ:
+  written:32 гб: 1 ТБ
+monitor/brand/title:
+  written:redmi: Redmi
+monitor/color/description:
+  written:синего: черный
+  синий: черный
+monitor/screen_diagonal/title:
+  20":
+  22":
+  24": 23.8"
+  25":
+  30":
+  32": 31.5"
+  60":
+  written:20:
+  written:22:
+  written:24: 23.8"
+  written:25:
+  written:30:
+  written:32: 31.5"
+  written:60:
+monitor/screen_type/title:
+  LCD: IPS
+  written:lcd: IPS
+refrigerator/brand/description:
+  Flow:
+  written:flow:
+  written:квт:
+  written:см:
+  КВТ:
+  СМ:
+refrigerator/volume/description:
+  104 л:
+  written:104 л:
+smartphone/brand/description:
+  written:момент:
+  written:набор: Apple
+  written:селфи:
+  Момент:
+  Набор: Apple
+  Селфи:
+smartphone/brand/title:
+  written:redmi: Redmi
+smartphone/color/description:
+  written:стекло:
+  стекло:
+smartphone/color/title:
+  written:starlight: сияющая звезда
+  written:пурпурный: фиолетовый
+  пурпурный: фиолетовый
+smartphone/model/title:
+  HONOR 600 Lite:
+  POCO M8 5G:
+  POCO M8 Pro 5G:
+  POCO X8 Pro:
+  POCO X8 Pro Max:
+  Samsung Galaxy S26 Ultra:
+  nova 14:
+  written:honor 600 lite:
+  written:nova 14:
+  written:nova 14i:
+  written:poco m8 5g:
+  written:poco m8 pro 5g:
+  written:poco x8 pro:
+  written:poco x8 pro max:
+  written:samsung galaxy s25 ultra:
+  written:samsung galaxy s26 ultra:
+smartphone/resolution/description:
+  1366x768:
+  1920x1080:
+  3840x2160:
+  written:4k:
+  written:fhd:
+  written:full hd:
+  written:hd:
+smartphone/storage/description:
+  1 ТБ:
+  2 ТБ:
+  written:1 тб:
+  written:1024 гб:
+  written:2 тб:
+  written:памяти до 1 тб:
+  written:памяти до 2 тб:
+smartwatch/brand/description:
+  written:пульс:
+  written:стандарт: BandRate Smart
+  Пульс:
+  Стандарт: BandRate Smart
+smartwatch/color/description:
+  written:стекло:
+  стекло:
+smartwatch/color/title:
+  written:blue:
+  written:midnight:
+  written:purple:
+  written:starlight:
+  written:желтый:
+  written:золото:
+  written:золотой:
+  written:синий:
+  written:черная:
+  желтый:
+  синий:
+tablet/color/description:
+  written:металлический:
+  металлический:
+tablet/color/title:
+  written:starlight:
+  written:пурпурный: фиолетовый
+  белый:
+  пурпурный: фиолетовый
+tablet/resolution/description:
+  3840x2160:
+  written:4k:
+tablet/storage/description:
+  1 ТБ:
+  2 ТБ:
+  written:1 тб:
+  written:1024 гб:
+  written:2 тб:
+tv/brand/description:
+  Google:
+  Hi: Hisense
+  NEO: Samsung
+  Vision:
+  written:google:
+  written:hi: Hisense
+  written:neo: Samsung
+  written:vision:
+  written:yandex: CENTEK
+  written:звук:
+  written:см:
+  Звук:
+  СМ:
+tv/power/description:
+  10 Вт:
+  20 Вт:
+  written:10 вт:
+  written:20 вт:
+tv/screen_diagonal/description:
+  16":
+  written:16:
+tv/screen_type/description:
+  Mini LED:
+  QLED:
+  written:led:
+  written:qled:
+tv/screen_type/title:
+  Mini LED: VA
+  QLED:
+  written:led: VA
+  written:qled:
+vacuum/brand/description:
+  written:сила:
+  written:см:
+  СМ:
+  Сила:
+vacuum/color/description:
+  written:red:
+washing_machine/brand/description:
+  written:квт:
+  written:см:
+  written:старт:
+  КВТ:
+  СМ:
+  Старт:

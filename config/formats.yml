@@ -1,0 +1,5 @@
+---
+plotnost_bumagi:
+  suffix: " г/м2"
+moschnost_dvigatelya:
+  suffix: " кВт"

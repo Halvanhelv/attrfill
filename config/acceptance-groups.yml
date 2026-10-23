@@ -1,0 +1,118 @@
+---
+headphones/brand/description+title/alone:
+- 197
+- 197
+headphones/brand/title/alone:
+- 289
+- 288
+laptop/brand/description+title/alone:
+- 151
+- 151
+laptop/brand/title/alone:
+- 353
+- 353
+laptop/ram/description+title/alone:
+- 80
+- 80
+laptop/screen_diagonal/description+tagger/alone:
+- 60
+- 60
+laptop/storage/description+title/alone:
+- 92
+- 92
+laptop/storage/title/alone:
+- 118
+- 118
+monitor/brand/description+title/alone:
+- 77
+- 77
+monitor/brand/title/alone:
+- 185
+- 185
+monitor/model/tagger+title/alone:
+- 261
+- 261
+monitor/refresh_rate/description+tagger/alone:
+- 57
+- 57
+monitor/resolution/description+tagger/alone:
+- 58
+- 58
+monitor/screen_type/description+tagger/alone:
+- 54
+- 54
+refrigerator/brand/description+title/alone:
+- 129
+- 129
+refrigerator/brand/title/alone:
+- 280
+- 280
+smartphone/battery/description+tagger/alone:
+- 66
+- 66
+smartphone/battery/description/alone:
+- 68
+- 68
+smartphone/brand/description+title/alone:
+- 270
+- 270
+smartphone/brand/title/alone:
+- 1187
+- 1186
+smartphone/ram/description+title/alone:
+- 207
+- 207
+smartphone/ram/title/alone:
+- 698
+- 696
+smartphone/screen_diagonal/description+tagger/alone:
+- 87
+- 87
+smartphone/storage/description+title/alone:
+- 226
+- 226
+smartphone/storage/reference?+tagger+title/alone:
+- 68
+- 68
+smartphone/storage/title/alone:
+- 716
+- 715
+smartwatch/brand/description+title/alone:
+- 87
+- 87
+smartwatch/brand/title/alone:
+- 277
+- 276
+smartwatch/model/title/alone:
+- 57
+- 57
+tablet/brand/description+title/alone:
+- 119
+- 119
+tablet/brand/title/alone:
+- 125
+- 125
+tv/brand/description+title/alone:
+- 137
+- 137
+tv/brand/title/alone:
+- 445
+- 444
+vacuum/brand/description+title/alone:
+- 204
+- 204
+vacuum/brand/title/alone:
+- 377
+- 377
+washing_machine/brand/description+title/alone:
+- 100
+- 100
+washing_machine/brand/title/alone:
+- 231
+- 231
+washing_machine/model/tagger+title/alone:
+- 327
+- 326
+washing_machine/spin_speed/description+tagger/alone:
+- 87
+- 87
