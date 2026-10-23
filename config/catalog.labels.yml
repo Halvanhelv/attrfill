@@ -1,0 +1,2645 @@
+# English interface labels for the Russian category and attribute titles of generated catalogs (catalog.*.yml).
+# A title is still what the catalog matches card text by; the label is only what the interface shows.
+---
+1-ая скорость редуктора: Gearbox 1st speed
+3D: 3D
+3D-нагрев: 3D heating
+AC мотор: AC motor
+Always On Display: Always On Display
+Amazon Alexa: Amazon Alexa
+Apple Siri: Apple Siri
+CAS Latency (CL): CAS latency (CL)
+DC мотор: DC motor
+DisplayPort: DisplayPort
+EC мотор: EC motor
+ELARI SmartHome: ELARI SmartHome
+Ethernet: Ethernet
+Fibaro: Fibaro
+FrostProtect: FrostProtect
+Google Assistant: Google Assistant
+Google Home: Google Home
+Hommyn: Hommyn
+LAN разъем (RJ45): LAN port (RJ45)
+Livicom: Livicom
+Mac OS: Mac OS
+Micro-SIM: Micro-SIM
+Nano-SIM: Nano-SIM
+Nintendo DS: Nintendo DS
+Nintendo Switch: Nintendo Switch
+Nintendo Switch 2: Nintendo Switch 2
+Nintendo Wii: Nintendo Wii
+PC: PC
+PCI-E M.2: PCI-E M.2
+PCI-Express x1: PCI-Express x1
+PCI-Express x16: PCI-Express x16
+PFC: PFC
+PS/2(клавиатура/мышь) порт: PS/2 port (keyboard/mouse)
+PlayStation 4: PlayStation 4
+PlayStation 4 VR: PlayStation 4 VR
+PlayStation 5: PlayStation 5
+PlayStation 5 VR2: PlayStation 5 VR2
+REDMOND: REDMOND
+RS-232: RS-232
+RS-485: RS-485
+Rubetek: Rubetek
+Tuya Smart: Tuya Smart
+UV-обработка воздуха: UV air treatment
+VESA: VESA
+VESA 100x100: VESA 100x100
+VESA 100x75: VESA 100x75
+VESA 200x100: VESA 200x100
+VESA 200x200: VESA 200x200
+VESA 200x300: VESA 200x300
+VESA 200x400: VESA 200x400
+VESA 300x200: VESA 300x200
+VESA 300x300: VESA 300x300
+VESA 400x200: VESA 400x200
+VESA 400x300: VESA 400x300
+VESA 400x400: VESA 400x400
+VESA 600x200: VESA 600x200
+VESA 600x400: VESA 600x400
+VESA 75x75: VESA 75x75
+Vera: Vera
+Wi-Fi 4 (802.11n): Wi-Fi 4 (802.11n)
+Wi-Fi 5 (802.11ac): Wi-Fi 5 (802.11ac)
+Wi-Fi 6 (802.11ax): Wi-Fi 6 (802.11ax)
+Wi-Fi 7 (802.11be): Wi-Fi 7 (802.11be)
+Windows: Windows
+Windows 10: Windows 10
+Xbox: Xbox
+Xbox 360: Xbox 360
+Xbox One: Xbox One
+Xbox Series X: Xbox Series X
+Xiaomi Mi Home: Xiaomi Mi Home
+Ёмкость лотка для подачи бумаги: Paper input tray capacity
+Ёршики: Toilet brushes
+Автовзвешивание: Auto weighing
+Автодозирование моющего средства: Automatic detergent dosing
+Автоматика закипания: Boil-dry auto shut-off
+Автоматическая двусторонняя печать: Automatic duplex printing
+Автоматическая завивка локонов: Automatic curling
+Автоматическая подача воды касанием чашки: Cup-touch water dispensing
+Автоматическая подача лески: Automatic line feed
+Автоматическая программа мытья: Automatic wash program
+Автоматическая регулировка силы пара: Automatic steam adjustment
+Автоматическая регулировка температуры: Automatic temperature control
+Автоматические кофемашины: Automatic coffee machines
+Автоматические режимы: Automatic modes
+Автоматический выбор зоны нагрева: Automatic heating zone selection
+Автоматический доводчик двери: Automatic door closer
+Автоматический доводчик дверцы: Automatic door closer
+Автоматический капучинатор: Automatic cappuccino maker
+Автоматический контроль оптимальной температуры: Automatic optimal temperature control
+Автоматический режим: Automatic mode
+Автоматических программ: Automatic programs
+Автоматическое включение: Auto on
+Автоматическое включение вытяжки: Automatic hood activation
+Автоматическое включение при подаче питания: Auto power-on
+Автоматическое выключение: Auto off
+Автоматическое определение толщины: Automatic thickness detection
+Автоматическое отключение: Auto shut-off
+Автоматическое отключение при отсутствии питания: Auto shut-off on power loss
+Автоматическое отключение через: Auto shut-off after
+Автоматическое поддержание влажности: Automatic humidity control
+Автоматическое размораживание внутреннего блока: Indoor unit auto defrost
+Автоматическое распределение воздушных потоков: Automatic airflow distribution
+Автоматическое центрирование: Auto centering
+Автомобильные брызговики: Car mud flaps
+Автомобильные видеорегистраторы: Dash cams
+Автомобильные дефлекторы: Car deflectors
+Автомобильные краски: Car paints
+Автомобильные подкрылки: Car wheel arch liners
+Автомобильные пороги: Car side steps
+Автомобильные фильтры: Car filters
+Автоочистка: Self-cleaning
+Автоподдержание температуры нагрева: Automatic heat maintenance
+Авторестарт: Auto restart
+Адаптер для капсул Dolce Gusto: Dolce Gusto capsule adapter
+Адаптер для капсул Nespresso Original: Nespresso Original capsule adapter
+Азотное наполнение: Nitrogen filling
+Аккумуляторов: Number of batteries
+Аккумуляторов в комплекте: Batteries included
+Аккумуляторы для автомобиля: Car batteries
+Акселерометр: Accelerometer
+Аксессуары для банных печей: Sauna stove accessories
+Активировать в течение: Activate within
+Актёр 1: Actor 1
+Актёр 2: Actor 2
+Актёр 3: Actor 3
+Актёр 4: Actor 4
+Актёр 5: Actor 5
+Актёр 6: Actor 6
+Актёр 7: Actor 7
+Акустический тип наушников: Headphone acoustic type
+Алиса: Alice
+Амортизатор закрывания дверцы: Soft-close door damper
+Анатомическая форма: Anatomical shape
+Антиаллергенная система: Anti-allergy system
+Антибактериальное покрытие: Antibacterial coating
+Антибактериальный режим: Antibacterial mode
+Антибактериальный фильтр: Antibacterial filter
+Антивибрационная система: Anti-vibration system
+Антивозвратный клапан: Non-return valve
+Антивсплеск: Anti-splash
+Антидеформационный диск: Anti-warp base
+Антизапотевание: Anti-fog
+Антипригарное покрытие: Non-stick coating
+Антисминание после сушки: Anti-crease after drying
+Антистатическая прослойка: Anti-static layer
+Аромадиффузоры: Aroma diffusers
+Аромат производителя: Manufacturer fragrance
+Ароматизаторы автомобильные: Car air fresheners
+Артикул производителя: Manufacturer SKU
+Артикул производителя (Part Number): Manufacturer part number
+Аудио разъемы 3.5 мм: 3.5 mm audio jacks
+Аудио-контроллер: Audio controller
+Аэратор: Aerator
+Аэрогрили: Air fryers
+База камер: Camera database
+Базовая частота процессора: Processor base clock
+Базовые ноты: Base notes
+Барные стулья: Bar stools
+Батареи в комплекте: Batteries included
+Батарейки: Batteries
+Безободковая система смыва: Rimless flush system
+Безободковый: Rimless
+Безопасность: Safety
+Белизна по CIE (%): CIE whiteness (%)
+Бензиновые автомобили: Petrol cars
+Бережная сушка: Gentle drying
+Бесклеевой: Glue-free
+Беспроводная акустика: Wireless speakers
+Беспроводная зарядка: Wireless charging
+Беспроводная мышь: Wireless mouse
+Беспроводное воспроизведение музыки: Wireless music playback
+Беспроводное использование: Cordless use
+Бессрочный: Unlimited
+Бесшумная сушка: Silent drying
+Бесшумные клавиши: Silent keys
+Бинокли: Binoculars
+Биография: Biography
+Блендеры: Blenders
+Ближняя конфорка: Front burner
+Ближняя, левая конфорка: Front left burner
+Ближняя, правая конфорка: Front right burner
+Блок питания: Power supply
+Блоки питания: Power supplies
+Блокировка дверцы духовки: Oven door lock
+Блокировка кнопки включения: Power button lock
+Блокировка подачи воды: Water supply lock
+Блокировка управления: Control lock
+Блокноты: Notepads
+Боевик: Action
+Бокалы: Glasses
+Боковые карманы: Side pockets
+Боковые подлокотники: Side armrests
+Болгарки (УШМ): Angle grinders
+Большая клавиша Enter: Large Enter key
+Бриз: Breeze
+Бритвенная насадка: Shaver attachment
+Брызгозащитный корпус: Splash-proof housing
+Бургер: Burger
+Буры: SDS drill bits
+Быстрая зарядка: Fast charging
+Быстрое охлаждение: Fast cooling
+Быстрозажимная гайка SDS: SDS quick-clamp nut
+Быстрозажимной патрон: Keyless chuck
+Быстросъемное сиденье: Quick-release seat
+Быстрый нагрев: Fast heating
+В ролях: Cast
+В уровень со столешницей: Flush with countertop
+Вакуум: Vacuum
+Вакуумные упаковщики: Vacuum sealers
+Ванны: Bathtubs
+Вариантов подсветки: Lighting options
+Варианты использования гриля: Grill usage options
+Веб-камера: Webcam
+Вентилируемая спинка: Ventilated backrest
+Вентилятор для распределения температуры: Heat distribution fan
+Вентилятор охлаждения корпуса: Housing cooling fan
+Вентиляторы вытяжные: Exhaust fans
+Версия Bluetooth: Bluetooth version
+Версия Wi-Fi: Wi-Fi version
+Версия издания: Edition
+Версия привода: Drive version
+Вертел: Rotisserie spit
+Вертикальное отпаривание: Vertical steaming
+Вертикальное размещение: Vertical placement
+Верхние ноты: Top notes
+Верхний долив воды: Top water filling
+Верхний душ: Overhead shower
+Верхний и нижний нагрев: Top and bottom heating
+Верхний нагрев: Top heating
+Верхний нагрев+конвекция: Top heating + convection
+Вес: Weight
+Вес (клавиатура): Weight (keyboard)
+Вес батареи: Battery weight
+Вес блока внешнего/ внутреннего: Outdoor/indoor unit weight
+Вес внешнего блока: Outdoor unit weight
+Вес внутреннего блока: Indoor unit weight
+Вес с упаковкой: Weight with packaging
+Вес шкафа: Cabinet weight
+Вес электрической зубной щётки: Electric toothbrush weight
+Весы кухонные: Kitchen scales
+Вибрация: Vibration
+Вибрирующие движения: Vibrating motion
+Вид: Type
+Вид встроенного ящика для посуды: Built-in dish drawer type
+Вид выпуска товара: Product form
+Вид гирлянды: Garland type
+Вид занавески, штор: Curtain type
+Вид ирригатора: Oral irrigator type
+Вид картриджа: Cartridge type
+Вид комплектующего для печей и каминов: Stove and fireplace part type
+Вид крепления штор: Curtain mounting type
+Вид линовки: Ruling type
+Вид открытия: Opening type
+Вид охлаждения: Cooling type
+Вид поддона: Tray type
+Вид принта: Print type
+Вид пружинного блока: Spring unit type
+Вид стекла: Glass type
+Вид тарелки: Plate type
+Вид техники: Appliance type
+Вид транспорта: Vehicle type
+Вид фар: Headlight type
+Видеоигры: Video games
+Видеокарта: Graphics card
+Видеокарты: Graphics cards
+Виды лапок в комплекте: Included presser feet
+Винные шкафы: Wine coolers
+Винтажная: Vintage
+Влагозащитный корпус: Moisture-proof housing
+Влагозащищенный корпус: Moisture-protected housing
+Влагосборник: Moisture collector
+Вместимость: Capacity
+Внешнее покрытие: Exterior finish
+Внешнее покрытие двери: Door exterior finish
+Внешние аккумуляторы: Power banks
+Внешний вид: Appearance
+Внешняя антенна: External antenna
+Внешняя темп (нагрев): Outdoor temp (heating)
+Внешняя температура (охлаждение): Outdoor temperature (cooling)
+Внутреннее антибактериальное покрытие: Antibacterial interior coating
+Внутреннее освещение: Interior lighting
+Внутреннее покрытие: Interior coating
+Внутреннее покрытие бака: Tank interior coating
+Внутреннее покрытие чаши: Bowl interior coating
+Внутренние SSD накопители: Internal SSDs
+Внутренние отсеки 3.5": Internal 3.5" bays
+Внутренняя градуировка: Internal graduation marks
+Водонепроницаемый: Waterproof
+Водоотталкивающий материал: Water-repellent material
+Водопроводный кран: Water tap
+Водопроводный тройник: Water tee connector
+Водоустойчивый корпус: Water-resistant housing
+Возвратно-вращательные движение: Reciprocating rotary motion
+Воздуховод в комплекте: Air duct included
+Воздухоотвод: Air outlet
+Воздушно-цинковая батарея: Zinc-air battery
+Воздушное охлаждение корпуса: Housing air cooling
+Воздушные каналы: Air channels
+Воздушный фильтр: Air filter
+Возможность встраивания: Built-in installation
+Возможность изменения веса: Adjustable weight
+Возможность изменения оптического разрешения: Adjustable optical resolution
+Возможность использования в ванной комнате: Bathroom use
+Возможность подключения фильтра: Filter connection
+Возможность приготовления 2 чашек: Makes 2 cups
+Возможность работы без подключения к водопроводу: Works without water supply connection
+Возможность работы от газового баллона: Works with gas cylinder
+Возможность сокращения программы: Program time reduction
+Возможность установки под столешницу: Under-counter installation
+Возрастное ограничение: Age rating
+Воронка для залива воды: Water filling funnel
+Воронка для засыпания соли: Salt funnel
+Ворсовый фильтр: Lint filter
+Воспроизведение 4K Blu-Ray: 4K Blu-ray playback
+Вращающийся шнур: Swivel cord
+Вращение излива: Spout rotation
+Время зарядки аккумулятора: Battery charging time
+Время зарядки аккумулятора геймпада: Gamepad battery charging time
+Время нагрева: Heating time
+Время нагрева воды до максимальной температуры: Time to heat water to max temperature
+Время нагрева конвектора: Convector heating time
+Время непрерывной работы: Continuous operation time
+Время непрерывной работы до: Continuous operation time up to
+Время отклика: Response time
+Время работы геймпада: Gamepad operating time
+Время работы от аккумулятора до: Battery life up to
+Время сохранения тепла: Heat retention time
+Время сохранения тепла/холода: Heat/cold retention time
+Время сохранения холода: Cold retention time
+Вспарыватель: Seam ripper
+Встраиваемые газовые панели: Built-in gas hobs
+Встраиваемые индукционные панели: Built-in induction hobs
+Встраиваемые посудомоечные машины: Built-in dishwashers
+Встраиваемые холодильники: Built-in refrigerators
+Встраиваемые электрические панели: Built-in electric hobs
+Встраиваемый: Built-in
+Встраиваемый электрический духовой шкаф: Built-in electric oven
+Встроенная антенна: Built-in antenna
+Встроенная вытяжка: Built-in extractor
+Встроенная кофемолка: Built-in coffee grinder
+Встроенная солнечная батарея: Built-in solar panel
+Встроенное освещение: Built-in lighting
+Встроенные часы: Built-in clock
+Встроенные электрические конфорки: Built-in electric burners
+Встроенный аккумулятор: Built-in battery
+Встроенный ароматизатор: Built-in aroma diffuser
+Встроенный вентилятор: Built-in fan
+Встроенный выключатель: Built-in switch
+Встроенный гигрометр: Built-in hygrometer
+Встроенный гриль-противень: Built-in grill tray
+Встроенный динамик: Built-in speaker
+Встроенный замок: Built-in lock
+Встроенный копир: Built-in copy guide
+Встроенный микрофон: Built-in microphone
+Встроенный модуль Bluetooth: Built-in Bluetooth module
+Встроенный модуль GSM: Built-in GSM module
+Встроенный модуль Wi-Fi: Built-in Wi-Fi module
+Встроенный модуль Zigbee: Built-in Zigbee module
+Встроенный сабвуфер: Built-in subwoofer
+Встроенный теплообменник: Built-in heat exchanger
+Встроенный термометр: Built-in thermometer
+Встроенный триммер: Built-in trimmer
+Встроенный уровень: Built-in level
+Встроенный фонарик: Built-in flashlight
+Вторые блюда (гарнир): Main courses (side dishes)
+Вторые блюда (каши): Main courses (porridge)
+Вторые блюда (мясо): Main courses (meat)
+Вторые блюда (рыба): Main courses (fish)
+Вход 3.5 мм аудио: 3.5 mm audio input
+Вход HDMI: HDMI input
+Вход WAN (RJ-45): WAN port (RJ-45)
+Входное напряжение: Input voltage
+Выбор 1 или 2 порции кофе: 1 or 2 coffee servings
+Выбор времени завершения программы: Program end time selection
+Выбор состояния продукта (влажный/сухой): Food state selection (wet/dry)
+Выбранной длины: Custom length
+Выдаваемая мощность: Power output
+Выдвижная морозильная камера: Pull-out freezer
+Выдвижной излив: Pull-out spout
+Выдвижной козырек: Pull-out visor
+Выдвижной микрофон: Retractable microphone
+Выдвижной/гибкий излив: Pull-out/flexible spout
+Выключатели: Switches
+Выпечка: Baking
+Выпрямители волос: Hair straighteners
+Выпуск сантехники: Plumbing outlet
+Высокая решетка для гриля: High grill rack
+Высота: Height
+Высота верхних шкафов: Wall cabinet height
+Высота излива: Spout height
+Высота кулера: Cooler height
+Высота кухонного гарнитура: Kitchen set height
+Высота нижних шкафов: Base cabinet height
+Высота спинки: Backrest height
+Высота стенок: Wall height
+Высота чаши: Bowl height
+Высота шкафа: Cabinet height
+Вытяжки кухонные: Range hoods
+Выход DVI: DVI output
+Выход HDMI: HDMI output
+Выход LAN (RJ-45): LAN port (RJ-45)
+Выход VGA: VGA output
+Выход оптический (Toslink): Optical output (Toslink)
+Выходная мощность: Output power
+Выходное напряжение: Output voltage
+Габаритные размеры (В*Ш): Dimensions (H×W)
+Габаритные размеры (В*Ш*Г): Dimensions (H×W×D)
+Габаритные размеры (В*Ш*Д): Dimensions (H×W×L)
+Габаритные размеры (В*Ш*Т): Dimensions (H×W×T)
+Габаритные размеры (Д*Ш): Dimensions (L×W)
+Габаритные размеры (Ш*Г): Dimensions (W×D)
+Габариты в сложенном состоянии (В*Ш*Г): Folded dimensions (H×W×D)
+Габариты в упаковке (В*Ш*Г): Package dimensions (H×W×D)
+Газконтроль конфорок: Burner gas control
+Газовые плиты: Gas cookers
+Газовый лифт: Gas lift
+Генераторы: Generators
+Гигиенический душ: Bidet showers
+Гироскоп: Gyroscope
+Гладкая пластина для гриля: Smooth grill plate
+Глубина: Depth
+Глубина верхних шкафов: Wall cabinet depth
+Глубина кухонного гарнитура: Kitchen set depth
+Глубина нижних шкафов: Base cabinet depth
+Глубина погружения: Immersion depth
+Глубина с открытым люком: Depth with door open
+Глубина с учетом выступающих элементов: Depth including protruding parts
+Глубина сиденья: Seat depth
+Глубина столешницы: Countertop depth
+Глубина чаши: Bowl depth
+Глубина шкафа: Cabinet depth
+Глубокий противень: Deep baking tray
+Глушитель: Silencer
+Год выпуска: Year of manufacture
+Год выпуска автомобиля: Vehicle model year
+Год начала производства: Production start year
+Год релиза: Release year
+Головки торцевые: Sockets
+Голосовое предупреждение: Voice alert
+Голосовой помощник: Voice assistant
+Голосовые подсказки: Voice prompts
+Голосовые помощники: Voice assistants
+Горизонтальная регулировка: Horizontal adjustment
+Горизонтальное отпаривание: Horizontal steaming
+Горизонтальное размещение: Horizontal placement
+Городские рюкзаки: City backpacks
+Горшки комнатные: Indoor plant pots
+Гриль: Grill
+Гриль+верхний нагрев: Grill + top heat
+Гриль+верхний нагрев+конвекция: Grill + top heat + convection
+Гриль+конвекция: Grill + convection
+Громкая связь Bluetooth: Bluetooth hands-free
+Давление струи: Jet pressure
+Дальность (в помещении): Range (indoor)
+Дальняя конфорка: Rear burner
+Дальняя, левая конфорка: Rear left burner
+Дальняя, правая конфорка: Rear right burner
+Дата релиза: Release date
+Датчик влажности: Humidity sensor
+Датчик движения: Motion sensor
+Датчик температуры: Temperature sensor
+Датчик удара (G-сенсор): Shock sensor (G-sensor)
+Дверцы: Doors
+Двойная корона: Double crown
+Двойной: Double
+Двойной шов запайки: Double sealing seam
+Двойные стенки: Double walls
+Двусторонний индикатор уровня воды: Double-sided water level indicator
+Двусторонний матрас: Double-sided mattress
+Двухзонный: Dual-zone
+Декоративных строчек: Decorative stitches
+Держатели для бокалов: Wine glass holders
+Держатели для полотенец: Towel holders
+Держатели для туалетной бумаги: Toilet paper holders
+Держатель бумаги: Paper holder
+Держатель для вертела: Spit holder
+Держатель для лейки: Shower head holder
+Держатель для стаканов: Cup holder
+Держатель шланга: Hose holder
+Детектив: Detective
+Детская посуда: Children's tableware
+Детский: Children's
+Детский режим: Kids mode
+Джинсы: Jeans
+Диагональ дисплея: Display diagonal
+Диагональное расположение отверстий: Diagonal hole arrangement
+Диаметр: Diameter
+Диаметр бура: Drill bit diameter
+Диаметр воздуховода: Air duct diameter
+Диаметр выходного зрачка: Exit pupil diameter
+Диаметр горлышка: Neck diameter
+Диаметр динамика: Speaker diameter
+Диаметр диска: Disc diameter
+Диаметр дна: Base diameter
+Диаметр зажимаемого сверла: Chuck capacity
+Диаметр колесных дисков: Wheel rim diameter
+Диаметр лампы: Lamp diameter
+Диаметр люка: Door opening diameter
+Диаметр объектива: Lens diameter
+Диаметр пишущего узла: Tip diameter
+Диаметр поворотного стола: Turntable diameter
+Диаметр посадочного отверстия: Bore diameter
+Диаметр режущей лески: Trimmer line diameter
+Диаметр резьбы шланга подключения: Inlet hose thread diameter
+Диаметр сливного отверстия: Drain hole diameter
+Диаметр шины: Tire diameter
+Диаметр щипцов для завивки: Curling barrel diameter
+Диапазон рабочих температур: Operating temperature range
+Диапазон регулировки наклона: Tilt adjustment range
+Диапазон регулировки по горизонтали: Horizontal adjustment range
+Диапазон температур: Temperature range
+Диваны: Sofas
+Дизайн корпуса мыши: Mouse body design
+Дизайнерская коллекция: Designer collection
+Диск терка/шинковка: Grating/slicing disc
+Диски: Discs
+Диски Blu-ray: Blu-ray discs
+Диски DVD: DVD discs
+Диски для авто: Car wheels
+Дисплей: Display
+Дистанционное управление: Remote control
+Диффузор: Diffuser
+Длина: Length
+Длина бура: Drill bit length
+Длина гирлянды: String light length
+Длина дивана: Sofa length
+Длина излива: Spout length
+Длина кабеля: Cable length
+Длина кабеля педали: Pedal cable length
+Длина кухонного гарнитура: Kitchen set length
+Длина лезвия: Blade length
+Длина ленты: Strip length
+Длина отсека: Compartment length
+Длина пластин: Plate length
+Длина сетевого кабеля: Power cable length
+Длина сетевого шнура: Power cord length
+Длина стержня: Refill length
+Длина стрижки: Cutting length
+Длина шланга: Hose length
+Для высокого потребления тока: For high-drain devices
+Для детей: For children
+Для завивки крупных локонов: For large curls
+Для завивки мелких локонов и афрокудрей: For small curls and afro curls
+Для моделей с диагональю экрана: For screen sizes
+Для мяса беф-строганов: For beef stroganoff
+Для создания эффекта волны: For wave effect
+Для фильтров: For filters
+Доводчик дверцы духовки: Oven door soft close
+Дозагрузка белья во время программы: Add laundry during cycle
+Дозаторы для жидкого мыла: Liquid soap dispensers
+Документальный: Documentary
+Долив воды в процессе глажки: Refill water while ironing
+Донный клапан: Drain valve
+Дополнительная информация: Additional information
+Дополнительная камера: Additional camera
+Дополнительная комплектация: Additional accessories
+Дополнительная рукоятка: Auxiliary handle
+Дополнительная сушка: Extra drying
+Дополнительное ополаскивание: Extra rinse
+Дополнительные особенности: Additional features
+Дополнительные программы: Additional programs
+Дополнительные режимы: Additional modes
+Дополнительный аккумулятор: Spare battery
+Дополнительный комплект угольных щеток: Spare carbon brush set
+Дополнительный цвет: Secondary color
+Драма: Drama
+Духи: Perfume
+Душевая насадка: Shower head
+Душевая панель, гарнитура: Shower panels and sets
+Душевые кабины: Shower cabins
+Душевые трапы и лотки: Shower drains
+Ева: Eva
+Единица измерения: Unit of measure
+Ежедневная чистка: Daily cleaning
+Ежедневники и еженедельники: Diaries and planners
+Емкость аккумулятора (А*ч): Battery capacity (Ah)
+Емкость для воды: Water tank
+Емкость лотка для подачи бумаги 1: Paper tray 1 capacity
+Емкость лотка для подачи бумаги 2: Paper tray 2 capacity
+Емкость основного лотка для подачи: Main input tray capacity
+ЖД для отчета BI/BO: Railway for BI/BO report
+ЖК дисплей: LCD display
+Жанр игры: Game genre
+Жанр фильма: Movie genre
+Жарка: Frying
+Жарка во фритюре: Deep frying
+Жарочная поверхность: Cooking surface
+Жерновая кофемолка: Burr coffee grinder
+Жесткость подушки: Pillow firmness
+Жесткость стороны 1: Side 1 firmness
+Жесткость стороны 2: Side 2 firmness
+Жесткость щетинок: Bristle stiffness
+Жиклеры для подключения газового баллона: Gas cylinder jets
+Заваривание чая: Tea brewing
+Завершение чистки: Cleaning completion
+Загрузка кофе в зернах: Coffee bean capacity
+Загрузка при сушке (синтетика): Drying load (synthetics)
+Загрузка при сушке синтетика/хлопок/шерсть: Drying load synthetics/cotton/wool
+Загрузка при сушке(хлопок): Drying load (cotton)
+Загрузка при сушке(шерсть): Drying load (wool)
+Зажимная гайка: Clamping nut
+Заземляющий контакт: Grounding contact
+Закладка: Bookmark
+Залив воды без открытия крышки: Water filling without opening lid
+Замачивание: Soaking
+Запись времени и даты: Time and date recording
+Запись звука: Audio recording
+Запись координат съемки: GPS location recording
+Запись скорости движения: Speed recording
+Запись событий в отдельный файл: Event recording to separate file
+Зарядка от USB порта: USB charging
+Зарядка от сети 220 В: 220 V mains charging
+Зарядное устройство: Charger
+Зарядные сетевые устройства: Wall chargers
+Затвор: Shutter
+Защита агрегатов и кузовных элементов автомобилей: Car underbody and body protection
+Защита двигателя от перегрузок: Motor overload protection
+Защита от включения без воды: No-water operation protection
+Защита от влаги: Moisture protection
+Защита от детей: Child lock
+Защита от замерзания: Frost protection
+Защита от короткого замыкания: Short circuit protection
+Защита от коррозии: Corrosion protection
+Защита от перегрева: Overheat protection
+Защита от перегрузки: Overload protection
+Защита от перенапряжения: Surge protection
+Защита от попадания воды: Water ingress protection
+Защита от случайного включения: Accidental start protection
+Защита от сухого хода: Dry run protection
+Защита от угона: Anti-theft protection
+Защитная крышка: Protective cover
+Защитная решетка: Protective grille
+Защитная рукавица: Protective mitt
+Защитное покрытие от отпечатков пальцев: Anti-fingerprint coating
+Защитное стекло для смартфона: Smartphone screen protector
+Защитные стекла: Screen protectors
+Защитные стекла для iPhone: iPhone screen protectors
+Защитный кожух: Protective guard
+Защитный щиток: Protective shield
+Звуковой сигнал: Sound signal
+Звуковой сигнал двери холодильной камеры: Fridge door alarm
+Звуковой сигнал отключения питания: Power failure alarm
+Звуковой сигнал повышения температуры: High temperature alarm
+Звуковой сигнал при закипании: Boil alert
+Звуковой сигнал эффекта укладки: Styling ready beep
+Звукоизоляционный кожух: Soundproof enclosure
+Зеркала: Mirrors
+Зеркала для ванной: Bathroom mirrors
+Зеркало: Mirror
+Зоны комфорта: Comfort zones
+Игровая валюта Xbox: Xbox game currency
+Игровые консоли: Game consoles
+Издатель: Publisher
+Изменение положения рукоятки: Adjustable handle position
+Изменение программ в процессе приготовления: Program change during cooking
+Измерение артериального давления: Blood pressure measurement
+Измерение объема: Volume measurement
+Измерение пульса: Heart rate measurement
+Измерения температуры: Temperature measurement
+Изоляционная ткань: Insulating fabric
+Импульсный режим: Pulse mode
+Импульсный режим работы: Pulse operation mode
+Инверторная разморозка: Inverter defrost
+Инверторная технология: Inverter technology
+Инверторный генератор: Inverter generator
+Индекс нагрузки: Load index
+Индекс скорости: Speed index
+Индекс цветопередачи: Color rendering index
+Индикатор включения: Power indicator
+Индикатор уровня воды: Water level indicator
+Индикатор уровня масла: Oil level indicator
+Индикация: Indication
+Индикация Caps Lock: Caps Lock indicator
+Индикация Num Lock: Num Lock indicator
+Индикация включения: Power-on indication
+Индикация времени до конца программы: Remaining program time display
+Индикация времени отключения: Shutdown time display
+Индикация времени приготовления: Cooking time display
+Индикация времени программы: Program time display
+Индикация времени работы: Operating time display
+Индикация выбранной мощности: Selected power display
+Индикация выбранной скорости: Selected speed display
+Индикация готовности к работе: Ready indicator
+Индикация давления пара: Steam pressure indicator
+Индикация завершения цикла: Cycle end indicator
+Индикация загрязнения фильтра: Filter clog indicator
+Индикация заданной температуры: Set temperature display
+Индикация замены картриджа: Cartridge replacement indicator
+Индикация замены ножей: Blade replacement indicator
+Индикация заполнения отсека для отходов: Waste container full indicator
+Индикация заполнения резервуара: Tank full indicator
+Индикация заполнения резервуара для капель: Drip tray full indicator
+Индикация заряда аккумулятора: Battery level indicator
+Индикация зарядки аккумулятора: Battery charging indicator
+Индикация нагрева: Heating indicator
+Индикация наличия соли: Salt level indicator
+Индикация неисправности: Fault indicator
+Индикация необходимости очистки: Cleaning indicator
+Индикация необходимости очистки от накипи: Descaling indicator
+Индикация остаточного тепла: Residual heat indicator
+Индикация отсутствия воды: No water indicator
+Индикация отсутствия каплесборника: Missing drip tray indicator
+Индикация отсутствия кофе: No coffee indicator
+Индикация отсутствия посуды: No cookware indicator
+Индикация охлаждения: Cooling indicator
+Индикация перегрузки: Overload indicator
+Индикация режима работы: Operating mode indicator
+Индикация степени поджаривания: Browning level indicator
+Индикация степени прожарки: Doneness indicator
+Индикация текущей температуры: Current temperature display
+Индикация температуры: Temperature display
+Индикация температуры в зоне сохранения свежести: Freshness zone temperature display
+Индикация температуры в каждой зоне: Per-zone temperature display
+Индикация температуры в морозильной камере: Freezer temperature display
+Индикация температуры в помещении: Room temperature display
+Индикация температуры в холодильной камере: Fridge temperature display
+Индикация температуры нагрева: Heating temperature display
+Индикация уровня воды: Water level display
+Индикация уровня топлива: Fuel level indicator
+Индикация цепи заземления: Ground circuit indicator
+Индикация этапов программы: Program stage indicator
+Интенсивность постоянного пара: Continuous steam rate
+Интенсивный режим: Intensive mode
+Интервал записи: Recording interval
+Интерфейс: Interface
+Интерфейс подключения: Connection interface
+Интерфейс связи с ПК: PC interface
+Ионизационный фильтр: Ionizing filter
+Ионизация: Ionization
+Ионизирующий серебряный стержень: Ionizing silver rod
+Ирригаторы: Water flossers
+Исполнение: Design
+Использование: Usage
+Использование в СВЧ: Microwave safe
+Использование в духовке: Oven safe
+Использование в качестве гарнитуры: Use as headset
+Использование в качестве качалки: Use as rocker
+Использование вилок евростандарта: Euro plug compatible
+Использование вилок росстандарта: Russian standard plug compatible
+Использование капсул: Capsule compatible
+Использование кофе в чалдах: Coffee pod compatible
+Использование молотого кофе: Ground coffee compatible
+Использование с беспроводной зарядкой: Wireless charging compatible
+Использование средств 3 в 1: 3-in-1 detergent use
+Использование типов кофе: Coffee types used
+Используемая оптика: Optics used
+Используемое топливо: Fuel type
+Исторический: Historical
+Источники бесперебойного питания: Uninterruptible power supplies
+Кабели для смартфонов, телефонов: Phone cables
+Кабель RJ-45: RJ-45 cable
+Кабель USB: USB cable
+Кабель USB для зарядки: USB charging cable
+Кабель для зарядки: Charging cable
+Кабель для цифрового подключения (HDMI): Digital connection cable (HDMI)
+Кабель для электроприкуривателя: Car cigarette lighter cable
+Кабель питания: Power cable
+Камера заднего вида: Rear view camera
+Канал для питьевой воды: Drinking water channel
+Капучинатор: Milk frother
+Кардхолдеры: Card holders
+Каркас: Frame
+Карта памяти: Memory card
+Картины: Paintings
+Картины по номерам и раскраски: Paint by numbers and coloring books
+Картридж для системы самоочистки: Self-cleaning system cartridge
+Картридж для смягчения воды: Water softening cartridge
+Картриджей в комплекте: Cartridges included
+Картриджи для лазерных принтеров: Laser printer cartridges
+Картриджи для струйных принтеров: Inkjet printer cartridges
+Картриджи сменные: Replacement cartridges
+Кастрюли для кухни: Pots
+Каталитический фильтр: Catalytic filter
+Категория: Category
+Катушка с леской: Line spool
+Качество видеосъемки: Video quality
+Качество видеосъемки/ FPS: Video quality/FPS
+Кварцевый нагревательный элемент: Quartz heating element
+Кейс: Case
+Кейс для хранения: Storage case
+Керамический противень: Ceramic baking tray
+Кисломолочные продукты: Fermented dairy products
+Кисти в комплекте: Brushes included
+Клавиатура в комплекте: Keyboard included
+Клавиатуры: Keyboards
+Клапан выпуска пара: Steam release valve
+Класс водонепроницаемости: Waterproof rating
+Класс инструмента: Tool class
+Класс мойки: Washing class
+Класс сушки: Drying class
+Класс энергоэффективности: Energy efficiency class
+Классический матрас: Classic mattress
+Клей строительный: Construction adhesive
+Климат-контроль: Climate control
+Климатический класс: Climate class
+Ключ для смены диска: Disc change wrench
+Книга рецептов: Recipe book
+Кнопка ''Stop'': Stop button
+Кнопка блокировки работы поверхности: Hob lock button
+Коврики автомобильные: Car mats
+Коврики в багажник: Trunk mats
+Кожух для защиты от брызг: Splash guard
+Колеса: Wheels
+Колесики для перемещения: Casters
+Количество ТЭНов: Number of heating elements (TEN)
+Количество автоматических программ: Number of automatic programs
+Количество антенн: Number of antennas
+Количество бритвенных головок: Number of shaving heads
+Количество в комплекте: Quantity included
+Количество в наборе: Quantity in set
+Количество в упаковке: Quantity per pack
+Количество вентиляторов: Number of fans
+Количество венчиков для взбивания: Number of whisks
+Количество верхних коромысел: Number of upper spray arms
+Количество внешних карманов: Number of outer pockets
+Количество внутренних блоков: Number of indoor units
+Количество внутренних отделений: Number of inner compartments
+Количество газовых конфорок: Number of gas burners
+Количество дверей: Number of doors
+Количество жил: Number of cores
+Количество жиропоглощающих фильтров: Number of grease filters
+Количество зарядных устройств: Number of chargers
+Количество зон жесткости: Number of firmness zones
+Количество зубьев: Number of teeth
+Количество камер: Number of cameras
+Количество клавиш: Number of keys
+Количество кнопок: Number of buttons
+Количество кнопок (мышь): Number of buttons (mouse)
+Количество компрессоров: Number of compressors
+Количество конфорок: Number of burners
+Количество конфорок Двойная корона: Number of double crown burners
+Количество конфорок Тройная корона: Number of triple crown burners
+Количество корзин: Number of baskets
+Количество краников: Number of taps
+Количество крюков для замеса теста: Number of dough hooks
+Количество крючков: Number of hooks
+Количество ламп: Number of lamps
+Количество лапок: Number of presser feet
+Количество листов: Number of sheets
+Количество мест: Number of seats
+Количество металлических фильтров: Number of metal filters
+Количество модулей в комплекте: Number of modules included
+Количество нагревательных элементов: Number of heating elements
+Количество насадок: Number of attachments
+Количество настроек: Number of settings
+Количество нижних коромысел: Number of lower spray arms
+Количество отсеков: Number of compartments
+Количество перекладин: Number of rails
+Количество петель: Number of buttonhole styles
+Количество полок: Number of shelves
+Количество пользователей до: Number of users up to
+Количество портов USB: Number of USB ports
+Количество портов USB 2.0: Number of USB 2.0 ports
+Количество посадочных мест: Number of place settings
+Количество предметов: Number of pieces
+Количество предметов в наборе: Number of pieces in set
+Количество программ: Number of programs
+Количество программ мойки: Number of wash programs
+Количество программ, заносимых в память: Number of programs stored in memory
+Количество пружин на спальное место: Number of springs per sleeping place
+Количество разъемов 15-pin SATA: Number of 15-pin SATA connectors
+Количество разъемов 4+4 pin CPU: Number of 4+4 pin CPU connectors
+Количество разъемов 4-pin Floppy: Number of 4-pin Floppy connectors
+Количество разъемов 4-pin IDE (Molex): Number of 4-pin IDE (Molex) connectors
+Количество разъемов 6+2-pin PCI-E: Number of 6+2-pin PCI-E connectors
+Количество разъемов RJ-45: Number of RJ-45 ports
+Количество режимов: Number of modes
+Количество режимов нагрева: Number of heating modes
+Количество режимов работы: Number of operating modes
+Количество решеток: Number of racks
+Количество розеток: Number of sockets
+Количество ручек: Number of handles
+Количество рядов: Number of rows
+Количество светодиодов: Number of LEDs
+Количество секций: Number of sections
+Количество скоростей: Number of speeds
+Количество скоростей работы: Number of operating speeds
+Количество слотов памяти: Number of memory slots
+Количество слотов расширения: Number of expansion slots
+Количество спальных мест: Number of sleeping places
+Количество стенок: Number of walls
+Количество степеней помола: Number of grind settings
+Количество степеней прожарки: Number of browning levels
+Количество страниц: Number of pages
+Количество ступеней крутящего момента: Number of torque settings
+Количество ступеней мощности: Number of power levels
+Количество тактов двигателя: Engine strokes
+Количество температурных зон: Number of temperature zones
+Количество температурных режимов: Number of temperature modes
+Количество тостов: Number of slices
+Количество цветных картриджей: Number of color cartridges
+Количество цветов: Number of colors
+Количество цветов для лазерной печати: Number of colors for laser printing
+Количество цилиндров: Number of cylinders
+Количество цифровых дисплеев: Number of digital displays
+Количество ч/б картриджей: Number of black cartridges
+Количество чаш: Number of bowls
+Количество чехлов: Number of covers
+Количество штекеров: Number of plugs
+Количество элементов: Number of elements
+Количество ядер: Number of cores
+Количество ядер процессора: Number of CPU cores
+Количество ярусов: Number of tiers
+Количество ящиков: Number of drawers
+Колка льда в измельчителе: Ice crushing in chopper
+Коллекция: Collection
+Комбинированная поверхность для гриля: Combined grill surface
+Комбинированные плиты: Dual fuel cookers
+Комедия: Comedy
+Комоды для спальни: Bedroom dressers
+Компактная клавиатура: Compact keyboard
+Комплект инсталляции: Installation kit
+Комплектация: Package contents
+Комплектующие для компьютерных столов: Computer desk parts
+Комплекты мебели для ванной: Bathroom furniture sets
+Компьютерные кресла: Computer chairs
+Комфорт: Comfort
+Конвекторы: Convector heaters
+Конвекция: Convection
+Конвекция с паром: Steam convection
+Конструктор Lego: Lego sets
+Конструкция: Design
+Конструкция варочной панели: Hob design
+Конструкция весов: Scale design
+Контейнер для льда: Ice container
+Контейнер для молока: Milk container
+Контейнер-пароварка: Steamer container
+Контейнеров в комплекте: Containers included
+Контроллер SATA III (6 ГБ/с): SATA III controller (6 GB/s)
+Контроль дистанции автомобиля (FCWS): Forward collision warning (FCWS)
+Контроль полосы движения (LDWS): Lane departure warning (LDWS)
+Контроль степени прожарки тоста: Toast browning control
+Конусная форма щипцов: Conical tongs
+Конфорка WoK: Wok burner
+Конфорка-гриль: Grill burner
+Концентратор: Hub
+Копирование без компьютера: Standalone copying
+Корзина для жарки: Frying basket
+Корзина для замачивания круп: Grain soaking basket
+Корзина для столовых приборов: Cutlery basket
+Коробка передач: Gearbox
+Коробки и корзины для хранения вещей: Storage boxes and baskets
+Коронки: Hole saws
+Корпуса: Cases
+Кофеварки рожкового типа: Espresso machines
+Коэффициент усиления антенн: Antenna gain
+Край столешницы: Worktop edge
+Краски строительные: Construction paints
+Краски штемпельные: Stamp inks
+Краткие характеристики: Key specifications
+Края панели: Panel edges
+Крепление для душа: Shower holder
+Крепление на стену: Wall mount
+Крепление пульта ДУ на стену: Remote control wall holder
+Крепление шнура к вилке: Cord-to-plug attachment
+Крепления для кабеля: Cable clips
+Кресла для гостиной: Living room armchairs
+Криминальный: Crime
+Кровати: Beds
+Кронштейны для телевизоров: TV mounts
+Круги пильные и отрезные: Saw blades and cutting discs
+Крупы: Grains
+Крышка: Lid
+Крышка аэрогриля: Air fryer lid
+Крышка варочной поверхности: Hob cover
+Крышка для вакуумизации (шт): Vacuum lids (pcs)
+Крышка для хранения: Storage lid
+Крышка объектива: Lens cap
+Крышка-лоток: Tray lid
+Крышка-стаканчик: Cup lid
+Крючки, вешалки: Hooks and hangers
+Кузов автомобиля: Car body type
+Кулеры для процессоров: CPU coolers
+Кулеры, пурифайеры: Water coolers and purifiers
+Кухни модульные: Modular kitchens
+Кухонные мойки: Kitchen sinks
+Кухонные ножи: Kitchen knives
+Кухонные столы: Kitchen tables
+Лампа точечной подсветки: Spotlight lamp
+Лампочек в комплекте: Bulbs included
+Лампочки: Light bulbs
+Лампы автомобильные: Car bulbs
+Лампы в комплекте: Lamps included
+Ланч-боксы: Lunch boxes
+Лапка для выметывания петель: Buttonhole foot
+Лапка для молний: Zipper foot
+Лапка стандартная: Standard foot
+Легкая глажка: Easy ironing
+Лейка: Shower head
+Ленты светодиодные: LED strips
+Литиевая батарея: Lithium battery
+Лопатка: Spatula
+Люстры: Chandeliers
+Лёдогенератор: Ice maker
+МТС Марвин: MTS Marvin
+МФУ: All-in-one printers
+Магниевый анод: Magnesium anode
+Магнитное крепление насадок: Magnetic attachment mount
+Магнитное экранирование: Magnetic shielding
+Магнитный штекер: Magnetic plug
+Макс. разреш. Ч/Б печати: Max. B/W print resolution
+Макс. разрешение копира: Max. copy resolution
+Максимальная 1-ая скорость редуктора: Max. gear 1 speed
+Максимальная 2-ая скорость редуктора: Max. gear 2 speed
+Максимальная вместимость: Max. capacity
+Максимальная воспроизводимая частота: Max. reproducible frequency
+Максимальная высота процессорного кулера: Max. CPU cooler height
+Максимальная высота сиденья: Max. seat height
+Максимальная высота чашки: Max. cup height
+Максимальная глубина сверления: Max. drilling depth
+Максимальная глубина сиденья: Max. seat depth
+Максимальная длина видеокарты: Maximum graphics card length
+Максимальная длина излива: Max. spout length
+Максимальная длина коммуникаций: Max. piping length
+Максимальная длина стежка: Max. stitch length
+Максимальная длина стрижки: Max. cutting length
+Максимальная емкость карты памяти: Max. memory card capacity
+Максимальная кратность: Max. magnification
+Максимальная мощность: Max. power
+Максимальная мощность лампы: Max. bulb wattage
+Максимальная нагрузка: Max. load
+Максимальная нагрузка по мощности: Max. power load
+Максимальная оперативная память: Max. RAM
+Максимальная площадь полива: Max. watering area
+Максимальная производительность: Max. performance
+Максимальная производительность (отвод): Max. extraction rate
+Максимальная производительность (рециркуляция): Max. recirculation rate
+Максимальная рабочая температура: Max. operating temperature
+Максимальная рассеиваемая мощность: Max. power dissipation
+Максимальная скорость записи до: Max. write speed up to
+Максимальная скорость передачи данных: Max. data transfer rate
+Максимальная скорость чтения до: Max. read speed up to
+Максимальная скорость шитья: Max. sewing speed
+Максимальная тактовая частота: Max. clock speed
+Максимальная температура: Max. temperature
+Максимальная температура воды: Max. water temperature
+Максимальная температура духовки: Max. oven temperature
+Максимальная температура нагрева: Max. heating temperature
+Максимальная температура эксплуатации: Max. service temperature
+Максимальная цветовая температура: Max. color temperature
+Максимальная частота вращения: Max. rotation speed
+Максимальная частота вращения диска: Max. disc speed
+Максимальная частота кадров: Max. frame rate
+Максимальная частота пульсации: Max. pulse frequency
+Максимальная ширина зигзага: Max. zigzag width
+Максимальная ширина пакета/рулона: Max. bag/roll width
+Максимальная ширина среза: Max. cutting width
+Максимальное время работы: Max. operating time
+Максимальное высота подъема лапки: Max. presser foot lift
+Максимальное давление: Max. pressure
+Максимальное давление воды: Max. water pressure
+Максимальное допустимое ускорение (g): Max. allowable acceleration (g)
+Максимальное количество бутылок: Max. number of bottles
+Максимальное количество подвесных корзин: Max. number of hanging baskets
+Максимальное разрешение Ч/Б печати (высота): Max. B/W print resolution (vertical)
+Максимальное разрешение Ч/Б печати (ширина): Max. B/W print resolution (horizontal)
+Максимальное разрешение камеры заднего вида: Max. rear camera resolution
+Максимальное разрешение копира (высота): Max. copy resolution (vertical)
+Максимальное разрешение копира (ширина): Max. copy resolution (horizontal)
+Максимальное рассеивающая энергия: Max. energy dissipation
+Максимальное увлажнение воздуха (мл/ч): Max. humidification (ml/h)
+Максимальное число оборотов: Max. speed
+Максимальное число оборотов холостого хода: Max. no-load speed
+Максимальный вес: Max. weight
+Максимальный диаметр патрона: Max. chuck diameter
+Максимальный диаметр посуды: Max. cookware diameter
+Максимальный диаметр сверления (дерево): Max. drilling diameter (wood)
+Максимальный диаметр сверления (металл): Max. drilling diameter (metal)
+Максимальный диаметр ячейки: Max. cell diameter
+Максимальный крутящий момент: Max. torque
+Максимальный месячный объем печати: Max. monthly duty cycle
+Максимальный напор: Max. head
+Максимальный объем: Max. volume
+Максимальный ток: Max. current
+Максимальный ток помехи: Max. surge current
+Максимальный уровень шума: Max. noise level
+Максимальный формат бумаги: Max. paper size
+Марка ТС: Vehicle make
+Маркеры: Markers
+Маруся: Marusya
+Масло для смазки: Lubricating oil
+Массажный эффект: Massage effect
+Материал: Material
+Материал амбушюров: Ear cushion material
+Материал антипригарного покрытия: Non-stick coating material
+Материал бака: Tank material
+Материал бака горячей воды: Hot water tank material
+Материал бака холодной воды: Cold water tank material
+Материал барабана: Drum material
+Материал бортика: Rim material
+Материал варочной поверхности: Cooktop material
+Материал двери: Door material
+Материал дна: Bottom material
+Материал жерновов: Burr material
+Материал застёжки: Clasp material
+Материал каркаса: Frame material
+Материал колбы: Flask material
+Материал корпуса: Body material
+Материал крестовины: Base star material
+Материал крышки: Lid material
+Материал кувшина: Jug material
+Материал лезвия: Blade material
+Материал лотка: Tray material
+Материал наволочки: Pillowcase material
+Материал наполнителя: Filling material
+Материал ножа: Knife material
+Материал ножек: Legs material
+Материал ножки: Leg material
+Материал обивки: Upholstery material
+Материал обложки: Cover material
+Материал основания: Base material
+Материал палочек: Stick material
+Материал панели управления: Control panel material
+Материал плафона: Shade material
+Материал поворотного стола: Turntable material
+Материал погружной части: Immersion part material
+Материал подкладки: Lining material
+Материал подлокотников: Armrest material
+Материал подставки: Stand material
+Материал подушки: Cushion material
+Материал полок: Shelf material
+Материал проводника: Conductor material
+Материал рабочей поверхности гриля: Grill surface material
+Материал рабочей поверхности щипцов: Tong plate material
+Материал радиатора: Radiator material
+Материал резервуара для кофе: Coffee container material
+Материал ремешка: Strap material
+Материал решетки каплесборника: Drip tray grid material
+Материал решеток: Grate material
+Материал рожка: Portafilter material
+Материал ручки: Handle material
+Материал ручки ножа: Knife handle material
+Материал салона: Interior material
+Материал сиденья: Seat material
+Материал спинки: Backrest material
+Материал столешницы: Tabletop material
+Материал теплообменника: Heat exchanger material
+Материал упаковки: Packaging material
+Материал фасада: Front material
+Материал фильтра от накипи: Scale filter material
+Материал фронтальной панели: Front panel material
+Материал чаши: Bowl material
+Материал челнока: Bobbin case material
+Материал чехла: Case material
+Материал шнека: Auger material
+Материал шпулек: Bobbin material
+Материал штекера: Plug material
+Материал ящиков: Drawer material
+Материнские платы: Motherboards
+Матрасы: Mattresses
+Матрасы детские: Kids' mattresses
+Матрасы-топперы: Mattress toppers
+Машинки для стрижки: Hair clippers
+Межосевое расстояние: Center distance
+Мелодрама: Melodrama
+Мерная ложка: Measuring spoon
+Мерный стакан: Measuring cup
+Место установки: Installation location
+Металлическая крышка: Metal lid
+Металлическая решетка: Metal rack
+Металлические струбцины: Metal clamps
+Механизм вдевания нити: Needle threader
+Механизм вращения: Swivel mechanism
+Механизм качания: Tilt mechanism
+Механизм мягкого закрывания двери: Soft-close door mechanism
+Механизм мягкого закрытия дверцы: Soft-close door mechanism
+Механизм раскладывания: Folding mechanism
+Механическая защита розеток: Mechanical socket protection
+Механическая помпа: Manual pump
+Микроволновые печи встраиваемые: Built-in microwaves
+Микроволновые печи соло: Solo microwaves
+Микроволны: Microwave
+Микроволны+гриль: Microwave + grill
+Микроволны+гриль+конвекция: Microwave + grill + convection
+Микроволны+конвекция: Microwave + convection
+Микроволны+пар: Microwave + steam
+Микролифт: Soft close
+Микрофибра: Microfiber
+Микрофон на гибкой штанге: Flexible boom microphone
+Миксеры ручные: Hand mixers
+Минерализация воды: Water mineralization
+Мини-печи: Mini ovens
+Минимальная воспроизводимая частота: Min. frequency response
+Минимальная высота над газовой плитой: Min. height above gas hob
+Минимальная высота над электрической плитой: Min. height above electric hob
+Минимальная высота сиденья: Min. seat height
+Минимальная глубина сиденья: Min. seat depth
+Минимальная длина излива: Min. spout length
+Минимальная длина стрижки: Min. cutting length
+Минимальная кратность: Min. magnification
+Минимальная рабочая температура: Min. operating temperature
+Минимальная температура: Min. temperature
+Минимальная температура воды: Min. water temperature
+Минимальная температура духовки: Min. oven temperature
+Минимальная температура нагрева: Min. heating temperature
+Минимальная температура эксплуатации: Min. operating temperature
+Минимальная фокусировка: Min. focus distance
+Минимальная цветовая температура: Min. color temperature
+Минимальная частота вращения диска: Min. disc speed
+Минимальная частота пульсации: Min. pulse frequency
+Минимальная ширина среза: Min. cutting width
+Минимальное давление воды: Min. water pressure
+Минимальное рабочее напряжение: Min. operating voltage
+Минимальное расстояние от боковых стенок: Min. distance from side walls
+Минимальное расстояние от стены: Min. distance from wall
+Минимальный вес: Min. weight
+Минимальный диаметр посуды: Min. cookware diameter
+Минимальный огонь: Min. flame
+Минимальный уровень шума: Min. noise level
+Минипрограмма: Mini program
+Минипрограмма (14 минут): Mini program (14 min)
+Модель ТС: Vehicle model
+Модель интегрированной видеокарты: Integrated graphics model
+Модель процессора: Processor model
+Модификация: Modification
+Мойка в посудомоечной машине: Dishwasher safe
+Моноблоки: All-in-one PCs
+Монопоток: Single flow
+Монохромная печать: Monochrome printing
+Монтаж кухонной мойки: Kitchen sink mounting
+Монтажный ключ: Mounting wrench
+Морепродукты: Seafood
+Морозильные камеры: Freezers
+Мотор: Motor
+Моторизированная загрузка тостов: Motorized toast lowering
+Моторизированная функция: Motorized function
+Моторизированное центрирование: Motorized centering
+Моторизированный подъем тостов: Motorized toast lift
+Мощность: Power
+Мощность блока питания: Power supply wattage
+Мощность гриля: Grill power
+Мощность двигателя: Motor power
+Мощность двигателя (л.с.): Engine power (hp)
+Мощность замораживания: Freezing capacity
+Мощность лампы: Lamp power
+Мощность микроволн: Microwave power
+Мощность нагрева: Heating power
+Мощность нагрева I режим: Heating power, mode I
+Мощность нагрева II режим: Heating power, mode II
+Мощность нагрева III режим: Heating power, mode III
+Мощность охлаждения: Cooling capacity
+Мощность при блокировке мотора: Stall power
+Мощность фронтальных АС: Front speaker power
+Музыкальный: Musical
+Мультиварки: Multicookers
+Мультимедиа: Multimedia
+Мультфильм: Animation
+Мусорные ведра и баки: Trash cans and bins
+Мыльницы: Soap dishes
+Мытье тонкого стекла: Delicate glass wash
+Мыши: Mice
+Мышь в комплекте: Mouse included
+Мюзикл: Musical
+Мягкий: Soft
+Мясо: Meat
+Набор: Set
+Набор для слива в дренаж: Drain kit
+Набор для установки: Installation kit
+Набор игл: Needle set
+Наборы аксессуаров для ванной комнаты: Bathroom accessory sets
+Наборы инструментов для автомобиля: Car tool kits
+Наволочка: Pillowcase
+Нагрев: Heating
+Нагрев на газовых конфорках: Gas hob compatible
+Нагрев на галогеновых конфорках: Halogen hob compatible
+Нагрев на индукционных конфорках: Induction hob compatible
+Нагрев на стеклокерамических конфорках: Glass-ceramic hob compatible
+Нагрев на чугунных конфорках: Cast iron hob compatible
+Нагрев с одной стороны: One-sided heating
+Нагревание: Heating
+Нагревательный элемент: Heating element
+Над стиральной машиной: Above washing machine
+Назначение: Purpose
+Назначение SIM-карты: SIM card purpose
+Назначение клавиатуры: Keyboard purpose
+Назначение мыши: Mouse purpose
+Назначение термоса: Thermos purpose
+Наименование защиты от протечек: Leak protection type
+Наименование реж. блока/сетки для замены: Replacement cutter/foil name
+Наименование угольного фильтра: Carbon filter name
+Накопительные водонагреватели: Tank water heaters
+Наличие клавиш Windows: Windows keys
+Наличие крыла: Wing
+Наличие полей: Brim
+Наличие фильтра: Filter
+Наличие шипов: Studs
+Намотка нити на шпульку: Bobbin winding
+Напольное размещение: Floor-standing
+Направление открытия двери: Door opening direction
+Направление открытия дверцы: Door opening direction
+Направляющие для противней: Tray runners
+Направляющие ящиков: Drawer runners
+Напряжение аккумулятора: Battery voltage
+Напряжение отключаемой нагрузки: Switched load voltage
+Напряжение сети: Mains voltage
+Наручные часы: Wristwatches
+Насадка: Attachment
+Насадка для бороды: Beard attachment
+Насадка для брекетов: Orthodontic nozzle
+Насадка для деликатных тканей: Delicate fabrics attachment
+Насадка для ирригатора: Irrigator nozzle
+Насадка для картофельного пюре: Potato masher attachment
+Насадка для мытья противней: Tray cleaning attachment
+Насадка для нарезки кубиками: Dicing attachment
+Насадка для приготовления колбасы: Sausage attachment
+Насадка для приготовления сосисок: Hot dog sausage attachment
+Насадка для сбора шерсти: Pet hair attachment
+Насадка для стрелок: Crease attachment
+Насадка для теста: Dough attachment
+Насадка для языка: Tongue nozzle
+Насадка кеббе: Kebbe attachment
+Насадка панарелло: Panarello wand
+Насадка-венчик: Whisk attachment
+Насадка-гребень для стрижки: Hair clipper comb
+Насадка-измельчитель большая: Large chopper attachment
+Насадка-измельчитель малая: Small chopper attachment
+Насадка-овощерезка: Vegetable slicer attachment
+Насадка-соковыжималка: Juicer attachment
+Насадка-триммер: Trimmer attachment
+Насадка-триммер для носа и ушей: Nose and ear trimmer attachment
+Насадка-щетка: Brush attachment
+Насадка-щетка для чистки лица: Facial cleansing brush
+Насадки: Attachments
+Настенное размещение: Wall-mounted
+Настольная подставка: Desk stand
+Настольное размещение: Tabletop
+Наушники игровые: Gaming headphones
+Независимая регулировка температуры пластин: Independent plate temperature control
+Необходимость замены насадки: Attachment replacement required
+Непрерывная запись: Continuous recording
+Нескользящие ножки: Non-slip feet
+Нижнее белье: Underwear
+Нижний нагрев: Bottom heat
+Нижний нагрев+гриль: Bottom heat + grill
+Нижний нагрев+гриль+конвекция: Bottom heat + grill + convection
+Нижний нагрев+конвекция: Bottom heat + convection
+Нижний шкафчик: Lower cabinet
+Нижний+верхний нагрев: Top and bottom heat
+Нижний+верхний нагрев+конвекция: Top and bottom heat + convection
+Низкая решетка для гриля: Low grill rack
+Низкопрофильная: Low-profile
+Нитеобрезатель: Thread cutter
+Нож-резак для пленки: Film cutter
+Ножей в комплекте: Blades included
+Ножки: Feet
+Ножки-опоры: Support feet
+Ножницы: Scissors
+Номинал: Rating
+Номинальная мощность: Rated power
+Ночной режим: Night mode
+Нулевой зазор двери: Zero door clearance
+Обзор: Overview
+Обработка паром: Steam treatment
+Обувницы: Shoe racks
+Обхват: Girth
+Общая мощность: Total power
+Общая мощность конфорок: Total hob power
+Объем: Volume
+Объем SSD: SSD capacity
+Объем барабана: Drum capacity
+Объем видеопамяти: Video memory
+Объем воды: Water volume
+Объем двигателя: Engine displacement
+Объем духовки: Oven capacity
+Объем масляного бака: Oil tank capacity
+Объем мерного стакана: Measuring cup capacity
+Объем морозильной камеры: Freezer capacity
+Объем одного модуля: Module capacity
+Объем памяти: Memory capacity
+Объем резервуара для воды: Water tank capacity
+Объем резервуара для зерен: Bean hopper capacity
+Объем резервуара для молока: Milk container capacity
+Объем резервуара для молотого кофе: Ground coffee container capacity
+Объем топливного бака: Fuel tank capacity
+Объем холодильной камеры: Fridge capacity
+Объем чаши: Bowl capacity
+Объем шкафчика: Cabinet capacity
+Объём двигателя: Engine displacement
+Обяз. к предустановке ПО: Mandatory preinstalled software
+Оверлочных строчек: Overlock stitches
+Ограничитель глубины сверления: Drilling depth stop
+Олег: Oleg
+Олеофобное покрытие: Oleophobic coating
+Оперативная память: RAM
+Оператор: Carrier
+Операционная система: Operating system
+Ополаскивание горячей водой: Hot water rinse
+Опорная подставка: Support stand
+Опорный фланец: Support flange
+Оптическое разреш. сканера: Scanner optical resolution
+Оптическое разрешение: Optical resolution
+Оптическое разрешение сканера (высота): Scanner optical resolution (height)
+Оптическое разрешение сканера (ширина): Scanner optical resolution (width)
+Организация смывающего потока: Flush type
+Ориентация: Orientation
+Ортопедический матрас: Orthopedic mattress
+Освежить (паровой): Refresh (steam)
+Освещение морозильной камеры: Freezer lighting
+Освещение холодильной камеры: Fridge lighting
+Оснащение: Equipment
+Основа: Base
+Основной продукт: Main product
+Основные характеристики: Key specifications
+Особенности: Features
+Особенности клавиатуры: Keyboard features
+Особенности конструкции: Design features
+Особенности корпус: Case features
+Особенности корпуса: Case features
+Особенности микрофона: Microphone features
+Остановка при попадании твёрдых частиц: Stop on solid particle ingress
+Осушение: Dehumidification
+Отбеливание: Whitening
+Отверстие для кабеля: Cable hole
+Отверстие для слива жидкости: Liquid drain hole
+Отверстие под смеситель: Faucet hole
+Отверстия для монтажа: Mounting holes
+Отверстия под смеситель: Faucet holes
+Отверток в комплекте: Screwdrivers included
+Отвод воздуха: Air exhaust
+Отвод конденсата в дренаж: Condensate drain outlet
+Отвёртки: Screwdrivers
+Отделений в морозильной камере: Freezer compartments
+Отключение без воды: Auto shut-off without water
+Отключение вращения подноса: Turntable rotation off
+Отключение звукового сигнала: Sound signal off
+Отключение микрофона: Microphone mute
+Отключение при закипании: Auto shut-off on boiling
+Отключение при застревании тоста: Auto shut-off if toast gets stuck
+Отключение при опрокидывании: Tip-over shut-off
+Отключение при открытой крышке: Shut-off when lid is open
+Отключение при отсутствии воды: Shut-off when out of water
+Отключение при перегреве: Overheat shut-off
+Отключение при повышении/понижении напряжения: Over/undervoltage shut-off
+Отключение при проливе жидкости: Spill shut-off
+Отключение при снятии: Shut-off when removed
+Отключение при снятии резервуара: Shut-off when tank removed
+Отключение при снятой крышке: Shut-off when lid removed
+Открывание двери: Door opening
+Открывание крышки на 180*: 180° lid opening
+Открытая панель управления: Exposed control panel
+Отложенный старт: Delayed start
+Относительная яркость: Relative brightness
+Отпаривание: Steaming
+Отражатель: Reflector
+Отсек для аксессуаров: Accessory compartment
+Отсек для насадок: Attachment compartment
+Отсек для сетевого шнура: Power cord storage
+Отсеков для заморозки: Freezing compartments
+Отслеживание сна: Sleep tracking
+Отсоединяемый шнур питания: Detachable power cord
+Отстегивающиеся кабели: Detachable cables
+Охлаждающая способность: Cooling capacity
+Охлаждение: Cooling
+Охлаждение воды: Water cooling
+Охлаждение после сушки: Cool-down after drying
+Очистка от бактерий: Bacteria removal
+Очистка от хлора: Chlorine removal
+Очистка паром: Steam cleaning
+Пазлы: Jigsaw puzzles
+Пакеты для вакуумизации: Vacuum sealer bags
+Папка: Folder
+Парикмахерская накидка: Hairdressing cape
+Пароварка: Steamer
+Паровая мойка: Steam washer
+Парфюмерная вода: Eau de parfum
+Педаль: Pedal
+Пеналы без наполнения: Empty pencil cases
+Пеналы и шкафы для ванной: Bathroom cabinets
+Первые блюда: Soups
+Передача данных: Data transfer
+Переключатели: Switches
+Переливное отверстие: Overflow hole
+Перенавешиваемые двери: Reversible doors
+Переплет: Binding
+Петля для подвешивания: Hanging loop
+Питание: Power supply
+Питание от USB порта: USB powered
+Питание от аккумулятора: Rechargeable battery powered
+Питание от батареи: Battery powered
+Питание от прикуривателя: Car cigarette lighter powered
+Питание от сети: Mains powered
+Питание от сети 220 В: 220 V mains powered
+Плавающие пластины: Floating plates
+Плавающий шарнир дверцы: Floating door hinge
+Плавная: Smooth
+Плавное включение освещения: Soft light start
+Плавное открытие дверцы духовки: Soft-open oven door
+Плавный запуск двигателя: Soft motor start
+Плавный пуск: Soft start
+Плавный пуск двигателя: Motor soft start
+Пластиковые струбцины: Plastic clamps
+Платформа: Platform
+Плетеный корпус: Woven body
+Плечевой ремень: Shoulder strap
+Плоский противень: Flat baking tray
+Плотность бумаги: Paper weight
+Плотность материала: Material density
+Плотность пикселей: Pixel density
+Плотность плетения ткани: Thread count
+Плотность ткани: Fabric density
+Площадь ароматизации: Fragrance coverage area
+Площадь обогрева: Heating area
+Площадь освещения: Lighting area
+По дереву: For wood
+Поверхность: Surface
+Поверхность барабана: Drum surface
+Поворот ножки на подставке: Leg swivel on stand
+Поворот ножки на струбцине: Leg swivel on clamp
+Поворотное крепление шнура: Swivel cord connection
+Поворотное основание: Swivel base
+Поворотное шасси: Swivel chassis
+Поворотные чашки: Swivel ear cups
+Поворотный: Swivel
+Поворотный дисплей: Swivel display
+Поворотный механизм: Swivel mechanism
+Повседневная сушка: Everyday drying
+Повторение контуров лица: Face contour following
+Погрешность: Accuracy tolerance
+Погружные насосы: Submersible pumps
+Под керамогранит: Under porcelain tile
+Под ковровое покрытие: Under carpet
+Под ламинат: Under laminate
+Под линолеум: Under linoleum
+Под паркет: Under parquet
+Под плитку: Under tile
+Под раковину: Under-sink
+Подавление фантомных нажатий: Anti-ghosting
+Подача воды комнатной температуры: Room-temperature water dispensing
+Подвесное: Hanging
+Подвесной: Hanging
+Подвесных корзин в комплекте: Hanging baskets included
+Подвижный верхний гриль: Movable top grill
+Подголовник: Headrest
+Поддержание температуры: Keep warm
+Поддержание температуры 40*С: Keep warm at 40°C
+Поддержание температуры 45*С: Keep warm at 45°C
+Поддержание температуры 55*С: Keep warm at 55°C
+Поддержание температуры 60*С: Keep warm at 60°C
+Поддержание температуры 65*С: Keep warm at 65°C
+Поддержание температуры 70*С: Keep warm at 70°C
+Поддержание температуры 80*С: Keep warm at 80°C
+Поддержание температуры 85*С: Keep warm at 85°C
+Поддержание температуры 90*С: Keep warm at 90°C
+Поддержание температуры 95*С: Keep warm at 95°C
+Поддержание температуры 98*С: Keep warm at 98°C
+Поддержка: Support
+Поддержка 10/100 FastEthernet: 10/100 Fast Ethernet support
+Поддержка Bluetooth: Bluetooth support
+Поддержка ECC: ECC support
+Поддержка GPS: GPS support
+Поддержка Gigabit LAN: Gigabit LAN support
+Поддержка IP-TV: IPTV support
+Поддержка MIMO: MIMO support
+Поддержка MagSafe: MagSafe support
+Поддержка Powerdelivery 1.0: Power Delivery 1.0 support
+Поддержка Powerdelivery 2.0: Power Delivery 2.0 support
+Поддержка Powerdelivery 3.0: Power Delivery 3.0 support
+Поддержка QI: Qi support
+Поддержка Quick Charge 1.0: Quick Charge 1.0 support
+Поддержка Quick Charge 2.0: Quick Charge 2.0 support
+Поддержка Quick Charge 3.0: Quick Charge 3.0 support
+Поддержка RAID: RAID support
+Поддержка SuperCharge 1.0: SuperCharge 1.0 support
+Поддержка SuperCharge 2.0: SuperCharge 2.0 support
+Поддержка SuperCharge 3.0: SuperCharge 3.0 support
+Поддержка VR: VR support
+Поддержка Wi-Fi: Wi-Fi support
+Поддержка ГЛОНАСС: GLONASS support
+Поддержка быстрой зарядки: Fast charging support
+Поддержка зарядки ноутбуков: Laptop charging support
+Поддон для капель: Drip tray
+Поддон для крошек: Crumb tray
+Подкладка: Lining
+Подключение: Connection
+Подключение к горячей воде: Hot water connection
+Подключение к телевизору: TV connection
+Подключение камеры заднего вида: Rear-view camera connection
+Поднос для замораживания: Freezing tray
+Подогрев: Heating
+Подогрев контура двери: Door frame heating
+Подогрев чашек: Cup warming
+Подошва отпаривателя: Steamer soleplate
+Подошва утюга: Iron soleplate
+Подсветка: Backlight
+Подсветка USB портов: USB port backlight
+Подсветка дисплея: Display backlight
+Подсветка дисплея пульта ДУ: Remote control display backlight
+Подсветка клавиш: Key backlight
+Подсветка кнопок: Button backlight
+Подсветка кнопок управления: Control button backlight
+Подсветка корпуса: Case lighting
+Подсветка ручек управления: Control knob backlight
+Подсветка чашек: Cup illumination
+Подставка: Stand
+Подставка для кистей рук: Wrist rest
+Подставка для насадок: Attachment stand
+Подставка для ног: Footrest
+Подставка для пиццы: Pizza stand
+Подставка для турки: Cezve stand
+Подставка для утюга: Iron rest
+Подставка для яиц: Egg holder
+Подушка: Pillow
+Подушки: Pillows
+Подушки декоративные: Decorative pillows
+Подходит для: Suitable for
+Подходит к корпусам стандарта: Compatible case form factor
+Подъем для небольших ломтиков: High lift for small slices
+Пожаробезопасный корпус: Fireproof housing
+Покрытие: Coating
+Покрытие корпуса: Housing coating
+Покрытие пластин щипцов: Tong plate coating
+Покрытие стекла: Glass coating
+Покрытие фасада: Front panel finish
+Покрытие чаши: Bowl coating
+Пол: Gender
+Пол ребенка: Child's gender
+Поле наблюдения на 1000 м: Field of view at 1000 m
+Полезный объем: Usable capacity
+Полезный объем морозильной камеры: Freezer net capacity
+Полезный объем холодильной камеры: Fridge net capacity
+Полезный объем чаши: Bowl usable capacity
+Полка: Shelf
+Полка для бутылок: Bottle shelf
+Полки для ванной комнаты: Bathroom shelves
+Полки для кружек: Mug shelves
+Полок в холодильной камере: Fridge shelves
+Полок на двери холодильной камеры: Fridge door shelves
+Полок, регулируемых по высоте: Height-adjustable shelves
+Полотенцедержатель: Towel holder
+Полотенцесушители: Heated towel rails
+Полочка для длинных ножей: Long knife shelf
+Поляризационная линза: Polarized lens
+Помещение: Room
+Помол специй: Spice grinding
+Порошковое покрытие: Powder coating
+Порт: Port
+Порт LAN (RJ-45): LAN port (RJ-45)
+Порт Lightning: Lightning port
+Порт USB: USB port
+Порт USB 2.0 тип A: USB 2.0 Type-A port
+Порт USB 3.0: USB 3.0 port
+Порт USB 3.0 тип A: USB 3.0 Type-A port
+Порт USB 3.0 тип C: USB 3.0 Type-C port
+Порт USB 3.1: USB 3.1 port
+Порт USB 3.1 тип A: USB 3.1 Type-A port
+Порт USB 3.1 тип C: USB 3.1 Type-C port
+Порт USB 3.1 тип C / Thunderbolt 3: USB 3.1 Type-C / Thunderbolt 3 port
+Порт USB 3.2 тип A: USB 3.2 Type-A port
+Порт USB 3.2 тип C: USB 3.2 Type-C port
+Порт USB 4 тип C / Thunderbolt 4: USB4 Type-C / Thunderbolt 4 port
+Порт USB Type-A/ Type-С: USB Type-A/Type-C port
+Порт USB Type-C для зарядки устройств: USB Type-C port for device charging
+Порт USB Type-С на вход: USB Type-C input port
+Порт USB Type-С на вход/выход: USB Type-C input/output port
+Порт USB для зарядки устройств: USB port for device charging
+Порт USB тип А: USB Type-A port
+Порт USB тип С: USB Type-C port
+Порт microUSB: Micro-USB port
+Порт для расширения памяти: Memory expansion port
+Последовательное взвешивание: Sequential weighing
+Постельное белье: Bed linen
+Посудомоечные машины: Dishwashers
+Потайных строчек: Blind stitches
+Поэтапное приготовление: Multi-stage cooking
+Предварительная разморозка: Pre-defrost
+Предварительное ополаскивание: Pre-rinse
+Предварительное смачивание кофе: Coffee pre-infusion
+Предварительный прогрев: Preheating
+Предметов в наборе: Pieces in set
+Предохранительный клапан давления: Pressure safety valve
+Предупреждение о камерах слежения: Speed camera alerts
+Пресс - ситечко: Press strainer
+Пресс для цитрусовых: Citrus press
+Привод: Drive
+Приводной вал: Drive shaft
+Приготовление горячего молока: Hot milk preparation
+Приготовление кипятка: Hot water dispensing
+Приготовление кофе: Coffee brewing
+Приготовление кофе "капучино": Cappuccino
+Приготовление кофе "латте": Latte
+Приготовление кофе "латте-макиато": Latte macchiato
+Приготовление кофе "лунго": Lungo
+Приготовление кофе "ристретто": Ristretto
+Приготовление кофе "флэт-уайт": Flat white
+Приготовление кофе "эспрессо": Espresso
+Приготовление на пару: Steam cooking
+Приготовление напитка: Beverage preparation
+Приготовление под давлением: Pressure cooking
+Приключения: Adventure
+Применение: Application
+Применение защитного стекла: Screen protector application
+Принтеры: Printers
+Принцип подачи струи воды: Water jet type
+Приобретается отдельно: Sold separately
+Природный (метан): Natural gas (methane)
+Проводная мышь: Wired mouse
+Проводная сеть: Wired network
+Проволочные металлические направляющие: Metal wire rails
+Программируемые клавиши: Programmable keys
+Программы приготовления: Cooking programs
+Продолжительность: Duration
+Проекция на пол: Floor projection
+Прозрачный чехол: Clear case
+Производ-ть по теплу: Heating capacity
+Производ-ть по холоду: Cooling capacity
+Производитель видеопроцессора: GPU manufacturer
+Производитель процессора: CPU manufacturer
+Производитель чипсета: Chipset manufacturer
+Производительность: Performance
+Производительность мясорубки: Meat grinder capacity
+Производительность нагрева: Heating output
+Производительность охлаждения: Cooling output
+Производительность по теплу/ холоду: Heating/cooling capacity
+Производительность подачи горячей воды: Hot water flow rate
+Пройденное расстояние: Distance traveled
+Промывка ножей под водой: Rinsable blades
+Пропитка: Impregnation
+Пропитывание: Soaking
+Пропускная способность: Throughput
+Прореживание: Thinning
+Прорезиненная ручка: Rubberized handle
+Прорезиненное покрытие корпуса: Rubberized housing
+Прорезиненное покрытие ручки крышки: Rubberized lid handle
+Прорезиненные ножки: Rubberized feet
+Простыни: Bed sheets
+Противень с антипригарным покрытием: Non-stick baking tray
+Противокапельная система: Anti-drip system
+Противоскользящее покрытие дна: Non-slip base coating
+Проточные водонагреватели: Tankless water heaters
+Профиль: Profile
+Процесс приготовления: Cooking process
+Прочие опции: Other options
+Прямой помол: Direct grinding
+Пульсация: Pulse
+Пульсирующие движения: Pulsating motion
+Пульт ДУ: Remote control
+Пуховики: Down jackets
+Пуховые изделия: Down items
+Пылеустойчивый корпус: Dustproof housing
+Пьедестал: Pedestal
+Работа от аккумулятора: Battery operation
+Работа под: OS support
+Работа под Linux: Linux support
+Работа под Mac OS: Mac OS support
+Работа под Windows: Windows support
+Работает в системе Умный дом: Smart home compatible
+Рабочая длина: Working length
+Рабочая поверхность гриля: Grill cooking surface
+Рабочая температура: Operating temperature
+Рабочая частота роутера: Router operating frequency
+Рабочее напряжение: Operating voltage
+Рабочие температуры: Operating temperatures
+Рабочий механизм: Operating mechanism
+Рабочих строчек: Working stitches
+Радиатор охлаждения: Cooling heatsink
+Разборная конструкция: Collapsible design
+Разбрызгиватель над верхней корзиной: Sprayer above upper basket
+Раздвижная форма: Adjustable baking ring
+Разделитель морозильной камеры: Freezer divider
+Различная жесткость сторон: Dual-sided firmness
+Размер (В*Ш): Size (H×W)
+Размер базы (В*Ш*Г): Base size (H×W×D)
+Размер вентилятора: Fan size
+Размер внешнего блока (В*Ш*Г): Outdoor unit size (H×W×D)
+Размер внутреннего блока (В*Ш*Г): Indoor unit size (H×W×D)
+Размер готовой картины: Finished picture size
+Размер дополнительной чаши: Extra bowl size
+Размер крепления: Mount size
+Размер ниши (В*Ш*Г): Niche size (H×W×D)
+Размер ниши (Ш*Г): Niche size (W×D)
+Размер ниши (высота): Niche height
+Размер ниши (глубина): Niche depth
+Размер ниши (ширина): Niche width
+Размер ниши, мм (В*Ш*Г): Niche size, mm (H×W×D)
+Размер пластин (Д*Ш): Plate size (L×W)
+Размер полотна: Canvas size
+Размер рюкзака: Backpack size
+Размер спального места: Sleeping area size
+Размер спального места (В*Ш*Г): Sleeping area size (H×W×D)
+Размер столешницы (Д*Г*Т): Tabletop size (L×D×T)
+Размер фигурки: Figure size
+Размер чаши: Bowl size
+Размеры (В*Ш*Г): Dimensions (H×W×D)
+Размеры вентилятора: Fan dimensions
+Размеры верхних шкафов (В*Г): Upper cabinet dimensions (H×D)
+Размеры нижних шкафов (В*Г): Lower cabinet dimensions (H×D)
+Размещение: Placement
+Размещение бутыли: Bottle placement
+Размещение катушки: Bobbin placement
+Размещение ламп освещения: Light placement
+Размещение панели управления: Control panel placement
+Размораживание: Defrosting
+Размораживание морозильной камеры: Freezer defrosting
+Размораживание по весу: Defrost by weight
+Размораживание по времени: Defrost by time
+Размораживание холодильной камеры: Fridge defrosting
+Разогрев: Reheating
+Разработчик: Developer
+Разрешение дисплея: Display resolution
+Разрядка аккумулятора: Battery discharge
+Разрядка батарей: Battery discharge
+Разрядность шины памяти: Memory bus width
+Разъем 2: Connector 2
+Разъем microSD: microSD slot
+Разъем для микрофона 3.5 мм: 3.5 mm microphone jack
+Разъем для наушников: Headphone jack
+Разъем для наушников 3.5 мм: 3.5 mm headphone jack
+Разъем для наушников/микрофона 3.5мм: 3.5 mm headphone/microphone jack
+Разъем карт памяти: Memory card slot
+Разъем мобильного устройства: Mobile device connector
+Разъем питания: Power connector
+Разъемная штанга: Detachable rod
+Раковина: Sink
+Раковина-столешница: Countertop sink
+Раковины для ванной: Bathroom sinks
+Рамка: Frame
+Рамка для встраивания: Built-in frame
+Расположение БП: PSU location
+Расположение двигателя: Motor location
+Расположение крыла: Wing position
+Расположение руля: Steering position
+Расположение трубы подключения: Connection pipe location
+Распушивание шерсти: Fur fluffing
+Распылитель воды: Water sprayer
+Расход воды за цикл: Water consumption per cycle
+Расход топлива: Fuel consumption
+Расческа: Comb
+Расширение зоны нагрева конфорок: Expandable cooking zones
+Расширительное кольцо: Extension ring
+Реверс: Reverse
+Регион аккаунта: Account region
+Регион подключения: Connection region
+Регион подключения 3: Connection region 3
+Регулировка: Adjustment
+Регулировка вертикальных створок с ДУ: Remote vertical louver adjustment
+Регулировка влажности в зоне сохранения свежести: Freshness zone humidity control
+Регулировка влажности воздуха: Humidity control
+Регулировка воздушного потока: Airflow control
+Регулировка воздушного потока t*: Airflow control t*
+Регулировка высоты: Height adjustment
+Регулировка высоты короба: Hood height adjustment
+Регулировка высоты светильника: Lamp height adjustment
+Регулировка громкости: Volume control
+Регулировка давления лапки: Presser foot pressure adjustment
+Регулировка длины стежка: Stitch length adjustment
+Регулировка интенсивности вакуума: Vacuum strength adjustment
+Регулировка интенсивности увлажнения: Humidification intensity control
+Регулировка крепости кофе: Coffee strength adjustment
+Регулировка наклона отражателя: Reflector tilt adjustment
+Регулировка наклона подвеса: Suspension tilt adjustment
+Регулировка направления увлажнения: Mist direction adjustment
+Регулировка натяжения нити: Thread tension adjustment
+Регулировка оборотов: Speed control
+Регулировка объема кофе: Coffee volume adjustment
+Регулировка объема порции: Portion size adjustment
+Регулировка по высоте: Height-adjustable
+Регулировка подлокотников по высоте: Armrest height adjustment
+Регулировка подсветки: Backlight adjustment
+Регулировка порции воды: Water portion adjustment
+Регулировка потока воды: Water flow adjustment
+Регулировка расстояния от стены: Wall distance adjustment
+Регулировка режима Мультиповар: Multicook mode adjustment
+Регулировка сиденья по высоте: Seat height adjustment
+Регулировка скорости: Speed control
+Регулировка скорости конвекции: Convection speed control
+Регулировка скорости шитья: Sewing speed control
+Регулировка спинки по высоте: Backrest height adjustment
+Регулировка спинки по глубине: Backrest depth adjustment
+Регулировка степени поджаривания: Browning control
+Регулировка степени помола: Grind size adjustment
+Регулировка температуры: Temperature control
+Регулировка температуры в зоне сохранения свежести: Freshness zone temperature control
+Регулировка температуры до: Max adjustable temperature
+Регулировка температуры кофе: Coffee temperature control
+Регулировка температуры нагрева: Heating temperature control
+Регулировка температуры от: Min adjustable temperature
+Регулировка частоты вращения: Rotation speed control
+Регулировка ширины зигзага: Zigzag width adjustment
+Регулировка яркости освещения: Light brightness adjustment
+Регулировка яркости пламени: Flame brightness adjustment
+Регулировка яркости светового потока: Luminous flux brightness adjustment
+Регулируемая насадка-гребень 1: Adjustable comb attachment 1
+Регулируемая насадка-гребень 2: Adjustable comb attachment 2
+Регулируемая насадка-гребень 3: Adjustable comb attachment 3
+Регулируемая ширина отсека: Adjustable compartment width
+Регулируемое оголовье: Adjustable headband
+Регулируемые ножки: Adjustable feet
+Регулятор оборотов: Speed control
+Регулятор потока: Flow control
+Режим "дожаривание": Finish roasting mode
+Режим аварийной записи: Emergency recording mode
+Режим автоматической промывки: Automatic rinse mode
+Режим гриля: Grill mode
+Режим легкой заморозки: Soft freeze mode
+Режим ночной съемки: Night shooting mode
+Режим нулевой температуры: Zero temperature mode
+Режим отпуск: Vacation mode
+Режим охлаждения напитков: Beverage cooling mode
+Режим очистки от накипи: Descaling mode
+Режим повторного кипячения: Reboil mode
+Режим поддержания температуры: Keep warm mode
+Режим подогрева: Reheat mode
+Режим попкорн: Popcorn mode
+Режим размораживания внешнего блока: Outdoor unit defrost mode
+Режим самоочистки: Self-cleaning mode
+Режим стирки: Wash mode
+Режим суперзамораживания: Super freeze mode
+Режим суперохлаждения: Super cool mode
+Режим частичной загрузки: Half load mode
+Режим энергосбережения: Energy saving mode
+Режимы: Modes
+Режимы зубной щетки: Toothbrush modes
+Режимы работы: Operating modes
+Режимы работы духовки: Oven modes
+Режиссёр: Director
+Режиссёр 1: Director 1
+Режиссёр 2: Director 2
+Режущий элемент: Cutting element
+Резервный источник питания: Backup power supply
+Резинка фиксатор: Elastic retainer
+Резьба шпинделя: Spindle thread
+Рекомендуемая мощность БП: Recommended PSU power
+Рекомендуемая площадь (высота 2.6 м): Recommended area (2.6 m ceiling)
+Ремень на руку: Hand strap
+Ремешки для Apple Watch: Apple Watch bands
+Ремешки для смарт-часов и фитнес-браслетов: Smartwatch and fitness tracker bands
+Ремешок на шею: Neck strap
+Реподжиг конфорок: Burner re-ignition
+Ресурс картриджа очистки воды: Water filter cartridge life
+Ресурс наполнителя: Filter media life
+Ресурс цветного картриджа (A4): Color cartridge yield (A4)
+Ресурс черного картриджа (A4): Black cartridge yield (A4)
+Рециркуляция: Recirculation
+Решетка: Rack
+Решетка в комплекте: Rack included
+Решетка для гренок: Toast rack
+Решетка для гриля: Grill rack
+Решетка для паровой обработки: Steaming rack
+Решетка для подогрева булочек: Bun warming rack
+Рисунок: Pattern
+Рисунок на обивке: Upholstery pattern
+Рифленая пластина для гриля: Ribbed grill plate
+Рифленое дно: Ribbed bottom
+Розетки утопленного типа: Recessed sockets
+Ротационная кофемолка: Blade coffee grinder
+Роутеры: Routers
+Рулоны для вакуумизации: Vacuum sealing rolls
+Руль: Handlebar
+Ручка: Handle
+Ручка для перемещения: Moving handle
+Ручка для переноски: Carrying handle
+Ручка для снятий противней: Baking tray handle
+Ручка для снятия вертела: Spit removal handle
+Ручки: Handles
+Ручки для переворачивания: Turning handles
+Ручки легкого открывания: Easy-open handles
+Ручки шариковые: Ballpoint pens
+Ручной выбор мощности: Manual power selection
+Ручной режим: Manual mode
+Ручные отпариватели: Handheld steamers
+Рыба: Fish
+С рисунком: Patterned
+С функцией биде: With bidet function
+СВЧ с грилем: Microwave with grill
+СВЧ с грилем и конвекцией: Microwave with grill and convection
+Садовые стулья и кресла: Garden chairs
+Салатники и миски: Salad bowls and bowls
+Салон: Car interior
+Салфетка для предварительной очистки: Pre-cleaning wipe
+Салют: Fireworks
+Самодиагностика неисправностей: Fault self-diagnosis
+Самозатачивающиеся лезвия: Self-sharpening blades
+Самоочистка каппучинатора: Cappuccinatore self-cleaning
+Самоочистка от накипи: Self-descaling
+Самоочистка теплообменника: Heat exchanger self-cleaning
+Саморезы по дереву: Wood screws
+Саморезы универсальные: Universal self-tapping screws
+Сбор конденсата в резервуар: Condensate collection tank
+Сборка: Assembly
+Сброс веса тары: Tare function
+Сварочный генератор: Welding generator
+Сверление с ударом: Hammer drilling
+Светильники встраиваемые: Recessed lights
+Светильники настенные: Wall lights
+Светильники настольные: Desk lamps
+Светильники потолочные: Ceiling lights
+Светильники трековые: Track lights
+Светильники уличные: Outdoor lights
+Световой поток: Luminous flux
+Световой сигнал двери холодильной камеры: Fridge door light alert
+Световой сигнал изменения температуры: Temperature change light alert
+Световой сигнал отключения питания: Power outage light alert
+Световой сигнал повышения температуры: High temperature light alert
+Светодиодная подсветка (LED): LED lighting
+Свисток: Whistle
+Свободный рукав: Free arm
+Свёрла: Drill bits
+Сезонность: Season
+Семейный: Family
+Семейство: Family
+Сенсор давления: Pressure sensor
+Сенсор жидкости: Liquid sensor
+Сенсор наличия посуды: Cookware detection sensor
+Сенсор чистоты воды: Water clarity sensor
+Сенсорная панель управления: Touch control panel
+Сенсорное управление: Touch control
+Сенсорный дисплей: Touch display
+Сенсорный экран: Touchscreen
+Сериал: TV series
+Серия: Series
+Сертификат 80 PLUS (уровни эффективности): 80 PLUS certification (efficiency level)
+Сетевой кабель: Power cable
+Сетевые фильтры: Surge protectors
+Сетка для фритюра: Frying basket
+Сечение: Cross-section
+Сжиженный (пропан-бутан): LPG (propane-butane)
+Сигнал о повышении температуры: High temperature alert
+Сигнал открытой двери: Door open alert
+Сиденье: Seat
+Сиденье со спинкой: Seat with backrest
+Сидячая ванна: Sitz bath
+Сила парового удара: Steam shot
+Сила света: Luminous intensity
+Сила тока: Current
+Силиконовые выступы для тонкого стекла: Silicone stems for thin glassware
+Силиконовые держатели ножей: Silicone knife holders
+Силиконовые накладки ручек: Silicone handle covers
+Система антивсплеск: Anti-splash system
+Система быстрой замены патрона: Quick chuck change system
+Система жидкостного охлаждения: Liquid cooling system
+Система инсталляций и смыва: Toilet frames and flush systems
+Система обратного осмоса: Reverse osmosis system
+Система охлаждения: Cooling system
+Система стабилизации оборотов: Speed stabilization system
+Системные блоки: Desktop PCs
+Ситечко: Strainer
+Сифон: Siphon
+Сказка: Fairy tale
+Сквозной заряд: Pass-through charging
+Складная конструкция: Foldable design
+Складная ручка: Folding handle
+Складной: Foldable
+Складной корпус: Folding body
+Складные держатели тарелок: Folding plate holders
+Сковороды: Frying pans
+Скорость воздушного потока: Airflow speed
+Скорость вращения: Rotation speed
+Скорость вращения двигателя: Motor rotation speed
+Скорость копирования: Copy speed
+Скорость мотора: Motor speed
+Скорость передачи данных (LAN): Data transfer rate (LAN)
+Скорость передачи данных (Wi-Fi): Data transfer rate (Wi-Fi)
+Скорость цветной печати до: Color print speed up to
+Скорость ч/б печати (до): B/W print speed (up to)
+Скребок: Scraper
+Скрытый замок: Hidden lock
+Скрытый крепеж: Hidden fasteners
+Слив-перелив: Drain-overflow
+Смартфон в качестве пульта ДУ: Smartphone as remote control
+Смена области чистки: Cleaning area change
+Сменные блоки для тетради: Notebook refills
+Смесители: Faucets
+Смеситель: Faucet
+Смешанные ткани: Mixed fabrics
+Смотровое окошко: Viewing window
+Смягчение воды: Water softening
+Совместимость: Compatibility
+Совместимость 2: Compatibility 2
+Совместимость 3: Compatibility 3
+Сокет: Socket
+Сокет AMD: AMD socket
+Сокет Intel: Intel socket
+Сорочки: Shirts
+Состав: Composition
+Состав комплекта: Kit contents
+Состав комплектации: Package contents
+Состав комплектации 10: Package contents 10
+Состав комплектации 2: Package contents 2
+Состав комплектации 3: Package contents 3
+Состав комплектации 4: Package contents 4
+Состав комплектации 5: Package contents 5
+Состав комплектации 6: Package contents 6
+Состав комплектации 7: Package contents 7
+Состав комплектации 8: Package contents 8
+Состав комплектации 9: Package contents 9
+Состояние: Condition
+Сохранение настроек в памяти: Settings memory
+Сохранение тепла: Heat retention
+Специальная функция: Special function
+Специальные насадки: Special attachments
+Специальные программы (варка): Special programs (boiling)
+Специальные программы (жарка): Special programs (frying)
+Специальные программы (мультиповар): Special programs (multi-cook)
+Сплит-системы: Split air conditioners
+Спорт: Sport
+Способ бритья: Shaving method
+Способ вспенивания молока: Milk frothing method
+Способ крепления: Mounting method
+Способ монтажа: Installation method
+Способ монтажа нагревателя: Heater mounting method
+Способ открытия крышки: Lid opening method
+Способ приготовления капучино: Cappuccino preparation method
+Спутники: Satellites
+Средние ноты: Middle notes
+Срок годности: Shelf life
+Срок службы: Service life
+Срок службы лампы: Lamp life
+Стаканы для зубных щёток: Toothbrush holders
+Стандарт: Standard
+Стандарт 2G: 2G standard
+Стандарт 3G: 3G standard
+Стандарт 4G: 4G standard
+Стандарт 5G: 5G standard
+Стандарт IEEE 802.11: IEEE 802.11 standard
+Стандарт подводки: Connection standard
+Стандарт связи: Communication standard
+Стеганое покрытие: Quilted cover
+Стейк: Steak
+Стекло дверцы духовки: Oven door glass
+Стеклянная крышка: Glass lid
+Стеллажи: Shelving units
+Степень зарядки: Charge level
+Степень защиты: Protection rating
+Стерилизация: Sterilization
+Стикер для удаления пыли: Dust removal sticker
+Стиль: Style
+Стирка рубашек: Shirt wash
+Столешница в комплекте: Countertop included
+Столешницы под раковину: Vanity countertops
+Столовая ложка для супа: Soup spoon
+Столы и столики для гостиной: Living room tables
+Страна: Country
+Страна производства: Country of manufacture
+Стулья для кухни: Kitchen chairs
+Ступенчатая: Stepped
+Сумки: Bags
+Суммарная мощность: Total power
+Сушильные машины: Dryers
+Сушка подушек: Pillow drying
+Сушка шелка: Silk drying
+Сушка шерсти: Wool drying
+Счетчик калорий: Calorie counter
+Счетчик моточасов: Hour meter
+Съемная верхняя крышка: Removable top cover
+Съемная защитная решетка: Removable safety grille
+Съемная крышка: Removable lid
+Съемная панель для гриля: Removable grill plate
+Съемная решетка: Removable grate
+Съемная ручка: Removable handle
+Съемная чаша: Removable bowl
+Съемное дно: Removable bottom
+Съемные жернова/нож: Removable burrs/blade
+Съемный аккумулятор: Removable battery
+Съемный контейнер: Removable container
+Съемный контейнер для молотого кофе: Removable ground coffee container
+Съемный лоток для жира: Removable grease tray
+Съемный лоток для сбора капель: Removable drip tray
+Съемный микрофон: Detachable microphone
+Съемный нагревательный элемент: Removable heating element
+Съемный поддон для капель: Removable drip pan
+Съемный поддон для крошек: Removable crumb tray
+Съемный резервуар д/воды: Removable water tank
+Съемный резервуар для воды: Removable water reservoir
+Съемный резервуар для использованного кофе: Removable used coffee container
+Съемный резервуар для капель: Removable drip container
+Съемный резервуар для кофе: Removable coffee container
+Съемный резервуар для молока: Removable milk container
+Съемный ремешок: Removable strap
+Съемный столик: Removable table
+Съемный чехол: Removable cover
+Сэндвич: Sandwich
+Таймер: Timer
+Таймер включения: On timer
+Таймер включения/выключения: On/off timer
+Таймер выключения: Off timer
+Таймер выключения духовки: Oven shut-off timer
+Таймер отключения (время): Shut-off timer (time)
+Таймер отключения конфорок: Burner shut-off timer
+Таймер отложенного старта: Delayed start timer
+Таймер продолжительности работы: Operating time timer
+Тарелка для пиццы: Pizza plate
+Тарелки: Plates
+Тарифный план: Tariff plan
+Твёрдость: Firmness
+Текстура фасада: Front texture
+Телескопическая ручка: Telescopic handle
+Телескопические направляющие: Telescopic rails
+Тематика: Theme
+Темные ткани: Dark fabrics
+Температура воды: Water temperature
+Температура нагрева: Heating temperature
+Температура приготовления: Cooking temperature
+Температура цвета: Color temperature
+Температура эксплуатации: Operating temperature
+Тепловой насос: Heat pump
+Тепловые трубки: Heat pipes
+Теплые полы: Underfloor heating
+Термозащитная перчатка: Heat-resistant glove
+Термоизолированная ручка: Heat-insulated handle
+Термоизолированный корпус: Heat-insulated housing
+Термоизолированный наконечник: Heat-insulated tip
+Термокружки: Travel mugs
+Термопоты: Hot water dispensers
+Терморегулирующий слой: Thermoregulating layer
+Терморегулятор: Temperature controller
+Термостат: Thermostat
+Термостат духовки: Oven thermostat
+Термостойкий коврик: Heat-resistant mat
+Термосы: Thermoses
+Термощуп для мяса: Meat probe
+Территория активации: Activation region
+Территория использования: Region of use
+Тетради: Exercise books
+Технология: Technology
+Технология "Без поворотного стола": Turntable-free technology
+Технология 4K разрешения: 4K resolution technology
+Технология GAN: GaN technology
+Технология HDR: HDR technology
+Технология NFC: NFC technology
+Технология WDR: WDR technology
+Технология дисплея: Display technology
+Технология ионизации: Ionization technology
+Технология снижения уровня шума: Noise reduction technology
+Технология сушки: Drying technology
+Технология чистки: Cleaning technology
+Тип: Type
+Тип SIM-карты: SIM card type
+Тип ИБП: UPS type
+Тип аккумулятора: Battery type
+Тип антенны: Antenna type
+Тип антипригарного покрытия: Non-stick coating type
+Тип батареи: Battery type
+Тип беспроводных колонок: Wireless speaker type
+Тип бритвы: Shaver type
+Тип быстрой зарядки: Fast charging type
+Тип весов: Scale type
+Тип видеопамяти: Video memory type
+Тип вилки: Plug type
+Тип внешнего покрытия: Exterior coating type
+Тип встроенного вольтметра: Built-in voltmeter type
+Тип вытяжки: Range hood type
+Тип геймпада: Gamepad type
+Тип генератора: Generator type
+Тип гриля: Grill type
+Тип двери: Door type
+Тип двигателя: Engine type
+Тип дисплея: Display type
+Тип духовки: Oven type
+Тип загрузки: Loading type
+Тип заднего тормоза: Rear brake type
+Тип закрывания: Closure type
+Тип запуска: Start type
+Тип застежки: Fastener type
+Тип защиты от протечек: Leak protection type
+Тип зоны сохранения свежести: Freshness zone type
+Тип издания: Edition type
+Тип изделия: Product type
+Тип используемого кофе: Coffee type
+Тип используемых батарей: Battery type used
+Тип используемых игл: Needle type
+Тип источника питания: Power source type
+Тип кабеля: Cable type
+Тип кабеля в комплекте 1: Included cable type 1
+Тип картриджа: Cartridge type
+Тип карты памяти: Memory card type
+Тип клавиатуры: Keyboard type
+Тип клавиш: Key type
+Тип компрессора: Compressor type
+Тип консоли: Console type
+Тип конфорок: Burner type
+Тип корпуса: Case type
+Тип красок: Ink type
+Тип крепления: Mount type
+Тип кресла: Chair type
+Тип кузова: Body type
+Тип кулера: Cooler type
+Тип кухонного гарнитура: Kitchen set type
+Тип кухонного ножа: Kitchen knife type
+Тип лампы: Lamp type
+Тип матраса: Mattress type
+Тип монтажа: Mounting type
+Тип монтажа дефлектора: Deflector mounting type
+Тип мотора: Motor type
+Тип мыши: Mouse type
+Тип нагрева: Heating type
+Тип нагрева индукционных конфорок: Induction burner heating type
+Тип нагревательного элемента: Heating element type
+Тип наконечника: Tip type
+Тип накопителя: Storage type
+Тип насоса: Pump type
+Тип наушников: Headphone type
+Тип ножек: Feet type
+Тип носителя информации: Storage media type
+Тип оперативной памяти: RAM type
+Тип освещения: Lighting type
+Тип освещения морозильной камеры: Freezer lighting type
+Тип открывания дверцы: Door opening type
+Тип охлаждения: Cooling type
+Тип очага: Firebox type
+Тип очистки: Cleaning type
+Тип памяти: Memory type
+Тип патрона: Chuck type
+Тип переднего тормоза: Front brake type
+Тип переключателей: Switch type
+Тип петли: Hinge type
+Тип печати: Print type
+Тип питания: Power type
+Тип погружного насоса: Submersible pump type
+Тип подвеса: Suspension type
+Тип подводки: Connection type
+Тип подключения: Connection type
+Тип подсветки: Backlight type
+Тип полотенцесушителя: Towel warmer type
+Тип поставки: Package type
+Тип посудомоечной машины: Dishwasher type
+Тип призмы: Prism type
+Тип принтера: Printer type
+Тип процессора: Processor type
+Тип размещения: Placement type
+Тип разъема для материнской платы: Motherboard connector type
+Тип раковины: Sink type
+Тип ремешка: Strap type
+Тип решетки: Grate type
+Тип рисунка: Pattern type
+Тип розеток: Outlet type
+Тип рукоятки: Grip type
+Тип ручек: Handle type
+Тип ручки: Handle type
+Тип светильника: Light fixture type
+Тип системного блока: Desktop type
+Тип сковороды: Pan type
+Тип сменного картриджа: Replacement cartridge type
+Тип смесителя: Faucet type
+Тип смывной клавиши: Flush button type
+Тип стекла: Glass type
+Тип сумки: Bag type
+Тип сушки: Drying type
+Тип таймера: Timer type
+Тип таймера завершения чистки: Cleaning completion timer type
+Тип таймера смены области чистки: Cleaning area change timer type
+Тип товара: Product type
+Тип триммера/мотокосы: Trimmer/brush cutter type
+Тип увлажнения воздуха: Humidification type
+Тип унитаза/биде: Toilet/bidet type
+Тип упаковки: Packaging type
+Тип управления: Control type
+Тип управления смесителя: Faucet control type
+Тип установки смесителя: Faucet installation type
+Тип флеш-памяти: Flash memory type
+Тип холодильника: Refrigerator type
+Тип цоколя: Base type
+Тип челнока: Bobbin type
+Типоразмер: Size
+Тканевая оплетка кабеля: Braided fabric cable
+Ток холодной прокрутки: Cold cranking amps
+Толщина: Thickness
+Толщина диска/круга: Disc/wheel thickness
+Толщина дна: Base thickness
+Толщина лезвия: Blade thickness
+Толщина линии: Line thickness
+Толщина стекла: Glass thickness
+Толщина стенки: Wall thickness
+Толщина стенок: Wall thickness
+Толщина столешницы: Worktop thickness
+Толщина столешницы от: Min. countertop thickness
+Тормоз двигателя: Motor brake
+Торшеры и напольные светильники: Floor lamps
+Тостеры: Toasters
+Трансляция видео в социальной сети: Live streaming to social networks
+Трансляция видео через Wi-Fi: Video streaming via Wi-Fi
+Требуется переходник для евророзетки: Euro socket adapter required
+Требуется подключение к интернету: Internet connection required
+Третий уровень загрузки: Third loading level
+Трикотажных строчек: Knit stitches
+Триллер: Thriller
+Триммеры: Trimmers
+Триммеры для травы: Grass trimmers
+Тройная корона: Triple-ring burner
+Трубка подачи пара: Steam wand
+Тумба: Cabinet
+Тумбы для ванной: Bathroom vanities
+Тумбы для гостиной: Living room cabinets
+Турбопоток: Turbo flow
+Турборежим: Turbo mode
+Турборежим подачи пара: Turbo steam mode
+Туристический eSIM: Travel eSIM
+Тушение: Stewing
+Уведомления: Notifications
+Увлажнители воздуха: Humidifiers
+Угловая: Corner
+Угловой: Corner
+Угловой штекер: Angled plug
+Углубление для Вок: Wok recess
+Угол обзора (основная камера): Field of view (main camera)
+Угол рассеивания: Beam angle
+Угольный фильтр: Carbon filter
+Удаление железа: Iron removal
+Удаление запахов: Odor removal
+Ударного сверления: Hammer drilling
+Ударопрочный корпус: Shockproof housing
+Удлинители: Extension cords
+Ужасы: Horror
+Ультразвуковая чистка: Ultrasonic cleaning
+Ультразвуковое распыление воды: Ultrasonic water atomization
+Умные лампочки: Smart bulbs
+Умные ручки и блокноты: Smart pens and notebooks
+Умный дом МТС: MTS Smart Home
+Унитазы: Toilets
+Уплотнитель кофе в рожке: Built-in coffee tamper
+Уплотнительная прокладка: Sealing gasket
+Управление: Controls
+Управление жестами: Gesture control
+Управление набором воды: Water fill control
+Управление с помощью смартфона: Smartphone control
+Управление через Wi-Fi: Wi-Fi control
+Управление через варочную поверхность: Control via hob
+Управление через смартфон: Control via smartphone
+Уровень сложности: Difficulty level
+Уровень шума: Noise level
+Уровень шума внешнего блока: Outdoor unit noise level
+Уровень шума внутреннего блока: Indoor unit noise level
+Уровень шума внутреннего блока 2-ой блок: Indoor unit noise level (2nd unit)
+Ускоренная сушка: Quick drying
+Установка: Installation
+Установка вплотную к стене: Flush-to-wall installation
+Установка времени приготовления: Cooking time setting
+Установка времени сварки: Welding time setting
+Установка жесткости воды: Water hardness setting
+Установка на стиральную машину: Stackable on washing machine
+Установочный набор: Installation kit
+Утапливаемые переключатели: Retractable switches
+Утапливаемые ручки управления: Retractable control knobs
+Утюги: Irons
+Уход за деснами: Gum care
+Фантастика: Science fiction
+Фены: Hair dryers
+Фигурки персонажей: Character figures
+Фиксатор для складывания пластин: Plate folding lock
+Фиксация в закрытом положении: Closed-position lock
+Фиксация полок против выдвижения: Shelf anti-slide lock
+Фиксация утюга: Iron lock
+Фиксация шпинделя: Spindle lock
+Фильтр: Filter
+Фильтр 3 в 1: 3-in-1 filter
+Фильтр грубой очистки: Coarse filter
+Фильтр для воды: Water filter
+Фильтр импульсных помех: Surge noise filter
+Фильтр на входе воды: Water inlet filter
+Фильтр от запахов: Odor filter
+Фильтр от накипи: Anti-scale filter
+Фильтр очистки воды: Water purification filter
+Фильтр с витамином С: Vitamin C filter
+Фитнес-браслеты: Fitness trackers
+Форм-фактор: Form factor
+Форм-фактор БП: PSU form factor
+Форм-фактор дисплея: Display form factor
+Форма: Shape
+Форма выпуска: Product form
+Форма для вафель: Waffle plate
+Форма для выпечки: Baking pan
+Форма для сэндвичей: Sandwich plate
+Форма излива: Spout shape
+Форма кабеля: Cable type
+Форма лампы: Bulb shape
+Форма пазла: Puzzle shape
+Форма плафона: Shade shape
+Форма подставки: Stand shape
+Форма полотенцесушителя: Towel warmer shape
+Форма поставки: Delivery form
+Форма раковины: Sink shape
+Форма ручки триммера: Trimmer handle shape
+Формат бумаги: Paper size
+Формат системы: System format
+Формат совместимого блока питания: Compatible PSU form factor
+Формат совместимых материнских плат: Compatible motherboard form factors
+Формы для запекания: Baking dishes
+Фотошторы: Photo print curtains
+Функции: Features
+Функционал пульта ДУ: Remote control functions
+Функция: Function
+Функция AirDry: AirDry function
+Функция Гигиена+: Hygiene+ function
+Функция аэрогриля: Air fryer function
+Функция микроволновая печь: Microwave function
+Функция пароувлажнения: Steam humidification
+Функция самоочистки: Self-cleaning function
+Функция хлебопечки: Bread maker function
+Футляр: Case
+Фэнтези: Fantasy
+Хладагент: Refrigerant
+Холодный обдув: Cool air
+Хранение в морозильнике: Freezer storage
+Хранение в холодильнике: Refrigerator storage
+Хранение при отключении питания: Memory during power outage
+Цвет внутреннего блока: Indoor unit color
+Цвет дверцы люка: Door color
+Цвет игровых клавиш: Gaming keys color
+Цвет изоляции: Insulation color
+Цвет кабеля: Cable color
+Цвет каркаса: Frame color
+Цвет колбы: Flask color
+Цвет корпуса: Body color
+Цвет ножек: Legs color
+Цвет ножки: Base color
+Цвет обивки: Upholstery color
+Цвет освещения: Light color
+Цвет панели управления: Control panel color
+Цвет плафона: Shade color
+Цвет подлокотников: Armrest color
+Цвет подсветки: Backlight color
+Цвет подсветки дисплея: Display backlight color
+Цвет подсветки корпуса: Case lighting color
+Цвет подставки: Stand color
+Цвет порошка: Powder color
+Цвет производителя: Manufacturer color
+Цвет рамки: Frame color
+Цвет регуляторов конфорок: Burner knob color
+Цвет ремешка: Strap color
+Цвет ручки: Handle color
+Цвет ручки ножа: Knife handle color
+Цвет свечения: Glow color
+Цвет сиденья: Seat color
+Цвет спинки: Backrest color
+Цвет столешницы: Tabletop color
+Цвет фасада: Front panel color
+Цвет фурнитуры: Hardware color
+Цвет чернил: Ink color
+Цветная печать: Color printing
+Цветная рамка: Colored frame
+Цветные карандаши: Colored pencils
+Цветовая температура: Color temperature
+Целевая аудитория: Target audience
+Цена деления: Scale division
+Центральная конфорка: Central burner
+Циклическая запись: Loop recording
+Цифровой дисплей: Digital display
+Цифровые версии видеоигр: Digital video games
+Цоколь в комплекте: Base included
+Чайники для плит: Stovetop kettles
+Частота: Frequency
+Частота вращения диска: Disc rotation speed
+Частота графического процессора: GPU clock speed
+Частота движений в минуту: Strokes per minute
+Частота памяти: Memory frequency
+Частота при макс. разрешении камеры заднего вида: Frame rate at max rear camera resolution
+Частота пульсации: Flicker frequency
+Частотный диапазон: Frequency range
+Частотный диапазон (микрофон): Frequency range (microphone)
+Чаша: Bowl
+Чашки и кружки: Cups and mugs
+Чехлы для смартфонов: Smartphone cases
+Чехол: Case
+Чехол для переноски: Carrying case
+Чип MFI: MFi chip
+Чипсет: Chipset
+Число оборотов: Rotation speed
+Число оборотов холостого хода: No-load speed
+Число розеток 12 В: Number of 12 V outlets
+Число розеток 220 В: Number of 220 V outlets
+Число универсальных процессоров: Number of shader units
+Число фаз: Number of phases
+Чистый рез: Clean cut
+Чувствительность: Sensitivity
+Чувствительность микрофона: Microphone sensitivity
+Чувствительный: Sensitive
+Шаг регулировки длины среза: Cutting length adjustment step
+Шагомер: Pedometer
+Шампуры: Skewers
+Шаровое крепление шнура: Swivel cord connection
+Швейные машины: Sewing machines
+Швейных операций: Sewing operations
+Шины: Tyres
+Шины для мотоциклов: Motorcycle tyres
+Ширина: Width
+Ширина лезвия: Blade width
+Ширина ленты: Belt width
+Ширина отсека: Compartment width
+Ширина пластин: Plate width
+Ширина пропила: Kerf width
+Ширина сиденья: Seat width
+Ширина спинки: Backrest width
+Ширина чаши: Bowl width
+Ширина шины: Bar width
+Ширина шкафа: Cabinet width
+Шкафы: Wardrobes
+Шкафы-купе: Sliding door wardrobes
+Шланг: Hose
+Шланг для душа: Shower hose
+Шоковая заморозка: Blast freezing
+Шпатель для разглаживания: Spreading spatula
+Шпулек в комплекте: Bobbins included
+Штанга: Wand
+Штопательная пластина: Darning plate
+Шторы для ванной: Shower curtains
+Штуцер для внешней вакуумизации: External vacuum port
+Штуцер для подключения газового баллона: Gas cylinder connector
+Шумоподавление: Noise cancellation
+Шуруповерты: Cordless drills
+Щелочная (Alkaline) батарея: Alkaline battery
+Щеточка для чистки: Cleaning brush
+Щипцы: Tongs
+Щипцы без зажима: Clipless wand
+Щипцы для тостов: Toast tongs
+Экономия времени или электроэнергии: Time or energy saving
+Экосистема: Ecosystem
+Экран: Screen
+Экранизация: Shielding
+Экранное меню: On-screen menu
+Электрическая помпа: Electric pump
+Электрические бритвы: Electric shavers
+Электрические зубные щетки: Electric toothbrushes
+Электрические кофемолки: Electric coffee grinders
+Электрические плиты: Electric cookers
+Электрические чайники: Electric kettles
+Электрогирлянды: String lights
+Электрогрили: Electric grills
+Электрокамины: Electric fireplaces
+Электромеханический вертел: Motorized rotisserie
+Электромясорубки: Electric meat grinders
+Электроника регенерирования: Regeneration electronics
+Электронная книга рецептов: Electronic recipe book
+Электронная регулировка частоты вращения: Electronic speed control
+Электронный программатор: Electronic programmer
+Электроподжиг духовки: Oven electric ignition
+Электроподжиг конфорок: Burner electric ignition
+Электрощипцы и плойки: Curling irons
+Элементы экстерьера: Exterior elements
+Энергопотребление в год: Annual energy consumption
+Энергопотребление за цикл: Energy consumption per cycle
+Энергосберегающая: Energy saving
+Эффект зима-лето: Winter-summer effect
+Эффект памяти: Memory effect
+Эффекты: Effects
+Язык: Language
+Язык клавиатуры: Keyboard language
+Язык операционной системы: Operating system language
+Яркость: Brightness
+Ящики: Drawers
+Ящиков в зоне сохранения свежести: Drawers in freshness zone
+Ящиков в морозильной камере: Freezer drawers
+Ящиков в отделении для овощей: Vegetable compartment drawers
+комплектация: Package contents

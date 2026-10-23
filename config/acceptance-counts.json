@@ -1,0 +1,2338 @@
+{
+  "refrigerator/brand/description+title/alone": [
+    129,
+    129
+  ],
+  "refrigerator/model/tagger+title/alone": [
+    407,
+    404
+  ],
+  "refrigerator/volume/description/alone": [
+    65,
+    42
+  ],
+  "refrigerator/color/description/alone": [
+    17,
+    13
+  ],
+  "refrigerator/power/prior?/alone": [
+    179,
+    97
+  ],
+  "refrigerator/brand/title/alone": [
+    280,
+    280
+  ],
+  "refrigerator/volume/prior?/alone": [
+    136,
+    107
+  ],
+  "refrigerator/color/description+tagger/alone": [
+    69,
+    65
+  ],
+  "refrigerator/volume/description/rival": [
+    47,
+    11
+  ],
+  "refrigerator/color/description+title/alone": [
+    20,
+    19
+  ],
+  "refrigerator/volume/description+tagger/alone": [
+    46,
+    43
+  ],
+  "refrigerator/color/prior?/alone": [
+    149,
+    107
+  ],
+  "refrigerator/color/tagger+title/alone": [
+    60,
+    59
+  ],
+  "refrigerator/color/reference?/alone": [
+    8,
+    8
+  ],
+  "refrigerator/color/tagger/rival": [
+    1,
+    0
+  ],
+  "refrigerator/volume/description+tagger/rival": [
+    11,
+    8
+  ],
+  "refrigerator/volume/description+reference?+tagger/rival": [
+    1,
+    1
+  ],
+  "refrigerator/color/description+reference?/alone": [
+    1,
+    1
+  ],
+  "refrigerator/power/reference?/alone": [
+    4,
+    3
+  ],
+  "refrigerator/volume/reference?/alone": [
+    10,
+    9
+  ],
+  "refrigerator/color/tagger+title/rival": [
+    2,
+    1
+  ],
+  "refrigerator/brand/tagger+title/rival": [
+    2,
+    1
+  ],
+  "refrigerator/model/title/alone": [
+    4,
+    4
+  ],
+  "refrigerator/power/title/alone": [
+    2,
+    0
+  ],
+  "refrigerator/volume/tagger/rival": [
+    8,
+    0
+  ],
+  "refrigerator/color/reference?+tagger+title/alone": [
+    2,
+    2
+  ],
+  "refrigerator/power/title/rival": [
+    2,
+    0
+  ],
+  "refrigerator/power/description/alone": [
+    3,
+    3
+  ],
+  "refrigerator/brand/description+tagger/alone": [
+    2,
+    2
+  ],
+  "refrigerator/model/tagger/alone": [
+    4,
+    4
+  ],
+  "refrigerator/power/description+title/rival": [
+    1,
+    0
+  ],
+  "refrigerator/brand/tagger+title/alone": [
+    1,
+    1
+  ],
+  "refrigerator/power/description+title/alone": [
+    2,
+    0
+  ],
+  "refrigerator/volume/description+title/alone": [
+    1,
+    1
+  ],
+  "refrigerator/color/description+reference?+tagger/alone": [
+    3,
+    3
+  ],
+  "refrigerator/power/description/rival": [
+    2,
+    1
+  ],
+  "refrigerator/color/description+tagger/rival": [
+    1,
+    1
+  ],
+  "refrigerator/volume/description+reference?+tagger/alone": [
+    2,
+    2
+  ],
+  "refrigerator/volume/title/rival": [
+    1,
+    1
+  ],
+  "refrigerator/brand/tagger/alone": [
+    1,
+    0
+  ],
+  "refrigerator/power/description+reference?/alone": [
+    1,
+    1
+  ],
+  "tablet/brand/description+title/alone": [
+    119,
+    119
+  ],
+  "tablet/model/tagger+title/alone": [
+    244,
+    201
+  ],
+  "tablet/storage/description+title/alone": [
+    90,
+    89
+  ],
+  "tablet/ram/description+title/alone": [
+    44,
+    44
+  ],
+  "tablet/screen_diagonal/reference?/alone": [
+    51,
+    50
+  ],
+  "tablet/battery/description+reference?/alone": [
+    7,
+    7
+  ],
+  "tablet/color/description+tagger/rival": [
+    1,
+    1
+  ],
+  "tablet/resolution/description+tagger/alone": [
+    62,
+    59
+  ],
+  "tablet/refresh_rate/description+reference?+tagger/rival": [
+    3,
+    3
+  ],
+  "tablet/screen_diagonal/description+tagger/alone": [
+    36,
+    31
+  ],
+  "tablet/battery/description+tagger/alone": [
+    36,
+    32
+  ],
+  "tablet/color/description+tagger+title/rival": [
+    1,
+    1
+  ],
+  "tablet/storage/tagger+title/rival": [
+    18,
+    18
+  ],
+  "tablet/ram/description+tagger/alone": [
+    19,
+    19
+  ],
+  "tablet/color/description+title/alone": [
+    70,
+    67
+  ],
+  "tablet/storage/tagger+title/alone": [
+    12,
+    11
+  ],
+  "tablet/ram/prior?/alone": [
+    21,
+    14
+  ],
+  "tablet/screen_diagonal/tagger+title/alone": [
+    4,
+    3
+  ],
+  "tablet/battery/prior?/alone": [
+    60,
+    26
+  ],
+  "tablet/color/tagger+title/alone": [
+    61,
+    55
+  ],
+  "tablet/refresh_rate/prior?/alone": [
+    72,
+    46
+  ],
+  "tablet/brand/title/alone": [
+    125,
+    125
+  ],
+  "tablet/storage/title/alone": [
+    42,
+    41
+  ],
+  "tablet/ram/title/alone": [
+    47,
+    47
+  ],
+  "tablet/storage/prior?/alone": [
+    19,
+    9
+  ],
+  "tablet/screen_diagonal/prior?/alone": [
+    38,
+    25
+  ],
+  "tablet/color/prior?/alone": [
+    44,
+    35
+  ],
+  "tablet/resolution/prior?/alone": [
+    57,
+    37
+  ],
+  "tablet/resolution/description/alone": [
+    7,
+    5
+  ],
+  "tablet/refresh_rate/description+tagger/alone": [
+    42,
+    42
+  ],
+  "tablet/battery/description/alone": [
+    29,
+    29
+  ],
+  "tablet/color/tagger/alone": [
+    2,
+    2
+  ],
+  "tablet/storage/reference?+tagger+title/alone": [
+    21,
+    21
+  ],
+  "tablet/ram/reference?/alone": [
+    58,
+    54
+  ],
+  "tablet/color/reference?+tagger+title/alone": [
+    11,
+    11
+  ],
+  "tablet/resolution/reference?/alone": [
+    53,
+    51
+  ],
+  "tablet/refresh_rate/reference?/alone": [
+    68,
+    68
+  ],
+  "tablet/screen_diagonal/reference?+tagger+title/alone": [
+    19,
+    19
+  ],
+  "tablet/battery/reference?/alone": [
+    36,
+    33
+  ],
+  "tablet/screen_diagonal/description+reference?+tagger/alone": [
+    27,
+    27
+  ],
+  "tablet/storage/description/alone": [
+    12,
+    12
+  ],
+  "tablet/ram/description/alone": [
+    26,
+    24
+  ],
+  "tablet/color/description/alone": [
+    4,
+    2
+  ],
+  "tablet/screen_diagonal/description+title/alone": [
+    2,
+    2
+  ],
+  "tablet/color/reference?/alone": [
+    6,
+    3
+  ],
+  "tablet/color/tagger+title/rival": [
+    12,
+    8
+  ],
+  "tablet/color/title/alone": [
+    3,
+    3
+  ],
+  "tablet/color/description+tagger/alone": [
+    8,
+    8
+  ],
+  "tablet/screen_diagonal/description/alone": [
+    12,
+    12
+  ],
+  "tablet/storage/reference?/alone": [
+    5,
+    2
+  ],
+  "tablet/storage/description+tagger/rival": [
+    3,
+    3
+  ],
+  "tablet/resolution/description+reference?+tagger/alone": [
+    27,
+    27
+  ],
+  "tablet/refresh_rate/description+reference?+tagger/alone": [
+    22,
+    22
+  ],
+  "tablet/refresh_rate/title/alone": [
+    2,
+    2
+  ],
+  "tablet/ram/description/rival": [
+    1,
+    1
+  ],
+  "tablet/screen_diagonal/description+reference?/alone": [
+    4,
+    4
+  ],
+  "tablet/battery/description+reference?+tagger/alone": [
+    15,
+    15
+  ],
+  "tablet/ram/description+reference?/alone": [
+    3,
+    3
+  ],
+  "tablet/screen_diagonal/description+reference?+tagger/rival": [
+    1,
+    1
+  ],
+  "tablet/color/description/rival": [
+    3,
+    1
+  ],
+  "tablet/resolution/description+reference?+tagger/rival": [
+    1,
+    1
+  ],
+  "tablet/resolution/description+tagger/rival": [
+    5,
+    5
+  ],
+  "tablet/color/description+reference?+tagger/rival": [
+    1,
+    1
+  ],
+  "tablet/color/description+reference?/alone": [
+    2,
+    1
+  ],
+  "tablet/brand/tagger+title/alone": [
+    2,
+    2
+  ],
+  "tablet/model/title/alone": [
+    2,
+    2
+  ],
+  "tablet/color/reference?+tagger+title/rival": [
+    2,
+    2
+  ],
+  "tablet/resolution/description+reference?/alone": [
+    1,
+    1
+  ],
+  "tablet/resolution/description/rival": [
+    1,
+    0
+  ],
+  "tablet/screen_diagonal/reference?+tagger/alone": [
+    3,
+    3
+  ],
+  "tablet/screen_diagonal/description/rival": [
+    1,
+    0
+  ],
+  "tablet/storage/description+reference?/alone": [
+    1,
+    1
+  ],
+  "tablet/battery/description+tagger/rival": [
+    1,
+    0
+  ],
+  "tablet/refresh_rate/description+tagger/rival": [
+    2,
+    2
+  ],
+  "tablet/storage/description/rival": [
+    2,
+    2
+  ],
+  "tablet/brand/tagger+title/rival": [
+    1,
+    1
+  ],
+  "tablet/storage/description+reference?/rival": [
+    1,
+    1
+  ],
+  "tablet/screen_diagonal/tagger+title/rival": [
+    1,
+    1
+  ],
+  "tablet/color/reference?+tagger/alone": [
+    1,
+    1
+  ],
+  "tablet/battery/description/rival": [
+    1,
+    1
+  ],
+  "tablet/model/tagger+title/rival": [
+    1,
+    1
+  ],
+  "tablet/color/tagger/rival": [
+    1,
+    0
+  ],
+  "tablet/storage/description+reference?+tagger/alone": [
+    1,
+    1
+  ],
+  "tablet/screen_diagonal/description+tagger/rival": [
+    1,
+    1
+  ],
+  "monitor/brand/title/alone": [
+    185,
+    185
+  ],
+  "monitor/model/tagger+title/alone": [
+    261,
+    261
+  ],
+  "monitor/screen_diagonal/title/alone": [
+    119,
+    104
+  ],
+  "monitor/resolution/prior?/alone": [
+    144,
+    124
+  ],
+  "monitor/refresh_rate/prior?/alone": [
+    175,
+    117
+  ],
+  "monitor/screen_type/prior?/alone": [
+    173,
+    146
+  ],
+  "monitor/color/prior?/alone": [
+    183,
+    176
+  ],
+  "monitor/brand/description+title/alone": [
+    77,
+    77
+  ],
+  "monitor/screen_diagonal/description+title/alone": [
+    59,
+    58
+  ],
+  "monitor/resolution/description+tagger/alone": [
+    58,
+    58
+  ],
+  "monitor/refresh_rate/description+tagger/alone": [
+    57,
+    57
+  ],
+  "monitor/screen_type/description+tagger/alone": [
+    54,
+    54
+  ],
+  "monitor/color/description+tagger/alone": [
+    52,
+    50
+  ],
+  "monitor/power/prior?/alone": [
+    105,
+    20
+  ],
+  "monitor/screen_diagonal/description+tagger/rival": [
+    10,
+    9
+  ],
+  "monitor/resolution/description/alone": [
+    20,
+    20
+  ],
+  "monitor/refresh_rate/description/alone": [
+    11,
+    10
+  ],
+  "monitor/screen_type/description/alone": [
+    22,
+    21
+  ],
+  "monitor/color/description/alone": [
+    16,
+    16
+  ],
+  "monitor/resolution/description+title/alone": [
+    13,
+    13
+  ],
+  "monitor/refresh_rate/description+title/alone": [
+    15,
+    15
+  ],
+  "monitor/screen_type/description+tagger+title/alone": [
+    10,
+    10
+  ],
+  "monitor/color/description+title/alone": [
+    6,
+    6
+  ],
+  "monitor/power/description+tagger/alone": [
+    3,
+    3
+  ],
+  "monitor/screen_diagonal/prior/alone": [
+    60,
+    21
+  ],
+  "monitor/resolution/prior/alone": [
+    30,
+    11
+  ],
+  "monitor/model/tagger/alone": [
+    3,
+    3
+  ],
+  "monitor/color/description+tagger+title/alone": [
+    3,
+    3
+  ],
+  "monitor/screen_diagonal/description+tagger/alone": [
+    7,
+    7
+  ],
+  "monitor/screen_diagonal/description/rival": [
+    1,
+    1
+  ],
+  "monitor/screen_diagonal/description+tagger+title/rival": [
+    7,
+    7
+  ],
+  "monitor/refresh_rate/description+tagger/rival": [
+    4,
+    3
+  ],
+  "monitor/power/description/alone": [
+    8,
+    6
+  ],
+  "monitor/refresh_rate/description/rival": [
+    2,
+    1
+  ],
+  "monitor/screen_diagonal/tagger+title/rival": [
+    2,
+    2
+  ],
+  "monitor/color/tagger+title/alone": [
+    5,
+    4
+  ],
+  "monitor/brand/tagger+title/alone": [
+    7,
+    4
+  ],
+  "monitor/model/title/alone": [
+    7,
+    3
+  ],
+  "monitor/refresh_rate/tagger+title/rival": [
+    1,
+    1
+  ],
+  "monitor/screen_type/tagger+title/rival": [
+    1,
+    1
+  ],
+  "monitor/color/reference?+tagger+title/alone": [
+    1,
+    1
+  ],
+  "monitor/power/reference?/alone": [
+    4,
+    0
+  ],
+  "monitor/resolution/title/alone": [
+    3,
+    3
+  ],
+  "monitor/refresh_rate/reference?+tagger+title/alone": [
+    2,
+    2
+  ],
+  "monitor/brand/tagger+title/rival": [
+    4,
+    3
+  ],
+  "monitor/model/tagger+title/rival": [
+    2,
+    2
+  ],
+  "monitor/screen_diagonal/tagger/rival": [
+    1,
+    1
+  ],
+  "monitor/brand/tagger/rival": [
+    3,
+    3
+  ],
+  "monitor/brand/description+tagger/rival": [
+    1,
+    0
+  ],
+  "monitor/model/tagger/rival": [
+    4,
+    4
+  ],
+  "monitor/screen_diagonal/tagger+title/alone": [
+    1,
+    1
+  ],
+  "monitor/refresh_rate/title/alone": [
+    1,
+    1
+  ],
+  "monitor/refresh_rate/tagger+title/alone": [
+    2,
+    2
+  ],
+  "monitor/screen_type/tagger+title/alone": [
+    3,
+    3
+  ],
+  "monitor/screen_type/tagger/rival": [
+    1,
+    1
+  ],
+  "monitor/screen_type/title/alone": [
+    4,
+    4
+  ],
+  "monitor/screen_diagonal/title/rival": [
+    3,
+    3
+  ],
+  "monitor/screen_type/description+title/alone": [
+    3,
+    3
+  ],
+  "monitor/color/title/alone": [
+    2,
+    2
+  ],
+  "monitor/screen_diagonal/description+title/rival": [
+    1,
+    1
+  ],
+  "monitor/color/prior/alone": [
+    1,
+    0
+  ],
+  "smartphone/brand/description+title/alone": [
+    270,
+    270
+  ],
+  "smartphone/model/tagger+title/alone": [
+    1423,
+    1349
+  ],
+  "smartphone/storage/description+title/alone": [
+    226,
+    226
+  ],
+  "smartphone/ram/description+title/alone": [
+    207,
+    207
+  ],
+  "smartphone/screen_diagonal/description/alone": [
+    5,
+    4
+  ],
+  "smartphone/battery/description/alone": [
+    68,
+    68
+  ],
+  "smartphone/color/description+title/alone": [
+    207,
+    187
+  ],
+  "smartphone/cpu/description+tagger/alone": [
+    96,
+    91
+  ],
+  "smartphone/resolution/description/alone": [
+    8,
+    7
+  ],
+  "smartphone/brand/title/alone": [
+    1187,
+    1186
+  ],
+  "smartphone/storage/description+tagger/alone": [
+    5,
+    4
+  ],
+  "smartphone/ram/description+tagger/alone": [
+    4,
+    4
+  ],
+  "smartphone/battery/description+tagger/alone": [
+    66,
+    66
+  ],
+  "smartphone/resolution/description+tagger/alone": [
+    106,
+    101
+  ],
+  "smartphone/refresh_rate/description/alone": [
+    20,
+    20
+  ],
+  "smartphone/storage/title/alone": [
+    716,
+    715
+  ],
+  "smartphone/ram/title/alone": [
+    698,
+    696
+  ],
+  "smartphone/screen_diagonal/prior?/alone": [
+    461,
+    292
+  ],
+  "smartphone/battery/prior?/alone": [
+    527,
+    263
+  ],
+  "smartphone/color/tagger+title/alone": [
+    820,
+    780
+  ],
+  "smartphone/resolution/prior?/alone": [
+    446,
+    207
+  ],
+  "smartphone/screen_diagonal/description+tagger/alone": [
+    87,
+    87
+  ],
+  "smartphone/cpu/description/alone": [
+    23,
+    23
+  ],
+  "smartphone/cpu/prior?/alone": [
+    352,
+    235
+  ],
+  "smartphone/refresh_rate/prior?/alone": [
+    548,
+    450
+  ],
+  "smartphone/storage/prior?/alone": [
+    44,
+    35
+  ],
+  "smartphone/storage/description+tagger+title/rival": [
+    7,
+    7
+  ],
+  "smartphone/screen_diagonal/reference?/alone": [
+    431,
+    413
+  ],
+  "smartphone/battery/description+reference?/alone": [
+    24,
+    24
+  ],
+  "smartphone/cpu/description+reference?/alone": [
+    15,
+    15
+  ],
+  "smartphone/resolution/description+reference?+tagger/alone": [
+    74,
+    72
+  ],
+  "smartphone/refresh_rate/description+reference?+tagger/alone": [
+    6,
+    6
+  ],
+  "smartphone/color/prior?/alone": [
+    29,
+    18
+  ],
+  "smartphone/resolution/reference?/alone": [
+    413,
+    354
+  ],
+  "smartphone/refresh_rate/reference?/alone": [
+    297,
+    291
+  ],
+  "smartphone/storage/tagger+title/alone": [
+    281,
+    278
+  ],
+  "smartphone/ram/reference?/alone": [
+    38,
+    30
+  ],
+  "smartphone/battery/reference?/alone": [
+    261,
+    200
+  ],
+  "smartphone/cpu/reference?/alone": [
+    264,
+    225
+  ],
+  "smartphone/color/title/alone": [
+    123,
+    63
+  ],
+  "smartphone/storage/reference?+tagger+title/alone": [
+    68,
+    68
+  ],
+  "smartphone/battery/description+tagger/rival": [
+    8,
+    8
+  ],
+  "smartphone/color/description/rival": [
+    7,
+    0
+  ],
+  "smartphone/color/tagger+title/rival": [
+    51,
+    37
+  ],
+  "smartphone/cpu/description+reference?+tagger/alone": [
+    42,
+    38
+  ],
+  "smartphone/color/tagger/rival": [
+    7,
+    3
+  ],
+  "smartphone/refresh_rate/description+tagger/alone": [
+    13,
+    13
+  ],
+  "smartphone/color/reference?+tagger+title/alone": [
+    13,
+    12
+  ],
+  "smartphone/screen_diagonal/description+reference?/alone": [
+    1,
+    1
+  ],
+  "smartphone/battery/description+reference?+tagger/alone": [
+    46,
+    46
+  ],
+  "smartphone/refresh_rate/description+reference?/alone": [
+    15,
+    15
+  ],
+  "smartphone/storage/reference?/alone": [
+    26,
+    19
+  ],
+  "smartphone/model/tagger/alone": [
+    27,
+    23
+  ],
+  "smartphone/screen_diagonal/description+reference?+tagger/alone": [
+    74,
+    72
+  ],
+  "smartphone/ram/prior?/alone": [
+    71,
+    66
+  ],
+  "smartphone/storage/tagger+title/rival": [
+    23,
+    23
+  ],
+  "smartphone/color/description+tagger/rival": [
+    5,
+    0
+  ],
+  "smartphone/color/description+tagger+title/rival": [
+    4,
+    4
+  ],
+  "smartphone/resolution/description+tagger/rival": [
+    22,
+    20
+  ],
+  "smartphone/brand/description+tagger/rival": [
+    1,
+    0
+  ],
+  "smartphone/model/tagger+title/rival": [
+    3,
+    3
+  ],
+  "smartphone/screen_diagonal/description+tagger/rival": [
+    15,
+    11
+  ],
+  "smartphone/cpu/description+tagger/rival": [
+    4,
+    3
+  ],
+  "smartphone/refresh_rate/description+tagger/rival": [
+    1,
+    1
+  ],
+  "smartphone/ram/tagger+title/alone": [
+    6,
+    6
+  ],
+  "smartphone/brand/tagger+title/alone": [
+    8,
+    8
+  ],
+  "smartphone/model/tagger/rival": [
+    15,
+    15
+  ],
+  "smartphone/cpu/title/alone": [
+    1,
+    0
+  ],
+  "smartphone/color/description/alone": [
+    3,
+    1
+  ],
+  "smartphone/storage/description/alone": [
+    1,
+    1
+  ],
+  "smartphone/ram/description/alone": [
+    4,
+    3
+  ],
+  "smartphone/color/description+tagger/alone": [
+    6,
+    6
+  ],
+  "smartphone/battery/description/rival": [
+    4,
+    1
+  ],
+  "smartphone/color/title/rival": [
+    5,
+    0
+  ],
+  "smartphone/color/reference?+title/alone": [
+    3,
+    0
+  ],
+  "smartphone/color/reference?/alone": [
+    6,
+    2
+  ],
+  "smartphone/ram/title/rival": [
+    1,
+    1
+  ],
+  "smartphone/color/description+tagger+title/alone": [
+    1,
+    1
+  ],
+  "smartphone/resolution/description+reference?/alone": [
+    3,
+    3
+  ],
+  "smartphone/storage/description+tagger/rival": [
+    3,
+    2
+  ],
+  "smartphone/ram/description+reference?/alone": [
+    1,
+    1
+  ],
+  "smartphone/storage/tagger/alone": [
+    4,
+    1
+  ],
+  "smartphone/screen_diagonal/description/rival": [
+    2,
+    0
+  ],
+  "smartphone/color/reference?+title/rival": [
+    1,
+    0
+  ],
+  "smartphone/brand/tagger+title/rival": [
+    2,
+    2
+  ],
+  "smartphone/refresh_rate/description/rival": [
+    1,
+    1
+  ],
+  "laptop/brand/description+title/alone": [
+    151,
+    151
+  ],
+  "laptop/model/tagger+title/alone": [
+    452,
+    398
+  ],
+  "laptop/cpu/tagger+title/rival": [
+    8,
+    8
+  ],
+  "laptop/ram/tagger+title/rival": [
+    4,
+    4
+  ],
+  "laptop/storage/title/rival": [
+    3,
+    1
+  ],
+  "laptop/screen_diagonal/tagger+title/rival": [
+    1,
+    1
+  ],
+  "laptop/color/tagger+title/alone": [
+    113,
+    102
+  ],
+  "laptop/brand/title/alone": [
+    353,
+    353
+  ],
+  "laptop/ram/prior/alone": [
+    95,
+    68
+  ],
+  "laptop/storage/prior?/alone": [
+    120,
+    98
+  ],
+  "laptop/screen_diagonal/prior?/alone": [
+    175,
+    162
+  ],
+  "laptop/color/prior?/alone": [
+    179,
+    156
+  ],
+  "laptop/cpu/title/alone": [
+    100,
+    88
+  ],
+  "laptop/ram/title/alone": [
+    165,
+    136
+  ],
+  "laptop/storage/title/alone": [
+    118,
+    118
+  ],
+  "laptop/cpu/description+title/alone": [
+    103,
+    95
+  ],
+  "laptop/ram/tagger/rival": [
+    4,
+    3
+  ],
+  "laptop/storage/description+title/alone": [
+    92,
+    92
+  ],
+  "laptop/screen_diagonal/description+title/alone": [
+    44,
+    44
+  ],
+  "laptop/model/tagger/alone": [
+    51,
+    37
+  ],
+  "laptop/ram/description+tagger+title/rival": [
+    11,
+    10
+  ],
+  "laptop/ram/description+title/alone": [
+    80,
+    80
+  ],
+  "laptop/screen_diagonal/description/rival": [
+    1,
+    0
+  ],
+  "laptop/color/title/alone": [
+    44,
+    41
+  ],
+  "laptop/cpu/reference?+tagger+title/alone": [
+    23,
+    23
+  ],
+  "laptop/screen_diagonal/reference?+tagger/alone": [
+    9,
+    9
+  ],
+  "laptop/color/tagger+title/rival": [
+    12,
+    10
+  ],
+  "laptop/screen_diagonal/reference?/alone": [
+    53,
+    51
+  ],
+  "laptop/screen_diagonal/description+tagger/alone": [
+    60,
+    60
+  ],
+  "laptop/color/description+title/alone": [
+    45,
+    43
+  ],
+  "laptop/screen_diagonal/tagger/alone": [
+    12,
+    12
+  ],
+  "laptop/ram/prior?/alone": [
+    59,
+    45
+  ],
+  "laptop/cpu/prior?/alone": [
+    74,
+    35
+  ],
+  "laptop/cpu/description/alone": [
+    11,
+    11
+  ],
+  "laptop/ram/description/alone": [
+    9,
+    9
+  ],
+  "laptop/storage/description/alone": [
+    11,
+    11
+  ],
+  "laptop/color/description+tagger/alone": [
+    34,
+    34
+  ],
+  "laptop/screen_diagonal/description+tagger+title/alone": [
+    11,
+    11
+  ],
+  "laptop/screen_diagonal/description+tagger+title/rival": [
+    1,
+    1
+  ],
+  "laptop/cpu/tagger+title/alone": [
+    49,
+    47
+  ],
+  "laptop/color/reference?+tagger+title/alone": [
+    8,
+    8
+  ],
+  "laptop/ram/description+tagger/alone": [
+    25,
+    25
+  ],
+  "laptop/color/tagger/alone": [
+    3,
+    3
+  ],
+  "laptop/storage/description+tagger+title/rival": [
+    4,
+    4
+  ],
+  "laptop/screen_diagonal/tagger+title/alone": [
+    7,
+    7
+  ],
+  "laptop/cpu/description+tagger/alone": [
+    28,
+    27
+  ],
+  "laptop/storage/description+tagger/alone": [
+    14,
+    14
+  ],
+  "laptop/screen_diagonal/description/alone": [
+    10,
+    10
+  ],
+  "laptop/ram/description+title/rival": [
+    1,
+    0
+  ],
+  "laptop/storage/prior/alone": [
+    22,
+    13
+  ],
+  "laptop/color/description/alone": [
+    9,
+    6
+  ],
+  "laptop/cpu/reference?/alone": [
+    20,
+    14
+  ],
+  "laptop/ram/reference?/alone": [
+    19,
+    8
+  ],
+  "laptop/storage/reference?/alone": [
+    22,
+    13
+  ],
+  "laptop/color/reference?/alone": [
+    18,
+    16
+  ],
+  "laptop/brand/tagger+title/alone": [
+    7,
+    3
+  ],
+  "laptop/model/title/alone": [
+    8,
+    3
+  ],
+  "laptop/color/description+tagger+title/rival": [
+    1,
+    0
+  ],
+  "laptop/ram/tagger+title/alone": [
+    38,
+    38
+  ],
+  "laptop/storage/tagger+title/alone": [
+    29,
+    29
+  ],
+  "laptop/color/description+reference?+tagger/alone": [
+    3,
+    3
+  ],
+  "laptop/cpu/description+reference?+tagger/alone": [
+    3,
+    3
+  ],
+  "laptop/screen_diagonal/title/rival": [
+    9,
+    8
+  ],
+  "laptop/cpu/reference?+title/alone": [
+    18,
+    18
+  ],
+  "laptop/ram/description+reference?+tagger/rival": [
+    1,
+    1
+  ],
+  "laptop/storage/description+reference?+tagger/alone": [
+    1,
+    1
+  ],
+  "laptop/storage/tagger+title/rival": [
+    3,
+    3
+  ],
+  "laptop/screen_diagonal/description+reference?+title/alone": [
+    1,
+    1
+  ],
+  "laptop/color/tagger/rival": [
+    1,
+    1
+  ],
+  "laptop/screen_diagonal/description+tagger/rival": [
+    3,
+    3
+  ],
+  "laptop/screen_diagonal/reference?+title/alone": [
+    9,
+    8
+  ],
+  "laptop/model/tagger+title/rival": [
+    3,
+    1
+  ],
+  "laptop/color/description+reference?/alone": [
+    2,
+    2
+  ],
+  "laptop/brand/tagger/alone": [
+    3,
+    1
+  ],
+  "laptop/brand/tagger/rival": [
+    4,
+    4
+  ],
+  "laptop/model/tagger/rival": [
+    8,
+    8
+  ],
+  "laptop/ram/description+tagger/rival": [
+    3,
+    3
+  ],
+  "laptop/screen_diagonal/title/alone": [
+    12,
+    3
+  ],
+  "laptop/cpu/description/rival": [
+    1,
+    1
+  ],
+  "laptop/brand/description+tagger/rival": [
+    4,
+    0
+  ],
+  "laptop/screen_diagonal/description+reference?/alone": [
+    2,
+    2
+  ],
+  "laptop/ram/tagger/alone": [
+    3,
+    3
+  ],
+  "laptop/storage/description+title/rival": [
+    3,
+    3
+  ],
+  "laptop/storage/reference?+tagger+title/alone": [
+    1,
+    1
+  ],
+  "laptop/ram/description+reference?+tagger+title/rival": [
+    1,
+    1
+  ],
+  "laptop/color/description+tagger/rival": [
+    2,
+    0
+  ],
+  "laptop/color/description/rival": [
+    2,
+    0
+  ],
+  "laptop/storage/description+reference?/alone": [
+    1,
+    1
+  ],
+  "laptop/brand/description+tagger/alone": [
+    1,
+    1
+  ],
+  "laptop/cpu/description+tagger/rival": [
+    2,
+    2
+  ],
+  "laptop/screen_diagonal/description+reference?+tagger/alone": [
+    1,
+    1
+  ],
+  "vacuum/brand/description+title/alone": [
+    204,
+    204
+  ],
+  "vacuum/model/tagger+title/rival": [
+    18,
+    15
+  ],
+  "vacuum/power/prior?/alone": [
+    238,
+    108
+  ],
+  "vacuum/color/description+title/alone": [
+    26,
+    24
+  ],
+  "vacuum/brand/tagger+title/alone": [
+    12,
+    12
+  ],
+  "vacuum/model/title/alone": [
+    25,
+    23
+  ],
+  "vacuum/color/prior?/alone": [
+    188,
+    93
+  ],
+  "vacuum/battery/prior?/alone": [
+    159,
+    74
+  ],
+  "vacuum/model/tagger+title/alone": [
+    547,
+    536
+  ],
+  "vacuum/color/description+tagger/alone": [
+    33,
+    30
+  ],
+  "vacuum/battery/description+tagger/alone": [
+    81,
+    79
+  ],
+  "vacuum/model/tagger/rival": [
+    7,
+    1
+  ],
+  "vacuum/brand/title/alone": [
+    377,
+    377
+  ],
+  "vacuum/color/tagger+title/alone": [
+    48,
+    44
+  ],
+  "vacuum/power/tagger/alone": [
+    1,
+    1
+  ],
+  "vacuum/color/description/alone": [
+    27,
+    14
+  ],
+  "vacuum/power/description+tagger/alone": [
+    22,
+    21
+  ],
+  "vacuum/color/title/alone": [
+    33,
+    21
+  ],
+  "vacuum/power/description/alone": [
+    23,
+    18
+  ],
+  "vacuum/brand/tagger/rival": [
+    3,
+    2
+  ],
+  "vacuum/battery/description/alone": [
+    13,
+    13
+  ],
+  "vacuum/brand/tagger/alone": [
+    11,
+    8
+  ],
+  "vacuum/brand/description+tagger/alone": [
+    14,
+    14
+  ],
+  "vacuum/power/description+title/alone": [
+    1,
+    1
+  ],
+  "vacuum/power/description+tagger+title/alone": [
+    2,
+    2
+  ],
+  "vacuum/model/tagger/alone": [
+    20,
+    19
+  ],
+  "vacuum/power/description+tagger/rival": [
+    2,
+    1
+  ],
+  "vacuum/power/reference?/alone": [
+    6,
+    2
+  ],
+  "vacuum/color/reference?+tagger+title/alone": [
+    2,
+    2
+  ],
+  "vacuum/color/reference?/alone": [
+    16,
+    8
+  ],
+  "vacuum/battery/description+reference?+tagger/alone": [
+    2,
+    2
+  ],
+  "vacuum/color/tagger/rival": [
+    1,
+    0
+  ],
+  "vacuum/color/tagger+title/rival": [
+    8,
+    6
+  ],
+  "vacuum/battery/reference?/alone": [
+    6,
+    5
+  ],
+  "vacuum/color/title/rival": [
+    1,
+    1
+  ],
+  "vacuum/brand/tagger+title/rival": [
+    5,
+    5
+  ],
+  "vacuum/color/description+tagger/rival": [
+    2,
+    2
+  ],
+  "vacuum/power/reference?+title/alone": [
+    1,
+    1
+  ],
+  "vacuum/color/description+tagger+title/rival": [
+    2,
+    2
+  ],
+  "smartwatch/brand/title/alone": [
+    277,
+    276
+  ],
+  "smartwatch/model/tagger+title/alone": [
+    303,
+    282
+  ],
+  "smartwatch/battery/reference?/alone": [
+    43,
+    36
+  ],
+  "smartwatch/brand/description+title/alone": [
+    87,
+    87
+  ],
+  "smartwatch/screen_diagonal/description/alone": [
+    3,
+    3
+  ],
+  "smartwatch/battery/description+reference?+tagger/alone": [
+    4,
+    4
+  ],
+  "smartwatch/color/description+tagger+title/rival": [
+    4,
+    4
+  ],
+  "smartwatch/battery/prior?/alone": [
+    121,
+    47
+  ],
+  "smartwatch/color/tagger+title/alone": [
+    89,
+    84
+  ],
+  "smartwatch/color/tagger+title/rival": [
+    38,
+    27
+  ],
+  "smartwatch/color/description+title/alone": [
+    27,
+    27
+  ],
+  "smartwatch/model/tagger+title/rival": [
+    8,
+    6
+  ],
+  "smartwatch/color/title/alone": [
+    31,
+    26
+  ],
+  "smartwatch/color/prior?/alone": [
+    56,
+    46
+  ],
+  "smartwatch/color/title/rival": [
+    11,
+    10
+  ],
+  "smartwatch/screen_diagonal/prior?/alone": [
+    69,
+    46
+  ],
+  "smartwatch/model/title/alone": [
+    57,
+    57
+  ],
+  "smartwatch/battery/description/alone": [
+    8,
+    8
+  ],
+  "smartwatch/color/description/rival": [
+    2,
+    0
+  ],
+  "smartwatch/screen_diagonal/description+reference?+tagger/alone": [
+    9,
+    9
+  ],
+  "smartwatch/battery/description+reference?/alone": [
+    3,
+    3
+  ],
+  "smartwatch/color/reference?+tagger+title/alone": [
+    8,
+    8
+  ],
+  "smartwatch/color/reference?/alone": [
+    18,
+    4
+  ],
+  "smartwatch/screen_diagonal/description+tagger/alone": [
+    28,
+    27
+  ],
+  "smartwatch/color/tagger/alone": [
+    2,
+    2
+  ],
+  "smartwatch/battery/description+tagger/alone": [
+    25,
+    25
+  ],
+  "smartwatch/color/description+tagger/alone": [
+    14,
+    13
+  ],
+  "smartwatch/screen_diagonal/reference?/alone": [
+    43,
+    33
+  ],
+  "smartwatch/color/description/alone": [
+    7,
+    3
+  ],
+  "smartwatch/brand/tagger+title/rival": [
+    3,
+    3
+  ],
+  "smartwatch/color/tagger/rival": [
+    1,
+    1
+  ],
+  "smartwatch/color/description+tagger/rival": [
+    1,
+    0
+  ],
+  "smartwatch/color/reference?+title/alone": [
+    1,
+    1
+  ],
+  "smartwatch/brand/tagger+title/alone": [
+    2,
+    2
+  ],
+  "smartwatch/brand/description/alone": [
+    1,
+    1
+  ],
+  "smartwatch/model/tagger/alone": [
+    1,
+    1
+  ],
+  "headphones/brand/description+title/alone": [
+    197,
+    197
+  ],
+  "headphones/model/tagger+title/alone": [
+    465,
+    442
+  ],
+  "headphones/connection/prior?/alone": [
+    68,
+    59
+  ],
+  "headphones/color/description+title/alone": [
+    126,
+    124
+  ],
+  "headphones/brand/title/alone": [
+    289,
+    288
+  ],
+  "headphones/color/tagger+title/alone": [
+    179,
+    170
+  ],
+  "headphones/connection/description/alone": [
+    21,
+    16
+  ],
+  "headphones/connection/description+tagger/alone": [
+    8,
+    8
+  ],
+  "headphones/brand/tagger+title/alone": [
+    21,
+    18
+  ],
+  "headphones/model/title/alone": [
+    26,
+    25
+  ],
+  "headphones/connection/tagger+title/alone": [
+    62,
+    58
+  ],
+  "headphones/color/prior?/alone": [
+    57,
+    33
+  ],
+  "headphones/color/reference?+tagger+title/alone": [
+    14,
+    14
+  ],
+  "headphones/color/tagger+title/rival": [
+    27,
+    25
+  ],
+  "headphones/connection/title/alone": [
+    27,
+    17
+  ],
+  "headphones/connection/description+title/alone": [
+    31,
+    14
+  ],
+  "headphones/connection/description+tagger+title/alone": [
+    34,
+    32
+  ],
+  "headphones/color/title/alone": [
+    9,
+    8
+  ],
+  "headphones/connection/reference?+tagger+title/alone": [
+    13,
+    13
+  ],
+  "headphones/model/tagger/alone": [
+    16,
+    16
+  ],
+  "headphones/color/description/alone": [
+    10,
+    7
+  ],
+  "headphones/color/description+tagger/alone": [
+    16,
+    16
+  ],
+  "headphones/brand/tagger+title/rival": [
+    11,
+    11
+  ],
+  "headphones/brand/description+tagger+title/alone": [
+    1,
+    1
+  ],
+  "headphones/connection/description+reference?+title/alone": [
+    10,
+    10
+  ],
+  "headphones/model/tagger+title/rival": [
+    12,
+    10
+  ],
+  "headphones/model/tagger/rival": [
+    3,
+    3
+  ],
+  "headphones/color/title/rival": [
+    1,
+    0
+  ],
+  "headphones/color/tagger/rival": [
+    3,
+    2
+  ],
+  "headphones/connection/title/rival": [
+    3,
+    1
+  ],
+  "headphones/color/reference?/alone": [
+    12,
+    9
+  ],
+  "headphones/brand/tagger/alone": [
+    3,
+    3
+  ],
+  "headphones/connection/reference?/alone": [
+    2,
+    2
+  ],
+  "headphones/color/description+tagger/rival": [
+    2,
+    1
+  ],
+  "headphones/color/description+reference?+tagger/alone": [
+    2,
+    2
+  ],
+  "headphones/brand/tagger/rival": [
+    3,
+    0
+  ],
+  "headphones/connection/reference?+title/alone": [
+    2,
+    1
+  ],
+  "washing_machine/brand/title/alone": [
+    231,
+    231
+  ],
+  "washing_machine/model/tagger+title/alone": [
+    327,
+    326
+  ],
+  "washing_machine/load/prior?/alone": [
+    187,
+    127
+  ],
+  "washing_machine/spin_speed/prior?/alone": [
+    222,
+    181
+  ],
+  "washing_machine/color/prior?/alone": [
+    214,
+    165
+  ],
+  "washing_machine/power/prior?/alone": [
+    238,
+    153
+  ],
+  "washing_machine/brand/description+title/alone": [
+    100,
+    100
+  ],
+  "washing_machine/load/description/rival": [
+    2,
+    2
+  ],
+  "washing_machine/spin_speed/description+tagger/alone": [
+    87,
+    87
+  ],
+  "washing_machine/color/description+tagger/alone": [
+    38,
+    35
+  ],
+  "washing_machine/power/description+tagger/alone": [
+    25,
+    24
+  ],
+  "washing_machine/load/description+tagger/rival": [
+    14,
+    12
+  ],
+  "washing_machine/load/description+tagger/alone": [
+    100,
+    97
+  ],
+  "washing_machine/color/description/alone": [
+    12,
+    11
+  ],
+  "washing_machine/load/description/alone": [
+    6,
+    5
+  ],
+  "washing_machine/spin_speed/description/rival": [
+    3,
+    2
+  ],
+  "washing_machine/power/description/alone": [
+    7,
+    6
+  ],
+  "washing_machine/model/tagger+title/rival": [
+    3,
+    3
+  ],
+  "washing_machine/color/prior/alone": [
+    19,
+    7
+  ],
+  "washing_machine/color/description+title/alone": [
+    14,
+    14
+  ],
+  "washing_machine/load/reference?/alone": [
+    15,
+    15
+  ],
+  "washing_machine/spin_speed/reference?/alone": [
+    16,
+    15
+  ],
+  "washing_machine/color/reference?/alone": [
+    17,
+    17
+  ],
+  "washing_machine/power/reference?/alone": [
+    18,
+    13
+  ],
+  "washing_machine/load/description+reference?+tagger/alone": [
+    8,
+    8
+  ],
+  "washing_machine/spin_speed/description+reference?+tagger/rival": [
+    1,
+    1
+  ],
+  "washing_machine/color/description+reference?+tagger/alone": [
+    4,
+    4
+  ],
+  "washing_machine/color/tagger+title/alone": [
+    13,
+    13
+  ],
+  "washing_machine/power/description+reference?/alone": [
+    1,
+    1
+  ],
+  "washing_machine/spin_speed/description/alone": [
+    4,
+    4
+  ],
+  "washing_machine/brand/tagger+title/rival": [
+    4,
+    4
+  ],
+  "washing_machine/spin_speed/description+tagger/rival": [
+    1,
+    1
+  ],
+  "washing_machine/power/description+title/rival": [
+    1,
+    0
+  ],
+  "washing_machine/color/tagger+title/rival": [
+    1,
+    1
+  ],
+  "washing_machine/model/title/alone": [
+    3,
+    2
+  ],
+  "washing_machine/load/tagger/alone": [
+    1,
+    0
+  ],
+  "washing_machine/power/description+tagger/rival": [
+    2,
+    2
+  ],
+  "washing_machine/power/title/alone": [
+    2,
+    0
+  ],
+  "washing_machine/power/description/rival": [
+    1,
+    0
+  ],
+  "washing_machine/model/tagger/rival": [
+    1,
+    1
+  ],
+  "washing_machine/load/description+title/alone": [
+    1,
+    1
+  ],
+  "washing_machine/model/tagger/alone": [
+    1,
+    1
+  ],
+  "washing_machine/power/description+title/alone": [
+    1,
+    0
+  ],
+  "washing_machine/power/description+reference?+tagger/alone": [
+    1,
+    1
+  ],
+  "washing_machine/color/description+tagger/rival": [
+    1,
+    1
+  ],
+  "tv/brand/title/alone": [
+    445,
+    444
+  ],
+  "tv/model/tagger+title/alone": [
+    582,
+    567
+  ],
+  "tv/screen_diagonal/title/alone": [
+    370,
+    355
+  ],
+  "tv/resolution/prior?/alone": [
+    291,
+    277
+  ],
+  "tv/color/prior?/alone": [
+    369,
+    354
+  ],
+  "tv/refresh_rate/prior?/alone": [
+    440,
+    404
+  ],
+  "tv/screen_type/prior?/alone": [
+    336,
+    262
+  ],
+  "tv/power/prior?/alone": [
+    397,
+    170
+  ],
+  "tv/color/prior/alone": [
+    24,
+    14
+  ],
+  "tv/brand/description+title/alone": [
+    137,
+    137
+  ],
+  "tv/screen_diagonal/description+title/alone": [
+    156,
+    154
+  ],
+  "tv/brand/tagger+title/rival": [
+    29,
+    29
+  ],
+  "tv/resolution/description+tagger/alone": [
+    159,
+    151
+  ],
+  "tv/refresh_rate/description+tagger/alone": [
+    105,
+    99
+  ],
+  "tv/color/description+tagger/alone": [
+    91,
+    84
+  ],
+  "tv/screen_type/description+tagger/alone": [
+    20,
+    19
+  ],
+  "tv/resolution/description/alone": [
+    40,
+    38
+  ],
+  "tv/power/description+tagger/alone": [
+    20,
+    17
+  ],
+  "tv/screen_type/tagger/alone": [
+    19,
+    19
+  ],
+  "tv/resolution/prior/alone": [
+    8,
+    1
+  ],
+  "tv/color/description/alone": [
+    16,
+    15
+  ],
+  "tv/power/description/alone": [
+    28,
+    14
+  ],
+  "tv/screen_diagonal/tagger+title/alone": [
+    7,
+    7
+  ],
+  "tv/screen_diagonal/reference?+tagger+title/alone": [
+    2,
+    2
+  ],
+  "tv/resolution/reference?/alone": [
+    3,
+    3
+  ],
+  "tv/color/reference?/alone": [
+    18,
+    18
+  ],
+  "tv/refresh_rate/reference?/alone": [
+    19,
+    19
+  ],
+  "tv/screen_type/reference?/alone": [
+    13,
+    13
+  ],
+  "tv/power/reference?/alone": [
+    14,
+    6
+  ],
+  "tv/model/tagger/alone": [
+    23,
+    21
+  ],
+  "tv/screen_type/description/alone": [
+    12,
+    4
+  ],
+  "tv/refresh_rate/description/alone": [
+    14,
+    9
+  ],
+  "tv/model/tagger+title/rival": [
+    4,
+    4
+  ],
+  "tv/screen_diagonal/title/rival": [
+    10,
+    10
+  ],
+  "tv/power/description+tagger/rival": [
+    3,
+    2
+  ],
+  "tv/screen_diagonal/description+tagger/rival": [
+    2,
+    0
+  ],
+  "tv/resolution/tagger+title/alone": [
+    1,
+    1
+  ],
+  "tv/resolution/reference?+tagger+title/alone": [
+    10,
+    10
+  ],
+  "tv/screen_diagonal/description+tagger/alone": [
+    9,
+    8
+  ],
+  "tv/screen_diagonal/prior?/alone": [
+    14,
+    10
+  ],
+  "tv/screen_diagonal/description/alone": [
+    2,
+    2
+  ],
+  "tv/screen_type/title/alone": [
+    6,
+    6
+  ],
+  "tv/screen_diagonal/description+reference?+tagger/alone": [
+    3,
+    3
+  ],
+  "tv/resolution/description+reference?+tagger/alone": [
+    2,
+    2
+  ],
+  "tv/color/description+reference?+tagger/alone": [
+    1,
+    1
+  ],
+  "tv/refresh_rate/description+reference?+tagger/alone": [
+    2,
+    2
+  ],
+  "tv/power/description+reference?/alone": [
+    1,
+    1
+  ],
+  "tv/screen_diagonal/reference?+title/alone": [
+    2,
+    2
+  ],
+  "tv/refresh_rate/prior/alone": [
+    1,
+    0
+  ],
+  "tv/screen_type/description+tagger+title/alone": [
+    1,
+    1
+  ],
+  "tv/screen_diagonal/reference?/alone": [
+    2,
+    2
+  ],
+  "tv/resolution/description+reference?/alone": [
+    2,
+    2
+  ],
+  "tv/resolution/description+tagger+title/alone": [
+    1,
+    1
+  ],
+  "tv/refresh_rate/description+reference?/alone": [
+    1,
+    1
+  ],
+  "tv/screen_type/title/rival": [
+    1,
+    0
+  ],
+  "tv/brand/tagger+title/alone": [
+    2,
+    2
+  ],
+  "tv/model/title/alone": [
+    2,
+    2
+  ],
+  "tv/screen_diagonal/tagger+title/rival": [
+    2,
+    2
+  ],
+  "tv/screen_type/reference?+title/alone": [
+    2,
+    2
+  ],
+  "tv/power/description/rival": [
+    2,
+    0
+  ],
+  "tv/model/tagger/rival": [
+    1,
+    0
+  ],
+  "tv/refresh_rate/description/rival": [
+    1,
+    1
+  ],
+  "tv/resolution/description+title/alone": [
+    1,
+    1
+  ],
+  "tv/screen_type/reference?+tagger/alone": [
+    1,
+    1
+  ]
+}
