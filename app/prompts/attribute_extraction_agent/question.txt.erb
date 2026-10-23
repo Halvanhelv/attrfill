@@ -1,0 +1,9 @@
+Category: <%= category.label %>
+
+Card:
+Title: <%= card.title %>
+Description: <%= card.description.presence&.truncate(description_limit) || "none" %>
+Seller attributes: <%= card.seller_text.presence || "none" %>
+
+Requested attributes:
+<%= attributes.map { |attribute| "- #{attribute.name} (#{attribute.label})#{": #{hints[attribute.name]}" if hints[attribute.name]}" }.join("\n") %>
