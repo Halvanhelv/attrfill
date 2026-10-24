@@ -1,0 +1,147 @@
+Power Delivery: []
+Powerdelivery 1.0, Power Delivery: []
+Powerdelivery 1.0, Powerdelivery 2.0, Powerdelivery 3.0: []
+Powerdelivery 1.0, Powerdelivery 2.0, Powerdelivery 3.0, Quick Charge 1.0, Quick Charge 2.0, Quick Charge 3.0: []
+? Powerdelivery 1.0, Powerdelivery 2.0, Powerdelivery 3.0, Quick Charge 1.0, Quick
+  Charge 2.0, Quick Charge 3.0, QC / PD 22,5W
+: []
+? Powerdelivery 1.0, Powerdelivery 2.0, Powerdelivery 3.0, Quick Charge 1.0, Quick
+  Charge 2.0, Quick Charge 3.0, Quick Charge 3.0/Power Delivery 3.0
+: []
+? Powerdelivery 1.0, Powerdelivery 2.0, Powerdelivery 3.0, Quick Charge 1.0, Quick
+  Charge 2.0, Quick Charge 3.0, SuperCharge 1.0, PD 30Ватт
+: []
+? Powerdelivery 1.0, Powerdelivery 2.0, Powerdelivery 3.0, Quick Charge 1.0, Quick
+  Charge 2.0, Quick Charge 3.0, SuperCharge 1.0, SuperCharge 2.0, SuperCharge 3.0
+: []
+? Powerdelivery 1.0, Powerdelivery 2.0, Powerdelivery 3.0, Quick Charge 1.0, Quick
+  Charge 2.0, Quick Charge 3.0, SuperCharge 1.0, SuperCharge 2.0, SuperCharge 3.0,
+  Power Delivery, Quick Charge 3.0
+: []
+? Powerdelivery 1.0, Powerdelivery 2.0, Powerdelivery 3.0, Quick Charge 1.0, Quick
+  Charge 2.0, Quick Charge 3.0, SuperCharge 1.0, SuperCharge 2.0, SuperCharge 3.0,
+  Да
+: []
+? Powerdelivery 1.0, Powerdelivery 2.0, Powerdelivery 3.0, Quick Charge 1.0, Quick
+  Charge 2.0, Quick Charge 3.0, SuperCharge 1.0, SuperCharge 2.0, SuperCharge 3.0,
+  да
+: []
+? Powerdelivery 1.0, Powerdelivery 2.0, Powerdelivery 3.0, Quick Charge 1.0, Quick
+  Charge 2.0, Quick Charge 3.0, SuperCharge 1.0, SuperCharge 2.0, да
+: []
+? Powerdelivery 1.0, Powerdelivery 2.0, Powerdelivery 3.0, Quick Charge 1.0, Quick
+  Charge 2.0, Quick Charge 3.0, SuperCharge 1.0, Да
+: []
+? Powerdelivery 1.0, Powerdelivery 2.0, Powerdelivery 3.0, Quick Charge 1.0, Quick
+  Charge 2.0, Quick Charge 3.0, SuperCharge 1.0, Поддержка режима быстрой зарядки
+  SCP 22.5W
+: []
+? Powerdelivery 1.0, Powerdelivery 2.0, Powerdelivery 3.0, Quick Charge 1.0, Quick
+  Charge 2.0, Quick Charge 3.0, SuperCharge 1.0, Поддержка режима быстрой зарядки
+  SCP 22.5W, Quick Charge (QC 3.0) и Power Delivery 20W (PD) и других популярных протоколов
+: []
+? Powerdelivery 1.0, Powerdelivery 2.0, Powerdelivery 3.0, Quick Charge 1.0, Quick
+  Charge 2.0, Quick Charge 3.0, SuperCharge 1.0, да
+: []
+? Powerdelivery 1.0, Powerdelivery 2.0, Powerdelivery 3.0, Quick Charge 1.0, Quick
+  Charge 2.0, Quick Charge 3.0, Устройство поддерживает стандарты быстрой зарядки
+  Quick Charge и Power Delivery
+: []
+Powerdelivery 1.0, Powerdelivery 2.0, Powerdelivery 3.0, Quick Charge 1.0, Quick Charge 2.0, Quick Charge 3.0, да: []
+Powerdelivery 1.0, Powerdelivery 2.0, Powerdelivery 3.0, Quick Charge 1.0, Quick Charge 2.0, Да: []
+Powerdelivery 1.0, Powerdelivery 2.0, Quick Charge 1.0, Quick Charge 2.0: []
+? Powerdelivery 1.0, Powerdelivery 2.0, Quick Charge 1.0, Quick Charge 2.0, Quick
+  Charge 3.0, Quick Charge 3.0/Power Delivery 2.0
+: []
+? Powerdelivery 1.0, Powerdelivery 2.0, Quick Charge 1.0, Quick Charge 2.0, Quick
+  Charge 3.0, Quick Charge 3.0/Power Delivery 2.2
+: []
+Powerdelivery 1.0, Powerdelivery 2.0, Quick Charge 1.0, Quick Charge 2.0, SuperCharge 1.0, SuperCharge 2.0, Да: []
+Powerdelivery 1.0, Powerdelivery 2.0, Quick Charge 2.0, Quick Charge 3.0, SuperCharge 2.0, да: []
+Powerdelivery 1.0, Powerdelivery 2.0, Quick Charge 2.0, SuperCharge 2.0, да: []
+Powerdelivery 1.0, Powerdelivery 2.0, Quick Charge 2.0, да: []
+Powerdelivery 1.0, Powerdelivery 2.0, Quick Charge 3.0, Qualcomm Quick Charge 2.0/3.0: []
+Powerdelivery 1.0, Powerdelivery 3.0, Quick Charge 1.0, Quick Charge 2.0, Quick Charge 3.0, QC3.0, PD 22.5W: []
+Powerdelivery 1.0, Powerdelivery 3.0, Quick Charge 3.0, Power Delivery: []
+Powerdelivery 1.0, Quick Charge 1.0: []
+Powerdelivery 1.0, Quick Charge 1.0, Quick Charge 3.0: []
+Powerdelivery 1.0, Quick Charge 1.0, Quick Charge/Power Delivery: []
+Powerdelivery 1.0, Quick Charge 1.0, SuperCharge 1.0: []
+Powerdelivery 1.0, Quick Charge 3.0: []
+Powerdelivery 1.0, Quick Charge 3.0, да: []
+? Powerdelivery 2.0, Powerdelivery 3.0, Quick Charge 1.0, Quick Charge 2.0, Quick
+  Charge 3.0, Power Delivery и Qualcomm Quick Charge 3.0,
+: []
+? Powerdelivery 2.0, Powerdelivery 3.0, Quick Charge 1.0, Quick Charge 2.0, Quick
+  Charge 3.0, SuperCharge 2.0, Power Delivery, Quick Charge 3.0, Quick Charge 2.0,
+  Battery Charging 1.2, Fast Charge Protocol, Adaptive Fast Charging, Super Fast Charge
+: []
+Powerdelivery 2.0, Powerdelivery 3.0, Quick Charge 2.0, Quick Charge 3.0: []
+Powerdelivery 2.0, Powerdelivery 3.0, Quick Charge 2.0, Quick Charge 3.0, SuperCharge 1.0: []
+Powerdelivery 2.0, Powerdelivery 3.0, Quick Charge 3.0: []
+? Powerdelivery 2.0, Powerdelivery 3.0, Quick Charge 3.0, SuperCharge 2.0, Quick Charge
+  3.0, Power Delivery, Huawei SuperCharge
+: []
+Powerdelivery 3.0, Quick Charge 3.0: []
+Powerdelivery 3.0, Quick Charge 3.0, Power Delivery: []
+Powerdelivery 3.0, Quick Charge 3.0, Power Delivery, Quick Charge 3.0: []
+Powerdelivery 3.0, Quick Charge 3.0, QC 3.0, Power Delivery: []
+Powerdelivery 3.0, Quick Charge 3.0, Quick Charge 3.0, Power Delivery: []
+Powerdelivery 3.0, Quick Charge 3.0, SuperCharge 1.0: []
+Powerdelivery 3.0, Quick Charge 3.0, Да: []
+Quick Charge 1.0: []
+Quick Charge 1.0, Quick Charge 2.0: []
+Quick Charge 1.0, Quick Charge 2.0, Quick Charge 3.0, да: []
+Quick Charge 1.0, Quick Charge 3.0, Quick Charge 3.0: []
+Quick Charge 2.0, Quick Charge 3.0: []
+Quick Charge 3.0: []
+Quick Charge 3.0, Power Delivery: []
+Quick Charge 3.0, Quick Charge 3.0: []
+да: []
+поддержка Powerdelivery 1.0: []
+поддержка Powerdelivery 1.0, поддержка Powerdelivery 2.0, поддержка Powerdelivery 3.0: []
+? поддержка Powerdelivery 1.0, поддержка Powerdelivery 2.0, поддержка Powerdelivery
+  3.0, поддержка QI, поддержка Quick Charge 1.0, поддержка Quick Charge 2.0, поддержка
+  Quick Charge 3.0, поддержка SuperCharge 1.0, поддержка SuperCharge 2.0, поддержка
+  SuperCharge 3.0
+: []
+? поддержка Powerdelivery 1.0, поддержка Powerdelivery 2.0, поддержка Powerdelivery
+  3.0, поддержка Quick Charge 1.0, поддержка Quick Charge 2.0, поддержка Quick Charge
+  3.0
+: []
+? поддержка Powerdelivery 1.0, поддержка Powerdelivery 2.0, поддержка Powerdelivery
+  3.0, поддержка Quick Charge 1.0, поддержка Quick Charge 2.0, поддержка Quick Charge
+  3.0, поддержка SuperCharge 1.0
+: []
+? поддержка Powerdelivery 1.0, поддержка Powerdelivery 2.0, поддержка Powerdelivery
+  3.0, поддержка Quick Charge 1.0, поддержка Quick Charge 2.0, поддержка Quick Charge
+  3.0, поддержка SuperCharge 1.0, поддержка SuperCharge 2.0, поддержка SuperCharge
+  3.0
+: []
+поддержка Powerdelivery 1.0, поддержка Powerdelivery 2.0, поддержка Powerdelivery 3.0, поддержка Quick Charge 3.0: []
+поддержка Powerdelivery 1.0, поддержка Quick Charge 1.0: []
+поддержка Powerdelivery 1.0, поддержка Quick Charge 3.0: []
+поддержка Powerdelivery 2.0: []
+поддержка Powerdelivery 2.0, поддержка Powerdelivery 3.0, поддержка Quick Charge 2.0, поддержка Quick Charge 3.0: []
+поддержка Powerdelivery 2.0, поддержка Powerdelivery 3.0, поддержка SuperCharge 2.0: []
+поддержка Powerdelivery 2.0, поддержка SuperCharge 2.0: []
+поддержка Powerdelivery 3.0: []
+поддержка Powerdelivery 3.0, поддержка QI, поддержка Quick Charge 3.0: []
+поддержка Powerdelivery 3.0, поддержка Quick Charge 1.0, поддержка Quick Charge 2.0, поддержка Quick Charge 3.0: []
+поддержка Powerdelivery 3.0, поддержка Quick Charge 2.0, поддержка Quick Charge 3.0: []
+поддержка Powerdelivery 3.0, поддержка Quick Charge 2.0, поддержка Quick Charge 3.0, поддержка SuperCharge 1.0: []
+поддержка Powerdelivery 3.0, поддержка Quick Charge 3.0: []
+поддержка Powerdelivery 3.0, поддержка Quick Charge 3.0, поддержка SuperCharge 2.0: []
+поддержка Powerdelivery 3.0, поддержка SuperCharge 2.0: []
+? поддержка QI, поддержка Quick Charge 1.0, поддержка Quick Charge 2.0, поддержка
+  Quick Charge 3.0, поддержка SuperCharge 1.0, поддержка SuperCharge 2.0, поддержка
+  SuperCharge 3.0
+: []
+поддержка QI, поддержка SuperCharge 2.0: []
+поддержка Quick Charge 1.0: []
+поддержка Quick Charge 1.0, поддержка Quick Charge 2.0, поддержка Quick Charge 3.0: []
+поддержка Quick Charge 1.0, поддержка Quick Charge 3.0: []
+поддержка Quick Charge 2.0: []
+поддержка Quick Charge 3.0: []
+поддержка SuperCharge 2.0: []
+поддержка SuperCharge 3.0: []
