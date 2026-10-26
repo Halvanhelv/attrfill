@@ -1,0 +1,11 @@
+<%# locals: (id:, labels: false) %>
+<%# Dark (the default) / light / system. Kept across Turbo visits and morph refreshes (data-turbo-permanent), so its ARIA state survives. %>
+<div id="<%= id %>" class="theme-switch" role="group" aria-label="Theme" data-turbo-permanent
+     data-controller="theme" data-action="turbo:render@document->theme#sync theme:change@document->theme#sync">
+  <% [ [ "dark", "moon", "Dark" ], [ "light", "sun", "Light" ], [ "system", "monitor", "System" ] ].each do |choice, icon_name, label| %>
+    <button type="button" data-choice="<%= choice %>" data-action="theme#choose" data-theme-choice-param="<%= choice %>"
+            aria-pressed="<%= choice == "dark" %>" title="<%= label %>" class="<%= "w-auto! grid-flow-col gap-1.5 px-2.5 text-xs font-medium whitespace-nowrap" if labels %>">
+      <%= icon icon_name, size: 16 %><span class="<%= "sr-only" unless labels %>"><%= label %></span>
+    </button>
+  <% end %>
+</div>

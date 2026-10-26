@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title><%= safe_join([ content_for(:title), "Product attribute filling" ].compact, " · ") %></title>
+    <%# viewport-fit=cover: the page reaches under the notch; the header and main keep clear of it with safe-area padding. %>
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="<%= content_for(:description) || "Automatic filling of product attributes: brand, model, storage, color, with a confidence score and manual review of disputed values." %>">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1c1c21" media="(prefers-color-scheme: dark)">
+    <%# Model codes and article numbers are not phone numbers: iOS must not turn them into links. %>
+    <meta name="format-detection" content="telephone=no, date=no, email=no, address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Attrfill">
+    <meta name="application-name" content="Attrfill">
+    <meta name="mobile-web-app-capable" content="yes">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%# The theme goes on <html> before the first paint, so the other one never flashes. Dark unless the person chose
+        otherwise; "system" leaves data-theme off and the CSS follows the system. No script at all: the CSS follows the system. %>
+    <%= javascript_tag nonce: true do %>
+      var theme = "dark";
+      try { theme = localStorage.getItem("theme") || "dark"; } catch (error) {}
+      if (theme === "light" || theme === "dark") {
+        document.documentElement.dataset.theme = theme;
+        document.querySelectorAll('meta[name="theme-color"]').forEach(function (meta) { meta.content = theme === "dark" ? "#1c1c21" : "#ffffff"; });
+      }
+    <% end %>
+
+    <%= yield :head %>
+
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.webmanifest">
+
+    <%# Onest: a free face close to the Acme Retail one; without the network the system font is used.
+        Added once by a script, so it never blocks the first paint and Turbo does not re-insert it on every visit
+        (a media="print" onload trick changes the tag, and Turbo then sees a new stylesheet each time). %>
+    <% fonts = "https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap" %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <%= javascript_tag nonce: true do %>
+      if (!document.getElementById("font-onest")) {
+        var font = document.createElement("link");
+        font.id = "font-onest"; font.rel = "stylesheet"; font.href = <%== fonts.to_json %>;
+        document.head.appendChild(font);
+      }
+    <% end %>
+    <noscript><link rel="stylesheet" href="<%= fonts %>"></noscript>
+
+    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body class="flex min-h-dvh flex-col">
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 btn btn-dark">Skip to content</a>
+
+    <header class="sticky top-0 z-30 border-b border-line/70 bg-panel/90 backdrop-blur">
+      <div class="mx-auto flex max-w-7xl items-center gap-2 py-3 sm:gap-3 pr-[max(1rem,env(safe-area-inset-right))] pl-[max(1rem,env(safe-area-inset-left))] sm:gap-8 sm:pr-[max(1.5rem,env(safe-area-inset-right))] sm:pl-[max(1.5rem,env(safe-area-inset-left))]">
+        <%= link_to root_path, class: "flex shrink-0 items-center gap-2.5", "aria-label": "Attrfill, home page" do %>
+          <span class="grid size-9 place-items-center rounded-xl bg-brand-600 text-white"><%= icon "tag", size: 18 %></span>
+          <span class="hidden leading-tight lg:block">
+            <span class="block text-md font-bold">Attrfill</span>
+            <span class="block text-xs text-muted">product attributes</span>
+          </span>
+        <% end %>
+
+        <nav aria-label="Sections" class="no-scrollbar -mx-1 flex min-w-0 flex-1 gap-1 overflow-x-auto px-1 py-1.5 sm:gap-1.5 sm:py-1">
+          <%= nav_link "Card", root_path, "sparkles" %>
+          <%= nav_link "Files", batches_path, "file" %>
+          <%= nav_link "Review", reviews_path, "check-circle", count: AttributeValue.waiting.count %>
+          <%= nav_link "Metrics", metrics_path, "chart" %>
+        </nav>
+
+        <div class="hidden shrink-0 lg:block"><%= render "shared/theme_switch", id: "theme-switch-header" %></div>
+      </div>
+    </header>
+
+    <% if alert || notice %>
+      <div class="pointer-events-none fixed inset-x-0 top-20 z-40 flex justify-center px-4" data-controller="toast" data-toast-persist-value="<%= alert.present? %>">
+        <div role="<%= alert ? "alert" : "status" %>" class="notice animate-in <%= "notice-error" if alert %>">
+          <%= icon alert ? "alert" : "check-circle", size: 18, class: alert ? "mt-0.5 text-brand-500" : "mt-0.5 text-emerald-700" %>
+          <p class="flex-1"><%= alert || notice %></p>
+          <button type="button" class="-m-1.5 grid size-8 cursor-pointer place-items-center rounded-lg opacity-60 hover:opacity-100" data-action="toast#close" aria-label="Close"><%= icon "x", size: 16 %></button>
+        </div>
+      </div>
+    <% end %>
+
+    <%# Live regions: scripts put short messages here for screen readers (controllers/announce.js). %>
+    <div id="announce-polite" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+    <div id="announce-assertive" class="sr-only" aria-live="assertive" aria-atomic="true"></div>
+    <%# Visible notifications from scripts (controllers/notify.js); kept across Turbo visits. %>
+    <div id="notifications" data-turbo-permanent
+         class="pointer-events-none fixed inset-x-0 bottom-0 z-50 flex flex-col items-center gap-2 px-4 pb-[max(1rem,env(safe-area-inset-bottom))] lg:items-end lg:pr-6"></div>
+
+    <main id="main" tabindex="-1" class="mx-auto w-full max-w-7xl flex-1 pt-6 pb-16 pr-[max(1rem,env(safe-area-inset-right))] pl-[max(1rem,env(safe-area-inset-left))] outline-none sm:pt-10 sm:pr-[max(1.5rem,env(safe-area-inset-right))] sm:pl-[max(1.5rem,env(safe-area-inset-left))]">
+      <%= yield %>
+    </main>
+
+    <footer class="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-3 border-t border-line/70 py-5 pr-[max(1rem,env(safe-area-inset-right))] pb-[max(1.25rem,env(safe-area-inset-bottom))] pl-[max(1rem,env(safe-area-inset-left))] text-sm text-muted sm:pr-[max(1.5rem,env(safe-area-inset-right))] sm:pl-[max(1.5rem,env(safe-area-inset-left))]">
+      <%# On every screen: the accessibility statement. Below lg also the theme switch, which lives in the header on wide screens. %>
+      <nav aria-label="About the service" class="flex flex-wrap items-center gap-x-4 gap-y-2">
+        <a href="/accessibility.html" class="link inline-flex min-h-11 items-center gap-2 text-ink">
+          <%= icon "user-check", size: 18 %> Accessibility statement
+        </a>
+        <span class="text-xs">Target: WCAG 2.1 AA</span>
+      </nav>
+      <div class="flex flex-wrap items-center gap-x-3 gap-y-2 lg:hidden">
+        <span class="max-sm:w-full">Theme</span>
+        <%= render "shared/theme_switch", id: "theme-switch-footer", labels: true %>
+      </div>
+    </footer>
+
+    <%# Printed pages say when and where they come from. %>
+    <p class="hidden px-4 pt-6 text-xs text-muted print:block">Attrfill report · <%= human_time(Time.current) %> · <%= request.original_url %></p>
+  </body>
+</html>
