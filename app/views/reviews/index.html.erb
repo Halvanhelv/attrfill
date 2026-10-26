@@ -1,0 +1,10 @@
+<% content_for :title, "Review" %>
+<%# "Back" to the queue asks the server again: a copy from the Turbo cache would still list values decided since
+    (on a card page, say) and the counts of that moment. %>
+<% turbo_exempts_page_from_cache %>
+<%# No prefetch on hover either: a page fetched while a decision waits out its 5 seconds would show it undecided. %>
+<% content_for :head, tag.meta(name: "turbo-prefetch", content: "false") %>
+
+<%= render "shared/steps", current: 2 %>
+
+<%= render "reviews/queue", values: values, waiting: waiting %>
