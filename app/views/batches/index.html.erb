@@ -1,0 +1,162 @@
+<% running = batches.any? { |batch| batch_running?(batch) } %>
+<% content_for :title, "#{"⏳ " if running}Files" %>
+<%# One query each for the whole list: values waiting per file, and the newest review per file (for the download note). %>
+<% waiting = AttributeValue.review.joins(:card).group("cards.batch_id").count %>
+<% reviewed = AttributeValue.joins(:card).group("cards.batch_id").maximum(:reviewed_at) %>
+
+<%= render "shared/steps", current: 1 %>
+
+<h1 class="page-title">Card files</h1>
+<p class="page-lead">Upload a catalog export and the system fills in the attributes of every card. A person checks the disputed values, and the result with their edits downloads as CSV or JSON.</p>
+
+<div class="mt-6 grid gap-6 lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-8">
+  <%= form_with url: batches_path, multipart: true, class: "panel panel-pad min-w-0",
+        data: { controller: "dropzone",
+                action: "dragenter@window->dropzone#enter dragleave@window->dropzone#leave dragover@window->dropzone#over drop@window->dropzone#drop turbo:submit-end->dropzone#submitted" } do %>
+    <%# The zone is a button of its own: Safari skips file inputs when tabbing. The picked file sits beside the button,
+        not in it, because its "Remove" is a button too. %>
+    <div data-dropzone-target="zone"
+         class="group/zone relative flex min-h-52 flex-col rounded-2xl border-2 border-dashed border-line bg-surface/50 transition
+                can-hover:has-[label:hover]:border-muted/50 can-hover:has-[label:hover]:bg-surface
+                has-[label:focus-visible]:border-solid has-[label:focus-visible]:border-brand-600
+                data-over:border-solid data-over:border-brand-500 data-over:bg-brand-50">
+      <%= file_field_tag :file, accept: BatchesHelper::ACCEPT, required: true, tabindex: -1, class: "sr-only",
+            data: { dropzone_target: "input", action: "change->dropzone#picked" } %>
+
+      <div data-dropzone-target="picked" hidden
+           class="group/picked mx-3 mt-3 flex items-center gap-3 rounded-xl bg-panel p-3 text-left shadow-panel sm:mx-auto sm:mt-6 sm:w-[calc(100%-3rem)] sm:max-w-md">
+        <span class="grid size-10 shrink-0 place-items-center rounded-xl bg-emerald-50 text-emerald-700 group-data-invalid/picked:bg-brand-50 group-data-invalid/picked:text-brand-700">
+          <%= icon "file", size: 20 %>
+        </span>
+        <span class="min-w-0 flex-1">
+          <span class="block font-medium break-all" data-dropzone-target="name"></span>
+          <span class="block text-xs text-muted" data-dropzone-target="size"></span>
+        </span>
+        <button type="button" class="btn btn-ghost btn-sm shrink-0 px-2" data-action="dropzone#clear" aria-label="Remove file" title="Remove file"><%= icon "x", size: 16 %></button>
+      </div>
+
+      <label for="file" tabindex="0" role="button" aria-describedby="file-error" data-dropzone-target="trigger"
+             data-action="keydown.enter->dropzone#browse:prevent keydown.space->dropzone#browse:prevent"
+             class="flex flex-1 cursor-pointer flex-col items-center justify-center rounded-[14px] p-6 text-center focus-visible:outline-offset-[-4px]">
+        <span data-dropzone-target="idle" class="grid justify-items-center">
+          <span class="grid size-12 place-items-center rounded-2xl bg-panel text-ink shadow-panel group-data-over/zone:text-brand-700"><%= icon "upload", size: 22 %></span>
+          <span class="mt-4 font-semibold group-data-over/zone:hidden">
+            <span class="pointer-coarse:hidden">Drop a file here or <span class="text-brand-700 underline decoration-2 underline-offset-4">choose one on your computer</span></span>
+            <span class="hidden text-brand-700 underline decoration-2 underline-offset-4 pointer-coarse:inline">Choose a file</span>
+          </span>
+          <span class="mt-4 hidden font-semibold text-brand-700 group-data-over/zone:block" aria-hidden="true">Release the file to drop it here</span>
+          <span class="mt-1 text-sm text-muted">CSV, TSV, JSON or JSONL. Save an Excel sheet as "CSV UTF-8".</span>
+        </span>
+        <span data-dropzone-target="again" hidden class="text-sm font-medium">
+          <span class="text-brand-700 underline decoration-2 underline-offset-4">Choose another file</span><span class="text-muted pointer-coarse:hidden"> or drop it here</span>
+        </span>
+      </label>
+    </div>
+
+    <p id="file-error" data-dropzone-target="error" hidden class="mt-3 border-l-4 border-brand-600 py-0.5 pl-3 text-sm font-medium text-brand-700"></p>
+
+    <div class="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+      <%= button_tag type: "submit", class: "btn btn-primary", data: { dropzone_target: "submit", turbo_submits_with: "Uploading…" } do %>
+        Process file <%= icon "arrow-right", size: 18 %>
+      <% end %>
+      <button type="button" class="btn btn-white" data-dropzone-target="sample" data-action="dropzone#sample" data-dropzone-url-param="/samples/primer.json">
+        <span data-dropzone-target="sampleIdle" class="inline-flex items-center gap-2"><%= icon "sparkles", size: 18 %>Try a sample (40 cards)</span>
+        <span data-dropzone-target="sampleBusy" hidden class="inline-flex items-center gap-2"><%= icon "loader", size: 18, class: "animate-spin" %>Loading the sample…</span>
+      </button>
+    </div>
+    <p class="mt-4 text-sm text-muted">Processing runs in the background: 40 cards take a few seconds, 10,000 a couple of minutes. You can close the page: the file stays in the history below.</p>
+  <% end %>
+
+  <aside class="panel panel-pad text-sm" aria-labelledby="columns-title">
+    <h2 id="columns-title" class="font-semibold">Which columns are needed</h2>
+    <dl class="spec mt-4">
+      <div><dt>Title</dt><dd><span class="badge bg-brand-50 text-brand-700">required</span></dd></div>
+      <div><dt>Description</dt><dd class="font-normal text-muted">optional</dd></div>
+      <div><dt>Seller attributes</dt><dd class="font-normal text-muted">optional</dd></div>
+      <div><dt>Category</dt><dd class="font-normal text-muted">optional</dd></div>
+      <div><dt>id</dt><dd class="font-normal text-muted">optional</dd></div>
+    </dl>
+    <p class="mt-4 text-muted">Column names can be in English or Russian. Seller attributes are JSON or "key: value" pairs.</p>
+    <a href="/samples/primer.json" download class="link mt-4 inline-flex items-center gap-1.5 py-1 pointer-coarse:min-h-11"><%= icon "download", size: 16 %>Download a sample file to see the format</a>
+  </aside>
+</div>
+
+<%# While a file is processed, only this section is refreshed (poll with section), so a file being picked above stays. %>
+<%= tag.section id: "history", class: "mt-10", "aria-labelledby": "history-title",
+      data: (running ? { controller: "poll", poll_section_value: true } : {}) do %>
+  <div class="mb-3 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+    <h2 id="history-title" class="section-title" tabindex="-1">Upload history</h2>
+    <% if running %>
+      <p class="flex items-center gap-2 text-sm text-muted"><%= icon "loader", size: 16, class: "animate-spin" %>Statuses update automatically</p>
+    <% end %>
+  </div>
+
+  <% if batches.any? %>
+    <%# A box that can scroll sideways takes the focus, so that the keyboard can scroll it too (Safari does not by itself).
+        Its name differs from the section's, which a screen reader would otherwise read twice in a row. %>
+    <div class="panel overflow-x-auto" tabindex="0" role="region" aria-label="Uploads table">
+      <table class="table">
+        <caption class="sr-only">Uploaded files, newest first. A row opens the file's result.</caption>
+        <thead>
+          <tr>
+            <th scope="col">File</th>
+            <th scope="col" class="hidden sm:table-cell">Cards</th>
+            <th scope="col" class="hidden sm:table-cell">Status</th>
+            <th scope="col" class="hidden lg:table-cell">Uploaded</th>
+            <th scope="col" class="hidden sm:table-cell">Result</th>
+            <th scope="col" class="w-10"><span class="sr-only">Open</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% batches.each do |batch| %>
+            <% left = waiting[batch.id].to_i %>
+            <% status = capture do %>
+              <%= batch_status_badge(batch.status) %>
+              <% if left.positive? %>
+                <span class="badge bg-amber-50 text-amber-700"><%= icon "clock", size: 12 %><%= num(left) %> <%= plural(left, "waits", "wait") %> for review</span>
+              <% end %>
+            <% end %>
+            <% download = capture do %>
+              <% if batch.done? %>
+                <%= link_to download_batch_path(batch, format: :csv), class: "link inline-flex items-center gap-1.5 py-1 text-sm whitespace-nowrap pointer-coarse:min-h-11",
+                      data: { turbo: false, controller: "download", action: "download#saved",
+                              download_batch_value: batch.id, download_last_review_value: reviewed[batch.id]&.utc&.iso8601(3).to_s } do %>
+                  <%= icon "download", size: 15 %>CSV<span class="sr-only">: download the result of "<%= batch.name %>"</span>
+                <% end %>
+              <% end %>
+            <% end %>
+
+            <%= tag.tr class: "group cursor-pointer can-hover:hover:bg-surface/60 has-[a:focus-visible]:bg-surface/60",
+                  data: { controller: "row-link", action: "click->row-link#open auxclick->row-link#open",
+                          batch_id: batch.id, batch_status: batch.status, batch_name: batch.name, batch_url: batch_path(batch),
+                          batch_summary: [ cards_phrase(batch.cards_count), ("#{values_phrase(left)} #{plural(left, "waits", "wait")} for review" if left.positive?) ].compact.join(", ") } do %>
+              <td>
+                <div class="flex items-start gap-3 lg:items-center">
+                  <span class="hidden size-9 shrink-0 place-items-center rounded-xl bg-surface text-muted sm:grid"><%= icon "file", size: 18 %></span>
+                  <div class="min-w-0 sm:py-1.5 lg:py-0">
+                    <%= link_to batch.name, batch, class: "font-semibold break-all decoration-2 underline-offset-4 can-hover:group-hover:underline", data: { row_link_target: "link" } %>
+                    <p class="mt-0.5 text-xs text-muted lg:hidden">
+                      <span class="sm:hidden"><%= cards_phrase(batch.cards_count) %> · </span><%= human_time(batch.created_at) %>
+                    </p>
+                    <div class="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1.5 sm:hidden"><%= status %><%= download %></div>
+                  </div>
+                </div>
+              </td>
+              <td class="hidden tabular-nums sm:table-cell"><%= num(batch.cards_count) %></td>
+              <td class="hidden sm:table-cell"><div class="flex flex-wrap items-center gap-1.5"><%= status %></div></td>
+              <td class="hidden whitespace-nowrap text-muted lg:table-cell"><%= human_time(batch.created_at) %></td>
+              <td class="hidden sm:table-cell"><%= download %></td>
+              <td class="w-10 text-muted transition can-hover:group-hover:translate-x-0.5 can-hover:group-hover:text-ink"><%= icon "chevron-right", size: 18, class: "pointer-events-none" %></td>
+            <% end %>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  <% else %>
+    <div class="panel grid justify-items-center px-6 py-14 text-center">
+      <span class="grid size-12 place-items-center rounded-2xl bg-surface text-muted"><%= icon "inbox", size: 22 %></span>
+      <p class="mt-4 font-semibold">No files yet</p>
+      <p class="mt-1 text-sm text-muted">Upload the first one or press "Try a sample": the result you can download appears here.</p>
+    </div>
+  <% end %>
+<% end %>

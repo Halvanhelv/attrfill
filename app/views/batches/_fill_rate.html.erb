@@ -1,0 +1,38 @@
+<%# locals: (batch:, cards:, rows: fill_rows(cards)) %>
+<%# How full each attribute is: what the sellers gave against what the system filled in. Counted over the cards on the page.
+    The two bars differ in height as well as in colour, so they read apart in grey, in print and in high contrast. %>
+<% total = fill_total(rows) %>
+
+<section class="panel panel-pad mt-6" aria-labelledby="fill-title">
+  <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+    <h2 id="fill-title" class="section-title">Before → after</h2>
+    <p class="text-xs text-muted">
+      <% if batch.cards_count > cards.size %>for the first <%= num(cards.size) %> cards of <%= num(batch.cards_count) %><% else %>for all cards of the file<% end %>
+    </p>
+  </div>
+  <p class="mt-1 max-w-3xl text-sm text-muted">
+    The share of cards with the attribute filled: by the seller and after the system (accepted values only; disputed ones count once a person confirms them).
+    Where the system added the most comes first; "+77" is how many percentage points the share grew.
+  </p>
+
+  <p class="mt-4 flex flex-wrap gap-x-5 gap-y-1.5 text-xs text-muted" aria-hidden="true">
+    <span class="flex items-center gap-2"><span class="fill-swatch fill-before inline-block h-1.5 w-5 rounded-full bg-zinc-600"></span>given by the seller</span>
+    <span class="flex items-center gap-2"><span class="fill-swatch inline-block h-3 w-5 rounded-full bg-emerald-500"></span>after the system</span>
+  </p>
+
+  <ul class="mt-4 grid gap-3.5 text-sm">
+    <% [ total, *rows ].compact.each_with_index do |row, index| %>
+      <li class="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-3 gap-y-1.5 sm:grid-cols-[minmax(0,13rem)_minmax(0,1fr)_9rem] <%= "border-b border-line pb-3.5 font-semibold" if index.zero? && total %>">
+        <span class="min-w-0 break-words sm:line-clamp-2"><%= row.title %><span class="sr-only">: seller <%= row.before.round %>%, after the system <%= row.after.round %>%, <%= fill_gain(row) %></span></span>
+        <span class="text-right whitespace-nowrap tabular-nums sm:col-start-3 sm:row-start-1" aria-hidden="true">
+          <span class="text-muted"><%= row.before.round %>%</span> → <span class="font-semibold"><%= row.after.round %>%</span>
+          <span class="ml-1 inline-block min-w-9 font-semibold <%= row.gain.positive? ? "text-emerald-700" : "text-muted" %>"><%= fill_gain(row) %></span>
+        </span>
+        <div class="meter relative col-span-2 h-3 rounded-full bg-surface sm:col-span-1 sm:col-start-2 sm:row-start-1" aria-hidden="true">
+          <div class="absolute inset-y-0 left-0 rounded-full bg-emerald-500" style="width: <%= row.after.round(1) %>%"></div>
+          <div class="fill-before absolute inset-y-[3px] left-0 rounded-full bg-zinc-600" style="width: <%= row.before.round(1) %>%"></div>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</section>
