@@ -1,0 +1,103 @@
+/* The card page: the values table (shared/_values, shared/_value_actions) and the card text with its marks. */
+@layer components {
+  /* The table picks its layout by its own width, not the window's: next to the card text on a laptop it has less room
+     than alone on a tablet. Under 50rem five columns do not fit, and each value becomes a small card (below). */
+  .values-wrap { container: values / inline-size; }
+
+  /* One <tbody> per value. Dividers go between values; an open editor belongs to its row, so there is none between them. */
+  .values-table > tbody:not(:last-of-type) > tr:last-child > :is(td, th) { @apply border-b; }
+  .values-table > tbody:last-of-type > tr:first-child:has(+ tr[hidden]) > :is(td, th) { @apply border-b-0; }
+  .values-table > tbody:has(> tr[data-editor-row]:not([hidden])) > tr:first-child > :is(td, th) { @apply border-b-transparent; }
+  .values-table tr[data-editor-row] > td { @apply pt-1 pb-5; }
+
+  /* The reason line is small; the value above it must not run under the next column when it has no spaces (SKU codes). */
+  .values-table .value-cell { @apply min-w-36 [overflow-wrap:anywhere]; }
+
+  @container values (width >= 50rem) {
+    /* Only "Correct" keeps its word; ✎ and ✕ are known signs and say their names to screen readers and on hover. */
+    .values-table .action-label { @apply sr-only; }
+    /* The word and the number over a short bar keep the confidence column narrow. */
+    .values-table .value-confidence > div { @apply flex-col-reverse items-start! gap-1.5!; }
+    /* Another likely answer: "Correct", ✎ and ✕ stay on one line and each "Choose "…"" goes across under them,
+       so the column does not widen; dense placement lets ✎ and ✕, which come after it, fill the first line. */
+    .values-table .value-choices:has(.value-variant) { @apply grid! grid-flow-row-dense grid-cols-[repeat(3,auto)] justify-end; }
+    /* A long answer ("Choose "Galaxy S24 Ultra Enterprise…"") wraps inside the button instead of stretching the grid,
+       which pushed ✕ out of the table and made it scroll sideways. */
+    .values-table .value-variant { @apply col-span-full text-center text-balance whitespace-normal; }
+  }
+
+  /* Each value as a card: name and status on top, the value and why, the confidence, then the actions with their words.
+     Only on screen: a printed page is wide enough for the table. */
+  @media screen {
+    @container values (width < 50rem) {
+      .values-table, .values-table > tbody { @apply block; }
+      .values-table thead { @apply sr-only; }
+      .values-table > tbody { @apply border-b border-line last:border-b-0; }
+      .values-table > tbody > tr:not([data-editor-row]) { @apply grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-3 gap-y-2 px-5 py-4 sm:px-6; }
+      .values-table > tbody :is(td, th) { @apply border-0! p-0!; }
+      .values-table > tbody th { @apply col-start-1 row-start-1 text-sm; }
+      .values-table .value-status { @apply col-start-2 row-start-1 justify-self-end; }
+      .values-table .value-cell { @apply col-span-2 row-start-2 min-w-0 text-base; }
+      .values-table .value-confidence { @apply col-span-2 col-start-1 row-start-3; }
+      /* A settled value: its one quiet "Change" sits next to the confidence. */
+      .values-table tr:has(> .value-actions) .value-confidence { @apply col-span-1; }
+      .values-table .value-actions { @apply col-start-2 row-start-3 w-auto!; }
+      /* A value to check: "Correct" across the whole width, then "Fix" and "No value" side by side.
+         The ! wins over the classes of the desktop layout written on the elements. */
+      .values-table tr:has([data-review-target="approve"]) .value-confidence { @apply col-span-2; }
+      .values-table tr:has([data-review-target="approve"]) .value-actions { @apply col-span-2 col-start-1 row-start-4 mt-1 text-left; }
+      .values-table tr:has([data-review-target="approve"]) .value-actions form { @apply flex! w-full; }
+      .values-table .value-choices:has([data-review-target="approve"]) { @apply grid! w-full max-w-md grid-cols-2 gap-2!; }
+      .values-table .value-choices :is([data-review-target="approve"], .value-variant) { @apply col-span-2 py-2.5; }
+      .values-table .value-choices [data-review-target="reject"] { @apply bg-control; }
+      .values-table .value-confidence > div { @apply min-w-0 flex-wrap; }
+      /* No value, no confidence: the dash under the dash says nothing; the cell stays for the "Add" next to it. */
+      .values-table .value-confidence[data-empty] > * { @apply invisible; }
+      .values-table tr[data-editor-row] { @apply block px-5 pb-5 sm:px-6; }
+      .values-table tr[data-editor-row] > td { @apply block; }
+      /* The decision line takes a row of its own under the value, as "Correct" did. */
+      .values-table > tbody[data-pending] .value-confidence { @apply col-span-2; }
+      .values-table > tbody[data-pending] .value-actions { @apply col-span-2 col-start-1 row-start-4 text-left; }
+      .values-table .value-pending { @apply ml-0 justify-start; }
+    }
+
+    /* A narrow phone: "Change" of a settled value keeps only its pencil, so it never runs into the confidence. */
+    @container values (width < 22rem) {
+      .values-table tr:not(:has([data-review-target="approve"])) .action-label { @apply sr-only; }
+    }
+
+    /* The narrowest phones: the three answers one under another, so no word breaks inside a button. */
+    @container values (width < 20rem) {
+      .values-table .value-choices:has([data-review-target="approve"]) { @apply grid-cols-1; }
+      .values-table .value-choices :is([data-review-target="approve"], .value-variant) { @apply col-span-1; }
+    }
+  }
+
+  /* A decision in its 5 seconds to take it back, and on its way (inline_review_controller): the value fades, and its
+     buttons give way to what was decided, with "Undo" while it can be. The refresh after it brings the server's row. */
+  .values-table > tbody[data-pending] > tr[data-row] > :is(.value-cell, .value-confidence, .value-status) { @apply opacity-45 transition-opacity; }
+  .values-table > tbody[data-pending] .value-actions > form { @apply hidden!; }
+  .value-pending { @apply ml-auto flex flex-wrap items-baseline justify-end gap-x-3 gap-y-0.5 text-left text-sm text-ink; }
+  .value-undo { @apply cursor-pointer whitespace-nowrap pointer-coarse:min-h-11; }
+
+  /* Fragments of the card text values were read from; the one of the hovered, focused or tapped row stands out. */
+  .source-mark { @apply rounded-[4px] bg-amber-100 px-0.5 text-ink decoration-amber-500 decoration-2 underline-offset-4 transition-colors; }
+  .source-mark[data-active] { @apply bg-amber-300 underline; }
+  [data-trace-target~="mark"] { @apply cursor-pointer; }
+
+  /* The same fragment quoted in the row's reason line. It lights up with its mark in the text, so on a phone,
+     where the text is far above, the tapped row itself shows what was read. */
+  .reason-quote { @apply rounded-[4px] font-medium text-ink decoration-amber-500 decoration-2 underline-offset-4 transition-colors; }
+  tr[data-active] .reason-quote { @apply bg-amber-300 underline shadow-[0_0_0_2px_var(--color-amber-300)]; }
+}
+
+@media (forced-colors: active) {
+  tr[data-active] .reason-quote { outline: 2px solid Highlight; }
+}
+
+/* On paper the names keep whole words ("Screen diagonal", not "Diago-nal"): the print rule that lets cells
+   break anywhere is for codes and links, and it squeezed the first column to a few letters. */
+@media print {
+  .values-table :is(thead th, th[scope="row"]) { overflow-wrap: normal !important; word-break: normal !important; }
+  .values-table th[scope="row"] { min-width: 8rem; }
+}

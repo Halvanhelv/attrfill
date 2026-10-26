@@ -1,0 +1,9 @@
+/* The file pages (batches/index, batches/show, batches/_fill_rate). */
+@layer components {
+  /* High contrast paints every bar of a .meter in CanvasText, and the thin "before" bar inside the thick "after" one
+     vanished: it becomes a hollow line (in both system palettes), and the legend keeps its marks. */
+  @media (forced-colors: active) {
+    .fill-swatch { forced-color-adjust: none; background: CanvasText !important; }
+    .fill-before { background: Canvas !important; outline: 1px solid CanvasText; }
+  }
+}

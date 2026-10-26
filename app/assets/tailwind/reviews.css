@@ -1,0 +1,108 @@
+/* The review queue (reviews/_queue, reviews/_value): the whole queue, and the check of one file on its page. */
+@layer components {
+  /* A card of the review queue disappears with its last value (removed by a Turbo Stream or hidden by a filter). */
+  .review-card:not(:has(.review-row:not([hidden]))) { display: none; }
+
+  /* Key hints on the buttons of the row the keys act on (queue_controller marks it data-current, or it has the focus).
+     The space is kept on the other rows, so the buttons do not move when the focus does; a phone has no room and no keys. */
+  .review-kbd { display: none; }
+  .review-editor-keys { display: none; }
+  @media (pointer: fine) and (width >= 40rem) {
+    .review-kbd { display: inline-block; visibility: hidden; }
+    .review-row:is([data-current], :focus-within) .review-kbd { visibility: visible; }
+    .review-editor-keys { display: block; }
+  }
+  /* On the green button: the same green in both themes, so light lines read on it in both. */
+  .btn-success .review-kbd { border-color: rgb(255 255 255 / 50%); background: transparent; color: #fff; }
+
+  /* The pill strip fades at the edge it can still be scrolled to. */
+  .review-pills {
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 1.25rem, #000 calc(100% - 2.5rem), transparent);
+    mask-image: linear-gradient(to right, transparent, #000 1.25rem, #000 calc(100% - 2.5rem), transparent);
+  }
+  .review-pills[data-at-start] {
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 2.5rem), transparent);
+    mask-image: linear-gradient(to right, #000 calc(100% - 2.5rem), transparent);
+  }
+  .review-pills[data-at-end] {
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 1.25rem);
+    mask-image: linear-gradient(to right, transparent, #000 1.25rem);
+  }
+  .review-pills[data-at-start][data-at-end] { -webkit-mask-image: none; mask-image: none; }
+
+  /* A row the focus moves to stops above the notice with "Undo" and, on a phone, above the progress panel
+     stuck to the bottom (--review-dock, measured by queue_controller), instead of under them. The controller
+     scrolls rows itself; this is for Tab. */
+  html:has(.review-queue) { scroll-padding-bottom: calc(var(--review-dock, 0px) + 6rem); }
+
+  /* The undo window in the notice (queue_controller#dress): the seconds left on "Undo", a bar that runs out
+     with them, and on a line of its own the button that repeats the decision for the same answer at other cards.
+     .notice comes later in the same layer, hence the two classes. */
+  .notice.undo-notice {
+    position: relative; overflow: hidden;
+    display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: start; gap: 0.5rem 0.75rem;
+  }
+  .undo-notice > p { grid-area: 1 / 1; }
+  .undo-action { grid-area: 1 / 2; }
+  .undo-close { grid-area: 1 / 3; }
+  .undo-more { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0.75rem; }
+  /* A phone has no width for the text and two buttons in one line: the text keeps the line with ✕,
+     "Undo" and "Same for N more" go under it. */
+  @media (width < 40rem) {
+    .notice.undo-notice { grid-template-columns: auto minmax(0, 1fr) auto; }
+    .undo-notice > p { grid-area: 1 / 1 / 2 / 3; }
+    .undo-close { grid-area: 1 / 3; }
+    .undo-action { grid-area: 2 / 1; }
+    .undo-more { grid-area: 2 / 2 / 3 / 4; }
+    .undo-more > span { display: none; }
+  }
+  .undo-left { margin-left: 0.375rem; font-variant-numeric: tabular-nums; font-weight: 500; opacity: 0.8; }
+  .undo-bar { position: absolute; inset: auto 0 0 0; height: 3px; background: var(--color-muted); transform-origin: left; }
+  .undo-bar.undo-run { animation: undo-run var(--undo, 5s) linear forwards; }
+  .undo-notice[data-held] .undo-bar { animation: none; }
+  .undo-kbd { display: none; margin-left: 0.375rem; }
+  @media (pointer: fine) and (width >= 40rem) {
+    .undo-kbd { display: inline-block; }
+  }
+}
+
+@keyframes undo-run {
+  to { transform: scaleX(0); }
+}
+
+/* Without motion the seconds on "Undo" say the same; the bar would only jump to empty. */
+@media (prefers-reduced-motion: reduce) {
+  .undo-bar { display: none; }
+}
+
+/* Open = not yet decided. A decision in its undo window counts as decided here, so the end screen shows at once
+   and gives way to the list again on "Undo". Outside the layers: it must win over the flex/grid utilities. */
+.review-queue:has(.review-row:not([data-pending])) .review-done { display: none; }
+.review-queue:not(:has(.review-row:not([data-pending]))) .review-open { display: none; }
+
+/* On a phone the progress panel stays at the bottom of the screen; notices sit right on top of it, a little over
+   its edge, so that no strip of the list shows between the two. */
+@media (width < 40rem) {
+  /* data-dock-away: on a file's page the list is scrolled out of view, and the panel with it. */
+  html:not([data-dock-away]) body:has(.review-row:not([data-pending])) #notifications {
+    padding-bottom: calc(var(--review-dock, calc(max(0.75rem, env(safe-area-inset-bottom)) + 3.5rem)) - 0.375rem);
+  }
+  /* Nor a strip under the panel: the page colour fills the gap down to the edge of the screen. */
+  .review-progress { box-shadow: var(--shadow-pop), 0 2.5rem 0 0.75rem var(--color-surface); }
+}
+
+/* Windows high contrast drops the shadow that marks the focused row; an outline stays. */
+@media (forced-colors: active) {
+  .review-row:focus-within { outline: 2px solid Highlight; outline-offset: -2px; }
+  .review-kbd { border: 1px solid CanvasText; }
+}
+
+/* Matches of the search in a card's text (text_find_controller); the current one stands out. */
+@layer components {
+  .find-hit { @apply rounded-[3px] bg-brand-100 text-ink outline-1 outline-brand-500/50; }
+  .find-hit[data-current] { @apply bg-brand-600 text-white outline-2 outline-brand-700; }
+  @media (forced-colors: active) {
+    .find-hit { forced-color-adjust: none; background: Mark; color: MarkText; }
+    .find-hit[data-current] { background: Highlight; color: HighlightText; }
+  }
+}

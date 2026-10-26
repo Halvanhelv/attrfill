@@ -1,0 +1,19 @@
+/* The metrics page (metrics/show, metrics/_sources). */
+@layer components {
+  /* A number tile: its label, number and note rows are shared with the tiles beside it (subgrid), so the numbers of
+     one row stand on one line however many lines a label or a note takes. The parent is a grid of such tiles. */
+  .kpi { @apply row-span-3 grid grid-rows-subgrid gap-y-0 p-4 sm:p-5; }
+  .kpi > dt { @apply text-sm text-muted; }
+  .kpi > dd:nth-of-type(1) { @apply self-end pt-2 text-2xl font-bold tracking-tight tabular-nums sm:text-3xl; }
+  .kpi > dd:nth-of-type(2) { @apply mt-1 text-xs text-muted; }
+
+  /* Where such tiles stand one under another (a narrow phone), a tall stack of grey boxes says little per screen:
+     a plain list instead, the number to the left of its label and note. The grey box comes from min-[26rem]: classes. */
+  @media (width < 26rem) {
+    .kpi-row { @apply row-span-1 grid-cols-[5.5rem_minmax(0,1fr)] grid-rows-none gap-x-3 px-0 py-3; }
+    .kpi-row + .kpi-row { @apply border-t border-line; }
+    .kpi-row > dt { @apply col-start-2 row-start-1; }
+    .kpi-row > dd:nth-of-type(1) { @apply col-start-1 row-span-2 row-start-1 self-start pt-0 text-xl leading-tight; }
+    .kpi-row > dd:nth-of-type(2) { @apply col-start-2 row-start-2; }
+  }
+}
