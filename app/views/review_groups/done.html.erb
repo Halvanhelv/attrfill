@@ -1,0 +1,9 @@
+<% content_for :title, "Group reviewed" %>
+<% turbo_exempts_page_from_cache %>
+<h1 class="page-title">Decision saved for <%= count %> <%= plural(count, "value", "values") %></h1>
+<p class="page-lead">They go into the export with your decision. For 15 minutes you can restore the previous values and statuses, if nobody has changed them since.</p>
+<%= form_with url: undo_review_groups_path, data: { turbo: false }, class: "mt-5" do %>
+  <%= hidden_field_tag :token, undo_token %>
+  <%= submit_tag "Undo the decision for the whole group", class: "btn btn-secondary" %>
+<% end %>
+<%= link_to "Continue review", reviews_path, class: "btn btn-primary mt-4" %>
