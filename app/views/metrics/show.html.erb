@@ -1,0 +1,333 @@
+<% content_for :title, "Metrics" %>
+<% total = by_status.values.sum %>
+<% shares = outcomes(by_status) %>
+<% waiting = shares[:waiting][:count] %>
+<% calls, input, output, duration = llm %>
+<% rows = report ? quality_rows(report) : [] %>
+<% scored = labelled(rows) %>
+<%# The two weakest rows are marked in the table, as the sentence above it names them. %>
+<% weak = scored.size >= 3 ? scored.first(2).map(&:first) : [] %>
+
+<% accepted = report ? report["attributes"].values.sum { |counts| counts["accepted"].to_i } : 0 %>
+<% accepted_right = report ? report["attributes"].values.sum { |counts| counts["accepted_correct"].to_i } : 0 %>
+<%# The precision of a saved evaluation says something about the values shown here only when it was made in the
+    acceptance mode in force; a report of another mode (or an old one without a mode) is not quoted next to them. %>
+<% same_mode = report && report["acceptance_mode"] == Extraction::Acceptance.mode %>
+<% trusted = same_mode && accepted.positive? ? accepted_right.to_f / accepted : nil %>
+
+<h1 class="page-title">Metrics</h1>
+<p class="page-lead">How accurately the system fills in attributes and how much work is left to people.</p>
+<p class="mt-2 text-sm text-muted">Acceptance mode: <%= Extraction::Acceptance.mode == "strict" ? "strict: a threshold of at least 0.98 for all fields; model, color, laptops and an undetermined category require a person to check" : "standard: the catalog's base thresholds" %>. A confidence threshold does not guarantee accuracy; that is checked on held-out data.</p>
+<p class="mt-2 text-sm text-muted">The mode applies to new processing. Cards saved earlier are not recalculated automatically.</p>
+<%= render "metrics/f1_benchmark", benchmark: benchmark if benchmark %>
+<%= render "metrics/economics", estimate: estimate, source: estimate_source %>
+<%= render "metrics/filter_risk", report: report %>
+
+<%# The headline in one sentence, for someone who will not read the tables; its shares add up to 100%, and the bar
+    under it shows the same four parts. bg-hero without "!": the utility already beats .panel, and an important one
+    would also beat the print rule, leaving dark text on a black box when backgrounds are printed. %>
+<section class="panel mt-6 overflow-hidden bg-hero text-white" aria-label="Highlights">
+  <div class="p-6 sm:p-8">
+    <p class="max-w-3xl text-xl leading-snug font-semibold text-pretty sm:text-2xl">
+      <% if total.positive? %>
+        The system fills in <span class="text-emerald-300"><%= share_phrase(shares[:accepted]) %></span> of attributes on its own<% if trusted %>,
+        and of those accepted without a person <span class="whitespace-nowrap text-emerald-300"><%= (trusted * 100).floor %> out of 100</span> are right<% end %>.
+        <%= remainder_sentence(shares) %>
+      <% else %>
+        Nothing has been processed yet. Upload a file or check a card, and the results appear here.
+      <% end %>
+    </p>
+    <% if total.positive? %>
+      <div class="mt-5 max-w-3xl">
+        <%# The list under it says the same in words; a screen reader need not hear it twice. %>
+        <div aria-hidden="true"><%= outcome_bar(by_status) %></div>
+        <ul class="mt-2.5 flex flex-wrap gap-x-4 gap-y-1 text-xs text-white/75 tabular-nums">
+          <% shares.each_value do |outcome| %>
+            <li class="flex items-center gap-1.5"><span class="dot <%= outcome[:colour] %>" aria-hidden="true"></span><%= outcome[:label] %> — <%= share_phrase(outcome) %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <% if report %>
+      <p class="mt-4 text-sm text-white/75">
+        Accuracy was checked on <%= num(report["cards"]) %> <%= plural(report["cards"].to_i, "card", "cards") %> of this app with known correct answers<%= same_mode ? ", in the current acceptance mode" : "; the measurement was made in another acceptance mode or without recording the mode, so the share of correct accepted values is not given here" %>.
+        <%# To the panel, not its heading: on a phone the sticky header is taller than the scroll padding. %>
+        <a href="#benchmark" class="link text-white">Historical results on the pilot data</a>
+      </p>
+    <% end %>
+  </div>
+</section>
+
+<%# The quality tile is the same kind of number as the table below ("out of 100"), so the page has one way to say quality. %>
+<% quality = if scored.any?
+     [ safe_join([ out_of_100(report["macro_f1"]), tag.span(" out of 100", class: "text-base font-semibold whitespace-nowrap text-muted sm:text-lg") ]),
+       "precision and recall together, averaged over #{scored.size} #{plural(scored.size, "attribute", "attributes")}" ]
+   else
+     [ "—", "no evaluation yet" ]
+   end %>
+<%# .kpi tiles share their rows, so the numbers of one row stand on one line on every width. %>
+<dl class="mt-3 grid grid-cols-2 gap-3 lg:grid-cols-4">
+<%# On a phone the first and the last tile take the whole row: the long label fits, and no tile is left alone. %>
+  <% [ [ "Overall quality score", *quality, "max-lg:col-span-2" ],
+       [ "Cards processed", num(cards), "in this app" ],
+       [ "Accepted without a person", total.positive? ? share_phrase(shares[:accepted]) : "—", "#{num(shares[:accepted][:count])} #{plural(shares[:accepted][:count], "value", "values")}" ],
+       [ "Waiting for review", num(waiting),
+         waiting.positive? ? safe_join([ plural(waiting, "value", "values"), " · ", link_to("Review", reviews_path, class: "link text-ink") ]) : "no disputed values",
+         "max-lg:col-span-2" ]
+     ].each do |label, number, note, span| %>
+    <div class="panel kpi <%= span %>">
+      <dt><%= label %></dt>
+      <dd><%= number %></dd>
+      <dd><%= note %></dd>
+    </div>
+  <% end %>
+</dl>
+
+<%# The numbers a jury knows from the pitch, so that "94 out of 100" above is not taken for the case's result. Frozen in
+    MetricsHelper::BENCHMARK from README.md: the app does not rerun that dataset. %>
+<section id="benchmark" class="panel panel-pad mt-3" aria-labelledby="benchmark-title">
+  <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+    <h2 id="benchmark-title" class="font-semibold">Historical results on the pilot data</h2>
+    <p class="text-xs text-muted">runs from the README, without an external LLM</p>
+  </div>
+  <p class="mt-1 max-w-3xl text-sm text-muted">
+    Earlier measurements on the Acme Retail catalog export, with other splits and settings. This is neither an evaluation of the current version nor an external evaluation.
+    The split was by offer, so variants of one product ended up in both training and test, and the dictionaries were learned on all the data:
+    these numbers are inflated and not comparable with the check on new product families (docs/independent-review.md).
+    <% if report %>
+      The tile above is computed on the app's own sample (<%= num(report["cards"]) %> <%= plural(report["cards"].to_i, "card", "cards") %>), so the numbers differ.
+    <% else %>
+      The tile above fills in after an evaluation on the app's own sample.
+    <% end %>
+  </p>
+  <dl class="mt-3 grid grid-cols-1 min-[26rem]:mt-4 min-[26rem]:grid-cols-2 min-[26rem]:gap-3 lg:grid-cols-4">
+    <% MetricsHelper::BENCHMARK.each do |run| %>
+      <div class="kpi kpi-row min-[26rem]:rounded-xl min-[26rem]:bg-surface">
+        <dt><%= run[:title] %></dt>
+        <dd><%= out_of_100(run[:score]) %> <span class="text-base font-semibold whitespace-nowrap text-muted">out of 100</span></dd>
+        <dd><%= run[:detail] %> · <span class="whitespace-nowrap"><%= decimal(run[:score], 3) %></span></dd>
+      </div>
+    <% end %>
+    <% low, high = MetricsHelper::BENCHMARK_ACCEPTED.minmax %>
+    <div class="kpi kpi-row min-[26rem]:rounded-xl min-[26rem]:bg-surface">
+      <dt>Right among those accepted without a person</dt>
+      <%# The space is outside the spans: on a narrow phone "out of 100" may go under the range. %>
+      <dd><span class="whitespace-nowrap"><%= out_of_100(low) %>–<%= out_of_100(high) %></span> <span class="text-base font-semibold whitespace-nowrap text-muted">out of 100</span></dd>
+      <%# The README gives this range for the case's 10 categories (the whole catalogue starts at 0.92). %>
+      <dd>10 pilot categories · <span class="whitespace-nowrap"><%= decimal(low) %>–<%= decimal(high) %></span></dd>
+    </div>
+  </dl>
+</section>
+
+<section class="mt-10" aria-labelledby="quality-title">
+  <div class="mb-3 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+    <h2 id="quality-title" class="section-title">Quality by attribute</h2>
+    <%# "Evaluation", not "review": "Review" is the section where people decide values. %>
+    <% if report %><p class="text-sm text-muted">evaluated <%= human_time(Time.zone.parse(report["evaluated_at"])) %></p><% end %>
+  </div>
+
+  <% if report %>
+    <% if (summary = weakest_summary(rows)) %>
+      <p class="mb-4 max-w-3xl text-md text-pretty"><%= summary %></p>
+    <% end %>
+
+    <%# Up to md: short headers with this legend, no bars, and the review share under the name, so the table fits
+        without scrolling down to 320px; the names stay in view if it scrolls all the same (large text). %>
+    <p class="mb-2 text-xs text-muted md:hidden" aria-hidden="true">Numbers are out of 100: "right" among the values found, "found" among all that should be there.</p>
+    <%# Its own name: the section around it is already a region called "Quality by attribute". %>
+    <div class="panel overflow-x-auto" tabindex="0" role="region" aria-label="Quality by attribute table">
+      <table class="table">
+        <caption class="sr-only">Quality by attribute, weakest first</caption>
+        <thead>
+          <tr>
+            <th scope="col" class="sticky left-0 z-10 bg-panel">Attribute</th>
+            <%# A phone shows the short header and the legend above; a screen reader always gets the whole one. %>
+            <th scope="col" class="max-md:px-3 md:min-w-40 lg:min-w-44"><span class="md:hidden" aria-hidden="true">Right</span><span class="max-md:sr-only">Right, out of 100 found</span></th>
+            <th scope="col" class="max-md:px-3 md:min-w-40 lg:min-w-44"><span class="md:hidden" aria-hidden="true">Found</span><span class="max-md:sr-only">Found, out of 100 expected</span></th>
+            <th scope="col" class="whitespace-normal max-md:hidden">Goes to review</th>
+          </tr>
+        </thead>
+        <tbody class="tabular-nums">
+          <% rows.each do |name, title, counts| %>
+            <% labelled = counts["gold"].to_i.positive? %>
+            <% weakest = weak.include?(name) %>
+            <tr class="<%= "bg-amber-50" if weakest %>">
+              <th scope="row" class="sticky left-0 z-10 font-medium max-md:pr-3 md:whitespace-nowrap <%= weakest ? "bg-amber-50" : "bg-panel" %>">
+                <%= title %>
+                <% if weakest %><span class="badge mt-1 bg-amber-100 text-amber-800 max-md:flex max-md:w-fit md:mt-0 md:ml-2">weakest</span><% end %>
+                <%# The review column does not fit a phone; its number goes under the name instead of away. %>
+                <span class="mt-0.5 block text-xs font-normal text-muted md:hidden">to review: <%= percent(counts["review_share"]) %></span>
+              </th>
+              <% %w[precision recall].each do |key| %>
+                <td class="max-md:px-3">
+                  <% if labelled %>
+                    <div class="flex items-center gap-3">
+                      <span class="w-8 shrink-0 text-right font-semibold"><%= out_of_100(counts[key]) %></span>
+                      <div class="meter hidden h-1.5 w-24 overflow-hidden rounded-full bg-surface md:block" aria-hidden="true">
+                        <div class="h-full rounded-full <%= quality_tone(out_of_100(counts[key])) %>" style="width: <%= out_of_100(counts[key]) %>%"></div>
+                      </div>
+                    </div>
+                  <% else %>
+                    <span class="text-muted"><%= key == "precision" ? "no labels" : "—" %></span>
+                  <% end %>
+                </td>
+              <% end %>
+              <td class="text-muted max-md:hidden"><%= percent(counts["review_share"]) %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    <%# What the colours of the bars mean, where there are bars; the thresholds are the ones quality_tone uses. %>
+    <p class="mt-2.5 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted max-md:hidden" aria-hidden="true">
+      <span>Bar colors:</span>
+      <% [ [ "bg-emerald-500", "green: #{MetricsHelper::GOOD} out of 100 and up" ],
+           [ "bg-amber-500", "yellow: #{MetricsHelper::FAIR}–#{MetricsHelper::GOOD - 1}" ],
+           [ "bg-brand-500", "red: below #{MetricsHelper::FAIR}" ] ].each do |tone, meaning| %>
+        <span class="flex items-center gap-1.5"><span class="h-1.5 w-4 rounded-full <%= tone %>"></span><%= meaning %></span>
+      <% end %>
+    </p>
+
+    <%# The focus ring goes inside the summary: the panel's overflow-hidden would cut off one drawn outside it. %>
+    <details class="panel group/more mt-3 overflow-hidden">
+      <summary class="flex cursor-pointer list-none items-center gap-2 rounded-2xl px-5 py-4 text-sm font-medium group-open/more:rounded-b-none hover:bg-surface/50 focus-visible:-outline-offset-2 sm:px-6 [&::-webkit-details-marker]:hidden">
+        <%= icon "chevron-right", size: 16, class: "text-muted transition group-open/more:rotate-90" %>
+        Details for specialists: F1, precision, recall
+      </summary>
+      <div class="border-t border-line">
+        <dl class="grid gap-1.5 px-5 pt-4 text-sm text-muted sm:px-6">
+          <% [ [ "Precision", "share of right values among those found" ],
+               [ "Recall", "share found among all that should be there" ],
+               [ "F1", "both at once, as one number from 0 to 1; Macro-F1 is the average over attributes: #{decimal(report["macro_f1"], 3)} (the \"Overall quality score\" tile shows it out of 100)" ],
+               [ "Accepted precision", "precision among values accepted without a person" ],
+               [ "Filled", "share of cards where a value was found" ] ].each do |term, meaning| %>
+            <div><dt class="inline font-medium text-ink"><%= term %></dt> <dd class="inline">— <%= meaning %></dd></div>
+          <% end %>
+        </dl>
+        <%# Inside the details' overflow-hidden, so the focus ring is drawn inward. %>
+        <div class="mt-3 overflow-x-auto focus-visible:-outline-offset-2" tabindex="0" role="region" aria-label="Detailed quality table">
+          <table class="table">
+            <caption class="sr-only">Precision, recall and F1 by attribute</caption>
+            <thead>
+              <tr>
+                <th scope="col" class="sticky left-0 z-10 bg-panel">Attribute</th>
+                <th scope="col" class="min-w-44">F1</th>
+                <th scope="col">Precision</th>
+                <th scope="col">Recall</th>
+                <th scope="col">Accepted precision</th>
+                <th scope="col">Filled</th>
+                <th scope="col">To review</th>
+              </tr>
+            </thead>
+            <tbody class="tabular-nums">
+              <% rows.each do |_, title, counts| %>
+                <% labelled = counts["gold"].to_i.positive? %>
+                <tr>
+                  <th scope="row" class="sticky left-0 z-10 bg-panel font-medium whitespace-nowrap"><%= title %></th>
+                  <td>
+                    <% if labelled %>
+                      <div class="flex items-center gap-3">
+                        <div class="meter h-1.5 w-24 overflow-hidden rounded-full bg-surface" aria-hidden="true"><div class="h-full rounded-full <%= quality_tone(out_of_100(counts["f1"])) %>" style="width: <%= out_of_100(counts["f1"]) %>%"></div></div>
+                        <span class="font-semibold"><%= decimal(counts["f1"]) %></span>
+                      </div>
+                    <% else %><span class="text-muted">no labels</span><% end %>
+                  </td>
+                  <td><%= labelled ? decimal(counts["precision"]) : "—" %></td>
+                  <td><%= labelled ? decimal(counts["recall"]) : "—" %></td>
+                  <td><%= labelled ? decimal(counts["accepted_precision"]) : "—" %></td>
+                  <td><%= percent(counts["coverage"]) %></td>
+                  <td class="text-muted"><%= percent(counts["review_share"]) %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </details>
+
+    <div class="mt-6 grid gap-4 lg:grid-cols-2">
+      <%# The same three words and thresholds as on a card ("Sure · 97"), each with how right it turned out. %>
+      <div class="panel panel-pad">
+        <h3 class="font-semibold text-balance">Can you trust the words "sure" and "unsure"</h3>
+        <p class="mt-1 text-sm text-muted">The system tags each value with a word, as in a card's table. Here you see how many such values turned out right on labelled cards. If the words are honest, the bar goes past the mark, the word's lower bound.</p>
+        <ul class="mt-5 grid gap-4 text-sm">
+          <% calibration_rows.each do |word, range, floor, fate, right, all| %>
+            <% share = all >= MetricsHelper::FEW ? right.to_f / all : nil %>
+            <li>
+              <div class="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-0.5">
+                <span><span class="font-semibold"><%= word.capitalize %></span> <span class="text-muted">· <%= range %></span></span>
+                <span class="font-semibold tabular-nums <%= "text-muted" unless share %>"><%= track_record_share(right, all) %></span>
+              </div>
+              <div class="meter relative mt-2 h-2.5 rounded-full bg-surface" aria-hidden="true">
+                <% if share %><div class="h-full rounded-full <%= quality_tone((share * 100).floor) %>" style="width: <%= (share * 100).floor %>%"></div><% end %>
+                <% if floor %><span class="absolute -inset-y-1 w-0.5 rounded-full bg-ink" style="left: <%= (floor * 100).round %>%"></span><% end %>
+              </div>
+              <p class="mt-1.5 text-xs text-muted tabular-nums"><%= num(all) %> <%= plural(all, "value", "values") %> · <%= fate %></p>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+
+      <%= render "metrics/sources", by_source: by_source %>
+    </div>
+  <% else %>
+    <div class="panel panel-pad text-sm text-muted">
+      An evaluation appears after a check on cards with known correct answers. For now this shows only where the values came from.
+    </div>
+    <div class="mt-4"><%= render "metrics/sources", by_source: by_source %></div>
+  <% end %>
+</section>
+
+<section class="mt-10" aria-labelledby="llm-title">
+  <h2 id="llm-title" class="section-title mb-3">External LLM usage</h2>
+  <% if Extraction::LlmFallback.enabled? || calls.to_i.positive? %>
+    <%# Outside the details only the plain sentence; the model, tokens and cache are for whoever pays for them. %>
+    <div class="panel overflow-hidden">
+      <div class="panel-pad flex flex-wrap items-center gap-3">
+        <% if Extraction::LlmFallback.enabled? %>
+          <span class="badge bg-emerald-50 text-emerald-700"><span class="dot bg-emerald-500"></span>Connected</span>
+          <span class="min-w-0 flex-1 basis-64 text-sm text-muted">
+            A fallback step for the hard remainder:
+            <%= asked_model.positive? ? "needed for #{num(asked_model)} #{plural(asked_model, "card", "cards")} of #{num(cards)}, where rules and dictionaries fell short." : "not needed even once so far." %>
+          </span>
+        <% else %>
+          <span class="badge bg-surface text-muted"><span class="dot bg-zinc-400"></span>Off</span>
+          <span class="min-w-0 flex-1 basis-64 text-sm text-muted">
+            The external LLM is off; local extraction keeps working. Its sources are shown above.
+            <% if asked_model.positive? %>While the neural network was on, it was needed for <%= num(asked_model) %> <%= plural(asked_model, "card", "cards") %>.<% end %>
+          </span>
+        <% end %>
+      </div>
+      <details class="group/llm border-t border-line">
+        <summary class="flex cursor-pointer list-none items-center gap-2 px-5 py-4 text-sm font-medium hover:bg-surface/50 focus-visible:-outline-offset-2 sm:px-6 [&::-webkit-details-marker]:hidden">
+          <%= icon "chevron-right", size: 16, class: "text-muted transition group-open/llm:rotate-90" %>
+          <%# The model is named only while it is on, so the summary promises it only then. %>
+          Details for specialists: <%= Extraction::LlmFallback.enabled? ? "model, requests, tokens" : "requests, tokens" %>
+        </summary>
+        <div class="border-t border-line px-5 py-5 sm:px-6">
+          <dl class="grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-4">
+            <% [ [ "Requests", num(calls) ], [ "Cards with a request", num(asked_model) ],
+                 [ "Tokens: input / output", "#{num(input)} / #{num(output)}" ],
+                 [ "Average response time", "#{num(duration.to_f.round)} ms" ] ].each do |label, number| %>
+              <div class="flex flex-col">
+                <dt class="text-sm text-muted"><%= label %></dt>
+                <dd class="mt-auto pt-1 text-xl font-bold tabular-nums"><%= number %></dd>
+              </div>
+            <% end %>
+          </dl>
+          <p class="mt-4 text-xs text-muted">
+            <% if Extraction::LlmFallback.enabled? %>Model <span class="font-medium break-all text-ink"><%= ApplicationAgent::MODEL %></span>.<% end %>
+            A repeated question comes from the cache and is not billed.
+          </p>
+        </div>
+      </details>
+    </div>
+  <% else %>
+    <div class="panel panel-pad">
+      <p class="flex items-start gap-3 text-md">
+        <%= icon "check-circle", size: 20, class: "mt-0.5 text-emerald-700" %>
+        <span>The external LLM is off. Attributes are processed locally; there is no spending on its API. The trained extraction model is switched on separately from the LLM. Unresolved values stay empty or need review.</span>
+      </p>
+    </div>
+  <% end %>
+</section>

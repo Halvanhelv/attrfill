@@ -1,0 +1,29 @@
+<%# locals: (estimate:, source:) %>
+<section class="panel panel-pad mt-6" aria-labelledby="economics-title">
+  <h2 id="economics-title" class="section-title">How much manual work is left</h2>
+  <p class="mt-2 text-sm text-muted">A scenario estimate, not measured savings. Shares refer to attribute values, not to cards.
+    The starting shares come from <%= source %>. Seconds and the hourly cost are assumptions until timed: enter your own measurements.</p>
+  <%= form_with url: metrics_path, method: :get, class: "mt-4 grid gap-4 sm:grid-cols-2" do |form| %>
+    <% { values: "Number of values", review_share: "Share sent to review (0–1)", missing_share: "Share not found (0–1)",
+         accepted_error_rate: "Error rate among values accepted without a person (0–1)",
+         manual_seconds: "Manual filling, seconds per value", review_seconds: "Checking a suggestion, seconds",
+         missing_seconds: "Filling a value not found, seconds", qa_share: "Spot checks of accepted values (0–1)",
+         fix_seconds: "Fixing a published error, seconds", hourly_rate: "Hourly cost of an employee, ₽" }.each do |key, label| %>
+      <div><%= form.label key, label, class: "block text-sm" %><%= form.number_field key, value: estimate.public_send(key), min: 0, max: (1 if %i[review_share missing_share accepted_error_rate qa_share].include?(key)), step: "any", required: true, class: "input mt-1 w-full" %></div>
+    <% end %>
+    <div><%= form.submit "Recalculate", class: "btn btn-primary" %></div>
+  <% end %>
+  <dl class="mt-5 grid gap-4 sm:grid-cols-2">
+    <% { "All manual, hours" => estimate.manual_hours, "Checking suggestions, hours" => estimate.review_hours,
+         "Filling values not found, hours" => estimate.missing_hours, "Spot checks of accepted values, hours" => estimate.qa_hours,
+         "Fixing published errors, hours" => estimate.fix_hours, "Wrong values reaching the storefront" => estimate.published_errors,
+         "Potential reduction, hours" => estimate.saved_hours, "Potential labor cost reduction, ₽" => estimate.labor_savings }.each do |label, value| %>
+      <div><dt class="text-sm text-muted"><%= label %></dt><dd class="text-xl font-bold"><%= decimal(value, 1) %></dd></div>
+    <% end %>
+  </dl>
+  <% if (limit = estimate.break_even_review_seconds) %>
+    <p class="mt-4 text-sm">Break-even point: the system saves labor as long as checking one suggestion takes less than
+      <span class="font-semibold"><%= decimal([ limit, 0 ].max, 1) %> s</span>. This is the key parameter to time.</p>
+  <% end %>
+  <p class="mt-4 text-sm text-muted">Not included: infrastructure, integration, and the damage a filter error does until it is fixed. Empty fields wait in the review queue too: an employee fills in the value or confirms there is none. A negative result means the chosen scenario costs more than manual work.</p>
+</section>
