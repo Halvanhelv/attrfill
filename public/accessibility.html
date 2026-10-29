@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="How Attrfill supports people with disabilities: keyboard, screen readers, contrast, zoom, keyboard shortcuts and known limitations.">
+  <script>var t = "dark"; try { t = localStorage.getItem("theme") || "dark"; } catch (e) {} if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;</script>
+  <title>Accessibility · Attrfill</title>
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <!-- Static page: Rails serves it without the app, so the styles are inline and follow the app's tokens and theme. -->
+  <style>
+    :root { --bg:#f3f3f5; --panel:#fff; --ink:#1e1e1e; --muted:#6b6d76; --line:#e6e6ea; --control:#f3f3f5; --brand:#e3111b; --brand-text:#bf0d16;
+            --ok:#007a55; --ok-bg:#ecfdf5; --warn:#973c00; --warn-bg:#fffbeb; color-scheme:light; }
+    @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#121215; --panel:#1c1c21; --ink:#ececf0; --muted:#a0a2ab; --line:#2f3037; --control:#27282e;
+            --brand-text:#ff8a90; --ok:#5ee9b5; --ok-bg:#0f2a20; --warn:#fee685; --warn-bg:#2d2109; color-scheme:dark; } }
+    :root[data-theme="dark"] { --bg:#121215; --panel:#1c1c21; --ink:#ececf0; --muted:#a0a2ab; --line:#2f3037; --control:#27282e;
+            --brand-text:#ff8a90; --ok:#5ee9b5; --ok-bg:#0f2a20; --warn:#fee685; --warn-bg:#2d2109; color-scheme:dark; }
+    @media (prefers-contrast: more) { :root { --muted:#4b4d55; --line:#8a8a93; } :root[data-theme="dark"] { --muted:#c4c6ce; --line:#6a6b74; } }
+    * { box-sizing:border-box; }
+    html { scroll-padding-top:1rem; }
+    body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.6 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+           -webkit-font-smoothing:antialiased; padding:24px 16px 48px; }
+    .wrap { max-width:48rem; margin:0 auto; }
+    .skip { position:absolute; left:-9999px; }
+    .skip:focus { left:16px; top:16px; background:var(--ink); color:var(--panel); padding:10px 16px; border-radius:12px; z-index:1; }
+    header { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px; }
+    .logo { display:inline-flex; align-items:center; gap:10px; font-weight:700; color:inherit; text-decoration:none; }
+    .logo img { width:36px; height:36px; }
+    a { color:inherit; text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:4px; text-decoration-color:color-mix(in srgb, currentColor 45%, transparent); }
+    a:hover { text-decoration-color:var(--brand); }
+    .back { font-weight:600; font-size:15px; display:inline-flex; align-items:center; min-height:44px; }
+    main { margin-top:20px; }
+    .panel { background:var(--panel); border-radius:16px; padding:24px; margin-top:16px; box-shadow:0 0 0 1px var(--line),0 4px 16px rgb(16 16 20 / 4%); }
+    .eyebrow { margin:0; font-size:13px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; color:var(--brand-text); }
+    h1 { margin:6px 0 0; font-size:30px; line-height:1.2; letter-spacing:-.01em; text-wrap:balance; }
+    h2 { margin:0; font-size:20px; line-height:1.3; }
+    h3 { margin:20px 0 0; font-size:16px; }
+    p, li { color:var(--muted); }
+    p { margin:10px 0 0; }
+    strong { color:var(--ink); }
+    ul { margin:10px 0 0; padding-left:20px; }
+    li + li { margin-top:6px; }
+    .lead { font-size:18px; }
+    .level { display:inline-flex; align-items:center; gap:8px; margin-top:16px; padding:6px 12px; border-radius:999px; background:var(--ok-bg); color:var(--ok); font-weight:600; font-size:14px; }
+    .note { margin-top:16px; padding:12px 16px; border-radius:12px; background:var(--warn-bg); color:var(--warn); font-size:15px; }
+    .table-wrap { overflow-x:auto; margin-top:12px; }
+    table { width:100%; border-collapse:collapse; font-size:15px; }
+    th, td { text-align:left; padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; }
+    th { font-size:13px; font-weight:600; color:var(--muted); }
+    td:first-child { white-space:nowrap; }
+    tr:last-child td { border-bottom:0; }
+    kbd { display:inline-block; min-width:1.6em; padding:1px 6px; border:1px solid var(--line); border-radius:6px; background:var(--control);
+          font:600 13px/1.5 ui-sans-serif,system-ui,sans-serif; text-align:center; color:var(--ink); }
+    footer { margin-top:24px; font-size:14px; color:var(--muted); }
+    :focus-visible { outline:2px solid #f5222d; outline-offset:2px; }
+    @media (prefers-reduced-motion: reduce) { * { transition:none !important; animation:none !important; } }
+    @media print { body { background:#fff; } .panel { box-shadow:none; border:1px solid #d4d4d8; } .skip, .back { display:none; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="wrap">
+    <header>
+      <a class="logo" href="/"><img src="/icon.svg" alt=""> Attrfill</a>
+      <a class="back" href="/">← Back to the service</a>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <section class="panel" aria-labelledby="title">
+        <p class="eyebrow">Accessibility</p>
+        <h1 id="title">The service can be used without a mouse, with a screen reader and with any display settings</h1>
+        <p class="lead">We built Attrfill so that product cards can be filled in and reviewed by people with different
+          abilities: blind and low-vision people, people who find a mouse hard to use, and people who are sensitive
+          to motion on screen.</p>
+        <p class="level">Target: WCAG 2.1, level AA</p>
+        <p>WCAG is the international set of web accessibility guidelines; level AA is the one required of most
+          government and large commercial services. We checked the interface against these guidelines ourselves;
+          there has been no independent audit yet.</p>
+      </section>
+
+      <section class="panel" aria-labelledby="supported">
+        <h2 id="supported">What is supported</h2>
+
+        <h3>Keyboard</h3>
+        <ul>
+          <li>Every action is available from the keyboard: <kbd>Tab</kbd> moves between elements, and the focus ring is always visible.</li>
+          <li>A "Skip to content" link at the top of every page skips the menu.</li>
+          <li>After a decision on a value, the focus moves to the next one by itself, so you do not have to look for it.</li>
+          <li>Any decision can be undone within 5 seconds: an accidental press will not spoil the data.</li>
+        </ul>
+
+        <h3>Screen readers (VoiceOver, NVDA, TalkBack)</h3>
+        <ul>
+          <li>All buttons have clear names, for example "Correct: Brand — Apple".</li>
+          <li>The result of each action is announced: “Brand — confirmed "Apple". Left to review: 1”.</li>
+          <li>Errors are announced at once and do not disappear by themselves until they are closed.</li>
+          <li>Charts and colored bars are duplicated with text and numbers.</li>
+          <li>A file page updates while it is processed without interrupting reading; updates can be paused.</li>
+        </ul>
+
+        <h3>Vision</h3>
+        <ul>
+          <li>Text contrast meets level AA in both the light and the dark theme.</li>
+          <li>The default theme is dark; light or "System" can be chosen with the "Theme" switch, and the choice is remembered.</li>
+          <li>The system "Increase contrast" mode and Windows high contrast are respected.</li>
+          <li>Meaning is never conveyed by color alone: every status has a label.</li>
+          <li>The page can be zoomed up to 400% and text spacing increased: nothing disappears or slides sideways.</li>
+        </ul>
+
+        <h3>Motion and devices</h3>
+        <ul>
+          <li>With the system "Reduce motion" setting animations are turned off, and with "Reduce transparency" blur is.</li>
+          <li>Phones and tablets from 320 px wide; buttons on touch screens are at least 44 px.</li>
+          <li>Input fields on a phone do not trigger automatic page zoom.</li>
+          <li>The result can be printed or saved as PDF, without menus and buttons.</li>
+        </ul>
+      </section>
+
+      <section class="panel" aria-labelledby="keys">
+        <h2 id="keys">Keyboard shortcuts</h2>
+        <p>They work in the review queue, in the "Review the values of this file" section of a file page (everything there works as in the queue)
+          and in the value tables on card and file pages when a value is selected (click a row or move to it with <kbd>Tab</kbd>).
+          In the queue and in a file review the keys also work without a selection, on the top value on screen. While you type text, the keys stay out of the way.</p>
+        <div class="table-wrap" tabindex="0" role="region" aria-label="Keyboard shortcuts table">
+          <table>
+            <thead><tr><th scope="col">Key</th><th scope="col">Action</th></tr></thead>
+            <tbody>
+              <tr><td><kbd>1</kbd></td><td>Correct: confirm the value</td></tr>
+              <tr><td><kbd>2</kbd></td><td>Fix: open a field for the right value</td></tr>
+              <tr><td><kbd>3</kbd></td><td>No value: the card really does not have it</td></tr>
+              <tr><td><kbd>4</kbd> <kbd>5</kbd></td><td>Choose the first or second other possible answer</td></tr>
+              <tr><td><kbd>↑</kbd> <kbd>↓</kbd></td><td>Previous or next value</td></tr>
+              <tr><td><kbd>T</kbd></td><td>In the review queue and in a file review: show or hide the full card text; the place the disputed value was taken from is highlighted</td></tr>
+              <tr><td><kbd>F</kbd>, <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>F</kbd></td><td>Find a word in this card's text only (Ctrl/⌘ + F when the text is open; pressed again in the search field, it is the browser's usual page search). <kbd>Enter</kbd>: next match, <kbd>Shift</kbd> + <kbd>Enter</kbd>: previous, <kbd>Esc</kbd>: back to the value</td></tr>
+              <tr><td><kbd>Z</kbd></td><td>Undo the last decision while the notice is on screen (5 seconds)</td></tr>
+              <tr><td><kbd>A</kbd></td><td>In the review queue and in a file review: the same decision for the same value on other cards with the same title, while the notice is on screen</td></tr>
+              <tr><td><kbd>Enter</kbd></td><td>Save the typed correction</td></tr>
+              <tr><td><kbd>Esc</kbd></td><td>Close the correction field without saving</td></tr>
+              <tr><td><kbd>⌘</kbd>/<kbd>Ctrl</kbd> + <kbd>Enter</kbd></td><td>Submit the card for filling from any form field</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>In Safari on a Mac, to make <kbd>Tab</kbd> move through buttons too, press <kbd>⌥</kbd> + <kbd>Tab</kbd>
+          or turn on "Press Tab to highlight each item on a webpage" in Safari settings.</p>
+      </section>
+
+      <section class="panel" aria-labelledby="browsers">
+        <h2 id="browsers">Where it was tested</h2>
+        <ul>
+          <li>Chrome, Edge and Yandex Browser (Chromium engine): version 120 and newer.</li>
+          <li>Safari 18 (WebKit engine) on Mac; on iPhone and iPad, iOS 17.2 and newer.</li>
+          <li>Firefox 121 and newer.</li>
+          <li>Screen widths from 320 to 2560 px, regular and Retina displays.</li>
+        </ul>
+      </section>
+
+      <section class="panel" aria-labelledby="limits">
+        <h2 id="limits">Known limitations</h2>
+        <ul>
+          <li>A decision can be undone only within the first 5 seconds; after that it can be changed on the card page.</li>
+          <li>We checked screen reader support through the markup and the announced messages; a full walkthrough
+            with VoiceOver on iPhone and with NVDA has not been done yet.</li>
+          <li>The downloadable CSV and JSON files are data, not documents: they have no descriptions for a screen reader.</li>
+          <li>Browsers older than those listed above show the "Outdated browser" page.</li>
+        </ul>
+        <p class="note">Found something that is inconvenient or impossible to use? Tell the project team what you were doing,
+          in which browser and with which assistive software, and we will fix it first.</p>
+      </section>
+    </main>
+
+    <footer>Page updated on October 19, 2026.</footer>
+  </div>
+</body>
+</html>
