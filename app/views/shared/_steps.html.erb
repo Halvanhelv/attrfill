@@ -1,0 +1,25 @@
+<%# locals: (current:, waiting: AttributeValue.waiting.count, waiting_unknown: nil, scope: nil, check_path: reviews_path, download_path: batches_path(anchor: "history-title"), download_detail: "the result with your edits, CSV or JSON") %>
+<%# The whole job in three steps, so it is always clear where you are and what comes next.
+    waiting / scope: what is left to check here, e.g. waiting: 14, scope: "in this file". %>
+<% steps = [
+     [ "Fill", "paste a card or upload a file", root_path ],
+     [ "Review", waiting_unknown ? waiting_unknown : waiting.positive? ? "#{num(waiting)} #{plural(waiting, "value", "values")} #{scope} #{plural(waiting, "waits", "wait")} for a person".squish : "no disputed values", check_path ],
+     [ "Download", download_detail, download_path ]
+   ] %>
+<nav aria-label="Workflow steps" class="mb-6 sm:mb-8">
+  <ol class="grid grid-cols-3 gap-2 sm:gap-3">
+    <% steps.each.with_index(1) do |(title, detail, path), number| %>
+      <% here = number == current %>
+      <li class="min-w-0">
+        <%= link_to path, class: "flex h-full items-center gap-3 rounded-2xl p-2.5 transition max-sm:flex-col max-sm:gap-1.5 max-sm:text-center sm:p-3 #{here ? "bg-panel shadow-panel" : "hover:bg-panel/60"}",
+              "aria-current": ("step" if here) do %>
+          <span class="grid size-8 shrink-0 place-items-center rounded-full text-sm font-bold tabular-nums <%= here ? "bg-brand-600 text-white" : "bg-panel text-muted shadow-panel" %>"><%= number %></span>
+          <span class="min-w-0">
+            <span class="block text-sm leading-tight font-semibold <%= "text-muted" unless here %>"><%= title %></span>
+            <span class="hidden truncate text-xs text-muted md:block" <%= "data-waiting-step" if number == 2 %>><%= detail %></span>
+          </span>
+        <% end %>
+      </li>
+    <% end %>
+  </ol>
+</nav>

@@ -1,0 +1,232 @@
+<% content_for :title, card.title.truncate(60) %>
+<% turbo_refreshes_with method: :morph, scroll: :preserve %>
+<%# "Back" to the card must ask the server: a snapshot would show statuses and "Correct" from before the last decision. %>
+<% turbo_exempts_page_from_cache %>
+<% values = card.attribute_values %>
+<% counts = values.group_by(&:status).transform_values(&:size) %>
+<% waiting = counts["review"].to_i %>
+<% from_seller = values.count { |value| seller_gave?(card, value) } %>
+<% filled = values.select { |value| value.value.present? } %>
+<% added = filled.count { |value| !seller_gave?(card, value) } %>
+<% empty = values.reject { |value| value.value.present? } %>
+<% published = values.select { |value| published?(value) } %>
+<% fields = ->(count) { "#{count} #{plural(count, "field", "fields")}" } %>
+<% back_label, back_path = card_back_link(card) %>
+
+<%= render "shared/steps", current: waiting.zero? ? 3 : 2, waiting: waiting, scope: "in this card",
+                           check_path: "#values-title", download_path: "#next-title", download_detail: "copy or download JSON" %>
+
+<%= link_to back_path, class: "btn btn-ghost btn-sm -ml-3" do %><%= icon "arrow-left", size: 16 %> <%= back_label %><% end %>
+
+<header class="mt-3 min-w-0">
+  <div class="flex flex-wrap gap-2">
+    <span class="chip bg-panel"><%= icon "tag", size: 14 %> <%= card.category_title %></span>
+    <% if card.batch %>
+      <%= link_to batch_path(card.batch), class: "chip bg-panel transition hover:bg-zinc-50" do %><%= icon "file", size: 14 %> From file "<%= card.batch.name %>"<% end %>
+    <% end %>
+    <span class="chip bg-panel"><%= icon "cpu", size: 14 %> <%= card.asked_model ? "With a request to an external LLM" : "No requests to an external LLM" %></span>
+    <% if (recognized = values.count { |value| value.source == "tagger" }).positive? %>
+      <span class="chip bg-panel">Initial hints from the trained model: <%= recognized %></span>
+    <% end %>
+  </div>
+  <h1 class="page-title mt-3 break-words"><%= card.title %></h1>
+</header>
+
+<div class="mt-6 grid gap-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:items-start">
+  <%# The answer first: can the card go to the site, what the system added to what the seller gave, and what to do now. %>
+  <section class="panel overflow-hidden" aria-labelledby="verdict-title">
+    <div class="p-5 sm:p-6">
+      <div class="flex items-start gap-4">
+        <% if waiting.zero? %>
+          <span class="grid size-12 shrink-0 place-items-center rounded-2xl bg-emerald-50 text-emerald-700"><%= icon "check-circle", size: 24 %></span>
+          <div class="min-w-0">
+            <h2 id="verdict-title" class="text-xl font-bold">Ready to publish</h2>
+            <p class="mt-1 text-sm text-muted">
+              <% if empty.any? %>Not filled: <%= empty.map(&:title).join(", ") %> — the card text does not have it. You can add it by hand in the table below.
+              <% else %>All attributes are filled and accepted.<% end %>
+            </p>
+          </div>
+        <% else %>
+          <span class="grid size-12 shrink-0 place-items-center rounded-2xl bg-amber-50 text-amber-700"><%= icon "alert", size: 24 %></span>
+          <div class="min-w-0">
+            <h2 id="verdict-title" class="text-xl font-bold">Needs review: <%= fields.(waiting) %></h2>
+            <p class="mt-1 text-sm text-muted">The system is not sure of the values marked "Needs review". Confirm or correct them<%= empty.any? ? "." : " — the rest is already accepted." %></p>
+          </div>
+        <% end %>
+      </div>
+
+      <dl class="mt-5 grid grid-cols-3 gap-2 text-center sm:gap-3">
+        <div class="rounded-2xl bg-surface p-3">
+          <dt class="text-xs text-muted">Seller gave</dt>
+          <dd class="mt-1 text-2xl font-bold tabular-nums"><%= from_seller %></dd>
+        </div>
+        <div class="rounded-2xl bg-emerald-50 p-3">
+          <dt class="text-xs text-emerald-800">System added</dt>
+          <dd class="mt-1 text-2xl font-bold text-emerald-800 tabular-nums">+<%= added %></dd>
+          <% unverified = filled.count { |value| value.review? && !seller_gave?(card, value) } %>
+          <% if unverified.positive? %><dd class="mt-0.5 text-xs text-emerald-800"><%= unverified %> of them <%= plural(unverified, "awaits", "await") %> review</dd><% end %>
+        </div>
+        <div class="rounded-2xl bg-surface p-3">
+          <dt class="text-xs text-muted">Not found</dt>
+          <dd class="mt-1 text-2xl font-bold tabular-nums"><%= empty.size %></dd>
+        </div>
+      </dl>
+
+      <%# The bar and what its colours are: the blue of a person's decisions appears only after checking, so it is named. %>
+      <div class="mt-5 grid gap-2 text-xs text-muted">
+        <div class="flex items-center gap-3">
+          <span class="shrink-0"><%= values.size %> <%= plural(values.size, "attribute", "attributes") %></span>
+          <div class="min-w-24 flex-1" aria-hidden="true"><%= outcome_bar(counts, height: "h-1.5") %></div>
+        </div>
+        <%= card_outcome_legend(counts) %>
+      </div>
+    </div>
+
+    <%# The ending of the job: take the result away, or go and check what is left. Copying, the file and the link are
+        built in the browser from the same values as the table, so they always match what is on the screen. %>
+    <%= tag.div class: "border-t border-line bg-surface/60 px-5 py-5 sm:px-6 print:hidden",
+          data: { controller: "card-result", card_result_text_value: card_export_text(values),
+                  card_result_json_value: card_export_json(card, values), card_result_file_value: "card-#{card.id}.json",
+                  card_result_url_value: card_url(card), card_result_count_value: published.size, card_result_waiting_value: waiting } do %>
+      <h3 id="next-title" class="w-fit text-md font-semibold" tabindex="-1">What next</h3>
+      <% if waiting.zero? %>
+        <p class="mt-1 text-sm text-muted">Paste the attributes into the card on the site or save them as a file.</p>
+        <div class="mt-4 grid gap-2 sm:flex sm:flex-wrap">
+          <button type="button" class="btn btn-primary" data-action="card-result#copy"><%= icon "copy", size: 18 %> Copy attributes</button>
+          <button type="button" class="btn btn-white" data-action="card-result#download"><%= icon "download", size: 18 %> Download JSON</button>
+          <button type="button" class="btn btn-white" data-action="card-result#print"><%= icon "printer", size: 18 %> Save as PDF</button>
+          <button type="button" class="btn btn-white" data-action="card-result#copyLink"><%= icon "link", size: 18 %> Copy link</button>
+        </div>
+      <% else %>
+        <p class="mt-1 text-sm text-muted">Review <%= fields.(waiting) %> first: then the text for the site, the JSON and the PDF will have every attribute.</p>
+        <div class="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2">
+          <%= link_to "#values-title", class: "btn btn-primary max-sm:w-full", data: { action: "card-result#check:prevent" } do %>
+            <%= icon "list-checks", size: 18 %> Review <%= fields.(waiting) %>
+          <% end %>
+          <% if published.any? %>
+            <button type="button" class="btn btn-ghost btn-sm max-sm:w-full" data-action="card-result#copy">
+              <%= icon "copy", size: 16 %> Copy accepted (<%= published.size %>)
+            </button>
+          <% end %>
+        </div>
+      <% end %>
+      <% if card.batch %>
+        <p class="mt-4 text-sm text-muted">
+          This card is from a file — decisions go into its CSV and JSON.
+          <%= link_to batch_path(card.batch), class: "link inline-flex items-center gap-1 text-ink" do %>To file "<%= card.batch.name.truncate(40) %>" <%= icon "arrow-right", size: 16 %><% end %>
+        </p>
+      <% else %>
+        <%= link_to new_card_path, class: "link mt-3 inline-flex items-center gap-1 py-1 text-sm pointer-coarse:min-h-11" do %>Fill the next card <%= icon "arrow-right", size: 16 %><% end %>
+      <% end %>
+    <% end %>
+  </section>
+
+  <%# What a shopper would see in the "Specifications" tab once the card is published, next to the verdict:
+      this is the result itself. Values the seller did not give are marked, the ones still waiting say so. %>
+  <section class="panel panel-pad" aria-labelledby="preview-title">
+    <h2 id="preview-title" class="section-title flex items-start gap-2">
+      <%= icon "eye", size: 20, class: "mt-1" %>
+      <span>What a shopper sees — <%= published.size %> <%= plural(published.size, "attribute", "attributes") %> instead of <%= from_seller %></span>
+    </h2>
+    <p class="mt-1 text-sm text-muted">The "Specifications" block of the product page. "New" means the seller did not give it.</p>
+    <% if published.any? || waiting.positive? %>
+      <dl class="spec mt-4 text-md">
+        <% values.each do |value| %>
+          <% if published?(value) %>
+            <div>
+              <dt><%= value.title %></dt>
+              <dd><%= value.value %><% unless seller_gave?(card, value) %> <span class="badge ml-1 bg-emerald-50 align-[1px] text-emerald-700">new</span><% end %></dd>
+            </div>
+          <% elsif value.review? %>
+            <div>
+              <dt><%= value.title %></dt>
+              <dd class="font-normal text-amber-800">awaiting review</dd>
+            </div>
+          <% end %>
+        <% end %>
+      </dl>
+    <% else %>
+      <p class="mt-4 text-sm text-muted">Nothing to show yet — no value was found. You can add them by hand in the table below.</p>
+    <% end %>
+  </section>
+</div>
+
+<%= tag.div class: "mt-10 grid gap-6 xl:grid-cols-[minmax(0,1fr)_340px]",
+      data: { controller: "trace inline-review", inline_review_waiting_value: waiting, inline_review_result_value: "next-title",
+              inline_review_done_value: "All reviewed — the card can be copied and downloaded.",
+              action: "submit->inline-review#defer click@document->trace#tap turbo:morph@document->trace#reset" } do %>
+  <%# The card text comes first, so that on a narrow screen it is above the table and the fragment a tapped row lights up
+      is in view; from xl it is the sticky column on the right. %>
+  <aside class="grid content-start gap-4 xl:sticky xl:col-start-2 xl:row-start-1 xl:top-24 xl:-m-1 xl:max-h-[calc(100dvh-7rem)] xl:self-start
+                xl:overflow-y-auto xl:overscroll-contain xl:p-1 print:hidden" aria-label="Card text">
+    <%# A <summary> may hold only phrasing content, so the heading for the headings list is outside it, for screen readers. %>
+    <h2 class="sr-only">Card text</h2>
+    <details class="panel group" open data-action="turbo:before-morph-attribute->trace#keepOpen">
+      <summary class="flex cursor-pointer list-none items-center justify-between gap-3 rounded-2xl px-5 py-4 sm:px-6 [&::-webkit-details-marker]:hidden">
+        <span class="eyebrow block">Card text</span>
+        <span class="flex items-center gap-1 text-xs text-muted" aria-hidden="true">
+          <span class="group-open:hidden">Show</span><span class="hidden group-open:inline">Hide</span>
+          <%= icon "chevron-down", size: 16, class: "transition group-open:rotate-180" %>
+        </span>
+      </summary>
+      <div class="px-5 pb-5 sm:px-6 sm:pb-6">
+        <p class="text-md leading-relaxed font-semibold break-words"><%= highlight_sources(card.title, values) %></p>
+        <% if card.description.present? %>
+          <% long = card.description.size > 700 %>
+          <%= tag.div class: [ "mt-3 text-sm leading-relaxed break-words whitespace-pre-line", ("max-xl:max-h-80 max-xl:overflow-y-auto max-xl:overscroll-contain max-xl:rounded-xl max-xl:bg-surface max-xl:p-3" if long) ],
+                tabindex: (0 if long), role: ("region" if long), "aria-label": ("Card description" if long) do %><%= highlight_sources(card.description, values) %><% end %>
+        <% end %>
+        <p class="mt-4 flex items-center gap-2 text-xs text-muted"><span class="source-mark">Highlighted</span> — where the system found values.</p>
+      </div>
+    </details>
+
+    <% if card.seller_attributes.any? %>
+      <div class="panel panel-pad">
+        <h2 class="eyebrow">Seller gave</h2>
+        <dl class="spec mt-3">
+          <% card.seller_attributes.each do |key, value| %>
+            <div><dt><span class="truncate"><%= key %></span></dt><dd><%= value %></dd></div>
+          <% end %>
+        </dl>
+      </div>
+    <% end %>
+  </aside>
+
+  <section aria-labelledby="values-title" class="min-w-0 xl:col-start-1 xl:row-start-1">
+    <%# On paper the heading goes to the next page with its table rather than staying alone at the bottom. %>
+    <h2 id="values-title" class="section-title print:break-after-avoid">Attributes</h2>
+    <div class="mt-1 mb-3 grid gap-1 text-sm text-muted print:hidden">
+      <p>
+        <span class="hidden can-hover:inline">Hover over a row or click it</span><span class="can-hover:hidden">Tap a row</span>
+        to highlight where its value came from: in the row itself and in the card text.
+      </p>
+      <%# As in the queue, a decision goes after 5 seconds (inline_review); the keys of the queue work here too,
+          on the row with the focus. %>
+      <%# Z is named here only when the line of keys below, which has it, is not shown. %>
+      <p>After a decision you have 5 seconds to undo it with the "Undo" button in the row or in the notification<% unless waiting.positive? %><span class="pointer-coarse:hidden"> (or <kbd class="kbd">Z</kbd>)</span><% end %>.</p>
+      <% if waiting.positive? %>
+        <p class="hidden pointer-fine:block"><%= review_keys_hint(values, neighbour: "next row") %></p>
+      <% end %>
+    </div>
+    <%= render "shared/values", values: values, filter: true, actions: true %>
+
+    <%# What the confidence words mean, in the numbers of the last check on labelled cards. %>
+    <% sure_word, doubt_word, unsure_word = [ 0.8, 0.5, 0.0 ].map { |confidence| confidence_word(confidence) } %>
+    <% sure = track_record_phrase(sure_word) %>
+    <% doubt = track_record_phrase(doubt_word) %>
+    <div class="mt-4 flex gap-2.5 text-sm text-muted">
+      <%= icon "info", size: 18, class: "mt-0.5" %>
+      <div class="grid gap-1">
+        <p><span class="font-medium text-ink"><%= sure_word.capitalize %></span> — high confidence<%= sure ? ": such values #{sure}" : "" %>. Whether a value was accepted automatically is shown in its status: important filters have stricter rules.</p>
+        <% if doubt %>
+          <% unsure = track_record_phrase(unsure_word) %>
+          <p><span class="font-medium text-ink"><%= doubt_word.capitalize %></span> — such values <%= doubt %>; <span class="font-medium text-ink"><%= unsure_word.capitalize %></span> — <%= unsure || "even less often" %>.
+            They wait for a person.</p>
+        <% else %>
+          <p><span class="font-medium text-ink"><%= doubt_word.capitalize %></span> and <span class="font-medium text-ink"><%= unsure_word.capitalize %></span> — wait for a person.</p>
+        <% end %>
+        <p><span class="font-medium text-sky-700">Checked by a person</span> — a person's decision; the system does not change it.</p>
+      </div>
+    </div>
+  </section>
+<% end %>

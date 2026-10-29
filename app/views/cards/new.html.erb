@@ -1,0 +1,151 @@
+<% content_for :title, "New card" %>
+<% batch = Batch.order(id: :desc).first %>
+<% waiting = batch ? batch.attribute_values.where(status: "review").count : 0 %>
+
+<%= render "shared/steps", current: 1 %>
+
+<%# One grid for every width. The order in the page is the order on a phone and for the keyboard: the examples come
+    before the form, a demo in one tap. On a wide screen the form is on the left, the examples and the last file on the
+    right, and the steps of the system across both under them.
+    grid-cols-1 and min-w-0: a long option of the select or the long button cannot widen the page at 320px. %>
+<div class="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_360px] lg:grid-rows-[auto_auto_1fr_auto] lg:gap-x-8"
+     data-controller="example" data-action="turbo:before-cache@document->example#reset">
+  <header class="min-w-0 lg:col-start-1 lg:row-start-1">
+    <h1 class="page-title">Fill in attributes</h1>
+    <p class="page-lead">Paste the text of a product card. The system finds the brand, model, storage, color and other fields, rates its confidence in each and sets doubtful ones aside for a person to review.</p>
+  </header>
+
+  <section class="panel panel-pad min-w-0 lg:col-start-2 lg:row-start-2" aria-labelledby="examples-title">
+    <h2 id="examples-title" class="font-semibold">See it in 10 seconds</h2>
+    <p class="mt-1 text-sm text-muted">One click takes you to the result page.</p>
+    <div class="mt-4 flex flex-wrap gap-2" role="group" aria-labelledby="examples-title">
+      <% HomeHelper::EXAMPLES.each do |example| %>
+        <%# While it is sent the spinner covers the label, so the pills do not move; the label stays the name. %>
+        <button type="button" class="pill group relative max-w-full text-left whitespace-normal aria-disabled:cursor-wait aria-disabled:opacity-60 aria-busy:opacity-100"
+                data-action="example#fill" data-example-target="example"
+                data-example-title-param="<%= example[:title] %>"
+                data-example-description-param="<%= example[:description] %>"
+                data-example-seller-param="<%= example[:seller] %>">
+          <%= icon "loader", size: 18, class: "absolute inset-0 m-auto hidden animate-spin group-aria-busy:block" %>
+          <% if example[:disputed] %><span class="dot bg-amber-500 group-aria-busy:opacity-0" aria-hidden="true"></span><% end %>
+          <span class="group-aria-busy:text-transparent"><%= example[:label] %></span>
+        </button>
+      <% end %>
+    </div>
+    <%# What to do after the example, to the end of the job, in the words of the buttons on the way. %>
+    <ol class="mt-5 grid gap-2 border-t border-line pt-4 text-sm text-muted">
+      <% [ "Open an example",
+           "Confirm or correct the yellow \"Needs review\" value",
+           safe_join([ link_to("\"Files\"", batches_path, class: "link text-ink"), tag.span(" → ", "aria-hidden": true), tag.span(", then ", class: "sr-only"),
+                       "the 40-card example", tag.span(" → ", "aria-hidden": true), tag.span(", then ", class: "sr-only"), "\"Download CSV\"" ]) ].each.with_index(1) do |step, number| %>
+        <li class="flex gap-2.5">
+          <span class="grid size-5 shrink-0 place-items-center rounded-full bg-control text-2xs font-semibold text-ink tabular-nums"><%= number %></span>
+          <span class="min-w-0"><%= step %></span>
+        </li>
+      <% end %>
+    </ol>
+  </section>
+
+  <div class="min-w-0 lg:col-start-1 lg:row-span-2 lg:row-start-2">
+    <%= form_with scope: :card, url: cards_path, class: "panel panel-pad grid gap-5",
+          data: { controller: "submit-shortcut", example_target: "form",
+                  action: "keydown.meta+enter->submit-shortcut#submit keydown.ctrl+enter->submit-shortcut#submit turbo:submit-end->example#reset" } do |form| %>
+      <div class="min-w-0">
+        <%= form.label :title, class: "label" do %>Title <span class="text-brand-700" aria-hidden="true">*</span><% end %>
+        <%# Not only spaces; no spellcheck or capitals for model codes; on a phone "Enter" goes on to the next field. %>
+        <%= form.text_field :title, required: true, pattern: ".*\\S.*", autocomplete: "off", spellcheck: false, enterkeyhint: "next",
+              placeholder: "Example Phone X smartphone 8/256 GB black", "aria-describedby": "card_title_hint",
+              class: "input py-3.5", data: { example_target: "title", action: "invalid->example#explain input->example#clear" } %>
+        <p id="card_title_hint" class="hint">Main source: most fields come from the title.</p>
+      </div>
+
+      <div class="min-w-0">
+        <%= form.label :description, "Description", class: "label" %>
+        <%= form.text_area :description, rows: 4, placeholder: "The seller's free text",
+              class: "input field-sizing-content min-h-28 max-h-[60vh] resize-y overflow-y-auto",
+              data: { example_target: "description", controller: "autosize", action: "input->autosize#resize" } %>
+      </div>
+
+      <div class="grid grid-cols-1 gap-5 sm:grid-cols-[minmax(0,1fr)_260px]">
+        <div class="min-w-0">
+          <%= form.label :seller_attributes, "What the seller gave", class: "label" %>
+          <%= form.text_area :seller_attributes, rows: 2, placeholder: "Brand: Example; Color: black",
+                autocapitalize: "none", spellcheck: false, "aria-describedby": "card_seller_attributes_hint",
+                class: "input field-sizing-content min-h-20 max-h-[60vh] resize-y overflow-y-auto font-mono",
+                data: { example_target: "seller", controller: "autosize", action: "input->autosize#resize" } %>
+          <p id="card_seller_attributes_hint" class="hint">"key: value" pairs separated by semicolons, or JSON.</p>
+        </div>
+        <div class="min-w-0">
+          <%= form.label :category, "Category", class: "label" %>
+          <%= form.select :category, categories.sort_by(&:label).map { |category| [ category.label, category.name ] },
+                { include_blank: "Detect from text" }, class: "input", "aria-describedby": "card_category_hint", data: { example_target: "category" } %>
+          <p id="card_category_hint" class="hint">Optional.</p>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-x-4 gap-y-3 border-t border-line pt-5">
+        <%# Under 360px the label alone fills the button: with the icon and the wide padding it broke into two lines. %>
+        <%= form.button class: "btn btn-primary btn-lg w-full sm:w-auto max-[22.5rem]:px-4 max-[22.5rem]:text-md", "aria-keyshortcuts": "Meta+Enter Control+Enter",
+              data: { submit_shortcut_target: "submit", example_target: "submit",
+                      turbo_submits_with: "#{icon("loader", size: 18, class: "animate-spin")} Filling in…" } do %>
+          <%= icon "sparkles", size: 18, class: "max-[22.5rem]:hidden" %> Fill in attributes
+        <% end %>
+        <%# Keys only where there is a keyboard. %>
+        <span class="hidden text-xs text-muted sm:pointer-fine:inline">
+          <kbd class="kbd" data-submit-shortcut-target="modifier"><%= shortcut_modifier %></kbd> <kbd class="kbd">Enter</kbd> to submit from any field
+        </span>
+      </div>
+    <% end %>
+
+    <p class="mt-4 text-sm text-muted">
+      Many cards?
+      <%= link_to batches_path, class: "link inline-flex items-center gap-1 text-ink" do %>Upload a CSV or JSON file <%= icon "arrow-right", size: 16 %><% end %>
+    </p>
+  </div>
+
+  <% if batch %>
+    <% state, tone = last_batch_state(batch, waiting) %>
+    <section class="panel panel-pad min-w-0 self-start lg:col-start-2 lg:row-start-3" aria-labelledby="last-batch-title">
+      <h2 id="last-batch-title" class="font-semibold">Latest file</h2>
+      <%# The state on a line of its own: in the narrow column a "·" would be left hanging at the end of a line. %>
+      <p class="mt-1 text-sm text-muted"><span class="font-medium break-all text-ink"><%= batch.name %></span> · <%= human_time(batch.created_at) %></p>
+      <p class="mt-1 flex items-center gap-1.5 text-sm text-muted"><span class="dot <%= tone %>" aria-hidden="true"></span><%= state %></p>
+      <div class="mt-4 flex flex-wrap gap-2">
+        <% if batch.done? && waiting.positive? %>
+          <%# To the check on the file's own page: these are the values the line counts, not the whole queue. %>
+          <%= link_to "Continue review", batch_path(batch, anchor: "review-title"), class: "btn btn-dark btn-sm" %>
+        <% elsif batch.done? %>
+          <%= link_to download_batch_path(batch, format: :csv), class: "btn btn-dark btn-sm", data: { turbo: false } do %><%= icon "download", size: 16 %> Download CSV<% end %>
+        <% end %>
+        <%= link_to batch_path(batch), class: "btn btn-secondary btn-sm" do %>Open file<span class="sr-only"> "<%= batch.name %>"</span><% end %>
+      </div>
+    </section>
+  <% end %>
+
+  <section class="panel panel-pad min-w-0 lg:col-span-2 lg:row-start-4" aria-labelledby="how-title">
+    <div class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
+      <h2 id="how-title" class="font-semibold">How it works</h2>
+      <p class="text-sm text-muted">Each step gets only what the previous one left undecided.</p>
+    </div>
+    <ol class="mt-4 grid gap-3 text-sm sm:grid-cols-2 lg:grid-cols-5 lg:gap-5">
+      <% [ [ "Rules and dictionaries", "patterns and lists of brands and colors" ],
+           [ "Text recognition", "finds the brand and model even when written unfamiliarly" ],
+           [ "Other product variants", "the same device in another color or with other storage" ],
+           [ "Typical for the category", "a hint for a field the text says nothing about" ],
+           [ "A person", "everything the system is not sure of" ] ].each.with_index(1) do |(step, detail), number| %>
+        <li class="flex gap-3">
+          <span class="grid size-6 shrink-0 place-items-center rounded-full bg-surface text-xs font-semibold tabular-nums"><%= number %></span>
+          <span class="min-w-0"><span class="font-medium"><%= step %></span><span class="block text-muted"><%= detail %></span></span>
+        </li>
+      <% end %>
+    </ol>
+    <p class="mt-4 rounded-xl bg-surface px-3.5 py-2.5 text-xs text-muted">
+      <%# The acceptance rule in force (strict or standard), not the floor of the top confidence word. %>
+      <%= acceptance_rule_sentence %>
+      <% if (record = track_record_phrase(confidence_word(0.8))) %>
+        On labelled test cards such values <%= record %>.
+        <%= link_to "More in Metrics", metrics_path, class: "link text-ink" %>
+      <% end %>
+    </p>
+  </section>
+</div>

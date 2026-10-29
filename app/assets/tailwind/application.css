@@ -1,0 +1,313 @@
+@import "tailwindcss";
+
+/* Styles of single screens live next to this file; each screen owns its own. */
+@import "./cards.css";
+@import "./reviews.css";
+@import "./batches.css";
+@import "./metrics.css";
+
+/* Theme: follows the system; a choice saved by the theme switch (html[data-theme]) wins.
+   Not light-dark(): Chrome 120–122 and Safari 17.2–17.4, which allow_browser lets in, do not have it. */
+@custom-variant dark {
+  @media (prefers-color-scheme: dark) {
+    &:where(:root:not([data-theme="light"]), :root:not([data-theme="light"]) *) { @slot; }
+  }
+  &:where([data-theme="dark"], [data-theme="dark"] *) { @slot; }
+}
+
+/* "Can hover" rather than "is a mouse": an iPad with a trackpad hovers although its pointer is coarse. */
+@custom-variant can-hover (@media (hover: hover));
+
+/* Design tokens. Colours, radii and type follow the Acme Retail look: white panels on a light grey page,
+   a red accent for the one main action, near-black text, generous rounding. Semantic tokens (panel, control,
+   on-ink, hero, success) exist so that the dark theme can swap them; the palette tints used for statuses are
+   swapped too (see :root below), so status classes such as bg-emerald-50 text-emerald-700 work in both themes. */
+@theme {
+  --font-sans: "Onest", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --text-md: 0.9375rem;
+  --text-md--line-height: 1.5rem;
+  --text-title: 1.75rem;
+  --text-title--line-height: 2.25rem;
+  --text-2xs: 0.6875rem;
+  --text-2xs--line-height: 1rem;
+
+  --color-brand-50: #fff1f1;
+  --color-brand-100: #ffdfdf;
+  --color-brand-500: #f5222d;
+  --color-brand-600: #e3111b;
+  --color-brand-700: #bf0d16;
+  --color-brand-hover: #bf0d16; /* hover of the red button: the same in both themes */
+
+  --color-ink: #1e1e1e;
+  --color-ink-strong: #000;
+  --color-on-ink: #fff; /* text on an ink background (dark button, selected pill) */
+  --color-muted: #6b6d76;
+  --color-line: #e6e6ea;
+  --color-surface: #f3f3f5; /* the page, sunken fields and tracks */
+  --color-panel: #fff; /* raised panels */
+  --color-control: #f3f3f5; /* secondary buttons, pills and chips */
+  --color-control-hover: #e6e6ea;
+  --color-field-hover: #ececef;
+  --color-hero: #1e1e1e; /* the dark headline panel: dark in both themes */
+  --color-field-edge: transparent; /* the edge of a field: the grey fill shows it in the light theme */
+  --color-success: oklch(50.8% 0.118 165.612);
+  --color-success-hover: oklch(43.2% 0.095 166.913);
+
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+  --radius-3xl: 24px;
+
+  /* The edge is transparent in the light theme; in the dark one it outlines panels a shadow can no longer show. */
+  --shadow-panel: 0 0 0 1px var(--shadow-edge), 0 1px 2px var(--shadow-tint), 0 4px 16px var(--shadow-tint);
+  --shadow-pop: 0 0 0 1px var(--shadow-edge), 0 8px 32px var(--shadow-pop-tint);
+}
+
+@layer base {
+  /* Dark values; every text pair on its background is at least 4.5:1. */
+  :root {
+    color-scheme: light;
+    --shadow-edge: transparent;
+    --shadow-tint: rgb(16 16 20 / 4%);
+    --shadow-pop-tint: rgb(16 16 20 / 12%);
+
+    @variant dark {
+      color-scheme: dark;
+      --color-surface: #121215;
+      --color-panel: #1c1c21;
+      --color-control: #27282e;
+      --color-control-hover: #34353c;
+      --color-field-hover: #0c0c0f;
+      --color-line: #2f3037;
+      --color-ink: #ececf0;
+      --color-ink-strong: #fff;
+      --color-on-ink: #17171a;
+      --color-muted: #a0a2ab;
+      --color-hero: #26272e;
+      --color-field-edge: #6c6d77; /* 3.2:1 to the panel */
+      --color-brand-50: #3a1517;
+      --color-brand-100: #5a1f23;
+      --color-brand-700: #ff8a90;
+      --color-emerald-50: #0f2a20;
+      --color-emerald-700: #5ee9b5;
+      --color-emerald-800: #a4f4cf;
+      --color-amber-50: #2d2109;
+      --color-amber-100: #4a360d;
+      --color-amber-300: #6e4e10;
+      --color-amber-700: #ffd230;
+      --color-amber-800: #fee685;
+      --color-sky-50: #0b2435;
+      --color-sky-700: #74d4ff;
+      --color-zinc-50: #25252b;
+      --color-zinc-300: #5c5c66;
+      --color-zinc-400: #80808a;
+      --shadow-edge: rgb(255 255 255 / 7%);
+      --shadow-tint: rgb(0 0 0 / 30%);
+      --shadow-pop-tint: rgb(0 0 0 / 55%);
+    }
+  }
+
+  /* More contrast when the system asks for it. */
+  @media (prefers-contrast: more) {
+    :root {
+      --color-muted: #4b4d55; --color-line: #8a8a93;
+      @variant dark { --color-muted: #c4c6ce; --color-line: #6a6b74; }
+    }
+  }
+
+  html {
+    -webkit-tap-highlight-color: transparent;
+    /* The sticky header must not cover what gets the focus or an anchor (WCAG 2.4.11). */
+    scroll-padding-top: 6rem;
+  }
+  body { @apply bg-surface text-ink font-sans antialiased; }
+  ::selection { @apply bg-brand-100; }
+  :focus-visible { @apply outline-2 outline-offset-2 outline-brand-500; }
+  [hidden] { display: none !important; }
+
+  /* Absolutely placed screen-reader text must stay inside its scrolling box, or it widens the page on phones. */
+  :where(.overflow-x-auto, .overflow-x-scroll, .overflow-auto) { position: relative; }
+
+  /* No double-tap zoom on controls, so quick taps on "Correct" stay taps. */
+  :where(a, button, summary, label, [data-action]) { touch-action: manipulation; }
+
+  /* No colour animation while the theme switches (theme_controller sets the attribute for one frame). */
+  [data-theme-switching] *, [data-theme-switching] ::before, [data-theme-switching] ::after { transition: none !important; }
+
+  /* Respect "reduce motion" in the system settings. */
+  @media (prefers-reduced-motion: reduce) {
+    *, ::before, ::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+  }
+}
+
+@layer components {
+  /* Surfaces */
+  .panel { @apply rounded-2xl bg-panel shadow-panel; }
+  .panel-pad { @apply p-5 sm:p-6; }
+
+  /* Headings */
+  .page-title { @apply text-2xl font-bold tracking-tight text-balance sm:text-title; }
+  .page-lead { @apply mt-1.5 max-w-2xl text-md text-muted; }
+  .section-title { @apply text-lg font-semibold tracking-tight text-balance; }
+  .eyebrow { @apply text-xs font-medium tracking-wide text-muted uppercase; }
+
+  /* Buttons. On a phone a long label wraps instead of widening the page; a press shows itself. */
+  .btn {
+    @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-md font-semibold whitespace-nowrap
+           transition select-none active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50 disabled:active:scale-100
+           aria-disabled:pointer-events-none aria-disabled:opacity-50 max-sm:whitespace-normal max-sm:text-center pointer-coarse:min-h-11;
+  }
+  .btn-sm { @apply rounded-[10px] px-3 py-1.5 text-sm; }
+  .btn-lg { @apply px-6 py-3.5 text-base; }
+  .btn-primary { @apply bg-brand-600 text-white hover:bg-brand-hover active:bg-brand-hover; }
+  .btn-dark { @apply bg-ink text-on-ink hover:bg-ink-strong; }
+  .btn-secondary { @apply bg-control text-ink hover:bg-control-hover active:bg-control-hover; }
+  .btn-white { @apply bg-panel text-ink shadow-panel hover:bg-zinc-50 active:bg-zinc-50; } /* secondary action placed on the grey page, not in a panel */
+  .btn-success { @apply bg-success text-white hover:bg-success-hover active:bg-success-hover; }
+  .btn-ghost { @apply text-muted hover:bg-control hover:text-ink active:bg-control; }
+
+  /* Form fields. Sunken into the panel; in the dark theme a visible edge too. */
+  .label { @apply mb-1.5 block text-sm font-medium; }
+  .hint { @apply mt-1.5 text-xs text-muted; }
+  .input {
+    @apply block w-full rounded-xl border border-transparent bg-surface px-4 py-3 text-md text-ink transition
+           placeholder:text-muted hover:bg-field-hover focus:border-ink focus:bg-panel focus:outline-hidden
+           dark:border-field-edge dark:focus:border-ink;
+  }
+  .input-sm { @apply rounded-[10px] px-3 py-2 text-sm; }
+  select.input {
+    @apply cursor-pointer appearance-none bg-[length:16px] bg-[right_14px_center] bg-no-repeat pr-10;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231e1e1e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    @variant dark {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ececf0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    }
+  }
+
+  /* Chips and badges */
+  .chip { @apply inline-flex max-w-full items-center gap-1.5 rounded-full bg-control px-3 py-1 text-sm whitespace-nowrap max-sm:whitespace-normal; }
+  .badge { @apply inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-xs font-semibold whitespace-nowrap; }
+  .dot { @apply inline-block size-2 shrink-0 rounded-full; }
+  .kbd { @apply rounded-md border border-line bg-panel px-1.5 py-0.5 font-sans text-2xs font-medium text-muted; }
+
+  /* Tabs that look like the filter pills on acme-retail.example */
+  .pill {
+    @apply inline-flex cursor-pointer items-center gap-2 rounded-xl bg-control px-3.5 py-2 text-sm font-medium whitespace-nowrap transition
+           hover:bg-control-hover active:bg-control-hover pointer-coarse:min-h-11
+           aria-[current]:bg-ink aria-[current]:text-on-ink aria-pressed:bg-ink aria-pressed:text-on-ink;
+  }
+  .pill-white { @apply bg-panel shadow-panel hover:bg-zinc-50 aria-[current]:bg-ink aria-pressed:bg-ink; } /* a pill on the grey page */
+  .pill-count { @apply rounded-full bg-ink/8 px-1.5 text-xs tabular-nums; }
+  .pill[aria-current] .pill-count, .pill[aria-pressed="true"] .pill-count { @apply bg-on-ink/20; }
+
+  /* Tables */
+  .table { @apply w-full text-left text-sm; }
+  .table thead th { @apply border-b border-line px-4 py-3 text-xs font-medium whitespace-nowrap text-muted first:pl-5 last:pr-5 sm:first:pl-6 sm:last:pr-6; }
+  .table tbody :is(td, th) { @apply border-b border-line px-4 py-3.5 text-left align-middle first:pl-5 last:pr-5 sm:first:pl-6 sm:last:pr-6; }
+  .table tbody tr:last-child :is(td, th) { @apply border-b-0; }
+  .table tbody tr { @apply transition-colors; }
+
+  /* A horizontal strip that scrolls (nav, pills): no scrollbar; Chrome 120 and Safari before 18.2 need the -webkit- rule. */
+  .no-scrollbar { scrollbar-width: none; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+
+  /* Specification list with dotted leaders, like the "Specifications" tab of a product page */
+  .spec { @apply grid gap-y-2.5 text-sm; }
+  .spec > div { @apply flex items-baseline gap-2; }
+  .spec dt { @apply flex min-w-0 flex-1 items-baseline gap-2 text-muted after:min-w-6 after:flex-1 after:border-b after:border-dotted after:border-line after:content-['']; }
+  .spec dd { @apply max-w-[60%] text-right font-medium break-words; }
+
+  /* The underline is in the link's own colour (a light grey line vanished on the panels), so a link is told apart without colour. */
+  .link { @apply font-medium underline decoration-current/45 decoration-2 underline-offset-4 transition hover:decoration-brand-500; }
+
+  /* Turbo's progress bar in the brand colour instead of its default blue. */
+  .turbo-progress-bar { background-color: var(--color-brand-600); }
+
+  /* The theme switch: the pressed button comes from html[data-theme] in CSS, so it is right before any script runs. */
+  .theme-switch { @apply inline-flex gap-0.5 rounded-xl bg-control p-0.5; }
+  .theme-switch button { @apply grid size-8 cursor-pointer place-items-center rounded-[10px] text-muted transition hover:text-ink pointer-coarse:size-10; }
+  :root:not([data-theme]) .theme-switch [data-choice="system"],
+  :root[data-theme="light"] .theme-switch [data-choice="light"],
+  :root[data-theme="dark"] .theme-switch [data-choice="dark"] { @apply bg-panel text-ink shadow-panel; }
+
+  /* Notifications shown by controllers/notify.js */
+  /* On a phone the action goes under the text at full width, so the sentence is not squeezed into a column. */
+  .notice { @apply pointer-events-auto flex max-w-lg items-start gap-3 rounded-2xl bg-panel px-4 py-3 text-sm text-ink shadow-pop max-sm:w-full max-sm:flex-wrap; }
+  .notice > p { @apply min-w-0 max-sm:basis-[calc(100%-3.5rem)]; }
+  .notice > .btn { @apply max-sm:order-last max-sm:w-full; }
+  .notice-error { @apply bg-ink text-on-ink; }
+}
+
+@utility animate-in {
+  animation: rise 0.25s ease-out both;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(6px); }
+}
+
+/* --- Rules outside the layers: they must win over utility classes. --- */
+
+/* iOS zooms the page on focus of a field under 16px and does not zoom back. Touch screens get 16px fields. */
+@media (pointer: coarse) {
+  .input, .input-sm { font-size: max(1rem, 16px); }
+}
+
+/* A phone held sideways has no height to spare for a sticky header. */
+@media (max-height: 30rem) {
+  body > header { position: static; }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  body > header { background-color: var(--color-panel); -webkit-backdrop-filter: none; backdrop-filter: none; }
+}
+
+/* Windows high contrast: backgrounds and shadows are dropped, so edges, selections and bars need their own signs. */
+@media (forced-colors: active) {
+  .panel, .chip, .badge, .kbd, .notice { border: 1px solid CanvasText; }
+  .btn, .pill, .theme-switch button { border: 1px solid ButtonText; }
+  .pill[aria-current], .pill[aria-pressed="true"], [aria-current="step"], .theme-switch button[aria-pressed="true"] {
+    border: 3px solid Highlight; text-decoration: underline 2px; text-underline-offset: 4px;
+  }
+  .input:focus { outline: 2px solid Highlight; outline-offset: 2px; }
+  [role="img"], [role="progressbar"], .meter { forced-color-adjust: none; background: Canvas; outline: 1px solid CanvasText; }
+  [role="img"] > *, [role="progressbar"] > *, .meter > * { background: CanvasText !important; }
+  .source-mark { forced-color-adjust: none; outline: 1px solid CanvasText; }
+  .source-mark[data-active] { outline: 3px solid Highlight; }
+  select.input { appearance: auto; background-image: none; }
+}
+
+/* Printing a card or a file: the result only, without the app around it; bars and badges keep their colours. */
+@media print {
+  @page { margin: 12mm; }
+  /* Paper is white whatever the theme on screen: the light values of every token the dark theme changes.
+     Unlayered, so it wins over the dark rules in @layer base. */
+  :root {
+    color-scheme: light;
+    --color-surface: #f3f3f5; --color-panel: #fff; --color-control: #f3f3f5; --color-control-hover: #e6e6ea;
+    --color-field-hover: #ececef; --color-line: #e6e6ea; --color-ink: #1e1e1e; --color-ink-strong: #000;
+    --color-on-ink: #fff; --color-muted: #6b6d76; --color-hero: #1e1e1e;
+    --color-brand-50: #fff1f1; --color-brand-100: #ffdfdf; --color-brand-700: #bf0d16;
+    --color-emerald-50: oklch(97.9% 0.021 166.113); --color-emerald-700: oklch(50.8% 0.118 165.612); --color-emerald-800: oklch(43.2% 0.095 166.913);
+    --color-amber-50: oklch(98.7% 0.022 95.277); --color-amber-100: oklch(96.2% 0.059 95.617); --color-amber-300: oklch(87.9% 0.169 91.605);
+    --color-amber-700: oklch(55.5% 0.163 48.998); --color-amber-800: oklch(47.3% 0.137 46.201);
+    --color-sky-50: oklch(97.7% 0.013 236.62); --color-sky-700: oklch(50% 0.134 242.749);
+    --color-zinc-50: oklch(98.5% 0 0); --color-zinc-300: oklch(87.1% 0.006 286.286); --color-zinc-400: oklch(70.5% 0.015 286.067);
+    --shadow-edge: transparent;
+  }
+  /* A dark headline panel (bg-hero) would print as white text on no background: plain dark text instead. */
+  [class*="bg-hero"] { background: none !important; color: #1e1e1e !important; border: 1px solid #d4d4d8; }
+  [class*="bg-hero"] * { color: inherit !important; }
+  .table :is(td, th) { white-space: normal !important; overflow-wrap: anywhere; }
+  body { background: #fff !important; color: #1e1e1e; }
+  body > header, body > footer, nav[aria-label="Workflow steps"], #notifications, [data-controller~="toast"], a[href="#main"],
+  .btn, .pill, [data-review-target], [role="group"][aria-label^="Show"], .print\:hidden { display: none !important; }
+  main { padding: 0 !important; max-width: none !important; }
+  .panel { box-shadow: none !important; border: 1px solid #d4d4d8; break-inside: avoid; }
+  .overflow-x-auto, .overflow-hidden { overflow: visible !important; }
+  [class*="sticky"] { position: static !important; }
+  [role="img"], [role="progressbar"], .meter, .rounded-full, .badge, .dot, .source-mark {
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  tr, li, .review-row { break-inside: avoid; }
+}

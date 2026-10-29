@@ -1,0 +1,92 @@
+<%# locals: (value:, twin: nil, twins: 0) %>
+<%# twin: the key shared with the same answer at other cards of the portion (reviews_helper); twins: how many others
+    there are when this row is the first of them (the note is shown on the first one only). %>
+<% shown = value.value.presence || "—" %>
+<% label_id = dom_id(value, :label) %>
+<% variants = review_variants(value) %>
+
+<%= tag.article id: dom_id(value), tabindex: 0,
+      "aria-labelledby": label_id, "aria-describedby": dom_id(value, :details),
+      class: "review-row grid gap-4 px-5 py-4 outline-none transition-colors sm:px-6 xl:grid-cols-[minmax(38rem,1fr)_auto] xl:items-center
+              focus-within:bg-brand-50/40 focus-within:shadow-[inset_4px_0_0_var(--color-brand-600)] aria-busy:opacity-50",
+      data: { controller: "review", queue_target: "row", field: value.title, title: value.title, value: shown, twin: twin,
+              action: "keydown.esc->review#cancel" } do %>
+  <div class="grid min-w-0 gap-x-6 gap-y-2 sm:grid-cols-[13rem_minmax(0,1fr)]">
+    <%# On a phone the field and the confidence share one line, so the value and the buttons come sooner.
+        On a wide screen the buttons sit to the right, and wrap before the reasons get narrower than about 24rem. %>
+    <div class="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 sm:block">
+      <p class="text-sm text-muted"><%= value.title %></p>
+      <div class="sm:mt-1.5"><%= confidence_bar(value.confidence, words: true) %></div>
+    </div>
+    <div class="min-w-0">
+      <p id="<%= label_id %>" class="text-lg font-bold break-words">
+        <span class="sr-only"><%= value.title %>: </span><%= shown %>
+      </p>
+      <%# Two different things: why a person is asked (doubt_reason), and where the value was found (value_reason).
+          Both quote only what really is in the card. %>
+      <div id="<%= dom_id(value, :details) %>" class="mt-1.5 grid gap-1 text-sm text-muted">
+        <span class="sr-only"><%= review_described(value) %></span>
+        <p class="flex gap-1.5">
+          <%= icon "info", size: 16, class: "mt-0.5" %>
+          <span class="min-w-0 break-words"><span class="font-medium text-ink">Why we ask:</span> <%= review_doubt(value) %></span>
+        </p>
+        <p class="flex gap-1.5">
+          <%= icon "link", size: 16, class: "mt-0.5" %>
+          <span class="min-w-0 break-words"><span class="font-medium text-ink">Where from:</span> <%= review_source(value) %><span class="sr-only">.</span></span>
+        </p>
+        <% if twin %>
+          <p class="flex gap-1.5" data-queue-target="twinNote" <%= "hidden" unless twins.positive? %>>
+            <%= icon "copy", size: 16, class: "mt-0.5 text-amber-700" %>
+            <span class="min-w-0 break-words">
+              <span class="font-medium text-ink" data-twins-count><%= review_twins_note(twins) if twins.positive? %></span>
+              — <span data-twins-where><%= review_twins_where(twins) if twins.positive? %></span>.
+            </span>
+          </p>
+        <% end %>
+      </div>
+      <%= link_to "Review identical cards as a group", review_group_path(value), class: "link mt-2 inline-block text-sm" %>
+    </div>
+  </div>
+
+  <%= form_with url: review_path(value), method: :patch, class: "min-w-0", data: { review_target: "form" } do %>
+    <%= hidden_field_tag :seen, value.version, id: nil %>
+    <div class="grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:justify-start xl:justify-end" data-review-target="choices">
+      <%= button_tag name: :decision, value: "approve", class: "btn btn-sm btn-success col-span-2 max-sm:py-2.5", data: { review_target: "approve" },
+            "aria-label": "Correct: #{value.title} — #{shown}", "aria-keyshortcuts": "1" do %><%= icon "check", size: 16 %> Correct<%= review_key "1" %><% end %>
+      <%# One click saves the other answer (review#choose); inside the correction the same answers only fill the field. %>
+      <% variants.each.with_index(4) do |variant, key| %>
+        <button type="button" class="btn btn-sm btn-secondary col-span-2 max-sm:py-2.5" data-action="review#choose" data-review-value-param="<%= variant %>"
+                aria-label="Choose &quot;<%= variant %>&quot; for the &quot;<%= value.title %>&quot; field" title="Save &quot;<%= variant %>&quot; instead of &quot;<%= shown %>&quot;"
+                aria-keyshortcuts="<%= key %>">Choose "<%= review_variant_label(variant) %>"<%= review_key key.to_s %></button>
+      <% end %>
+      <button type="button" class="btn btn-sm btn-secondary" data-action="review#edit" aria-expanded="false" data-review-target="editToggle"
+              aria-controls="<%= dom_id(value, :editor) %>" aria-label="Correct: <%= value.title %>" aria-keyshortcuts="2"><%= icon "pencil", size: 16 %> Correct<%= review_key "2" %></button>
+      <%= button_tag name: :decision, value: "reject", class: "btn btn-sm btn-ghost max-sm:bg-control", data: { review_target: "reject" },
+            "aria-label": "No value: #{value.title}", "aria-keyshortcuts": "3" do %><%= icon "x", size: 16 %> No value<%= review_key "3" %><% end %>
+    </div>
+
+    <div id="<%= dom_id(value, :editor) %>" class="grid gap-2 xl:w-[26rem]" data-review-target="editor" hidden>
+      <label for="<%= dom_id(value, :input) %>" class="text-sm font-medium">Correct value for the "<%= value.title %>" field</label>
+      <%# On a phone the field takes the whole line and the buttons go under it; in one line it was 59px wide. %>
+      <div class="grid grid-cols-2 gap-2 sm:flex">
+        <%= text_field_tag :value, nil, id: dom_id(value, :input), autocomplete: "off", placeholder: shown == "—" ? "Enter a value" : shown,
+              autocapitalize: "none", autocorrect: "off", spellcheck: "false", enterkeyhint: "done",
+              class: "input input-sm col-span-2 min-w-0 bg-panel! border-line! sm:flex-1",
+              data: { review_target: "input", action: "input->review#toggle keydown.enter->review#enter" } %>
+        <%# Disabled in the HTML too, so that it matches the state before any script runs. %>
+        <%= button_tag "Save", name: :decision, value: "correct", class: "btn btn-sm btn-dark max-sm:py-2.5", disabled: true, data: { review_target: "correct" } %>
+        <button type="button" class="btn btn-sm btn-ghost max-sm:bg-control max-sm:py-2.5" data-action="review#cancel">Cancel</button>
+      </div>
+      <% if value.alternatives.any? %>
+        <div class="flex flex-wrap items-center gap-1.5" role="group" aria-labelledby="<%= dom_id(value, :alternatives) %>">
+          <span id="<%= dom_id(value, :alternatives) %>" class="text-xs text-muted">Other possible answers:</span>
+          <% value.alternatives.each do |alternative| %>
+            <button type="button" class="chip cursor-pointer py-0.5 text-sm hover:bg-control-hover pointer-coarse:py-2" data-action="review#pick" data-review-value-param="<%= alternative %>"
+                    aria-label="Use &quot;<%= alternative %>&quot;" title="Put into the field without saving"><%= alternative %></button>
+          <% end %>
+        </div>
+      <% end %>
+      <p class="review-editor-keys text-xs text-muted"><kbd class="kbd">Enter</kbd> to save, <kbd class="kbd">Esc</kbd> to close the correction</p>
+    </div>
+  <% end %>
+<% end %>

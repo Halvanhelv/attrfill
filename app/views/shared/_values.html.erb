@@ -1,0 +1,69 @@
+<%# locals: (values:, filter: false, actions: false) %>
+<%# Each value with the reason it is what it is (value_reason), how sure the system is and its status.
+    Every value is a <tbody> of its own: the filter hides it whole, and with actions (✓ / ✎ / ✕ right in the table)
+    the editor opens full width in a row under the value instead of widening the last column; the row then also
+    lights up its fragment of the card text (trace controller). The layout switches to one card per value when the
+    table has less than 50rem (cards.css), so it never scrolls sideways next to the card text. %>
+<% groups = [ [ "All", nil ], [ "Needs review", %w[review] ], [ "Accepted", %w[accepted approved corrected] ], [ "Not found", %w[missing rejected] ] ] %>
+
+<%= tag.div class: "panel overflow-hidden",
+      data: (filter ? { controller: "filter", action: "turbo:morph@document->filter#restore turbo:render@document->filter#restore" } : {}) do %>
+  <% if filter %>
+    <div class="no-scrollbar flex gap-1.5 overflow-x-auto border-b border-line px-5 py-3 sm:px-6" role="group" aria-label="Show values">
+      <% groups.each_with_index do |(label, statuses), index| %>
+        <% count = statuses ? values.count { |value| statuses.include?(value.status) } : values.size %>
+        <% next if statuses && count.zero? %>
+        <button type="button" class="pill" aria-pressed="<%= index.zero? %>" data-filter-target="pill" data-action="filter#show"
+                data-filter-statuses-param="<%= statuses&.join(" ") %>">
+          <%= label %> <span class="pill-count"><%= count %></span>
+        </button>
+      <% end %>
+    </div>
+  <% end %>
+
+  <div class="values-wrap overflow-x-auto">
+    <table class="table values-table">
+      <thead>
+        <tr>
+          <th scope="col">Attribute</th>
+          <th scope="col">Value and where it came from</th>
+          <th scope="col">Confidence</th>
+          <th scope="col">Status</th>
+          <% if actions %><th scope="col" class="print:hidden"><span class="sr-only">Actions</span></th><% end %>
+        </tr>
+      </thead>
+      <% values.each do |value| %>
+        <% found = value.value.present? %>
+        <%= tag.tbody id: dom_id(value, :entry),
+              data: { status: value.status, filter_target: ("row" if filter),
+                      **(actions ? { controller: "review", action: "keydown.esc->review#cancel" } : {}) } do %>
+          <%# The row lit while tracing stays in its own colour family: a settled value must not turn the amber of "Needs review". %>
+          <%= tag.tr class: (value.review? ? "bg-amber-50/50 data-active:bg-amber-100/60" : "data-active:bg-control"),
+                data: { row: dom_id(value, :row),
+                        **(actions ? { trace_target: "row", trace_key: dom_id(value), extracted: value.extracted_value,
+                                       action: "mouseenter->trace#show mouseleave->trace#hide focusin->trace#show focusout->trace#hide" } : {}) } do %>
+            <th scope="row" class="font-normal text-muted" <%= "tabindex=-1" if actions %>><%= value.title %></th>
+            <td class="value-cell">
+              <% if found %>
+                <span class="font-semibold break-words" data-value><%= value.value %></span>
+              <% else %>
+                <span class="text-muted" aria-hidden="true">—</span><span class="sr-only">no value</span>
+              <% end %>
+              <span class="mt-1 block max-w-prose text-xs leading-snug text-muted"><%= value_reason_marked(value) %></span>
+            </td>
+            <%= tag.td value_assessment(value), class: "value-confidence", data: { empty: (true unless found || reviewed?(value)) } %>
+            <%# "Corrected" on the very value the system had found would say a mistake was fixed: it reads "Confirmed". %>
+            <td class="value-status"><%= status_badge(shown_status(value)) %></td>
+            <% if actions %>
+              <td class="value-actions w-px text-right print:hidden"><%= render "shared/value_actions", value: value %></td>
+            <% end %>
+          <% end %>
+          <% if actions %><%= render "shared/value_actions", value: value, part: :editor %><% end %>
+        <% end %>
+      <% end %>
+    </table>
+    <% if filter %>
+      <p class="px-6 py-10 text-center text-sm text-muted" data-filter-target="empty" hidden>No values with this status.</p>
+    <% end %>
+  </div>
+<% end %>

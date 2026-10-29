@@ -1,0 +1,70 @@
+<%# locals: (value:, part: :buttons) %>
+<%# Check one value in place. Sends the same request as the review queue, after the same 5 seconds to take it back
+    (inline_review holds the submit); the page then refreshes itself.
+    The buttons sit in the value's row; the editor is a row of its own under it (part: :editor), tied to the form by
+    form="…", so it opens full width instead of widening the table. The review controller is the value's <tbody>.
+    As in the queue, the other likely answers are one click away next to "Correct"; in the editor they only fill the field. %>
+<% shown = value.value.presence %>
+<% open_label = value.review? ? "Correct" : shown ? "Edit" : "Add" %>
+<% form_id = dom_id(value, :review_form) %>
+
+<% if part == :editor %>
+  <tr id="<%= dom_id(value, :inline_editor) %>" class="value-editor <%= "bg-amber-50/50" if value.review? %>" data-editor-row data-review-target="editor" hidden>
+    <td colspan="5">
+      <div class="grid max-w-2xl gap-2.5">
+        <label for="<%= dom_id(value, :inline_input) %>" class="text-sm font-medium">Correct value for the "<%= value.title %>" field</label>
+        <div class="flex flex-wrap gap-2">
+          <%# Model codes and sizes ("S24", "8/256GB") must reach the server as typed: no capitals or autocorrect from the phone. %>
+          <%= text_field_tag :value, nil, id: dom_id(value, :inline_input), form: form_id, autocomplete: "off",
+                autocapitalize: "none", autocorrect: "off", spellcheck: false, enterkeyhint: "done",
+                placeholder: shown || "Enter a value", class: "input input-sm min-w-0 flex-1 basis-56 border-line bg-panel focus:border-ink",
+                data: { review_target: "input", action: "input->review#toggle keydown.enter->review#enter" } %>
+          <div class="flex flex-1 gap-2 sm:flex-none">
+            <%# Disabled in the HTML itself: a morph refresh puts the server's attributes back and would enable it. %>
+            <%= button_tag "Save", name: :decision, value: "correct", form: form_id, disabled: true,
+                  class: "btn btn-sm btn-dark flex-1 sm:flex-none", data: { review_target: "correct" } %>
+            <button type="button" class="btn btn-sm btn-ghost flex-1 sm:flex-none" data-action="review#cancel">Cancel</button>
+          </div>
+        </div>
+        <% if value.alternatives.any? %>
+          <div class="flex flex-wrap items-center gap-1.5" role="group" aria-labelledby="<%= dom_id(value, :alternatives) %>">
+            <span id="<%= dom_id(value, :alternatives) %>" class="text-xs text-muted">Other possible answers:</span>
+            <% value.alternatives.each do |alternative| %>
+              <button type="button" class="chip cursor-pointer py-0.5 font-medium hover:bg-control-hover pointer-coarse:py-2"
+                      data-action="review#pick" data-review-value-param="<%= alternative %>"
+                      aria-label="Use &quot;<%= alternative %>&quot;"><%= alternative %></button>
+            <% end %>
+          </div>
+        <% end %>
+        <p class="text-xs text-muted pointer-coarse:hidden"><kbd class="kbd">Enter</kbd> to save, <kbd class="kbd">Esc</kbd> to close</p>
+      </div>
+    </td>
+  </tr>
+<% else %>
+  <%= form_with url: review_path(value), method: :patch, id: form_id, class: "inline-flex justify-end",
+        data: { review_target: "form", title: value.title } do %>
+    <%= hidden_field_tag :seen, value.version, id: nil %>
+    <div class="value-choices flex justify-end gap-1" data-review-target="choices">
+      <% if value.review? %>
+        <%= button_tag name: :decision, value: "approve", class: "btn btn-sm btn-success px-2.5", title: "Correct",
+              data: { review_target: "approve" }, "aria-label": "Correct: #{value.title} — #{shown}", "aria-keyshortcuts": "1" do %><%= icon "check", size: 16 %><span>Correct</span><% end %>
+        <%# The name starts with the words on the button, so it can be said aloud; the title has the whole answer. %>
+        <% review_variants(value).each.with_index(4) do |variant, key| %>
+          <% label = review_variant_label(variant) %>
+          <button type="button" class="value-variant btn btn-sm btn-secondary px-2.5" data-action="review#choose" data-review-value-param="<%= variant %>"
+                  aria-label="Choose &quot;<%= label %>&quot; for the &quot;<%= value.title %>&quot; field" title="Save &quot;<%= variant %>&quot; instead of &quot;<%= shown %>&quot;"
+                  aria-keyshortcuts="<%= key %>">Choose "<%= label %>"</button>
+        <% end %>
+      <% end %>
+      <button type="button" class="btn btn-sm <%= value.review? || !shown ? "btn-secondary" : "btn-ghost" %> px-2.5" data-action="review#edit"
+              data-review-target="editToggle" aria-expanded="false" aria-controls="<%= dom_id(value, :inline_editor) %>" aria-keyshortcuts="2"
+              title="<%= open_label %>" aria-label="<%= open_label %>: <%= value.title %>">
+        <%= icon shown ? "pencil" : "plus", size: 16 %><span class="action-label"><%= open_label %></span>
+      </button>
+      <% if value.review? %>
+        <%= button_tag name: :decision, value: "reject", class: "btn btn-sm btn-ghost px-2.5", title: "No value",
+              data: { review_target: "reject" }, "aria-label": "No value: #{value.title}", "aria-keyshortcuts": "3" do %><%= icon "x", size: 16 %><span class="action-label">No value</span><% end %>
+      <% end %>
+    </div>
+  <% end %>
+<% end %>

@@ -1,0 +1,25 @@
+<% if report %>
+  <section class="panel panel-pad mt-6" aria-labelledby="filter-risk-title">
+    <h2 id="filter-risk-title" class="section-title">Errors in the main filters</h2>
+    <p class="mt-2 text-sm text-muted">Only values accepted without a person and with a correct answer in the labels are measured. The pilot's target is at least 99% correct values; this is the team's proposal and must be agreed with the store. Overall F1 and confidence do not guarantee it.</p>
+    <p class="mt-2 text-sm text-muted">Mode of the saved measurement: <%= report["acceptance_mode"] || "not recorded (historical report)" %>. Current mode: <%= Extraction::Acceptance.mode %>, policy <%= Extraction::Acceptance.policy_version %>. Policy of the saved measurement: <%= report["acceptance_policy"] || "not recorded" %>. A result from another mode does not confirm the quality of the current one.</p>
+    <div class="mt-4 overflow-x-auto">
+      <table class="w-full text-left text-sm">
+        <thead><tr><th class="p-2">Field</th><th class="p-2">Accepted</th><th class="p-2">Errors</th><th class="p-2">Correct</th><th class="p-2">95% lower bound</th><th class="p-2">Target confirmed</th></tr></thead>
+        <tbody>
+          <% Extraction::Acceptance::FILTERS.each do |name| %>
+            <% counts = report["attributes"][name] || {}; n = counts["accepted"].to_i; correct = counts["accepted_correct"].to_i; lower = Evaluation.precision_lower_bound(correct, n) %>
+            <tr class="border-t border-line">
+              <td class="p-2"><%= Extraction::Catalog.current.attributes[name]&.label || name %></td>
+              <td class="p-2"><%= num(n) %></td><td class="p-2"><%= num(n - correct) %></td>
+              <td class="p-2"><%= n.positive? ? "#{decimal(100.0 * correct / n, 1)}%" : "no data" %></td>
+              <td class="p-2"><%= n.positive? ? "#{decimal(lower * 100, 1)}%" : "no data" %></td>
+              <td class="p-2"><%= lower >= 0.99 ? "Yes, on this sample" : "No: needs a pilot and monitoring" %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-3 text-xs text-muted">The lower bound is a Wilson interval: a small sample without errors does not yet confirm 99%. Dependence between variants of one product and labelling errors can make the estimate optimistic. Values unknown to the labels are not evaluated.</p>
+  </section>
+<% end %>

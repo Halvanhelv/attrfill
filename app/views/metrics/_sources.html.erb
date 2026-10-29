@@ -1,0 +1,25 @@
+<%# locals: (by_source:) %>
+<% total = by_source.values.sum %>
+<div class="panel panel-pad">
+  <h3 class="font-semibold">Where the values came from</h3>
+  <p class="mt-1 text-sm text-muted">Sources of the original suggestions, including ones a person later corrected or rejected. A source's share shows neither accuracy nor labor savings.</p>
+  <% if by_source.any? %>
+    <%# On a phone the name and the share share a line and the bar gets the whole width under them;
+        three columns would leave the bar a few pixels. %>
+    <ul class="mt-5 grid gap-3.5 text-sm">
+      <% by_source.sort_by { |_, count| -count }.each do |source, count| %>
+        <li class="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-3 gap-y-1.5 sm:grid-cols-[minmax(0,12rem)_minmax(0,1fr)_3.5rem]">
+          <span class="first-letter:uppercase sm:truncate" title="<%= source_label(source).capitalize %>"><%= source_label(source) %></span>
+          <div class="meter col-span-2 row-start-2 h-2.5 rounded-full bg-surface sm:col-span-1 sm:col-start-2 sm:row-start-1" aria-hidden="true">
+            <div class="h-full rounded-full bg-ink" style="width: <%= (count * 100.0 / total).round(1) %>%"></div>
+          </div>
+          <span class="text-right font-semibold tabular-nums sm:col-start-3" title="<%= num(count) %> <%= plural(count, "value", "values") %>">
+            <%= percent(count.to_f / total) %><span class="sr-only">, <%= num(count) %> <%= plural(count, "value", "values") %></span>
+          </span>
+        </li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p class="mt-5 text-sm text-muted">Nothing has been processed yet.</p>
+  <% end %>
+</div>

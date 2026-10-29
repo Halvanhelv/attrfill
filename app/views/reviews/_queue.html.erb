@@ -1,0 +1,288 @@
+<%# locals: (values:, waiting:, batch: nil) %>
+<%# The review list: the whole queue (reviews/index) or the values of one file (batches/show, batch:).
+    values: the portion on the page, least sure first; waiting: how many wait in that scope.
+    For a file the count is kept by the page itself (queue_controller, scope "batch"): the server's Turbo Stream
+    after a decision brings the count of the whole queue, so there is no #waiting here. %>
+<% by_card = values.group_by(&:card) %>
+<%# The file chip of each card reads its batch; one query for all of them instead of one per card.
+    In a file every card is of that file, and the chip would only repeat the page. %>
+<% ActiveRecord::Associations::Preloader.new(records: by_card.keys, associations: :batch).call unless batch %>
+<% card_heading = batch ? :h3 : :h2 %>
+<% next_path = batch ? batch_path(batch, anchor: "review-title") : reviews_path %>
+<% fields = values.group_by(&:title).transform_values(&:size).sort_by { |title, count| [ -count, title ] } %>
+<% variants = values.any? { |value| value.alternatives.any? } %>
+<% more = waiting - values.size %>
+<%# The same answer to the same question at several cards of the portion (one product from several files):
+    the first of them says so, and a decision on it can be repeated for the others (queue_controller). %>
+<% ordered = by_card.values.flatten %>
+<% twin_keys = ordered.index_with { |value| review_twin_key(value) } %>
+<% twins = ordered.group_by { |value| twin_keys[value] }.select { |_, group| group.size > 1 } %>
+
+<%# Decisions are sent a few seconds late, so that the last one can be undone (queue_controller).
+    In a file the id keeps the list out of the page's morph refreshes (the controller skips it): its rows held back
+    for "Undo" and an open correction would not survive one. %>
+<%= content_tag batch ? :section : :div, class: [ "review-queue", ("mt-10" if batch) ], id: ("review" if batch),
+      "aria-labelledby": ("review-title" if batch),
+      data: { controller: "queue", queue_waiting_value: waiting,
+              **(batch ? { queue_scope_value: "batch", queue_global_value: AttributeValue.waiting.count } : {}),
+              action: "keydown@document->queue#key submit->queue#defer focusin@document->queue#track focusout@document->queue#track scroll@window->queue#track:passive" } do %>
+  <div class="flex flex-wrap items-end justify-between gap-x-4 gap-y-2">
+    <div class="min-w-0">
+      <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+        <% if batch %>
+          <h2 id="review-title" class="section-title outline-none" tabindex="-1">Review this file's values</h2>
+        <% else %>
+          <h1 class="page-title outline-none" tabindex="-1">Manual review</h1>
+        <% end %>
+        <% if waiting.positive? %>
+          <%# On a phone the counter sits next to the title instead of a panel of its own. %>
+          <span class="badge bg-amber-50 text-sm text-amber-700 sm:hidden" data-queue-target="left" data-queue-short="true"><%= num(waiting) %> waiting</span>
+        <% end %>
+      </div>
+      <% if batch %>
+        <p class="mt-1 max-w-3xl text-sm text-muted max-sm:hidden">Values of this file the system is not sure of, the most doubtful first. Confirm, correct or mark that there is no value — the decision goes into the downloaded file. Made a mistake? Press "Undo" in the notification<span class="pointer-coarse:hidden"> or <kbd class="kbd">Z</kbd></span> while it is on screen (5 seconds).</p>
+      <% else %>
+        <p class="page-lead max-sm:hidden">These are the values the system is not sure of. Confirm, correct or mark that there is no value — the decision goes into the result. Made a mistake? Press "Undo" in the notification<span class="pointer-coarse:hidden"> or <kbd class="kbd">Z</kbd></span> while it is on screen (5 seconds).</p>
+      <% end %>
+    </div>
+    <% if waiting.positive? %>
+      <div class="rounded-2xl bg-panel px-5 py-3 shadow-panel max-sm:hidden" role="group" aria-label="<%= batch ? "Values counter of this file" : "Queue counter" %>">
+        <p class="text-xs text-muted"><%= batch ? "Awaiting a decision in the file" : "Awaiting a decision" %></p>
+        <p class="text-2xl font-bold tabular-nums"><span data-queue-target="left"><%= num(waiting) %></span><span class="sr-only" data-queue-target="leftWord"> <%= plural(waiting, "value", "values") %></span></p>
+        <%# The page holds a portion of the queue; said here, at the numbers, not only under the list.
+            Not on the end screen, where "Showing 0 of N" would read as an error. %>
+        <% if more.positive? %><p class="review-open text-xs text-muted tabular-nums" data-queue-target="shown">Showing <%= values.size %> of <%= num(waiting) %></p><% end %>
+      </div>
+    <% end %>
+    <%# The server's own count, updated by the Turbo Stream of every decision; the counters above are drawn from it. %>
+    <% unless batch %><span id="waiting" hidden><%= waiting %></span><% end %>
+  </div>
+
+  <% if values.any? %>
+    <%# The counts of the pills are of this portion, not of the whole queue: the caption says so. %>
+    <div class="review-pills review-open no-scrollbar mt-5 -mx-4 flex items-center gap-1.5 overflow-x-auto px-4 py-1 sm:mx-0 sm:px-0" role="group" aria-label="Show a field, values of this set"
+         data-queue-target="pills" data-action="scroll->queue#edges resize@window->queue#edges">
+      <span class="shrink-0 pr-1 text-xs text-muted" aria-hidden="true">In this set:</span>
+      <button type="button" class="pill pill-white" aria-pressed="true" data-queue-target="field" data-action="queue#filter">
+        All fields <span class="pill-count"><%= values.size %></span>
+      </button>
+      <% fields.each do |title, count| %>
+        <button type="button" class="pill pill-white" aria-pressed="false" data-queue-target="field" data-action="queue#filter" data-queue-field-param="<%= title %>">
+          <%= title %> <span class="pill-count"><%= count %></span>
+        </button>
+      <% end %>
+    </div>
+
+    <div class="review-open mt-3 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 text-sm text-muted print:hidden">
+      <%# With a mouse and a keyboard the keys are the fast way; a touch phone gets the one thing to know about tapping
+          (a tablet has it in the lead above). %>
+      <p class="hidden pointer-fine:block">
+        Faster with the keyboard:
+        <kbd class="kbd">1</kbd> correct · <kbd class="kbd">2</kbd> correct it · <kbd class="kbd">3</kbd> no value<% if variants %> · <kbd class="kbd">4</kbd> other answer<% end %>
+        · <kbd class="kbd">↑</kbd><kbd class="kbd ml-0.5">↓</kbd> neighbour · <kbd class="kbd">T</kbd> card text · <kbd class="kbd">F</kbd> find in it · <kbd class="kbd">Z</kbd> undo
+      </p>
+      <p class="pointer-fine:hidden sm:hidden">Tap "Correct" if the value matches the card. Made a mistake? "Undo" in the notification below, while it is on screen (5 seconds).</p>
+
+      <details class="group/help relative pointer-coarse:hidden max-sm:basis-full">
+        <summary class="btn btn-white btn-sm list-none [&::-webkit-details-marker]:hidden">
+          <%= icon "keyboard", size: 16 %> How to review <%= icon "chevron-down", size: 16, class: "transition group-open/help:rotate-180" %>
+        </summary>
+        <div class="panel z-20 mt-2 w-full p-5 text-sm text-ink sm:absolute sm:right-0 sm:w-[26rem] sm:shadow-pop">
+          <dl class="grid gap-2.5">
+            <% keys = [ [ "1", "Correct — the value matches the card" ], [ "2", "Correct it — enter your own value" ],
+                        [ "3", "No value — the card really does not have it" ] ]
+               keys << [ "4 5", "choose another possible answer in one press" ] if variants
+               keys += [ [ "↑ ↓", "previous / next value" ], [ "T", "show or hide the whole card text — the doubtful spot is highlighted" ],
+                         [ "F", "find a word in this card's text (with the text open, also Ctrl+F, ⌘F); Enter for next, Esc back to the value" ],
+                         [ "Esc", "close the correction" ],
+                         [ "Z", "undo the last decision while the notification is visible (or Ctrl+Z, ⌘Z)" ] ]
+               keys << [ "A", "the same decision for the same values of other cards with the same title, while the notification is visible" ] if twins.any? %>
+            <% keys.each do |key, action| %>
+              <div class="flex items-baseline gap-3"><dt class="w-10 shrink-0"><kbd class="kbd"><%= key %></kbd></dt><dd class="text-muted"><%= action %></dd></div>
+            <% end %>
+          </dl>
+          <p class="mt-4 border-t border-line pt-3 text-xs text-muted">
+            Keys work right away: the first press takes the top value, and after a decision the focus moves to the next one.<% if batch %>
+            When the review list is off screen, the first press only shows its top value.<% end %>
+            Tab moves between buttons (⌥Tab in Safari). A decision is sent after 5 seconds (the countdown is in the notification) or with the next decision; until then it can be undone.
+          </p>
+          <dl class="mt-3 grid gap-1.5 border-t border-line pt-3 text-xs">
+            <% review_confidence_legend.each do |word, range, meaning| %>
+              <div><dt class="inline font-medium"><%= word %> · <%= range %></dt> <dd class="inline text-muted">— <%= meaning %></dd></div>
+            <% end %>
+          </dl>
+          <p class="mt-3 text-xs text-muted"><%= acceptance_rule_sentence %> Confidence is the system's estimate, not the measured accuracy of a particular value.</p>
+        </div>
+      </details>
+    </div>
+  <% end %>
+
+  <div class="mt-4 flex flex-col gap-4">
+    <% if values.any? %>
+      <%# Progress over the portion on the page; the queue controller moves it with every decision.
+          On a phone it stays at the bottom of the screen while the list scrolls (it comes last there, so sticky works). %>
+      <div class="review-progress review-open panel print:hidden flex flex-wrap items-center gap-x-5 gap-y-2 px-5 py-3.5 sm:px-6
+                  max-sm:sticky max-sm:bottom-[max(0.75rem,env(safe-area-inset-bottom))] max-sm:z-20 max-sm:order-last max-sm:py-3 max-sm:shadow-pop" data-queue-target="dock">
+        <%# Two numbers that are easy to mix up: the portion on the page, and the queue as a whole. %>
+        <p class="text-sm">
+          Set: <span class="font-semibold tabular-nums" data-queue-target="done">0</span> of <span class="tabular-nums"><%= values.size %></span><span class="sr-only"> reviewed</span>
+          <% if more.positive? %><span class="text-muted">· <span class="max-sm:hidden">total </span><%= batch ? "in the file" : "in the queue" %> <span class="tabular-nums" data-queue-target="left"><%= num(waiting) %></span></span><% end %>
+        </p>
+        <div class="meter h-2 min-w-24 flex-1 overflow-hidden rounded-full bg-surface" role="progressbar" aria-label="Reviewed in this set"
+             aria-valuemin="0" aria-valuemax="<%= values.size %>" aria-valuenow="0" data-queue-target="progress">
+          <div class="h-full w-0 rounded-full bg-emerald-500 transition-[width]" data-queue-target="bar"></div>
+        </div>
+        <p class="text-xs text-muted max-sm:hidden" data-queue-target="eta">≈ <%= (values.size * 5 / 60.0).ceil %> min at 5 seconds per value</p>
+      </div>
+
+      <div class="review-open flex flex-wrap items-center justify-between gap-2 text-sm text-muted max-sm:hidden">
+        <p>This set has <span data-queue-target="cards"><%= by_card.size %> <%= plural(by_card.size, "card", "cards") %></span>, the most doubtful first.</p>
+        <button type="button" class="btn btn-ghost btn-sm pointer-coarse:hidden" data-action="queue#start"><%= icon "arrow-down", size: 16 %> Start from the first</button>
+      </div>
+    <% end %>
+
+    <div class="grid gap-4">
+      <% by_card.each do |card, card_values| %>
+        <section class="review-card panel overflow-hidden" aria-labelledby="<%= dom_id(card, :review) %>">
+          <header class="flex flex-wrap items-center gap-x-2 gap-y-1.5 border-b border-line bg-zinc-50/60 px-5 py-3.5 sm:px-6">
+            <%= content_tag card_heading, id: dom_id(card, :review), class: "min-w-0 basis-full font-semibold break-words sm:mr-1 sm:basis-0 sm:grow" do %>
+              <%= link_to card.title.truncate(140), batch ? card_path(card) : card_path(card, from: "reviews"), class: "hover:underline" %>
+            <% end %>
+            <span class="chip bg-panel text-xs"><%= card.category_title %></span>
+            <%= review_origin(card) unless batch %>
+          </header>
+
+          <%# The whole card text, to see where the doubtful words stand. T opens and closes it for the focused value. %>
+          <% marks_title = highlight_sources(card.title, card_values) %>
+          <% not_in_text = review_not_in_text(card, card_values) %>
+          <details class="review-text group/text border-b border-line" data-queue-target="text" id="<%= dom_id(card, :text) %>"
+                   data-controller="text-find">
+            <summary class="flex cursor-pointer list-none items-center gap-2 px-5 py-2.5 text-sm font-medium text-muted hover:text-ink sm:px-6 [&::-webkit-details-marker]:hidden"
+                     aria-keyshortcuts="T">
+              <%= icon "file", size: 16 %>
+              <span class="group-open/text:hidden">Show card text</span><span class="hidden group-open/text:inline">Hide card text</span>
+              <span class="text-xs font-normal">— where the doubtful value is in the text</span>
+              <kbd class="kbd hidden pointer-fine:inline-block" aria-hidden="true">T</kbd>
+              <%= icon "chevron-down", size: 16, class: "ml-auto transition group-open/text:rotate-180" %>
+            </summary>
+            <div class="grid gap-3 px-5 pt-1 pb-4 text-sm sm:px-6">
+              <%# Search in this text only (the browser's own Ctrl+F searches the whole page). %>
+              <div class="flex flex-wrap items-center gap-2" role="search" aria-label="Search the card text">
+                <label for="<%= dom_id(card, :find) %>" class="sr-only">Find in the text of card "<%= card.title.truncate(60) %>"</label>
+                <input type="search" id="<%= dom_id(card, :find) %>" placeholder="Find in text…" autocomplete="off" spellcheck="false"
+                       autocapitalize="none" enterkeyhint="search" aria-keyshortcuts="Control+F Meta+F F"
+                       class="input input-sm min-w-0 flex-1 border-line! bg-panel! sm:max-w-xs"
+                       data-text-find-target="input"
+                       data-action="input->text-find#search keydown.enter->text-find#next:prevent keydown.shift+enter->text-find#previous:prevent keydown.esc->text-find#close:stop keydown.meta+f->text-find#native keydown.ctrl+f->text-find#native">
+                <span class="min-w-16 text-xs text-muted tabular-nums" data-text-find-target="count"></span>
+                <button type="button" class="btn btn-ghost btn-sm px-2" data-action="text-find#previous" data-text-find-target="nav" disabled
+                        aria-label="Previous match" title="Previous (Shift+Enter)"><%= icon "chevron-down", size: 16, class: "rotate-180" %></button>
+                <button type="button" class="btn btn-ghost btn-sm px-2" data-action="text-find#next" data-text-find-target="nav" disabled
+                        aria-label="Next match" title="Next (Enter)"><%= icon "chevron-down", size: 16 %></button>
+                <span class="hidden text-xs text-muted pointer-fine:inline">
+                  <kbd class="kbd">Enter</kbd> next · <kbd class="kbd">Esc</kbd> back to the value
+                </span>
+              </div>
+              <div class="max-h-72 overflow-y-auto rounded-xl bg-surface p-4 leading-relaxed" tabindex="0" role="region" data-text-find-target="region"
+                   aria-label="Text of card &quot;<%= card.title.truncate(60) %>&quot;">
+                <p class="font-semibold break-words"><%= marks_title %></p>
+                <% if card.description.present? %>
+                  <p class="mt-2 break-words whitespace-pre-line text-ink/90"><%= highlight_sources(card.description, card_values) %></p>
+                <% else %>
+                  <p class="mt-2 text-muted">No description — only the title.</p>
+                <% end %>
+                <% if card.seller_attributes.any? %>
+                  <dl class="spec mt-3 border-t border-line pt-3">
+                    <% card.seller_attributes.each do |key, given| %>
+                      <div><dt><span class="truncate"><%= key %></span></dt><dd><%= given %></dd></div>
+                    <% end %>
+                  </dl>
+                <% end %>
+              </div>
+              <p class="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-muted">
+                <span class="source-mark">Highlighted</span> — where the system found the doubtful value; the focused value is highlighted brighter.
+              </p>
+              <% if not_in_text.any? %>
+                <p class="text-xs text-muted">
+                  Not found in the text: <%= not_in_text.map { |value| "\"#{value.title}\" (#{value.value.presence || "—"})" }.join(", ") %> — the value was filled in; check it against the text above.
+                </p>
+              <% end %>
+            </div>
+          </details>
+
+          <div class="divide-y divide-line">
+            <% card_values.each do |value| %>
+              <% group = twins[twin_keys[value]] %>
+              <%= render "reviews/value", value: value, twin: (twin_keys[value] if group), twins: (group&.first == value ? group.size - 1 : 0) %>
+            <% end %>
+          </div>
+        </section>
+      <% end %>
+    </div>
+
+    <%# Shown when nothing is left to decide: on load, and once the last value is decided (reviews.css). %>
+    <div class="review-done panel grid justify-items-center px-6 py-16 text-center">
+      <span class="grid size-14 place-items-center rounded-full bg-emerald-50 text-emerald-700"><%= icon "check", size: 26 %></span>
+      <% if batch %>
+        <%# A file: the next portion of it, or its download right here. The links wait for a decision still in its
+            5 seconds (queue#renew, queue#leave), so the page and the file already have it. %>
+        <% csv, json = download_batch_path(batch, format: :csv), download_batch_path(batch, format: :json) %>
+        <% if more.positive? %>
+          <h3 class="mt-4 text-lg font-semibold outline-none" tabindex="-1" data-queue-target="finish">This set is reviewed</h3>
+          <p class="mt-1 max-w-sm text-sm text-muted">Your decisions are already in the file. About <%= num(more) %> more <%= plural(more, "value", "values") %> in it await review.</p>
+          <div class="mt-6 flex flex-wrap justify-center gap-2">
+            <%= link_to next_path, class: "btn btn-primary btn-sm", data: { action: "queue#renew" } do %>Take the next <%= [ more, values.size ].min %> <%= icon "arrow-right", size: 16 %><% end %>
+            <%= link_to csv, class: "btn btn-secondary btn-sm", download: true, data: { turbo: false, action: "queue#leave" } do %><%= icon "download", size: 16 %> Download now — CSV<% end %>
+          </div>
+        <% else %>
+          <h3 class="mt-4 text-lg font-semibold outline-none" tabindex="-1" data-queue-target="finish">All values of this file are reviewed</h3>
+          <p class="mt-1 max-w-sm text-sm text-muted">No doubtful values are left in the file. Download it — it has all the corrections.</p>
+          <div class="mt-6 flex flex-wrap justify-center gap-2">
+            <%= link_to csv, class: "btn btn-primary btn-sm", download: true, data: { turbo: false, action: "queue#leave" } do %><%= icon "download", size: 16 %> Download CSV<% end %>
+            <%= link_to json, class: "btn btn-secondary btn-sm", download: true, "aria-label": "Download JSON", data: { turbo: false, action: "queue#leave" } do %>JSON<% end %>
+          </div>
+        <% end %>
+        <p class="mt-3 text-xs text-muted">
+          Values of other files are in the shared <%= link_to "Review", reviews_path, class: "link" %> queue.
+        </p>
+      <% elsif more.positive? %>
+        <%# The page had only a part of the queue; it is done, more is waiting on the server. %>
+        <h2 class="mt-4 text-lg font-semibold outline-none" tabindex="-1" data-queue-target="finish">This set is reviewed</h2>
+        <p class="mt-1 max-w-sm text-sm text-muted">Your decisions are already in the result. About <%= num(more) %> more are left in the queue.</p>
+        <div class="mt-6 flex flex-wrap justify-center gap-2">
+          <%= link_to reviews_path, class: "btn btn-primary btn-sm" do %>Take the next <%= [ more, values.size ].min %> <%= icon "arrow-right", size: 16 %><% end %>
+          <%= link_to "Download the result", batches_path(anchor: "history-title"), class: "btn btn-secondary btn-sm" %>
+        </div>
+      <% else %>
+        <h2 class="mt-4 text-lg font-semibold outline-none" tabindex="-1" data-queue-target="finish">All reviewed</h2>
+        <p class="mt-1 max-w-sm text-sm text-muted">No doubtful values are left. Download the file — it has all the corrections.</p>
+        <div class="mt-6 flex flex-wrap justify-center gap-2">
+          <%# The last file opened on the files page, when this browser remembers it: the file itself, one click away. %>
+          <a class="btn btn-primary btn-sm" href="#" download data-turbo="false" data-queue-target="csv" data-action="queue#leave" hidden>
+            <%= icon "download", size: 16 %> <span data-queue-target="csvLabel">Download CSV</span>
+          </a>
+          <a class="btn btn-secondary btn-sm" href="#" download data-turbo="false" data-queue-target="json" data-action="queue#leave" hidden>JSON</a>
+          <%= link_to batches_path(anchor: "history-title"), class: "btn btn-primary btn-sm", data: { queue_target: "files", action: "queue#leave" } do %>
+            <%= icon "download", size: 16 %> Download the result
+          <% end %>
+          <%= link_to "Check a new card", root_path, class: "btn btn-secondary btn-sm", data: { action: "queue#leave" } %>
+        </div>
+        <p class="mt-3 text-xs text-muted" data-queue-target="other" hidden>
+          Corrections to other files are under <%= link_to "Files", batches_path(anchor: "history-title"), class: "link", data: { action: "queue#leave" } %>.
+        </p>
+      <% end %>
+    </div>
+
+    <div class="panel grid justify-items-center gap-3 px-6 py-10 text-center text-sm text-muted" data-queue-target="nothing" hidden>
+      <p><%= batch ? "This set has no more of this field." : "This part of the queue has no more of this field." %></p>
+      <button type="button" class="btn btn-secondary btn-sm" data-action="queue#all">Show all fields</button>
+    </div>
+
+    <% if more.positive? %>
+      <p class="review-open text-center text-sm text-muted">
+        <span data-queue-target="shown">Showing <%= values.size %> of <%= num(waiting) %></span>.
+        <%= link_to "Refresh and take the next ones", next_path, class: "link", data: ({ action: "queue#renew" } if batch) %>
+      </p>
+    <% end %>
+  </div>
+<% end %>

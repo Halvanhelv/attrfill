@@ -1,0 +1,394 @@
+<% running = batch_running?(batch) %>
+<% waiting = statuses["review"].to_i %>
+<% total = statuses.values.sum %>
+<% reviewed = statuses.values_at("approved", "corrected", "rejected").compact.sum %>
+<%# The values of this file to check, as the review queue has them (least sure first, a portion at a time): they are
+    checked in their own section (reviews/_queue), whatever card of the file they belong to. %>
+<%# Once all are checked the section stays, with its ending: the morph refresh after the last decision keeps the list
+    the person worked in, and it must keep its place on the page too. %>
+<% review_here = batch.done? && cards.any? && (waiting.positive? || reviewed.positive?) %>
+<% review_values = review_here && waiting.positive? ? batch.attribute_values.waiting.includes(:card).limit(ReviewsController::PER_PAGE).to_a : [] %>
+<% check_path = review_here ? "#review-title" : cards.any? ? "#cards-title" : reviews_path %>
+<% content_for :title, "#{"⏳ " if running}#{batch.name}" %>
+<% turbo_refreshes_with method: :morph, scroll: :preserve %>
+<%# "Back" to this page fetches it again: a snapshot would show statuses and buttons from before the last decisions. %>
+<% turbo_exempts_page_from_cache %>
+
+<%= render "shared/steps", current: batch.done? && cards.any? ? (waiting.zero? ? 3 : 2) : 1, waiting: waiting, scope: "in this file",
+                           waiting_unknown: (batch.failed? ? "the file was not processed" : ("disputed values appear after processing" unless batch.done?)),
+      check_path: check_path, download_path: batch.done? && cards.any? ? "#export-title" : batches_path(anchor: "history-title") %>
+
+<%= link_to batches_path, class: "btn btn-ghost btn-sm -ml-3" do %><%= icon "arrow-left", size: 16 %> All files<% end %>
+
+<%# data-poll-done: what the poll says once processing has ended (the processing block leaves the page then). %>
+<% done = if batch.done?
+          message, action = batch_done_message(batch, waiting)
+          { poll_done: message, poll_done_action: action }
+        elsif batch.failed?
+          { poll_done: "The file could not be processed; the reason is on the page.", poll_done_tone: "error" }
+        end %>
+<%= tag.header class: "mt-3 grid items-start gap-x-8 gap-y-5 lg:grid-cols-[minmax(0,1fr)_auto]", data: done do %>
+  <div class="min-w-0">
+    <div class="flex flex-wrap items-center gap-x-3 gap-y-1">
+      <span aria-live="polite" aria-atomic="true"><span class="sr-only">Status: </span><%= batch_status_badge(batch.status) %></span>
+      <span class="text-sm text-muted">uploaded <%= human_time(batch.created_at) %></span>
+    </div>
+    <h1 class="page-title mt-2 break-all"><%= batch.name %></h1>
+    <% if batch.done? || batch.cards_count.positive? %><p class="mt-1 text-md text-muted tabular-nums"><%= cards_phrase(batch.cards_count) %></p><% end %>
+  </div>
+
+  <% if batch.done? && cards.any? %>
+    <% csv, json = download_batch_path(batch, format: :csv), download_batch_path(batch, format: :json) %>
+    <%# The main button is the next step: checking while values wait, downloading once none do. %>
+    <%= tag.div class: "grid gap-2 lg:max-w-xl lg:justify-items-end",
+          data: { controller: "download", action: "turbo:render@document->download#render",
+                  download_batch_value: batch.id, download_last_review_value: batch.attribute_values.maximum(:reviewed_at)&.utc&.iso8601(3).to_s,
+                  download_name_value: batch.name, download_csv_value: csv, download_json_value: json, download_url_value: batch_path(batch),
+                  download_remember_value: true } do %>
+      <%# On the narrowest phones the long labels lose their tails, so that each button stays on one line. %>
+      <div class="grid gap-2 sm:flex sm:flex-wrap lg:justify-end">
+        <% if waiting.positive? %>
+          <%= link_to check_path, class: "btn btn-primary", data: { poll_focus: true } do %>
+            <%= icon "list-checks", size: 18 %><span>Review <%= values_phrase(waiting) %><span class="max-[359px]:hidden"> in this file</span></span>
+          <% end %>
+          <div class="flex gap-2">
+            <%= link_to csv, class: "btn btn-white flex-1", data: { turbo: false, action: "download#saved" } do %><%= icon "download", size: 18 %><span>Download<span class="max-[359px]:hidden"> now:</span> CSV</span><% end %>
+            <%= link_to json, class: "btn btn-white", data: { turbo: false, action: "download#saved" } do %><span class="sr-only">Download now: </span>JSON<% end %>
+          </div>
+        <% else %>
+          <div class="flex gap-2">
+            <%= link_to csv, id: "download-primary", class: "btn btn-primary flex-1", data: { turbo: false, poll_focus: true, action: "download#saved" } do %><%= icon "download", size: 18 %>Download CSV<% end %>
+            <%= link_to json, class: "btn btn-white", data: { turbo: false, action: "download#saved" } do %><span class="sr-only">Download </span>JSON<% end %>
+          </div>
+        <% end %>
+      </div>
+      <p class="text-sm text-muted lg:text-right">
+        <% if waiting.positive? %>
+          <%= num(waiting) %> <%= plural(waiting, "value is not checked yet: the file marks it", "values are not checked yet: the file marks them") %> as "waiting for review".
+        <% elsif reviewed.positive? %>
+          All reviewers' edits are already in the file.
+        <% else %>
+          No disputed values: the file is ready to publish.
+        <% end %>
+      </p>
+      <p data-download-target="status" hidden class="print:hidden text-sm font-medium text-emerald-700 lg:text-right"></p>
+      <p data-download-target="stale" hidden class="print:hidden flex items-start gap-2 rounded-xl bg-amber-50 px-3 py-2 text-sm font-medium text-amber-800">
+        <%= icon "alert", size: 16, class: "mt-0.5" %><span data-download-target="staleText">New edits were made after the download: download the file again.</span>
+      </p>
+    <% end %>
+
+    <%# What the file holds, closed beside the buttons: most people only need a button, and open it stood a screen high
+        between the result and the cards. Closed it sits under the buttons, open it takes the whole width.
+        Step 3 of the steps leads to #export-title and opens it (disclosure#follow); its scroll margin keeps the buttons
+        above it in view, since step 3 is about downloading. Closed, it is a toggle that paper cannot use: not printed. %>
+    <details class="group/export -mt-2 min-w-0 print:not-open:hidden lg:col-start-2 lg:justify-self-end open:lg:col-span-2 open:lg:col-start-1 open:lg:justify-self-stretch"
+             data-controller="disclosure" data-action="click@document->disclosure#follow:capture">
+      <summary id="export-title" class="flex w-fit scroll-mt-44 cursor-pointer list-none items-center gap-1.5 rounded-lg py-1 text-sm font-medium pointer-coarse:min-h-11 lg:ml-auto [&::-webkit-details-marker]:hidden">
+        <%= icon "file", size: 16, class: "text-muted" %>What the downloaded file contains<%= icon "chevron-down", size: 16, class: "text-muted transition group-open/export:rotate-180" %>
+      </summary>
+      <div class="panel panel-pad mt-2">
+        <h2 class="sr-only">Downloaded file format</h2>
+        <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+          <p class="max-w-3xl text-sm text-muted">
+            The file holds <%= cards_phrase(batch.cards_count) %> with the reviewers' edits. CSV has a row for each attribute of each card, JSON an object per card. The file starts like this:
+          </p>
+          <p class="font-mono text-xs text-muted">predictions-<%= batch.id %>.csv · .json</p>
+        </div>
+
+        <div class="mt-4 overflow-x-auto rounded-xl border border-line" tabindex="0" role="region" aria-label="First rows of the downloaded file">
+          <table class="table text-xs [&_td]:py-2 [&_th]:py-2.5">
+            <caption class="sr-only">First rows of the downloaded file</caption>
+            <thead>
+              <tr>
+                <% BatchesHelper::EXPORT_COLUMNS.each do |code, caption| %>
+                  <th scope="col"><code class="block font-mono text-xs font-semibold text-ink"><%= code %></code><span class="block font-normal"><%= caption %></span></th>
+                <% end %>
+              </tr>
+            </thead>
+            <tbody>
+              <% export_rows(cards).each do |row| %>
+                <tr>
+                  <% row.each do |cell| %>
+                    <td class="font-mono whitespace-nowrap">
+                      <% if cell.to_s.empty? %><span class="text-muted" aria-hidden="true">—</span><span class="sr-only">empty</span><% else %><%= cell %><% end %>
+                    </td>
+                  <% end %>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-2 text-xs text-muted sm:hidden">The table scrolls sideways.</p>
+
+        <div class="mt-6 grid gap-6 text-sm md:grid-cols-2 md:gap-8">
+          <div>
+            <h3 class="font-semibold">Status <code class="font-mono text-xs font-normal text-muted">status</code></h3>
+            <dl class="mt-2 grid gap-2">
+              <% BatchesHelper::EXPORT_STATUSES.each do |status, meaning| %>
+                <div class="flex items-baseline gap-2">
+                  <dt class="shrink-0"><code class="rounded bg-surface px-1.5 py-0.5 font-mono text-xs"><%= status %></code></dt>
+                  <dd class="text-muted"><%= meaning %></dd>
+                </div>
+              <% end %>
+            </dl>
+            <p class="mt-3 text-muted">
+              Reviewers' decisions are already included: approved and corrected values are written as <code class="font-mono text-xs">accepted</code>,
+              "no value" as <code class="font-mono text-xs">missing</code>.
+            </p>
+          </div>
+          <div>
+            <h3 class="font-semibold">Where it came from <code class="font-mono text-xs font-normal text-muted">source</code></h3>
+            <dl class="mt-2 grid gap-x-4 gap-y-2 sm:grid-cols-2">
+              <% ApplicationHelper::SOURCE.each do |source, meaning| %>
+                <div class="flex items-baseline gap-2">
+                  <dt class="shrink-0"><code class="rounded bg-surface px-1.5 py-0.5 font-mono text-xs"><%= source %></code></dt>
+                  <dd class="text-muted"><%= meaning %></dd>
+                </div>
+              <% end %>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </details>
+  <% end %>
+<% end %>
+
+<% if running %>
+  <div class="panel panel-pad mt-6" data-controller="poll" data-action="focusin->poll#focusin focusout->poll#focusout">
+    <div class="flex flex-wrap items-start gap-x-4 gap-y-3">
+      <%= icon "loader", size: 24, class: "mt-0.5 animate-spin text-brand-600" %>
+      <div class="min-w-0 flex-1 basis-60">
+        <p class="font-semibold">
+          <% if batch.pending? %>
+            The file is queued: processing starts in a few seconds
+          <% else %>
+            Filling in attributes…<% if batch.cards_count.positive? %> Done: <span class="tabular-nums"><%= cards_phrase(batch.cards_count) %></span><% end %>
+          <% end %>
+        </p>
+        <p class="mt-1 text-sm text-muted">
+          40 cards take a few seconds, 10,000 a couple of minutes. You can leave: the file stays under <%= link_to "Files", batches_path(anchor: "history-title"), class: "link" %>.
+        </p>
+        <p data-poll-target="state" hidden class="mt-2 text-sm font-medium text-amber-700">Auto-refresh is paused, but processing goes on. Resume refreshing to see the result.</p>
+      </div>
+      <button type="button" class="btn btn-secondary btn-sm" data-poll-target="toggle" data-action="poll#toggle">Pause refreshing</button>
+    </div>
+  </div>
+<% end %>
+
+<% if batch.failed? %>
+  <div class="mt-6 flex gap-3 rounded-2xl bg-brand-50 p-5 text-brand-700" role="alert">
+    <%= icon "alert", size: 20, class: "mt-0.5" %>
+    <div class="min-w-0">
+      <p class="font-semibold">The file could not be processed</p>
+      <p class="mt-1 text-sm text-ink"><%= batch_error_hint(batch.error) %></p>
+      <div class="mt-3 flex flex-wrap gap-2">
+        <%= link_to "Upload another file", batches_path, class: "btn btn-dark btn-sm" %>
+        <a href="/samples/primer.json" download class="btn btn-white btn-sm">Download a sample of a valid file</a>
+      </div>
+      <details class="mt-3 text-sm">
+        <summary class="cursor-pointer py-1 text-brand-700 underline">Technical reason, for a developer</summary>
+        <p class="mt-2 font-mono text-xs break-words text-ink"><%= batch.error %></p>
+      </details>
+    </div>
+  </div>
+<% end %>
+
+<% if batch.done? && cards.none? %>
+  <div class="panel panel-pad mt-6 flex gap-3">
+    <%= icon "inbox", size: 20, class: "mt-0.5 text-muted" %>
+    <div>
+      <p class="font-semibold">No cards were found in the file</p>
+      <p class="mt-1 text-sm text-muted">Check that it has a product title column (named "title") and at least one row.</p>
+      <%= link_to "Upload another file", batches_path, class: "btn btn-dark btn-sm mt-3" %>
+    </div>
+  </div>
+<% end %>
+
+<% if batch.done? && cards.any? %>
+  <% rows = fill_rows(cards) %>
+  <% fill = fill_total(rows) %>
+  <% accepted = statuses["accepted"].to_i %>
+  <% record = track_record_phrase("sure") %>
+  <%# The result in one sentence, for someone who will not read the tables. bg-hero without "!": the utility already
+      beats .panel, and an important one beats the print rule too (dark text on a black box with backgrounds printed). %>
+  <section class="result-headline panel mt-6 overflow-hidden bg-hero text-white" aria-labelledby="headline-title">
+    <div class="p-6 sm:p-8">
+      <h2 id="headline-title" class="sr-only">File summary</h2>
+      <p class="max-w-4xl text-lg leading-snug font-semibold sm:text-2xl sm:leading-snug">
+        The system filled in the attributes of <%= num(batch.cards_count) %> <%= plural(batch.cards_count, "card", "cards") %><% if fill %>:
+        <%= "for the first #{num(cards.size)} cards, " if batch.cards_count > cards.size %>sellers had filled <%= fill.before.round %>% of the fields,
+        now it is <span class="text-emerald-300"><%= fill.after.round %>%</span><% end %>.
+        <%= values_phrase(accepted) %> accepted right away<% if waiting.positive? %>,
+        <span class="text-amber-200"><%= values_phrase(waiting) %> <%= plural(waiting, "waits", "wait") %> for review</span>,
+        about&nbsp;<%= review_minutes(waiting) %>&nbsp;<%= plural(review_minutes(waiting), "minute", "minutes") %> of work<% else %>, no disputed values are left<% end %>.
+      </p>
+      <% if reviewed.positive? || record %>
+        <p class="mt-3 max-w-3xl text-sm text-white/75">
+          <% if reviewed.positive? %>People have already checked <%= values_phrase(reviewed) %>; their decisions are in the downloaded file. <% end %>
+          <% if record %>Values the system accepts on its own were <%= record %> on labelled cards.<% end %>
+        </p>
+      <% end %>
+    </div>
+  </section>
+<% end %>
+
+<% if statuses.any? %>
+  <section class="panel panel-pad mt-6" aria-labelledby="outcomes-title">
+    <h2 id="outcomes-title" class="sr-only">Values summary</h2>
+    <dl class="grid grid-cols-2 gap-x-6 gap-y-5 lg:grid-cols-4">
+      <% ApplicationHelper::OUTCOMES.each do |label, keys, color| %>
+        <% count = statuses.values_at(*keys).compact.sum %>
+        <div>
+          <dt class="flex items-center gap-2 text-sm text-muted"><span class="dot <%= color %>"></span><%= label %></dt>
+          <dd class="mt-1 flex flex-wrap items-baseline gap-x-2">
+            <span class="text-2xl font-bold tabular-nums"><%= num(count) %></span>
+            <span class="text-sm text-muted tabular-nums"><%= percent(count.to_f / total) %></span>
+          </dd>
+        </div>
+      <% end %>
+    </dl>
+    <div class="mt-5"><%= outcome_bar(statuses, height: "h-2.5") %></div>
+    <% if review_here && waiting.positive? %>
+      <p class="mt-5 border-t border-line pt-5 text-sm text-muted">
+        Disputed values are checked <%= link_to "right here, below", "#review-title", class: "link" %>, just as in the shared queue: a decision is saved after 5 seconds (until then it can be undone) and goes into the downloaded file.
+        The shared <%= link_to "Review", reviews_path, class: "link" %> queue collects the values of all files.
+      </p>
+    <% end %>
+  </section>
+<% end %>
+
+<%# The check of this file, as in the queue: the same rows, keys, card text and 5 seconds to undo. It keeps its own
+    counts and stays out of the page's morph refreshes (queue_controller, scope "batch"). %>
+<% if review_here %>
+  <%= render "reviews/queue", values: review_values, waiting: waiting, batch: batch %>
+<% end %>
+
+<% if batch.done? && cards.any? %>
+  <%= render "batches/fill_rate", batch: batch, cards: cards, rows: rows %>
+<% end %>
+
+<% if cards.any? %>
+  <% to_check = cards.to_h { |card| [ card.id, card.attribute_values.count(&:review?) ] } %>
+  <% review_cards = to_check.values.count(&:positive?) %>
+  <% shown_waiting = to_check.values.sum %>
+  <% queued = review_values.to_h { |value| [ value.id, true ] } %>
+  <%# Every card, to look through and to change values a person already decided (✎ right in the table; the page
+      refreshes in place once a change is saved, inline-review holds it 5 seconds for "Undo"). Values still to
+      check are decided in the section above only, so that one value never has two sets of buttons on the page:
+      here they are read-only, with a link to their row there. Which cards a pill shows stays fixed through the
+      refreshes. %>
+  <%# waiting 0: no value to check is decided here (they are in the section above), so its notices do not count them. %>
+  <section id="cards" class="mt-10" aria-labelledby="cards-title"
+           data-controller="disclosure card-filter trace inline-review" data-inline-review-waiting-value="0"
+           data-inline-review-result-value="download-primary" data-inline-review-done-value="All values of this file are checked: download the file with the edits."
+           data-action="submit->inline-review#defer turbo:before-morph-attribute->disclosure#keep turbo:before-morph-attribute->card-filter#keep
+                        turbo:render@document->card-filter#apply turbo:render@document->disclosure#sync card-filter:change->disclosure#sync
+                        click@document->card-filter#follow:capture">
+    <div class="mb-3 flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
+      <h2 id="cards-title" class="section-title" tabindex="-1" data-card-filter-target="heading">Cards</h2>
+      <button type="button" class="btn btn-ghost btn-sm" data-action="disclosure#toggle" data-disclosure-target="label">Expand all</button>
+    </div>
+
+    <div class="mb-4 grid gap-3">
+      <div class="flex flex-wrap gap-1.5" role="group" aria-label="Show cards">
+        <button type="button" class="pill pill-white" aria-pressed="true" data-card-filter-target="pill" data-card-filter-mode-param="all" data-action="card-filter#show">
+          All cards <span class="pill-count"><%= num(cards.size) %></span>
+        </button>
+        <button type="button" class="pill pill-white" aria-pressed="false" data-card-filter-target="pill" data-card-filter-mode-param="review" data-action="card-filter#show">
+          <%# Values and cards both: "Review 14 values" next to a pill that said 13 (its cards) did not add up. %>
+          <span class="dot bg-amber-500" aria-hidden="true"></span>Waiting for review
+          <span class="pill-count"><% if review_cards.positive? %><%= values_phrase(shown_waiting) %> in <%= num(review_cards) %> <%= plural(review_cards, "card", "cards") %><% else %>0<% end %></span>
+        </button>
+      </div>
+      <p class="max-w-3xl text-sm text-muted">
+        <% if shown_waiting.positive? %>
+          Values to review are decided <%= link_to "in the \"Review this file's values\" section", "#review-title", class: "link" %> above; here you see them in the card, and checked ones can be changed with the ✎ button in their row.
+        <% end %>
+        "New": the seller did not have it, the system added the attribute.
+      </p>
+    </div>
+
+    <div class="grid gap-2">
+      <% cards.each do |card| %>
+        <% values = card.attribute_values %>
+        <% left = to_check[card.id] %>
+        <% settled = values.any?(&:reviewed_at) %>
+        <% checkable, rest = checkable_values(values) %>
+        <% waiting_here, checkable = checkable.partition(&:review?) %>
+        <%= tag.details id: dom_id(card, :details), class: "panel group overflow-hidden",
+              data: { disclosure_target: "item", card_filter_target: "card", review: left, action: "toggle->disclosure#remember" } do %>
+          <%# A phone or a small tablet has no room for the badge beside the title: the tally and the badge go under it.
+              From md up the row is four columns: title, bar with its tally, badge, chevron (md:contents); from sm already,
+              the title kept two or three words. The title keeps two lines at any width. %>
+          <summary class="grid cursor-pointer list-none grid-cols-[minmax(0,1fr)_auto] items-center gap-x-3 gap-y-1 px-5 py-4 can-hover:hover:bg-surface/50 md:grid-cols-[minmax(0,1fr)_9rem_8rem_auto] md:gap-x-4 sm:px-6 [&::-webkit-details-marker]:hidden">
+            <span class="col-start-1 row-start-1 line-clamp-2 font-medium break-words"><%= card.title.presence || tag.span("No title", class: "text-muted") %></span>
+            <span class="col-start-1 row-start-2 flex flex-wrap items-center gap-x-2 gap-y-1.5 text-xs text-muted md:contents">
+              <span class="md:col-start-1 md:row-start-2"><%= card.category_title %></span>
+              <span class="tabular-nums md:col-start-2 md:row-span-2 md:row-start-1 md:grid md:gap-1.5">
+                <span class="hidden md:block"><%= card_bar(values) %></span>
+                <span><span class="md:hidden" aria-hidden="true">· </span><%= card_tally(values) %></span>
+              </span>
+              <% if left.positive? %>
+                <span class="badge bg-amber-50 text-amber-700 md:col-start-3 md:row-span-2 md:row-start-1 md:justify-self-end"><%= num(left) %> to review</span>
+              <% elsif settled %>
+                <span class="badge bg-emerald-50 text-emerald-700 md:col-start-3 md:row-span-2 md:row-start-1 md:justify-self-end"><%= icon "check", size: 12 %>checked</span>
+              <% end %>
+            </span>
+            <%= icon "chevron-down", size: 18, class: "col-start-2 row-span-2 row-start-1 text-muted transition group-open:rotate-180 md:col-start-4" %>
+          </summary>
+          <div class="border-t border-line">
+            <div class="flex flex-wrap items-baseline justify-end gap-x-3 px-5 pt-3 sm:px-6">
+              <% if checkable.none? && waiting_here.none? %><span class="text-xs text-muted">Values can be changed on the card page</span><% end %>
+              <%= link_to card, class: "link inline-flex items-center py-1 text-sm pointer-coarse:min-h-11" do %>Open card<span class="sr-only"> "<%= (card.title.presence || "no title").truncate(60) %>"</span><% end %>
+            </div>
+            <%# Buttons only for the values to check and those a person decided (to revisit); the rest is a light list
+                (checkable_values says why). %>
+            <% if waiting_here.any? %>
+              <div class="px-5 pt-3 pb-4 sm:px-6">
+                <p class="mb-2 flex items-center gap-1.5 text-xs text-muted"><span class="dot bg-amber-500" aria-hidden="true"></span>Waiting for review: decide in the section above</p>
+                <dl class="spec md:grid-cols-2 md:gap-x-10">
+                  <% waiting_here.each do |value| %>
+                    <div>
+                      <dt><%= value.title %></dt>
+                      <dd>
+                        <%= value.value.presence || tag.span("—", class: "font-normal text-muted") %>
+                        <%= link_to queued[value.id] ? "##{dom_id(value)}" : "#review-title", class: "link ml-1 text-xs font-normal whitespace-nowrap" do %>being reviewed above<span class="sr-only">: <%= value.title %></span><% end %>
+                      </dd>
+                    </div>
+                  <% end %>
+                </dl>
+              </div>
+            <% end %>
+            <% if checkable.any? %>
+              <div class="[&_.panel]:rounded-none [&_.panel]:shadow-none <%= "border-t border-line" if waiting_here.any? %>"><%= render "shared/values", values: checkable, actions: true %></div>
+            <% end %>
+            <% if rest.any? %>
+              <div class="px-5 pt-3 pb-5 sm:px-6 <%= "border-t border-line pt-4" if checkable.any? || waiting_here.any? %>">
+                <% if checkable.any? || waiting_here.any? %><p class="mb-3 text-xs text-muted">Other values: they can be changed on the card page</p><% end %>
+                <dl class="spec md:grid-cols-2 md:gap-x-10">
+                  <% rest.each do |value| %>
+                    <div>
+                      <dt><%= value.title %></dt>
+                      <% if value.value.present? %>
+                        <dd><%= value.value %><% unless seller_gave?(card, value) %> <span class="badge ml-1 bg-emerald-50 align-[1px] text-emerald-700">new</span><% end %></dd>
+                      <% else %>
+                        <dd class="font-normal text-muted">not found</dd>
+                      <% end %>
+                    </div>
+                  <% end %>
+                </dl>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      <% end %>
+      <p data-card-filter-target="empty" hidden class="panel px-6 py-10 text-center text-sm text-muted">None of these cards has values to review.</p>
+    </div>
+
+    <% if batch.cards_count > cards.size %>
+      <p class="mt-4 text-center text-sm text-muted">
+        Showing the first <%= num(cards.size) %> of <%= num(batch.cards_count) %>. All cards are in the downloaded file<% if waiting.positive? %>; the disputed values of all cards are <%= link_to "in the review above", "#review-title", class: "link" %><% end %>.
+      </p>
+    <% end %>
+  </section>
+<% end %>
