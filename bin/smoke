@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Fast pre-demo check using the committed production models, with the LLM forcibly disabled.
+set -euo pipefail
+
+cd "$(dirname "$0")/.."
+export LLM_MODE=off
+export TAILWIND=prebuilt
+exec bin/rails runner script/smoke.rb
