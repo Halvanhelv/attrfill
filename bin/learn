@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# bin/learn TRAIN [GOLD] — see README
+cd "$(dirname "$0")/.." && args=$(IFS=,; echo "$*") && exec bin/rails "extraction:learn[$args]"
