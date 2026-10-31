@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Make exactly one real request through the configured LLM gateway.
+set -euo pipefail
+
+cd "$(dirname "$0")/.."
+if [ -f .env ]; then set -a; . ./.env; set +a; fi
+
+export LLM_MODE=on
+export LLM_MAX_CALLS=1
+export LLM_TIMEOUT="${LLM_TIMEOUT:-60}"
+exec bin/rails runner script/llm_smoke.rb
