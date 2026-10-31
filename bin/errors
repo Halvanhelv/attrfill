@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# bin/errors INPUT [ATTRIBUTE] [GOLD] — where predictions differ from gold
+cd "$(dirname "$0")/.." && { [ -f .env ] && { set -a; . ./.env; set +a; }; true; } && args=$(IFS=,; echo "$*") && exec bin/rails "extraction:errors[$args]"
