@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# bin/extract INPUT [OUTPUT] [GOLD] — see README
+cd "$(dirname "$0")/.." && { [ -f .env ] && { set -a; . ./.env; set +a; }; true; } && args=$(IFS=,; echo "$*") && exec bin/rails "extraction:run[$args]"
