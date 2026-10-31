@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# bin/compare TRAIN TEST [VARIANTS] — see README
+cd "$(dirname "$0")/.." && { [ -f .env ] && { set -a; . ./.env; set +a; }; true; } && args=$(IFS=,; echo "$*") && exec bin/rails "extraction:compare[$args]"
