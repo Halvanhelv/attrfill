@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# Starts the demo the way it is checked: production mode, port 8000, background jobs inside the web process.
+# Settings (LLM_API_KEY, LLM_API_BASE, LLM_MODEL …) are read from .env when it exists.
+set -euo pipefail
+cd "$(dirname "$0")/.."
+
+if [ -f .env ]; then set -a; . ./.env; set +a; fi
+
+export RAILS_ENV=production
+export PORT="${PORT:-8000}"
+export SOLID_QUEUE_IN_PUMA=1
+export RAILS_LOG_LEVEL="${RAILS_LOG_LEVEL:-warn}"
+
+mkdir -p storage
+[ -s storage/secret_key_base ] || ruby -rsecurerandom -e 'print SecureRandom.hex(64)' > storage/secret_key_base
+export SECRET_KEY_BASE="$(cat storage/secret_key_base)"
+
+bundle check > /dev/null || bundle install
+bin/rails db:prepare
+# The tailwind binary does not run on every CPU; the committed CSS stands in for it then.
+bin/rails assets:precompile > /dev/null || TAILWIND=prebuilt bin/rails assets:precompile > /dev/null
+
+exec bin/rails server -b 0.0.0.0 -p "$PORT"
