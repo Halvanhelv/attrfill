@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# bin/stress [DIR] — every dataset in the folder through the pipeline, one line each
+cd "$(dirname "$0")/.." && { [ -f .env ] && { set -a; . ./.env; set +a; }; true; } && exec bin/rails "extraction:stress[$1]"
