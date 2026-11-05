@@ -1,0 +1,165 @@
+---
+headphones/brand/description:
+  Hi:
+  Marshall Major: Marshall
+  written:hi:
+  written:marshall major: Marshall
+headphones/brand/title:
+  Marshall Major: Marshall
+  written:marshall major: Marshall
+laptop/brand/description:
+  Xiaomi: Redmi
+laptop/brand/title:
+  Xiaomi:
+  written:redmi: Redmi
+laptop/color/description:
+  written:синего:
+  белый:
+laptop/color/title:
+  written:midnight:
+  written:starlight:
+  written:полуночный:
+  белый:
+  полуночный:
+laptop/model/title:
+  written:pro fortis m:
+laptop/ram/description:
+  12 ГБ:
+  6 ГБ: 16 ГБ
+  written:8gb:
+laptop/ram/title:
+  12 ГБ:
+  6 ГБ: 16 ГБ
+  written:8 гб:
+  written:8gb:
+  written:8гб:
+laptop/screen_diagonal/description:
+  13": 13.6"
+  written:13: 13.6"
+laptop/screen_diagonal/title:
+  13": 13.6"
+  15": 15.3"
+  written:13: 13.6"
+  written:15: 15.3"
+laptop/storage/description:
+  16 ГБ:
+  32 ГБ:
+  64 ГБ:
+  8 ГБ:
+  written:32 гб:
+  written:32gb: 1 ТБ
+  written:64 гб:
+laptop/storage/title:
+  16 ГБ:
+  32 ГБ:
+  written:32 гб: 1 ТБ
+monitor/brand/title:
+  written:redmi: Redmi
+monitor/color/description:
+  written:синего: черный
+  синий: черный
+monitor/screen_diagonal/title:
+  20":
+  22":
+  24": 23.8"
+  25":
+  30":
+  32":
+  60":
+  written:20:
+  written:22:
+  written:24: 23.8"
+  written:25:
+  written:30:
+  written:32:
+  written:60:
+monitor/screen_type/title:
+  LCD: IPS
+  written:lcd: IPS
+smartphone/brand/title:
+  written:redmi: Redmi
+smartphone/color/title:
+  written:starlight: сияющая звезда
+  written:пурпурный: фиолетовый
+  пурпурный: фиолетовый
+smartphone/model/title:
+  HONOR 600 Lite:
+  POCO M8 5G:
+  POCO M8 Pro 5G:
+  POCO X8 Pro:
+  POCO X8 Pro Max:
+  Samsung Galaxy S26 Ultra:
+  written:honor 600 lite:
+  written:poco m8 5g:
+  written:poco m8 pro 5g:
+  written:poco x8 pro:
+  written:poco x8 pro max:
+  written:samsung galaxy s25 ultra:
+  written:samsung galaxy s26 ultra:
+smartphone/resolution/description:
+  1366x768: 1600x720
+  1920x1080:
+  3840x2160:
+  written:4k:
+  written:fhd:
+  written:full hd:
+  written:hd: 1600x720
+smartphone/storage/description:
+  1 ТБ:
+  2 ТБ:
+  written:1 тб:
+  written:1024 гб:
+  written:2 тб:
+  written:памяти до 1 тб:
+  written:памяти до 2 тб:
+smartwatch/color/title:
+  written:blue:
+  written:midnight:
+  written:purple:
+  written:starlight:
+  written:желтый:
+  written:золото:
+  written:золотой:
+  written:розовый:
+  written:синий:
+  written:черная:
+  желтый:
+  синий:
+  фиолетовый:
+tablet/color/title:
+  written:starlight:
+  written:пурпурный: фиолетовый
+  белый:
+  пурпурный: фиолетовый
+tablet/resolution/description:
+  3840x2160:
+  written:4k:
+tablet/storage/description:
+  1 ТБ:
+  2 ТБ:
+  written:1024 гб:
+  written:2 тб:
+tv/brand/description:
+  Google:
+  Hi:
+  written:google:
+  written:hi:
+  written:сбер:
+tv/power/description:
+  20 Вт:
+  written:20 вт:
+tv/screen_diagonal/description:
+  16":
+  written:16:
+tv/screen_type/description:
+  LED:
+  QLED:
+  written:led:
+  written:qled:
+tv/screen_type/title:
+  LED: VA
+  QLED:
+  written:led: VA
+  written:qled:
+vacuum/color/description:
+  written:red:
