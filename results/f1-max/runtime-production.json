@@ -1,0 +1,18 @@
+{
+  "ruby": "ruby 3.4.2 (2025-02-15 revision d2930f8e7a) +YJIT +PRISM [arm64-darwin24]",
+  "model_dir": "config",
+  "categories": 240,
+  "cold_pipeline_seconds": 15.751415999999153,
+  "latency_cards": 200,
+  "latency_p50_ms": 4.404000006616116,
+  "latency_p95_ms": 20.631000006687827,
+  "latency_p99_ms": 25.777999995625578,
+  "runner_cards": 1000,
+  "runner_threads": 6,
+  "runner_seconds": 8.89201999999932,
+  "cards_per_second": 112.4603858291003,
+  "deterministic_mismatches": 0,
+  "schema_cases": 480,
+  "fuzz_cases": 300,
+  "failures": []
+}

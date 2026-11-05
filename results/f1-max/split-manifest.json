@@ -1,0 +1,69 @@
+{
+  "source_cards": 35977,
+  "grouping": "Identity keys exclude capacity/SIM/measurement codes and uninformative title prefixes. Test identifiers/content frozen from v1; only development groups repartitioned.",
+  "groups": 14230,
+  "cross_split_key_overlap": 0,
+  "test_sha256_unchanged": "6528369df229ae379469052921f298c8496a6503aef8a6d87c81648338cc8d07",
+  "quarantined_aliases_of_test": 418,
+  "quarantined_ids": 418,
+  "parts": {
+    "test": {
+      "cards": 1997,
+      "categories": {
+        "refrigerator": 255,
+        "tablet": 39,
+        "monitor": 185,
+        "smartphone": 309,
+        "laptop": 175,
+        "vacuum": 202,
+        "smartwatch": 106,
+        "headphones": 187,
+        "washing_machine": 114,
+        "tv": 425
+      },
+      "sha256": "6528369df229ae379469052921f298c8496a6503aef8a6d87c81648338cc8d07"
+    },
+    "train": {
+      "cards": 28142,
+      "categories": {
+        "refrigerator": 1768,
+        "tablet": 1761,
+        "monitor": 1416,
+        "smartphone": 10273,
+        "laptop": 2832,
+        "vacuum": 2609,
+        "smartwatch": 1994,
+        "headphones": 2168,
+        "washing_machine": 1274,
+        "tv": 2047
+      },
+      "sha256": "dbfea58850e9de584457c0d09afbe00aab6d65d01013b3c8952a51066bd80211"
+    },
+    "validation": {
+      "cards": 5420,
+      "categories": {
+        "refrigerator": 415,
+        "tablet": 247,
+        "monitor": 277,
+        "smartphone": 1468,
+        "laptop": 523,
+        "vacuum": 646,
+        "smartwatch": 370,
+        "headphones": 526,
+        "washing_machine": 335,
+        "tv": 613
+      },
+      "sha256": "5ee5da627c1705ead842d55de1ecade7e94a764ae3bddfb1376d512f83e53ea6"
+    }
+  },
+  "largest_groups": [
+    2348,
+    900,
+    876,
+    796,
+    580,
+    345,
+    220,
+    216
+  ]
+}

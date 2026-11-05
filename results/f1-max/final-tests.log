@@ -1,0 +1,12 @@
+≈ tailwindcss v4.3.3
+
+Done in 105ms
+Running 188 tests in parallel using 2 processes
+Run options: --seed 11791
+
+# Running:
+
+............................................................................................................................................................................................
+
+Finished in 1.512618s, 124.2878 runs/s, 464.7571 assertions/s.
+188 runs, 703 assertions, 0 failures, 0 errors, 0 skips

@@ -1,0 +1,24 @@
+{
+  "complete": true,
+  "production_context_training_cards": 35975,
+  "context_models": 47,
+  "context_bytes": 199884022,
+  "context_sha256": "c36349a72ddddf8660c278a92f16cba437b0f37be65c81e7c30dc2297621cbc2",
+  "context_metadata": {
+    "training_cards": 35975,
+    "training_ids_sha256": "95ef59c5a3d1ac7254dbf3a9976a915a25642a12edb8efe11aa002b2a90c78c8",
+    "selection_sha256": "c7aef7b93431c83e904379669797f24dc0ef626b3c250856c4eaa842fc11a00e",
+    "sklearn": "1.9.1",
+    "numpy": "2.2.5",
+    "minimum_rows": 8,
+    "scope": "Input-only text features, labels from training cards only; guesses always require human review.",
+    "input_sha256": "f2ad06b8fb3fbc0464650fc3c596edd6b03963e7d789ec3109b95c169d400fd9",
+    "policy_file_sha256": "45b1ca12886e2a7c8b95e948c370f8ca8244c365d6614e2e9063adeb348e458a",
+    "trainer_sha256": "74a967ed7205ffbe0926a3ce9b8b320fe86f7678e32de6cc4c3a20b3d196e9a5",
+    "seconds": 128.31
+  },
+  "unchanged_full_catalog_config_files": 814,
+  "all_accepted_predictions_identical": 2553,
+  "full_catalog_manifest_sha256": "dc9031624d4ff7a33c3c36cab114c12138a281fd978d5737a6ab2122104cadb4",
+  "scope": "Production full refit differs from frozen benchmark. No independent quality claim for this refit."
+}

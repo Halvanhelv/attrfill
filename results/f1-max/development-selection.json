@@ -1,0 +1,479 @@
+{
+  "best_by_attribute": {
+    "battery": {
+      "method": "sgd-a00001",
+      "desc_chars": 800,
+      "threshold": 0.3,
+      "replace_prior": false,
+      "confidence": 0.473,
+      "f1": 0.6522,
+      "predicted": 1654,
+      "correct": 1115,
+      "calibration_values": 867,
+      "calibration_correct": 410,
+      "proposals_file": "balanced-prototype/proposals-d800-sgd-a00001.json"
+    },
+    "brand": {
+      "method": "baseline",
+      "f1": 0.9918,
+      "predicted": 5399,
+      "correct": 5365
+    },
+    "color": {
+      "method": "sgd-a00001",
+      "desc_chars": 0,
+      "threshold": 0.6,
+      "replace_prior": true,
+      "confidence": 0.8014,
+      "f1": 0.8023,
+      "predicted": 4620,
+      "correct": 3893,
+      "calibration_values": 1438,
+      "calibration_correct": 1153,
+      "proposals_file": "balanced-prototype/proposals-d0-sgd-a00001.json"
+    },
+    "connection": {
+      "method": "sgd-a00001",
+      "desc_chars": 0,
+      "threshold": 0.0,
+      "replace_prior": true,
+      "confidence": 0.8571,
+      "f1": 0.8221,
+      "predicted": 281,
+      "correct": 231,
+      "calibration_values": 68,
+      "calibration_correct": 59,
+      "proposals_file": "balanced-prototype/proposals-d0-sgd-a00001.json"
+    },
+    "cpu": {
+      "method": "sgd-a00001",
+      "desc_chars": 0,
+      "threshold": 0.3,
+      "replace_prior": false,
+      "confidence": 0.6332,
+      "f1": 0.6877,
+      "predicted": 1237,
+      "correct": 1002,
+      "calibration_values": 426,
+      "calibration_correct": 270,
+      "proposals_file": "proposals-pruned-1024.json",
+      "terms": 1024
+    },
+    "load": {
+      "method": "svc10",
+      "desc_chars": 0,
+      "threshold": 0.0,
+      "replace_prior": false,
+      "confidence": 0.6772,
+      "f1": 0.7994,
+      "predicted": 334,
+      "correct": 267,
+      "calibration_values": 187,
+      "calibration_correct": 127,
+      "proposals_file": "proposals-pruned-1024.json",
+      "terms": 1024
+    },
+    "model": {
+      "method": "baseline",
+      "f1": 0.942,
+      "predicted": 5384,
+      "correct": 5089
+    },
+    "power": {
+      "method": "sgd-a00001",
+      "desc_chars": 0,
+      "threshold": 0.3,
+      "replace_prior": false,
+      "confidence": 0.4757,
+      "f1": 0.4753,
+      "predicted": 1376,
+      "correct": 698,
+      "calibration_values": 1150,
+      "calibration_correct": 547,
+      "proposals_file": "balanced-prototype/proposals-d0-sgd-a00001.json"
+    },
+    "ram": {
+      "method": "svc10",
+      "desc_chars": 0,
+      "threshold": 0.75,
+      "replace_prior": true,
+      "confidence": 0.8235,
+      "f1": 0.9196,
+      "predicted": 1767,
+      "correct": 1654,
+      "calibration_values": 151,
+      "calibration_correct": 125,
+      "proposals_file": "proposals-pruned-4096.json",
+      "terms": 4096
+    },
+    "refresh_rate": {
+      "method": "svc10",
+      "desc_chars": 0,
+      "threshold": 0.0,
+      "replace_prior": true,
+      "confidence": 0.823,
+      "f1": 0.8781,
+      "predicted": 1965,
+      "correct": 1726,
+      "calibration_values": 1235,
+      "calibration_correct": 1017,
+      "proposals_file": "balanced-prototype/proposals-d0-svc10.json"
+    },
+    "resolution": {
+      "method": "svc10",
+      "desc_chars": 0,
+      "threshold": 0.6,
+      "replace_prior": true,
+      "confidence": 0.6873,
+      "f1": 0.7323,
+      "predicted": 2080,
+      "correct": 1654,
+      "calibration_values": 935,
+      "calibration_correct": 643,
+      "proposals_file": "proposals-pruned-4096.json",
+      "terms": 4096
+    },
+    "screen_diagonal": {
+      "method": "svc10",
+      "desc_chars": 800,
+      "threshold": 0.6,
+      "replace_prior": false,
+      "confidence": 0.7062,
+      "f1": 0.7808,
+      "predicted": 2701,
+      "correct": 2301,
+      "calibration_values": 757,
+      "calibration_correct": 535,
+      "proposals_file": "proposals-pruned-4096.json",
+      "terms": 4096
+    },
+    "screen_type": {
+      "method": "sgd-a0003",
+      "desc_chars": 0,
+      "threshold": 0.0,
+      "replace_prior": true,
+      "confidence": 0.7972,
+      "f1": 0.7185,
+      "predicted": 682,
+      "correct": 490,
+      "calibration_values": 427,
+      "calibration_correct": 341,
+      "proposals_file": "proposals-pruned-4096.json",
+      "terms": 4096
+    },
+    "spin_speed": {
+      "method": "svc10",
+      "desc_chars": 0,
+      "threshold": 0.0,
+      "replace_prior": false,
+      "confidence": 0.8125,
+      "f1": 0.8713,
+      "predicted": 334,
+      "correct": 291,
+      "calibration_values": 222,
+      "calibration_correct": 181,
+      "proposals_file": "proposals-pruned-4096.json",
+      "terms": 4096
+    },
+    "storage": {
+      "method": "svc1",
+      "desc_chars": 0,
+      "threshold": 0.6,
+      "replace_prior": true,
+      "confidence": 0.773,
+      "f1": 0.946,
+      "predicted": 2075,
+      "correct": 1989,
+      "calibration_values": 183,
+      "calibration_correct": 142,
+      "proposals_file": "balanced-prototype/proposals-d0-svc1.json"
+    },
+    "volume": {
+      "method": "svc100",
+      "desc_chars": 0,
+      "threshold": 0.6,
+      "replace_prior": false,
+      "confidence": 0.7826,
+      "f1": 0.6259,
+      "predicted": 328,
+      "correct": 225,
+      "calibration_values": 136,
+      "calibration_correct": 107,
+      "proposals_file": "refined-prototype/proposals-d0-svc100.json"
+    }
+  },
+  "validation": {
+    "cards": 5420,
+    "macro_f1": 0.7903,
+    "input_sha256": "5ee5da627c1705ead842d55de1ecade7e94a764ae3bddfb1376d512f83e53ea6",
+    "evaluator_sha256": "a650a456d5e35cfa400ae6543f7efde8acc176ef4d2ce5844bd3cbfbdf5a81a4",
+    "scope": "Model selection on development only; official frozen Ruby normalizers/F1; accepted findings never changed; probabilities used only for gating, confidence is changed-suggestion validation accuracy."
+  },
+  "details": {
+    "battery": {
+      "gold": 1765,
+      "baseline_f1": 0.5525,
+      "selected": {
+        "method": "sgd-a00001",
+        "desc_chars": 800,
+        "threshold": 0.3,
+        "replace_prior": false,
+        "confidence": 0.473,
+        "f1": 0.6522,
+        "predicted": 1654,
+        "correct": 1115,
+        "calibration_values": 867,
+        "calibration_correct": 410,
+        "proposals_file": "balanced-prototype/proposals-d800-sgd-a00001.json"
+      }
+    },
+    "brand": {
+      "gold": 5420,
+      "baseline_f1": 0.9918,
+      "selected": {
+        "method": "baseline",
+        "f1": 0.9918,
+        "predicted": 5399,
+        "correct": 5365
+      }
+    },
+    "color": {
+      "gold": 5085,
+      "baseline_f1": 0.7579,
+      "selected": {
+        "method": "sgd-a00001",
+        "desc_chars": 0,
+        "threshold": 0.6,
+        "replace_prior": true,
+        "confidence": 0.8014,
+        "f1": 0.8023,
+        "predicted": 4620,
+        "correct": 3893,
+        "calibration_values": 1438,
+        "calibration_correct": 1153,
+        "proposals_file": "balanced-prototype/proposals-d0-sgd-a00001.json"
+      }
+    },
+    "connection": {
+      "gold": 281,
+      "baseline_f1": 0.6655,
+      "selected": {
+        "method": "sgd-a00001",
+        "desc_chars": 0,
+        "threshold": 0.0,
+        "replace_prior": true,
+        "confidence": 0.8571,
+        "f1": 0.8221,
+        "predicted": 281,
+        "correct": 231,
+        "calibration_values": 68,
+        "calibration_correct": 59,
+        "proposals_file": "balanced-prototype/proposals-d0-sgd-a00001.json"
+      }
+    },
+    "cpu": {
+      "gold": 1677,
+      "baseline_f1": 0.5884,
+      "selected": {
+        "method": "sgd-a00001",
+        "desc_chars": 0,
+        "threshold": 0.3,
+        "replace_prior": false,
+        "confidence": 0.6332,
+        "f1": 0.6877,
+        "predicted": 1237,
+        "correct": 1002,
+        "calibration_values": 426,
+        "calibration_correct": 270,
+        "proposals_file": "proposals-pruned-1024.json",
+        "terms": 1024
+      }
+    },
+    "load": {
+      "gold": 334,
+      "baseline_f1": 0.5822,
+      "selected": {
+        "method": "svc10",
+        "desc_chars": 0,
+        "threshold": 0.0,
+        "replace_prior": false,
+        "confidence": 0.6772,
+        "f1": 0.7994,
+        "predicted": 334,
+        "correct": 267,
+        "calibration_values": 187,
+        "calibration_correct": 127,
+        "proposals_file": "proposals-pruned-1024.json",
+        "terms": 1024
+      }
+    },
+    "model": {
+      "gold": 5420,
+      "baseline_f1": 0.942,
+      "selected": {
+        "method": "baseline",
+        "f1": 0.942,
+        "predicted": 5384,
+        "correct": 5089
+      }
+    },
+    "power": {
+      "gold": 1561,
+      "baseline_f1": 0.1689,
+      "selected": {
+        "method": "sgd-a00001",
+        "desc_chars": 0,
+        "threshold": 0.3,
+        "replace_prior": false,
+        "confidence": 0.4757,
+        "f1": 0.4753,
+        "predicted": 1376,
+        "correct": 698,
+        "calibration_values": 1150,
+        "calibration_correct": 547,
+        "proposals_file": "balanced-prototype/proposals-d0-sgd-a00001.json"
+      }
+    },
+    "ram": {
+      "gold": 1830,
+      "baseline_f1": 0.8924,
+      "selected": {
+        "method": "svc10",
+        "desc_chars": 0,
+        "threshold": 0.75,
+        "replace_prior": true,
+        "confidence": 0.8235,
+        "f1": 0.9196,
+        "predicted": 1767,
+        "correct": 1654,
+        "calibration_values": 151,
+        "calibration_correct": 125,
+        "proposals_file": "proposals-pruned-4096.json",
+        "terms": 4096
+      }
+    },
+    "refresh_rate": {
+      "gold": 1966,
+      "baseline_f1": 0.792,
+      "selected": {
+        "method": "svc10",
+        "desc_chars": 0,
+        "threshold": 0.0,
+        "replace_prior": true,
+        "confidence": 0.823,
+        "f1": 0.8781,
+        "predicted": 1965,
+        "correct": 1726,
+        "calibration_values": 1235,
+        "calibration_correct": 1017,
+        "proposals_file": "balanced-prototype/proposals-d0-svc10.json"
+      }
+    },
+    "resolution": {
+      "gold": 2437,
+      "baseline_f1": 0.6318,
+      "selected": {
+        "method": "svc10",
+        "desc_chars": 0,
+        "threshold": 0.6,
+        "replace_prior": true,
+        "confidence": 0.6873,
+        "f1": 0.7323,
+        "predicted": 2080,
+        "correct": 1654,
+        "calibration_values": 935,
+        "calibration_correct": 643,
+        "proposals_file": "proposals-pruned-4096.json",
+        "terms": 4096
+      }
+    },
+    "screen_diagonal": {
+      "gold": 3193,
+      "baseline_f1": 0.6876,
+      "selected": {
+        "method": "svc10",
+        "desc_chars": 800,
+        "threshold": 0.6,
+        "replace_prior": false,
+        "confidence": 0.7062,
+        "f1": 0.7808,
+        "predicted": 2701,
+        "correct": 2301,
+        "calibration_values": 757,
+        "calibration_correct": 535,
+        "proposals_file": "proposals-pruned-4096.json",
+        "terms": 4096
+      }
+    },
+    "screen_type": {
+      "gold": 682,
+      "baseline_f1": 0.6598,
+      "selected": {
+        "method": "sgd-a0003",
+        "desc_chars": 0,
+        "threshold": 0.0,
+        "replace_prior": true,
+        "confidence": 0.7972,
+        "f1": 0.7185,
+        "predicted": 682,
+        "correct": 490,
+        "calibration_values": 427,
+        "calibration_correct": 341,
+        "proposals_file": "proposals-pruned-4096.json",
+        "terms": 4096
+      }
+    },
+    "spin_speed": {
+      "gold": 334,
+      "baseline_f1": 0.4932,
+      "selected": {
+        "method": "svc10",
+        "desc_chars": 0,
+        "threshold": 0.0,
+        "replace_prior": false,
+        "confidence": 0.8125,
+        "f1": 0.8713,
+        "predicted": 334,
+        "correct": 291,
+        "calibration_values": 222,
+        "calibration_correct": 181,
+        "proposals_file": "proposals-pruned-4096.json",
+        "terms": 4096
+      }
+    },
+    "storage": {
+      "gold": 2130,
+      "baseline_f1": 0.9285,
+      "selected": {
+        "method": "svc1",
+        "desc_chars": 0,
+        "threshold": 0.6,
+        "replace_prior": true,
+        "confidence": 0.773,
+        "f1": 0.946,
+        "predicted": 2075,
+        "correct": 1989,
+        "calibration_values": 183,
+        "calibration_correct": 142,
+        "proposals_file": "balanced-prototype/proposals-d0-svc1.json"
+      }
+    },
+    "volume": {
+      "gold": 391,
+      "baseline_f1": 0.4048,
+      "selected": {
+        "method": "svc100",
+        "desc_chars": 0,
+        "threshold": 0.6,
+        "replace_prior": false,
+        "confidence": 0.7826,
+        "f1": 0.6259,
+        "predicted": 328,
+        "correct": 225,
+        "calibration_values": 136,
+        "calibration_correct": 107,
+        "proposals_file": "refined-prototype/proposals-d0-svc100.json"
+      }
+    }
+  }
+}
