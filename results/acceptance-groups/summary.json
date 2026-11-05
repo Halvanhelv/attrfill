@@ -1,0 +1,153 @@
+{
+ "protocol": "Groups learned by script/acceptance/learn.rb on development validation (5 420 cards, models trained on the other 28 142). Design (MIN_LABELLED=50, MIN_PRECISION=0.995) chosen by 5-fold family-grouped cross-validation on that validation: 25.7% accepted at 99.1%. One held-out run on results/f1-max/test.csv with frozen weights plus unreliable.yml learned without test cards.",
+ "test_sha256": "6528369df229ae379469052921f298c8496a6503aef8a6d87c81648338cc8d07",
+ "groups_sha256": "0bdf7ea26e36109fb7ee545ab1867e25926304a3bf75107ce623df3ef29973d7",
+ "before": {
+  "macro_f1": 0.7644,
+  "filled_values": 12736,
+  "accepted_values": 2601,
+  "labelled_accepted": 2592,
+  "labelled_accepted_correct": 2582,
+  "review_share": 0.706,
+  "accepted_by_attribute": {
+   "brand": [
+    1770,
+    1765
+   ],
+   "model": [
+    0,
+    0
+   ],
+   "volume": [
+    0,
+    0
+   ],
+   "color": [
+    0,
+    0
+   ],
+   "power": [
+    0,
+    0
+   ],
+   "storage": [
+    277,
+    277
+   ],
+   "ram": [
+    264,
+    264
+   ],
+   "screen_diagonal": [
+    134,
+    131
+   ],
+   "battery": [
+    108,
+    107
+   ],
+   "resolution": [
+    12,
+    12
+   ],
+   "refresh_rate": [
+    5,
+    5
+   ],
+   "screen_type": [
+    4,
+    4
+   ],
+   "cpu": [
+    0,
+    0
+   ],
+   "connection": [
+    17,
+    16
+   ],
+   "load": [
+    1,
+    1
+   ],
+   "spin_speed": [
+    0,
+    0
+   ]
+  }
+ },
+ "after": {
+  "macro_f1": 0.7644,
+  "filled_values": 12736,
+  "accepted_values": 3466,
+  "labelled_accepted": 3451,
+  "labelled_accepted_correct": 3429,
+  "review_share": 0.637,
+  "accepted_by_attribute": {
+   "brand": [
+    1945,
+    1939
+   ],
+   "model": [
+    334,
+    329
+   ],
+   "volume": [
+    0,
+    0
+   ],
+   "color": [
+    0,
+    0
+   ],
+   "power": [
+    0,
+    0
+   ],
+   "storage": [
+    322,
+    322
+   ],
+   "ram": [
+    300,
+    299
+   ],
+   "screen_diagonal": [
+    219,
+    214
+   ],
+   "battery": [
+    142,
+    141
+   ],
+   "resolution": [
+    51,
+    50
+   ],
+   "refresh_rate": [
+    43,
+    41
+   ],
+   "screen_type": [
+    40,
+    40
+   ],
+   "cpu": [
+    0,
+    0
+   ],
+   "connection": [
+    17,
+    16
+   ],
+   "load": [
+    1,
+    1
+   ],
+   "spin_speed": [
+    37,
+    37
+   ]
+  }
+ }
+}
