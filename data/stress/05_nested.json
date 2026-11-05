@@ -1,0 +1,3181 @@
+{
+  "total": 150,
+  "data": [
+    {
+      "ID": "S000551",
+      "card": {
+        "Title": "Планшет Huawei MatePad 11.5 8 ГБ/256 ГБ",
+        "Description": "Толщина 8,2 мм. Экран 12,4 дюймов. Официальная гарантия производителя."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Цвет товара": "Pink",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "Huawei",
+        "model": "MatePad 11.5",
+        "ram": "8 ГБ",
+        "storage": "256 ГБ",
+        "color": "розовый",
+        "screen_diagonal": "12.4\""
+      }
+    },
+    {
+      "ID": "S000552",
+      "card": {
+        "Title": "Телевизор LG OLED48C3RLA 65\" HD Ready Gold",
+        "Description": "В комплекте зарядное устройство и документация. Официальная гарантия производителя."
+      },
+      "category": "Телевизор",
+      "attributes": {
+        "Модель": "OLED48C3RLA",
+        "Страна производства": "Вьетнам",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "LG",
+        "model": "OLED48C3RLA",
+        "screen_diagonal": "65\"",
+        "resolution": "HD",
+        "color": "золотой"
+      }
+    },
+    {
+      "ID": "S000553",
+      "card": {
+        "Title": "Ультрабук ASUS Zenbook 14 UX3405MA 16/256GB AMD Ryzen 7 7730U",
+        "Description": "Быстрая доставка по всей России. В комплекте зарядное устройство и документация."
+      },
+      "category": "Ноутбук",
+      "attributes": {
+        "Модель": "Zenbook 14 UX3405MA",
+        "Страна производства": "Индия"
+      },
+      "labels": {
+        "brand": "ASUS",
+        "model": "Zenbook 14 UX3405MA",
+        "ram": "16 ГБ",
+        "storage": "256 ГБ",
+        "cpu": "AMD Ryzen 7 7730U"
+      }
+    },
+    {
+      "ID": "S000554",
+      "card": {
+        "Title": "Телефон HONOR X8b 6+256GB Silver",
+        "Description": "В комплекте зарядное устройство и документация. Диагональ экрана 6,1 дюймов. Аккумулятор 5000 мАч. Отличный выбор для работы и учёбы."
+      },
+      "category": "Смартфон",
+      "attributes": {
+        "Бренд": "HONOR",
+        "Цвет": "серебристый",
+        "Оперативная память": "6 ГБ",
+        "Страна производства": "Вьетнам"
+      },
+      "labels": {
+        "brand": "HONOR",
+        "model": "X8b",
+        "ram": "6 ГБ",
+        "storage": "256 ГБ",
+        "color": "серебристый",
+        "screen_diagonal": "6.1\"",
+        "battery": "5000 мАч"
+      }
+    },
+    {
+      "ID": "S000555",
+      "card": {
+        "Title": "Планшет Huawei MatePad 11.5 серый",
+        "Description": "Стильный дизайн и высокая производительность. Оперативная память 8 ГБ, накопитель SSD 256 ГБ. В комплекте зарядное устройство и документация."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Емкость аккумулятора": "10090 мАч",
+        "ОЗУ": "8 ГБ",
+        "Накопитель": "256 ГБ",
+        "Страна производства": "Вьетнам"
+      },
+      "labels": {
+        "brand": "Huawei",
+        "model": "MatePad 11.5",
+        "battery": "10090 мАч",
+        "color": "серый",
+        "ram": "8 ГБ",
+        "storage": "256 ГБ"
+      }
+    },
+    {
+      "ID": "S000556",
+      "card": {
+        "Title": "Ноутбук ASUS Zenbook 14 UX3405MA фиолетовый",
+        "Description": "Быстрая доставка по всей России. Оперативная память 32 ГБ, встроенная память 512 ГБ. Гарантия 12 месяцев."
+      },
+      "category": "Ноутбук",
+      "attributes": {
+        "Диагональ": "14 дюйм",
+        "Накопитель": "512 ГБ",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "ASUS",
+        "model": "Zenbook 14 UX3405MA",
+        "screen_diagonal": "14\"",
+        "color": "фиолетовый",
+        "storage": "512 ГБ",
+        "ram": "32 ГБ"
+      }
+    },
+    {
+      "ID": "S000557",
+      "card": {
+        "Title": "Телефон realme C67 12/128 6.1\" 5160 мАч Graphite",
+        "Description": "Быстрая доставка по всей России. Стильный дизайн и высокая производительность."
+      },
+      "category": "Смартфон",
+      "attributes": {
+        "Модель": "realme C67",
+        "Цвет": "графит"
+      },
+      "labels": {
+        "brand": "realme",
+        "model": "C67",
+        "ram": "12 ГБ",
+        "storage": "128 ГБ",
+        "screen_diagonal": "6.1\"",
+        "battery": "5160 мАч",
+        "color": "серый"
+      }
+    },
+    {
+      "ID": "S000558",
+      "card": {
+        "Title": "Телевизор Samsung QE55Q60CAUXRU 55\"",
+        "Description": "Вес 190 г. В комплекте зарядное устройство и документация."
+      },
+      "category": "Телевизор",
+      "attributes": {
+        "Разрешение экрана": "Full HD",
+        "Модель": "QE55Q60CAUXRU",
+        "Цвет": "чёрный",
+        "Страна производства": "Вьетнам",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "Samsung",
+        "model": "QE55Q60CAUXRU",
+        "screen_diagonal": "55\"",
+        "resolution": "Full HD",
+        "color": "черный"
+      }
+    },
+    {
+      "ID": "S000559",
+      "card": {
+        "Title": "Планшет Apple iPad mini 6 4/64 ГБ 12,4\" Gold",
+        "Description": "Толщина 8,2 мм. В комплекте зарядное устройство и документация."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Модель": "iPad mini 6",
+        "Цвет": "золотой",
+        "Встроенная память": "64 ГБ",
+        "Страна производства": "Индия"
+      },
+      "labels": {
+        "brand": "Apple",
+        "model": "iPad mini 6",
+        "ram": "4 ГБ",
+        "storage": "64 ГБ",
+        "screen_diagonal": "12.4\"",
+        "color": "золотой"
+      }
+    },
+    {
+      "ID": "S000560",
+      "card": {
+        "Title": "Планшет Xiaomi Redmi Pad SE 4 ГБ/256 ГБ 11\" 10090 мАч Purple",
+        "Description": "Отличный выбор для работы и учёбы. Отличный выбор для работы и учёбы."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Цвет": "Purple"
+      },
+      "labels": {
+        "brand": "Xiaomi",
+        "model": "Redmi Pad SE",
+        "ram": "4 ГБ",
+        "storage": "256 ГБ",
+        "screen_diagonal": "11\"",
+        "battery": "10090 мАч",
+        "color": "фиолетовый"
+      }
+    },
+    {
+      "ID": "S000561",
+      "card": {
+        "Title": "Планшет Huawei MatePad SE красный",
+        "Description": "Вес 190 г. Оперативная память 6 ГБ, накопитель SSD 128 ГБ. Дисплей с диагональю 11 дюйма. Аккумулятор 7040 мАч. В комплекте зарядное устройство и документация."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Марка": "Huawei",
+        "Модель": "Huawei MatePad SE",
+        "Цвет": "красный",
+        "ОЗУ": "6 ГБ",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "Huawei",
+        "model": "MatePad SE",
+        "color": "красный",
+        "ram": "6 ГБ",
+        "storage": "128 ГБ",
+        "screen_diagonal": "11\"",
+        "battery": "7040 мАч"
+      }
+    },
+    {
+      "ID": "S000562",
+      "card": {
+        "Title": "Телевизор Hisense 43A6K 43\" Blue",
+        "Description": "Официальная гарантия производителя. Стильный дизайн и высокая производительность."
+      },
+      "category": "Телевизор",
+      "attributes": {
+        "Производитель": "Hisense",
+        "Модель": "43A6K",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "Hisense",
+        "model": "43A6K",
+        "screen_diagonal": "43\"",
+        "color": "синий"
+      }
+    },
+    {
+      "ID": "S000563",
+      "card": {
+        "Title": "Планшет Apple iPad Air 5 8+256GB Blue",
+        "Description": "Толщина 8,2 мм. В комплекте зарядное устройство и документация."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Диагональ экрана": "12.4 дюйм",
+        "Модель": "iPad Air 5",
+        "Страна производства": "Китай"
+      },
+      "labels": {
+        "brand": "Apple",
+        "model": "iPad Air 5",
+        "ram": "8 ГБ",
+        "storage": "256 ГБ",
+        "screen_diagonal": "12.4\"",
+        "color": "синий"
+      }
+    },
+    {
+      "ID": "S000564",
+      "card": {
+        "Title": "Телефон HONOR 90 Lite 8 ГБ/512 ГБ золотой",
+        "Description": "Официальная гарантия производителя. Вес 190 г."
+      },
+      "category": "Смартфон",
+      "attributes": {
+        "Емкость аккумулятора": "5160 мАч",
+        "Цвет товара": "Gold",
+        "ОЗУ": "8 ГБ",
+        "Накопитель": "512 ГБ"
+      },
+      "labels": {
+        "brand": "HONOR",
+        "model": "90 Lite",
+        "ram": "8 ГБ",
+        "storage": "512 ГБ",
+        "battery": "5160 мАч",
+        "color": "золотой"
+      }
+    },
+    {
+      "ID": "S000565",
+      "card": {
+        "Title": "Смартфон Samsung Galaxy A55 5G 6/256 5000 мАч фиолетовый",
+        "Description": "Быстрая доставка по всей России. Стильный дизайн и высокая производительность."
+      },
+      "category": "Смартфон",
+      "attributes": {
+        "Диагональ": "6.8 дюйм",
+        "Марка": "Samsung",
+        "Модель": "Samsung Galaxy A55 5G",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "Samsung",
+        "model": "Galaxy A55 5G",
+        "ram": "6 ГБ",
+        "storage": "256 ГБ",
+        "screen_diagonal": "6.8\"",
+        "battery": "5000 мАч",
+        "color": "фиолетовый"
+      }
+    },
+    {
+      "ID": "S000566",
+      "card": {
+        "Title": "Планшет Samsung Galaxy Tab S9 FE 4+256GB 10.9'' 7040 мАч",
+        "Description": "В комплекте зарядное устройство и документация. Стильный дизайн и высокая производительность."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Бренд": "Samsung",
+        "Объем памяти": "256 ГБ"
+      },
+      "labels": {
+        "brand": "Samsung",
+        "model": "Galaxy Tab S9 FE",
+        "ram": "4 ГБ",
+        "storage": "256 ГБ",
+        "screen_diagonal": "10.9\"",
+        "battery": "7040 мАч"
+      }
+    },
+    {
+      "ID": "S000567",
+      "card": {
+        "Title": "Ноутбук MSI Modern 15 B13M 32 ГБ/256 ГБ 17.3\" фиолетовый",
+        "Description": "Гарантия 12 месяцев. Толщина 8,2 мм."
+      },
+      "category": "Ноутбук",
+      "attributes": {
+        "Процессор": "Intel Core i5-1235U",
+        "Страна производства": "Вьетнам"
+      },
+      "labels": {
+        "brand": "MSI",
+        "model": "Modern 15 B13M",
+        "ram": "32 ГБ",
+        "storage": "256 ГБ",
+        "screen_diagonal": "17.3\"",
+        "cpu": "Intel Core i5-1235U",
+        "color": "фиолетовый"
+      }
+    },
+    {
+      "ID": "S000568",
+      "card": {
+        "Title": "Ультрабук Acer Aspire 5 A515-58M 8/1TB AMD Ryzen 5 7520U золотой",
+        "Description": "В комплекте зарядное устройство и документация. Экран 15,6 дюйма. Вес 190 г."
+      },
+      "category": "Ноутбук",
+      "attributes": {
+        "Бренд": "Acer",
+        "Встроенная память": "1 ТБ"
+      },
+      "labels": {
+        "brand": "Acer",
+        "model": "Aspire 5 A515-58M",
+        "ram": "8 ГБ",
+        "storage": "1 ТБ",
+        "cpu": "AMD Ryzen 5 7520U",
+        "color": "золотой",
+        "screen_diagonal": "15.6\""
+      }
+    },
+    {
+      "ID": "S000569",
+      "card": {
+        "Title": "Планшет Xiaomi Redmi Pad SE 4 ГБ/256 ГБ 8.3'' 10090 мАч",
+        "Description": "В комплекте зарядное устройство и документация. Гарантия 12 месяцев."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Встроенная память": "256 ГБ",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "Xiaomi",
+        "model": "Redmi Pad SE",
+        "ram": "4 ГБ",
+        "storage": "256 ГБ",
+        "screen_diagonal": "8.3\"",
+        "battery": "10090 мАч"
+      }
+    },
+    {
+      "ID": "S000570",
+      "card": {
+        "Title": "Телевизор TCL 50P635 синий",
+        "Description": "Официальная гарантия производителя. Разрешение 4K UHD. Стильный дизайн и высокая производительность."
+      },
+      "category": "Телевизор",
+      "attributes": {},
+      "labels": {
+        "brand": "TCL",
+        "model": "50P635",
+        "color": "синий",
+        "resolution": "4K UHD"
+      }
+    },
+    {
+      "ID": "S000571",
+      "card": {
+        "Title": "Ультрабук Lenovo ThinkBook 16 G6 17.3\" Gold",
+        "Description": "Официальная гарантия производителя. Стильный дизайн и высокая производительность."
+      },
+      "category": "Ноутбук",
+      "attributes": {
+        "Процессор": "Intel Core i5-1235U",
+        "Модель": "ThinkBook 16 G6",
+        "Цвет": "Gold"
+      },
+      "labels": {
+        "brand": "Lenovo",
+        "model": "ThinkBook 16 G6",
+        "screen_diagonal": "17.3\"",
+        "cpu": "Intel Core i5-1235U",
+        "color": "золотой"
+      }
+    },
+    {
+      "ID": "S000572",
+      "card": {
+        "Title": "Телевизор Samsung UE50CU7100UXRU синий",
+        "Description": "Отличный выбор для работы и учёбы. Дисплей с диагональю 32 дюйма. Разрешение 4K UHD. В комплекте зарядное устройство и документация."
+      },
+      "category": "Телевизор",
+      "attributes": {
+        "Марка": "Samsung",
+        "Модель": "UE50CU7100UXRU",
+        "Цвет": "Blue",
+        "Страна производства": "Китай"
+      },
+      "labels": {
+        "brand": "Samsung",
+        "model": "UE50CU7100UXRU",
+        "color": "синий",
+        "screen_diagonal": "32\"",
+        "resolution": "4K UHD"
+      }
+    },
+    {
+      "ID": "S000573",
+      "card": {
+        "Title": "Телевизор LG OLED48C3RLA HD Ready",
+        "Description": "Стильный дизайн и высокая производительность. Стильный дизайн и высокая производительность."
+      },
+      "category": "Телевизор",
+      "attributes": {
+        "Бренд": "LG",
+        "Модель": "LG OLED48C3RLA",
+        "Цвет товара": "Blue",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "LG",
+        "model": "OLED48C3RLA",
+        "resolution": "HD",
+        "color": "синий"
+      }
+    },
+    {
+      "ID": "S000574",
+      "card": {
+        "Title": "Смартфон Tecno Camon 30 12/256 Graphite",
+        "Description": "Отличный выбор для работы и учёбы. Экран 6,8 дюймов. Стильный дизайн и высокая производительность."
+      },
+      "category": "Смартфон",
+      "attributes": {
+        "Цвет товара": "графит"
+      },
+      "labels": {
+        "brand": "Tecno",
+        "model": "Camon 30",
+        "ram": "12 ГБ",
+        "storage": "256 ГБ",
+        "color": "серый",
+        "screen_diagonal": "6.8\""
+      }
+    },
+    {
+      "ID": "S000575",
+      "card": {
+        "Title": "Ноутбук HP 250 G10 16/512 ГБ",
+        "Description": "Стильный дизайн и высокая производительность. Процессор Intel Core i7-13620H справится с любыми задачами. Вес 190 г."
+      },
+      "category": "Ноутбук",
+      "attributes": {
+        "Диагональ": "17.3 дюйм",
+        "Цвет": "Blue",
+        "Страна производства": "Китай"
+      },
+      "labels": {
+        "brand": "HP",
+        "model": "250 G10",
+        "ram": "16 ГБ",
+        "storage": "512 ГБ",
+        "screen_diagonal": "17.3\"",
+        "color": "синий",
+        "cpu": "Intel Core i7-13620H"
+      }
+    },
+    {
+      "ID": "S000576",
+      "card": {
+        "Title": "Ультрабук Lenovo ThinkBook 16 G6 32/512GB 15.6\" Green",
+        "Description": "Вес 190 г. Вес 190 г."
+      },
+      "category": "Ноутбук",
+      "attributes": {
+        "Марка": "Lenovo",
+        "Цвет": "Green",
+        "ОЗУ": "32 ГБ",
+        "Страна производства": "Индия",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "Lenovo",
+        "model": "ThinkBook 16 G6",
+        "ram": "32 ГБ",
+        "storage": "512 ГБ",
+        "screen_diagonal": "15.6\"",
+        "color": "зеленый"
+      }
+    },
+    {
+      "ID": "S000577",
+      "card": {
+        "Title": "Ноутбук Lenovo IdeaPad Slim 3 15IAH8 8+512GB 17.3\" серебристый",
+        "Description": "Быстрая доставка по всей России. Гарантия 12 месяцев."
+      },
+      "category": "Ноутбук",
+      "attributes": {
+        "Модель": "Lenovo IdeaPad Slim 3 15IAH8",
+        "Накопитель": "512 ГБ",
+        "Страна производства": "Индия"
+      },
+      "labels": {
+        "brand": "Lenovo",
+        "model": "IdeaPad Slim 3 15IAH8",
+        "ram": "8 ГБ",
+        "storage": "512 ГБ",
+        "screen_diagonal": "17.3\"",
+        "color": "серебристый"
+      }
+    },
+    {
+      "ID": "S000578",
+      "card": {
+        "Title": "Телевизор Samsung QE55Q60CAUXRU White",
+        "Description": "Гарантия 12 месяцев. Диагональ экрана 43 дюймов. Вес 190 г."
+      },
+      "category": "Телевизор",
+      "attributes": {
+        "Модель": "Samsung QE55Q60CAUXRU",
+        "Цвет товара": "White",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "Samsung",
+        "model": "QE55Q60CAUXRU",
+        "color": "белый",
+        "screen_diagonal": "43\""
+      }
+    },
+    {
+      "ID": "S000579",
+      "card": {
+        "Title": "Телефон Tecno Camon 30 6 ГБ/128 ГБ синий",
+        "Description": "Официальная гарантия производителя. Стильный дизайн и высокая производительность."
+      },
+      "category": "Смартфон",
+      "attributes": {
+        "Марка": "Tecno",
+        "Цвет": "синий",
+        "Оперативная память": "6 ГБ",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "Tecno",
+        "model": "Camon 30",
+        "ram": "6 ГБ",
+        "storage": "128 ГБ",
+        "color": "синий"
+      }
+    },
+    {
+      "ID": "S000580",
+      "card": {
+        "Title": "Планшет Huawei MatePad SE 4/128GB",
+        "Description": "Гарантия 12 месяцев. Быстрая доставка по всей России."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Диагональ": "11 дюйм",
+        "Накопитель": "128 ГБ",
+        "Страна производства": "Китай"
+      },
+      "labels": {
+        "brand": "Huawei",
+        "model": "MatePad SE",
+        "ram": "4 ГБ",
+        "storage": "128 ГБ",
+        "screen_diagonal": "11\""
+      }
+    },
+    {
+      "ID": "S000581",
+      "card": {
+        "Title": "Телевизор Hisense 65U7KQ чёрный",
+        "Description": "Гарантия 12 месяцев. Диагональ экрана 55 дюйма. Стильный дизайн и высокая производительность."
+      },
+      "category": "Телевизор",
+      "attributes": {
+        "Разрешение экрана": "HD",
+        "Модель": "Hisense 65U7KQ",
+        "Цвет товара": "чёрный"
+      },
+      "labels": {
+        "brand": "Hisense",
+        "model": "65U7KQ",
+        "resolution": "HD",
+        "color": "черный",
+        "screen_diagonal": "55\""
+      }
+    },
+    {
+      "ID": "S000582",
+      "card": {
+        "Title": "Планшет Huawei MatePad SE Green",
+        "Description": "В комплекте зарядное устройство и документация. Оперативная память 6 ГБ, накопитель SSD 256 ГБ. Диагональ экрана 8,3 дюймов. Гарантия 12 месяцев."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Емкость аккумулятора": "7040 мАч",
+        "Цвет товара": "Green",
+        "Оперативная память": "6 ГБ"
+      },
+      "labels": {
+        "brand": "Huawei",
+        "model": "MatePad SE",
+        "battery": "7040 мАч",
+        "color": "зеленый",
+        "ram": "6 ГБ",
+        "storage": "256 ГБ",
+        "screen_diagonal": "8.3\""
+      }
+    },
+    {
+      "ID": "S000583",
+      "card": {
+        "Title": "Смартфон Xiaomi 14T Pro 4/64 ГБ 6.5'' красный",
+        "Description": "Официальная гарантия производителя. Аккумулятор 4 500 мА·ч. Отличный выбор для работы и учёбы."
+      },
+      "category": "Смартфон",
+      "attributes": {
+        "Встроенная память": "64 ГБ"
+      },
+      "labels": {
+        "brand": "Xiaomi",
+        "model": "14T Pro",
+        "ram": "4 ГБ",
+        "storage": "64 ГБ",
+        "screen_diagonal": "6.5\"",
+        "color": "красный",
+        "battery": "4500 мАч"
+      }
+    },
+    {
+      "ID": "S000584",
+      "card": {
+        "Title": "Ноутбук ASUS Vivobook 15 X1504ZA 8/256 17,3\"",
+        "Description": "Официальная гарантия производителя. Толщина 8,2 мм."
+      },
+      "category": "Ноутбук",
+      "attributes": {
+        "Процессор": "Intel Core i5-1235U",
+        "Бренд": "ASUS",
+        "Модель": "Vivobook 15 X1504ZA",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "ASUS",
+        "model": "Vivobook 15 X1504ZA",
+        "ram": "8 ГБ",
+        "storage": "256 ГБ",
+        "screen_diagonal": "17.3\"",
+        "cpu": "Intel Core i5-1235U"
+      }
+    },
+    {
+      "ID": "S000585",
+      "card": {
+        "Title": "Ноутбук Lenovo IdeaPad Slim 3 15IAH8 8/256GB 16'' Silver",
+        "Description": "Отличный выбор для работы и учёбы. Процессор AMD Ryzen 5 7520U справится с любыми задачами. Официальная гарантия производителя."
+      },
+      "category": "Ноутбук",
+      "attributes": {
+        "Производитель": "Lenovo",
+        "Цвет товара": "Silver",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "Lenovo",
+        "model": "IdeaPad Slim 3 15IAH8",
+        "ram": "8 ГБ",
+        "storage": "256 ГБ",
+        "screen_diagonal": "16\"",
+        "color": "серебристый",
+        "cpu": "AMD Ryzen 5 7520U"
+      }
+    },
+    {
+      "ID": "S000586",
+      "card": {
+        "Title": "Ноутбук Lenovo IdeaPad Slim 3 15IAH8 8/256GB 17.3\" Intel Core i5-1235U",
+        "Description": "В комплекте зарядное устройство и документация. Быстрая доставка по всей России."
+      },
+      "category": "Ноутбук",
+      "attributes": {
+        "Марка": "Lenovo",
+        "Накопитель": "256 ГБ",
+        "Страна производства": "Вьетнам",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "Lenovo",
+        "model": "IdeaPad Slim 3 15IAH8",
+        "ram": "8 ГБ",
+        "storage": "256 ГБ",
+        "screen_diagonal": "17.3\"",
+        "cpu": "Intel Core i5-1235U"
+      }
+    },
+    {
+      "ID": "S000587",
+      "card": {
+        "Title": "Телефон HONOR X8b 8/64 6.5''",
+        "Description": "Гарантия 12 месяцев. Гарантия 12 месяцев."
+      },
+      "category": "Смартфон",
+      "attributes": {
+        "Бренд": "HONOR",
+        "Цвет": "черная",
+        "Страна производства": "Индия"
+      },
+      "labels": {
+        "brand": "HONOR",
+        "model": "X8b",
+        "ram": "8 ГБ",
+        "storage": "64 ГБ",
+        "screen_diagonal": "6.5\"",
+        "color": "черный"
+      }
+    },
+    {
+      "ID": "S000588",
+      "card": {
+        "Title": "Планшет Xiaomi Pad 6 8/128 ГБ 11\" 10090 мАч розовый",
+        "Description": "Официальная гарантия производителя. Отличный выбор для работы и учёбы."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Марка": "Xiaomi",
+        "Цвет": "розовый",
+        "ОЗУ": "8 ГБ",
+        "Страна производства": "Индия",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "Xiaomi",
+        "model": "Pad 6",
+        "ram": "8 ГБ",
+        "storage": "128 ГБ",
+        "screen_diagonal": "11\"",
+        "battery": "10090 мАч",
+        "color": "розовый"
+      }
+    },
+    {
+      "ID": "S000589",
+      "card": {
+        "Title": "Планшет Samsung Galaxy Tab A9+ 4 ГБ/128 ГБ 7040 мАч Green",
+        "Description": "Гарантия 12 месяцев. Диагональ экрана 11 дюйма. Стильный дизайн и высокая производительность."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Модель": "Samsung Galaxy Tab A9+",
+        "Оперативная память": "4 ГБ",
+        "Объем памяти": "128 ГБ"
+      },
+      "labels": {
+        "brand": "Samsung",
+        "model": "Galaxy Tab A9+",
+        "ram": "4 ГБ",
+        "storage": "128 ГБ",
+        "battery": "7040 мАч",
+        "color": "зеленый",
+        "screen_diagonal": "11\""
+      }
+    },
+    {
+      "ID": "S000590",
+      "card": {
+        "Title": "Телефон Apple iPhone 13 5000 мАч Black",
+        "Description": "Вес 190 г. Отличный выбор для работы и учёбы."
+      },
+      "category": "Смартфон",
+      "attributes": {
+        "Диагональ экрана": "6.5 дюйм",
+        "Модель": "Apple iPhone 13",
+        "Цвет товара": "чёрного",
+        "Объем памяти": "64 ГБ"
+      },
+      "labels": {
+        "brand": "Apple",
+        "model": "iPhone 13",
+        "screen_diagonal": "6.5\"",
+        "battery": "5000 мАч",
+        "color": "черный",
+        "storage": "64 ГБ"
+      }
+    },
+    {
+      "ID": "S000591",
+      "card": {
+        "Title": "Ультрабук HP Pavilion 15-eg3000 32 ГБ/512 ГБ",
+        "Description": "Быстрая доставка по всей России. Толщина 8,2 мм."
+      },
+      "category": "Ноутбук",
+      "attributes": {
+        "Бренд": "HP",
+        "Модель": "HP Pavilion 15-eg3000",
+        "Цвет": "Pink"
+      },
+      "labels": {
+        "brand": "HP",
+        "model": "Pavilion 15-eg3000",
+        "ram": "32 ГБ",
+        "storage": "512 ГБ",
+        "color": "розовый"
+      }
+    },
+    {
+      "ID": "S000592",
+      "card": {
+        "Title": "Телевизор LG OLED48C3RLA чёрный",
+        "Description": "В комплекте зарядное устройство и документация. Толщина 8,2 мм."
+      },
+      "category": "Телевизор",
+      "attributes": {
+        "Диагональ": "43 дюйм",
+        "Разрешение экрана": "Full HD",
+        "Модель": "OLED48C3RLA"
+      },
+      "labels": {
+        "brand": "LG",
+        "model": "OLED48C3RLA",
+        "screen_diagonal": "43\"",
+        "resolution": "Full HD",
+        "color": "черный"
+      }
+    },
+    {
+      "ID": "S000593",
+      "card": {
+        "Title": "Смартфон Xiaomi Redmi Note 13 4/512 ГБ 6.8\"",
+        "Description": "Официальная гарантия производителя. Гарантия 12 месяцев."
+      },
+      "category": "Смартфон",
+      "attributes": {
+        "Марка": "Xiaomi",
+        "Встроенная память": "512 ГБ",
+        "Страна производства": "Вьетнам"
+      },
+      "labels": {
+        "brand": "Xiaomi",
+        "model": "Redmi Note 13",
+        "ram": "4 ГБ",
+        "storage": "512 ГБ",
+        "screen_diagonal": "6.8\""
+      }
+    },
+    {
+      "ID": "S000594",
+      "card": {
+        "Title": "Планшет Huawei MatePad SE 8 ГБ/64 ГБ Red",
+        "Description": "В комплекте зарядное устройство и документация. Аккумулятор 7 040 мА·ч. Толщина 8,2 мм."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Диагональ": "12.4 дюйм",
+        "Бренд": "Huawei",
+        "Цвет": "Red",
+        "Оперативная память": "8 ГБ",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "Huawei",
+        "model": "MatePad SE",
+        "ram": "8 ГБ",
+        "storage": "64 ГБ",
+        "screen_diagonal": "12.4\"",
+        "color": "красный",
+        "battery": "7040 мАч"
+      }
+    },
+    {
+      "ID": "S000595",
+      "card": {
+        "Title": "Ноутбук MSI Modern 15 B13M 16/256 14\"",
+        "Description": "Стильный дизайн и высокая производительность. Процессор Intel Core i5-1235U справится с любыми задачами. Официальная гарантия производителя."
+      },
+      "category": "Ноутбук",
+      "attributes": {
+        "Производитель": "MSI",
+        "Оперативная память": "16 ГБ",
+        "Накопитель": "256 ГБ",
+        "Страна производства": "Индия"
+      },
+      "labels": {
+        "brand": "MSI",
+        "model": "Modern 15 B13M",
+        "ram": "16 ГБ",
+        "storage": "256 ГБ",
+        "screen_diagonal": "14\"",
+        "cpu": "Intel Core i5-1235U"
+      }
+    },
+    {
+      "ID": "S000596",
+      "card": {
+        "Title": "Ноутбук Lenovo ThinkBook 16 G6 16\" красный",
+        "Description": "В комплекте зарядное устройство и документация. Оперативная память 8 ГБ, накопитель SSD 1 ТБ. Отличный выбор для работы и учёбы."
+      },
+      "category": "Ноутбук",
+      "attributes": {
+        "Процессор": "Intel Core i7-13620H",
+        "Производитель": "Lenovo",
+        "ОЗУ": "8 ГБ",
+        "Объем памяти": "1 ТБ"
+      },
+      "labels": {
+        "brand": "Lenovo",
+        "model": "ThinkBook 16 G6",
+        "screen_diagonal": "16\"",
+        "cpu": "Intel Core i7-13620H",
+        "color": "красный",
+        "ram": "8 ГБ",
+        "storage": "1 ТБ"
+      }
+    },
+    {
+      "ID": "S000597",
+      "card": {
+        "Title": "Телевизор Hisense 65U7KQ 55\" красный",
+        "Description": "В комплекте зарядное устройство и документация. Разрешение HD. В комплекте зарядное устройство и документация."
+      },
+      "category": "Телевизор",
+      "attributes": {
+        "Бренд": "Hisense",
+        "Страна производства": "Индия"
+      },
+      "labels": {
+        "brand": "Hisense",
+        "model": "65U7KQ",
+        "screen_diagonal": "55\"",
+        "color": "красный",
+        "resolution": "HD"
+      }
+    },
+    {
+      "ID": "S000598",
+      "card": {
+        "Title": "Ноутбук Apple MacBook Air 13 32+1TB 17.3\" AMD Ryzen 5 7520U Graphite",
+        "Description": "Быстрая доставка по всей России. Вес 190 г."
+      },
+      "category": "Ноутбук",
+      "attributes": {
+        "Оперативная память": "32 ГБ",
+        "Страна производства": "Вьетнам",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "Apple",
+        "model": "MacBook Air 13",
+        "ram": "32 ГБ",
+        "storage": "1 ТБ",
+        "screen_diagonal": "17.3\"",
+        "cpu": "AMD Ryzen 5 7520U",
+        "color": "серый"
+      }
+    },
+    {
+      "ID": "S000599",
+      "card": {
+        "Title": "Планшет Samsung Galaxy Tab S9 FE 4+256GB 8000 мАч фиолетовый",
+        "Description": "Толщина 8,2 мм. Быстрая доставка по всей России."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Цвет": "фиолетовый",
+        "Страна производства": "Вьетнам"
+      },
+      "labels": {
+        "brand": "Samsung",
+        "model": "Galaxy Tab S9 FE",
+        "ram": "4 ГБ",
+        "storage": "256 ГБ",
+        "battery": "8000 мАч",
+        "color": "фиолетовый"
+      }
+    },
+    {
+      "ID": "S000600",
+      "card": {
+        "Title": "Планшет Huawei MatePad 11.5 8+256GB 8.3'' 10090 мАч красный",
+        "Description": "Вес 190 г. В комплекте зарядное устройство и документация."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Модель": "Huawei MatePad 11.5"
+      },
+      "labels": {
+        "brand": "Huawei",
+        "model": "MatePad 11.5",
+        "ram": "8 ГБ",
+        "storage": "256 ГБ",
+        "screen_diagonal": "8.3\"",
+        "battery": "10090 мАч",
+        "color": "красный"
+      }
+    },
+    {
+      "ID": "S000601",
+      "card": {
+        "Title": "Телевизор Hisense 43A6K 32'' Green",
+        "Description": "Вес 190 г. Отличный выбор для работы и учёбы."
+      },
+      "category": "Телевизор",
+      "attributes": {
+        "Разрешение экрана": "4K UHD",
+        "Производитель": "Hisense",
+        "Страна производства": "Индия"
+      },
+      "labels": {
+        "brand": "Hisense",
+        "model": "43A6K",
+        "screen_diagonal": "32\"",
+        "resolution": "4K UHD",
+        "color": "зеленый"
+      }
+    },
+    {
+      "ID": "S000602",
+      "card": {
+        "Title": "Телевизор Haier S4 HD белый",
+        "Description": "Стильный дизайн и высокая производительность. Вес 190 г."
+      },
+      "category": "Телевизор",
+      "attributes": {
+        "Диагональ экрана": "43 дюйм",
+        "Модель": "S4",
+        "Страна производства": "Индия"
+      },
+      "labels": {
+        "brand": "Haier",
+        "model": "S4",
+        "screen_diagonal": "43\"",
+        "resolution": "HD",
+        "color": "белый"
+      }
+    },
+    {
+      "ID": "S000603",
+      "card": {
+        "Title": "Планшет Huawei MatePad 11.5 12,4\" 8000 мАч",
+        "Description": "Официальная гарантия производителя. Оперативная память 6 ГБ, встроенная память 256 ГБ. Вес 190 г."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Модель": "MatePad 11.5",
+        "Цвет товара": "Red",
+        "ОЗУ": "6 ГБ",
+        "Накопитель": "256 ГБ",
+        "Страна производства": "Индия"
+      },
+      "labels": {
+        "brand": "Huawei",
+        "model": "MatePad 11.5",
+        "screen_diagonal": "12.4\"",
+        "battery": "8000 мАч",
+        "color": "красный",
+        "ram": "6 ГБ",
+        "storage": "256 ГБ"
+      }
+    },
+    {
+      "ID": "S000604",
+      "card": {
+        "Title": "Смартфон Apple iPhone 15 8 ГБ/256 ГБ 6.67'' белый",
+        "Description": "Гарантия 12 месяцев. Толщина 8,2 мм."
+      },
+      "category": "Смартфон",
+      "attributes": {
+        "Емкость аккумулятора": "5000 мАч",
+        "Модель": "iPhone 15",
+        "Страна производства": "Вьетнам",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "Apple",
+        "model": "iPhone 15",
+        "ram": "8 ГБ",
+        "storage": "256 ГБ",
+        "screen_diagonal": "6.67\"",
+        "battery": "5000 мАч",
+        "color": "белый"
+      }
+    },
+    {
+      "ID": "S000605",
+      "card": {
+        "Title": "Смартфон Samsung Galaxy A15 6,7\" Purple",
+        "Description": "Стильный дизайн и высокая производительность. Оперативная память 8 ГБ, накопитель SSD 128 ГБ. В комплекте зарядное устройство и документация."
+      },
+      "category": "Смартфон",
+      "attributes": {
+        "Емкость аккумулятора": "6000 мАч",
+        "ОЗУ": "8 ГБ",
+        "Накопитель": "128 ГБ",
+        "Страна производства": "Китай"
+      },
+      "labels": {
+        "brand": "Samsung",
+        "model": "Galaxy A15",
+        "screen_diagonal": "6.7\"",
+        "battery": "6000 мАч",
+        "color": "фиолетовый",
+        "ram": "8 ГБ",
+        "storage": "128 ГБ"
+      }
+    },
+    {
+      "ID": "S000606",
+      "card": {
+        "Title": "Телевизор Haier S4 HD зелёный",
+        "Description": "В комплекте зарядное устройство и документация. Официальная гарантия производителя."
+      },
+      "category": "Телевизор",
+      "attributes": {
+        "Диагональ": "65 дюйм",
+        "Модель": "Haier S4",
+        "Страна производства": "Индия",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "Haier",
+        "model": "S4",
+        "screen_diagonal": "65\"",
+        "resolution": "HD",
+        "color": "зеленый"
+      }
+    },
+    {
+      "ID": "S000607",
+      "card": {
+        "Title": "Телефон realme 12 Pro+ 8/512 5000 мАч золотой",
+        "Description": "Стильный дизайн и высокая производительность. Быстрая доставка по всей России."
+      },
+      "category": "Смартфон",
+      "attributes": {
+        "Страна производства": "Китай",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "realme",
+        "model": "12 Pro+",
+        "ram": "8 ГБ",
+        "storage": "512 ГБ",
+        "battery": "5000 мАч",
+        "color": "золотой"
+      }
+    },
+    {
+      "ID": "S000608",
+      "card": {
+        "Title": "Телефон Tecno Camon 30 6+512GB Red",
+        "Description": "Толщина 8,2 мм. В комплекте зарядное устройство и документация."
+      },
+      "category": "Смартфон",
+      "attributes": {
+        "Диагональ экрана": "6.67 дюйм",
+        "Емкость аккумулятора": "6000 мАч",
+        "Модель": "Camon 30",
+        "Накопитель": "512 ГБ",
+        "Страна производства": "Китай"
+      },
+      "labels": {
+        "brand": "Tecno",
+        "model": "Camon 30",
+        "ram": "6 ГБ",
+        "storage": "512 ГБ",
+        "screen_diagonal": "6.67\"",
+        "battery": "6000 мАч",
+        "color": "красный"
+      }
+    },
+    {
+      "ID": "S000609",
+      "card": {
+        "Title": "Планшет Huawei MatePad SE 12.4'' фиолетовый",
+        "Description": "Толщина 8,2 мм. Оперативная память 4 ГБ, встроенная память 128 ГБ. Гарантия 12 месяцев."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Марка": "Huawei",
+        "Цвет товара": "фиолетовый",
+        "Объем памяти": "128 ГБ",
+        "Страна производства": "Вьетнам"
+      },
+      "labels": {
+        "brand": "Huawei",
+        "model": "MatePad SE",
+        "screen_diagonal": "12.4\"",
+        "color": "фиолетовый",
+        "storage": "128 ГБ",
+        "ram": "4 ГБ"
+      }
+    },
+    {
+      "ID": "S000610",
+      "card": {
+        "Title": "Ноутбук Apple MacBook Air 13 32 ГБ/512 ГБ Intel Core i5-1235U красный",
+        "Description": "Вес 190 г. Диагональ экрана 14 дюймов. Отличный выбор для работы и учёбы."
+      },
+      "category": "Ноутбук",
+      "attributes": {
+        "Модель": "MacBook Air 13",
+        "Цвет товара": "красный",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "Apple",
+        "model": "MacBook Air 13",
+        "ram": "32 ГБ",
+        "storage": "512 ГБ",
+        "cpu": "Intel Core i5-1235U",
+        "color": "красный",
+        "screen_diagonal": "14\""
+      }
+    },
+    {
+      "ID": "S000611",
+      "card": {
+        "Title": "Телефон realme C67 6/256 6.67\" белый",
+        "Description": "Стильный дизайн и высокая производительность. Толщина 8,2 мм."
+      },
+      "category": "Смартфон",
+      "attributes": {
+        "Емкость аккумулятора": "5000 мАч",
+        "Производитель": "realme",
+        "Модель": "C67",
+        "Цвет": "белая",
+        "Встроенная память": "256 ГБ",
+        "Страна производства": "Китай"
+      },
+      "labels": {
+        "brand": "realme",
+        "model": "C67",
+        "ram": "6 ГБ",
+        "storage": "256 ГБ",
+        "screen_diagonal": "6.67\"",
+        "battery": "5000 мАч",
+        "color": "белый"
+      }
+    },
+    {
+      "ID": "S000612",
+      "card": {
+        "Title": "Ноутбук MSI Modern 15 B13M AMD Ryzen 5 7520U Green",
+        "Description": "Вес 190 г. Оперативная память 16 ГБ, встроенная память 1 ТБ. Толщина 8,2 мм."
+      },
+      "category": "Ноутбук",
+      "attributes": {
+        "Диагональ экрана": "14 дюйм",
+        "Страна производства": "Китай"
+      },
+      "labels": {
+        "brand": "MSI",
+        "model": "Modern 15 B13M",
+        "screen_diagonal": "14\"",
+        "cpu": "AMD Ryzen 5 7520U",
+        "color": "зеленый",
+        "ram": "16 ГБ",
+        "storage": "1 ТБ"
+      }
+    },
+    {
+      "ID": "S000613",
+      "card": {
+        "Title": "Телевизор Hisense 65U7KQ зелёный",
+        "Description": "Стильный дизайн и высокая производительность. Экран 43 дюймов. Разрешение HD. Вес 190 г."
+      },
+      "category": "Телевизор",
+      "attributes": {
+        "Бренд": "Hisense",
+        "Модель": "65U7KQ",
+        "Цвет товара": "Green",
+        "Страна производства": "Индия"
+      },
+      "labels": {
+        "brand": "Hisense",
+        "model": "65U7KQ",
+        "color": "зеленый",
+        "screen_diagonal": "43\"",
+        "resolution": "HD"
+      }
+    },
+    {
+      "ID": "S000614",
+      "card": {
+        "Title": "Ноутбук Acer Aspire 5 A515-58M 16/256 ГБ Intel Celeron N4500",
+        "Description": "В комплекте зарядное устройство и документация. Стильный дизайн и высокая производительность."
+      },
+      "category": "Ноутбук",
+      "attributes": {
+        "Диагональ экрана": "14 дюйм",
+        "Бренд": "Acer",
+        "Цвет товара": "красный",
+        "ОЗУ": "16 ГБ",
+        "Объем памяти": "256 ГБ",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "Acer",
+        "model": "Aspire 5 A515-58M",
+        "ram": "16 ГБ",
+        "storage": "256 ГБ",
+        "screen_diagonal": "14\"",
+        "cpu": "Intel Celeron N4500",
+        "color": "красный"
+      }
+    },
+    {
+      "ID": "S000615",
+      "card": {
+        "Title": "Телефон Xiaomi 14T Pro 4/64GB 6.1\" 5000 мАч Pink",
+        "Description": "Толщина 8,2 мм. Гарантия 12 месяцев."
+      },
+      "category": "Смартфон",
+      "attributes": {
+        "Модель": "14T Pro",
+        "Цвет": "розовый",
+        "ОЗУ": "4 ГБ",
+        "Накопитель": "64 ГБ",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "Xiaomi",
+        "model": "14T Pro",
+        "ram": "4 ГБ",
+        "storage": "64 ГБ",
+        "screen_diagonal": "6.1\"",
+        "battery": "5000 мАч",
+        "color": "розовый"
+      }
+    },
+    {
+      "ID": "S000616",
+      "card": {
+        "Title": "Телевизор Haier S4 43\" 4K серый",
+        "Description": "Толщина 8,2 мм. Гарантия 12 месяцев."
+      },
+      "category": "Телевизор",
+      "attributes": {
+        "Модель": "S4",
+        "Страна производства": "Китай"
+      },
+      "labels": {
+        "brand": "Haier",
+        "model": "S4",
+        "screen_diagonal": "43\"",
+        "resolution": "4K UHD",
+        "color": "серый"
+      }
+    },
+    {
+      "ID": "S000617",
+      "card": {
+        "Title": "Планшет Apple iPad Air 5 4/256GB 8.3\" серебристый",
+        "Description": "Отличный выбор для работы и учёбы. Вес 190 г."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Бренд": "Apple",
+        "Модель": "iPad Air 5",
+        "Цвет": "Silver",
+        "Страна производства": "Индия"
+      },
+      "labels": {
+        "brand": "Apple",
+        "model": "iPad Air 5",
+        "ram": "4 ГБ",
+        "storage": "256 ГБ",
+        "screen_diagonal": "8.3\"",
+        "color": "серебристый"
+      }
+    },
+    {
+      "ID": "S000618",
+      "card": {
+        "Title": "Телевизор LG 55UR78006LK HD Silver",
+        "Description": "Гарантия 12 месяцев. Вес 190 г."
+      },
+      "category": "Телевизор",
+      "attributes": {
+        "Диагональ экрана": "32 дюйм"
+      },
+      "labels": {
+        "brand": "LG",
+        "model": "55UR78006LK",
+        "screen_diagonal": "32\"",
+        "resolution": "HD",
+        "color": "серебристый"
+      }
+    },
+    {
+      "ID": "S000619",
+      "card": {
+        "Title": "Телевизор Hisense 65U7KQ 55\" FHD белая",
+        "Description": "Официальная гарантия производителя. Официальная гарантия производителя."
+      },
+      "category": "Телевизор",
+      "attributes": {
+        "Модель": "65U7KQ",
+        "Цвет товара": "White",
+        "Страна производства": "Индия",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "Hisense",
+        "model": "65U7KQ",
+        "screen_diagonal": "55\"",
+        "resolution": "Full HD",
+        "color": "белый"
+      }
+    },
+    {
+      "ID": "S000620",
+      "card": {
+        "Title": "Ноутбук Acer Aspire 5 A515-58M 8+512GB 13.3\" AMD Ryzen 5 7520U",
+        "Description": "Толщина 8,2 мм. Официальная гарантия производителя."
+      },
+      "category": "Ноутбук",
+      "attributes": {
+        "Производитель": "Acer",
+        "Цвет товара": "Red",
+        "Встроенная память": "512 ГБ",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "Acer",
+        "model": "Aspire 5 A515-58M",
+        "ram": "8 ГБ",
+        "storage": "512 ГБ",
+        "screen_diagonal": "13.3\"",
+        "cpu": "AMD Ryzen 5 7520U",
+        "color": "красный"
+      }
+    },
+    {
+      "ID": "S000621",
+      "card": {
+        "Title": "Планшет Samsung Galaxy Tab S9 FE 8/128GB 8000 мАч синяя",
+        "Description": "Гарантия 12 месяцев. Диагональ экрана 8,3 дюйма. В комплекте зарядное устройство и документация."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Встроенная память": "128 ГБ",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "Samsung",
+        "model": "Galaxy Tab S9 FE",
+        "ram": "8 ГБ",
+        "storage": "128 ГБ",
+        "battery": "8000 мАч",
+        "color": "синий",
+        "screen_diagonal": "8.3\""
+      }
+    },
+    {
+      "ID": "S000622",
+      "card": {
+        "Title": "Планшет Apple iPad Air 5 8+256GB 7040 мАч Green",
+        "Description": "Толщина 8,2 мм. Отличный выбор для работы и учёбы."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Бренд": "Apple",
+        "ОЗУ": "8 ГБ",
+        "Встроенная память": "256 ГБ",
+        "Страна производства": "Индия",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "Apple",
+        "model": "iPad Air 5",
+        "ram": "8 ГБ",
+        "storage": "256 ГБ",
+        "battery": "7040 мАч",
+        "color": "зеленый"
+      }
+    },
+    {
+      "ID": "S000623",
+      "card": {
+        "Title": "Планшет Huawei MatePad SE 6/64 ГБ 10090 мАч Blue",
+        "Description": "Официальная гарантия производителя. Отличный выбор для работы и учёбы."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Диагональ экрана": "10.9 дюйм"
+      },
+      "labels": {
+        "brand": "Huawei",
+        "model": "MatePad SE",
+        "ram": "6 ГБ",
+        "storage": "64 ГБ",
+        "screen_diagonal": "10.9\"",
+        "battery": "10090 мАч",
+        "color": "синий"
+      }
+    },
+    {
+      "ID": "S000624",
+      "card": {
+        "Title": "Телефон Xiaomi 14T Pro 4+256GB 6.8\" White",
+        "Description": "Толщина 8,2 мм. Официальная гарантия производителя."
+      },
+      "category": "Смартфон",
+      "attributes": {
+        "Марка": "Xiaomi",
+        "Модель": "Xiaomi 14T Pro",
+        "ОЗУ": "4 ГБ",
+        "Объем памяти": "256 ГБ",
+        "Страна производства": "Индия"
+      },
+      "labels": {
+        "brand": "Xiaomi",
+        "model": "14T Pro",
+        "ram": "4 ГБ",
+        "storage": "256 ГБ",
+        "screen_diagonal": "6.8\"",
+        "color": "белый"
+      }
+    },
+    {
+      "ID": "S000625",
+      "card": {
+        "Title": "Телефон realme 12 Pro+ 6/128",
+        "Description": "Официальная гарантия производителя. Стильный дизайн и высокая производительность."
+      },
+      "category": "Смартфон",
+      "attributes": {
+        "Диагональ": "6.5 дюйм",
+        "Емкость аккумулятора": "5000 мАч",
+        "Страна производства": "Вьетнам"
+      },
+      "labels": {
+        "brand": "realme",
+        "model": "12 Pro+",
+        "ram": "6 ГБ",
+        "storage": "128 ГБ",
+        "screen_diagonal": "6.5\"",
+        "battery": "5000 мАч"
+      }
+    },
+    {
+      "ID": "S000626",
+      "card": {
+        "Title": "Телевизор LG OLED48C3RLA",
+        "Description": "В комплекте зарядное устройство и документация. Быстрая доставка по всей России."
+      },
+      "category": "Телевизор",
+      "attributes": {
+        "Диагональ экрана": "55 дюйм",
+        "Модель": "LG OLED48C3RLA",
+        "Цвет товара": "зелёный",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "LG",
+        "model": "OLED48C3RLA",
+        "screen_diagonal": "55\"",
+        "color": "зеленый"
+      }
+    },
+    {
+      "ID": "S000627",
+      "card": {
+        "Title": "Телефон realme C67 Green",
+        "Description": "Отличный выбор для работы и учёбы. Оперативная память 6 ГБ, встроенная память 64 ГБ. В комплекте зарядное устройство и документация."
+      },
+      "category": "Смартфон",
+      "attributes": {
+        "Емкость аккумулятора": "5160 мАч",
+        "Объем памяти": "64 ГБ",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "realme",
+        "model": "C67",
+        "battery": "5160 мАч",
+        "color": "зеленый",
+        "storage": "64 ГБ",
+        "ram": "6 ГБ"
+      }
+    },
+    {
+      "ID": "S000628",
+      "card": {
+        "Title": "Планшет Samsung Galaxy Tab S9 FE 8 ГБ/128 ГБ 7040 мАч золотой",
+        "Description": "Официальная гарантия производителя. Стильный дизайн и высокая производительность."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Производитель": "Samsung",
+        "ОЗУ": "8 ГБ",
+        "Встроенная память": "128 ГБ",
+        "Страна производства": "Китай",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "Samsung",
+        "model": "Galaxy Tab S9 FE",
+        "ram": "8 ГБ",
+        "storage": "128 ГБ",
+        "battery": "7040 мАч",
+        "color": "золотой"
+      }
+    },
+    {
+      "ID": "S000629",
+      "card": {
+        "Title": "Телефон realme C67 12/128 ГБ 5000 мАч фиолетовый",
+        "Description": "Гарантия 12 месяцев. Экран 6,7 дюйма. Стильный дизайн и высокая производительность."
+      },
+      "category": "Смартфон",
+      "attributes": {
+        "Производитель": "realme",
+        "Модель": "realme C67",
+        "Объем памяти": "128 ГБ"
+      },
+      "labels": {
+        "brand": "realme",
+        "model": "C67",
+        "ram": "12 ГБ",
+        "storage": "128 ГБ",
+        "battery": "5000 мАч",
+        "color": "фиолетовый",
+        "screen_diagonal": "6.7\""
+      }
+    },
+    {
+      "ID": "S000630",
+      "card": {
+        "Title": "Ноутбук HP Pavilion 15-eg3000 8/1TB чёрный",
+        "Description": "Гарантия 12 месяцев. Процессор AMD Ryzen 7 7730U справится с любыми задачами. Гарантия 12 месяцев."
+      },
+      "category": "Ноутбук",
+      "attributes": {
+        "Диагональ": "13.3 дюйм",
+        "Бренд": "HP",
+        "ОЗУ": "8 ГБ",
+        "Встроенная память": "1 ТБ",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "HP",
+        "model": "Pavilion 15-eg3000",
+        "ram": "8 ГБ",
+        "storage": "1 ТБ",
+        "screen_diagonal": "13.3\"",
+        "color": "черный",
+        "cpu": "AMD Ryzen 7 7730U"
+      }
+    },
+    {
+      "ID": "S000631",
+      "card": {
+        "Title": "Смартфон Samsung Galaxy S24 Ultra 6000 мАч серый",
+        "Description": "Отличный выбор для работы и учёбы. Оперативная память 4 ГБ, накопитель SSD 128 ГБ. Толщина 8,2 мм."
+      },
+      "category": "Смартфон",
+      "attributes": {
+        "Диагональ экрана": "6.1 дюйм",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "Samsung",
+        "model": "Galaxy S24 Ultra",
+        "screen_diagonal": "6.1\"",
+        "battery": "6000 мАч",
+        "color": "серый",
+        "ram": "4 ГБ",
+        "storage": "128 ГБ"
+      }
+    },
+    {
+      "ID": "S000632",
+      "card": {
+        "Title": "Телевизор LG 55UR78006LK",
+        "Description": "Стильный дизайн и высокая производительность. Разрешение HD. Вес 190 г."
+      },
+      "category": "Телевизор",
+      "attributes": {
+        "Диагональ экрана": "43 дюйм",
+        "Модель": "LG 55UR78006LK",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "LG",
+        "model": "55UR78006LK",
+        "screen_diagonal": "43\"",
+        "resolution": "HD"
+      }
+    },
+    {
+      "ID": "S000633",
+      "card": {
+        "Title": "Телефон HONOR X8b 12/64 розовый",
+        "Description": "Толщина 8,2 мм. Аккумулятор 4 500 mAh. В комплекте зарядное устройство и документация."
+      },
+      "category": "Смартфон",
+      "attributes": {
+        "Диагональ экрана": "6.8 дюйм",
+        "Модель": "X8b",
+        "ОЗУ": "12 ГБ",
+        "Накопитель": "64 ГБ",
+        "Страна производства": "Китай",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "HONOR",
+        "model": "X8b",
+        "ram": "12 ГБ",
+        "storage": "64 ГБ",
+        "screen_diagonal": "6.8\"",
+        "color": "розовый",
+        "battery": "4500 мАч"
+      }
+    },
+    {
+      "ID": "S000634",
+      "card": {
+        "Title": "Ноутбук ASUS Zenbook 14 UX3405MA 16/1 ТБ розовый",
+        "Description": "Отличный выбор для работы и учёбы. Дисплей с диагональю 13,3 дюйма. Процессор Intel Core i5-1235U справится с любыми задачами. Быстрая доставка по всей России."
+      },
+      "category": "Ноутбук",
+      "attributes": {
+        "Марка": "ASUS",
+        "Модель": "Zenbook 14 UX3405MA",
+        "Цвет": "Pink",
+        "Страна производства": "Вьетнам",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "ASUS",
+        "model": "Zenbook 14 UX3405MA",
+        "ram": "16 ГБ",
+        "storage": "1 ТБ",
+        "color": "розовый",
+        "screen_diagonal": "13.3\"",
+        "cpu": "Intel Core i5-1235U"
+      }
+    },
+    {
+      "ID": "S000635",
+      "card": {
+        "Title": "Ультрабук HP 250 G10 16/256GB белая",
+        "Description": "Официальная гарантия производителя. Толщина 8,2 мм."
+      },
+      "category": "Ноутбук",
+      "attributes": {
+        "Диагональ экрана": "15.6 дюйм",
+        "Страна производства": "Вьетнам"
+      },
+      "labels": {
+        "brand": "HP",
+        "model": "250 G10",
+        "ram": "16 ГБ",
+        "storage": "256 ГБ",
+        "screen_diagonal": "15.6\"",
+        "color": "белый"
+      }
+    },
+    {
+      "ID": "S000636",
+      "card": {
+        "Title": "Телевизор Hisense 65U7KQ",
+        "Description": "В комплекте зарядное устройство и документация. Вес 190 г."
+      },
+      "category": "Телевизор",
+      "attributes": {
+        "Диагональ экрана": "55 дюйм",
+        "Разрешение экрана": "HD",
+        "Бренд": "Hisense",
+        "Модель": "65U7KQ"
+      },
+      "labels": {
+        "brand": "Hisense",
+        "model": "65U7KQ",
+        "screen_diagonal": "55\"",
+        "resolution": "HD"
+      }
+    },
+    {
+      "ID": "S000637",
+      "card": {
+        "Title": "Смартфон Xiaomi Redmi 13C 6/128 ГБ серебристый",
+        "Description": "Быстрая доставка по всей России. Вес 190 г."
+      },
+      "category": "Смартфон",
+      "attributes": {
+        "Диагональ": "6.5 дюйм",
+        "Емкость аккумулятора": "5160 мАч",
+        "Цвет": "Silver",
+        "Накопитель": "128 ГБ",
+        "Страна производства": "Индия",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "Xiaomi",
+        "model": "Redmi 13C",
+        "ram": "6 ГБ",
+        "storage": "128 ГБ",
+        "screen_diagonal": "6.5\"",
+        "battery": "5160 мАч",
+        "color": "серебристый"
+      }
+    },
+    {
+      "ID": "S000638",
+      "card": {
+        "Title": "Планшет Samsung Galaxy Tab S9 FE 8/64 ГБ розовый",
+        "Description": "Стильный дизайн и высокая производительность. Гарантия 12 месяцев."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Диагональ экрана": "12.4 дюйм",
+        "Емкость аккумулятора": "8000 мАч",
+        "Объем памяти": "64 ГБ",
+        "Страна производства": "Индия"
+      },
+      "labels": {
+        "brand": "Samsung",
+        "model": "Galaxy Tab S9 FE",
+        "ram": "8 ГБ",
+        "storage": "64 ГБ",
+        "screen_diagonal": "12.4\"",
+        "battery": "8000 мАч",
+        "color": "розовый"
+      }
+    },
+    {
+      "ID": "S000639",
+      "card": {
+        "Title": "Планшет Huawei MatePad SE 4/64 ГБ 10.9'' золотой",
+        "Description": "Вес 190 г. Аккумулятор 7 040 мА·ч. Отличный выбор для работы и учёбы."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Производитель": "Huawei"
+      },
+      "labels": {
+        "brand": "Huawei",
+        "model": "MatePad SE",
+        "ram": "4 ГБ",
+        "storage": "64 ГБ",
+        "screen_diagonal": "10.9\"",
+        "color": "золотой",
+        "battery": "7040 мАч"
+      }
+    },
+    {
+      "ID": "S000640",
+      "card": {
+        "Title": "Телевизор TCL 65C745 Graphite",
+        "Description": "Официальная гарантия производителя. Дисплей с диагональю 50 дюйма. Разрешение 4K UHD. Гарантия 12 месяцев."
+      },
+      "category": "Телевизор",
+      "attributes": {
+        "Модель": "TCL 65C745",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "TCL",
+        "model": "65C745",
+        "color": "серый",
+        "screen_diagonal": "50\"",
+        "resolution": "4K UHD"
+      }
+    },
+    {
+      "ID": "S000641",
+      "card": {
+        "Title": "Смартфон realme 12 Pro+ золотой",
+        "Description": "В комплекте зарядное устройство и документация. Дисплей с диагональю 6,1 дюймов. Толщина 8,2 мм."
+      },
+      "category": "Смартфон",
+      "attributes": {
+        "Емкость аккумулятора": "5160 мАч",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "realme",
+        "model": "12 Pro+",
+        "battery": "5160 мАч",
+        "color": "золотой",
+        "screen_diagonal": "6.1\""
+      }
+    },
+    {
+      "ID": "S000642",
+      "card": {
+        "Title": "Ультрабук MSI Modern 15 B13M 8+256GB красный",
+        "Description": "Быстрая доставка по всей России. Процессор Intel Core i5-1235U справится с любыми задачами. Быстрая доставка по всей России."
+      },
+      "category": "Ноутбук",
+      "attributes": {
+        "Диагональ экрана": "16 дюйм",
+        "Марка": "MSI",
+        "Цвет товара": "красный",
+        "ОЗУ": "8 ГБ",
+        "Страна производства": "Вьетнам",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "MSI",
+        "model": "Modern 15 B13M",
+        "ram": "8 ГБ",
+        "storage": "256 ГБ",
+        "screen_diagonal": "16\"",
+        "color": "красный",
+        "cpu": "Intel Core i5-1235U"
+      }
+    },
+    {
+      "ID": "S000643",
+      "card": {
+        "Title": "Телевизор LG OLED48C3RLA Full HD золотой",
+        "Description": "Отличный выбор для работы и учёбы. Экран 65 дюймов. Гарантия 12 месяцев."
+      },
+      "category": "Телевизор",
+      "attributes": {
+        "Цвет": "золотой",
+        "Страна производства": "Китай",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "LG",
+        "model": "OLED48C3RLA",
+        "resolution": "Full HD",
+        "color": "золотой",
+        "screen_diagonal": "65\""
+      }
+    },
+    {
+      "ID": "S000644",
+      "card": {
+        "Title": "Смартфон realme C67 12/128 ГБ белый",
+        "Description": "Отличный выбор для работы и учёбы. Быстрая доставка по всей России."
+      },
+      "category": "Смартфон",
+      "attributes": {
+        "Емкость аккумулятора": "6000 мАч",
+        "Модель": "realme C67",
+        "ОЗУ": "12 ГБ"
+      },
+      "labels": {
+        "brand": "realme",
+        "model": "C67",
+        "ram": "12 ГБ",
+        "storage": "128 ГБ",
+        "battery": "6000 мАч",
+        "color": "белый"
+      }
+    },
+    {
+      "ID": "S000645",
+      "card": {
+        "Title": "Ультрабук ASUS Vivobook 15 X1504ZA 32/256 ГБ 16\"",
+        "Description": "Официальная гарантия производителя. Процессор Intel Core i5-1235U справится с любыми задачами. Официальная гарантия производителя."
+      },
+      "category": "Ноутбук",
+      "attributes": {
+        "Производитель": "ASUS",
+        "Модель": "Vivobook 15 X1504ZA",
+        "ОЗУ": "32 ГБ",
+        "Встроенная память": "256 ГБ"
+      },
+      "labels": {
+        "brand": "ASUS",
+        "model": "Vivobook 15 X1504ZA",
+        "ram": "32 ГБ",
+        "storage": "256 ГБ",
+        "screen_diagonal": "16\"",
+        "cpu": "Intel Core i5-1235U"
+      }
+    },
+    {
+      "ID": "S000646",
+      "card": {
+        "Title": "Смартфон Apple iPhone 13 6 ГБ/64 ГБ 6.8'' розовый",
+        "Description": "Официальная гарантия производителя. Аккумулятор 4500 мАч. Отличный выбор для работы и учёбы."
+      },
+      "category": "Смартфон",
+      "attributes": {
+        "Марка": "Apple",
+        "Модель": "iPhone 13",
+        "Цвет товара": "Pink",
+        "Встроенная память": "64 ГБ"
+      },
+      "labels": {
+        "brand": "Apple",
+        "model": "iPhone 13",
+        "ram": "6 ГБ",
+        "storage": "64 ГБ",
+        "screen_diagonal": "6.8\"",
+        "color": "розовый",
+        "battery": "4500 мАч"
+      }
+    },
+    {
+      "ID": "S000647",
+      "card": {
+        "Title": "Телевизор TCL 50P635 50\" розовый",
+        "Description": "Вес 190 г. Разрешение 4K UHD. Официальная гарантия производителя."
+      },
+      "category": "Телевизор",
+      "attributes": {
+        "Бренд": "TCL",
+        "Модель": "TCL 50P635",
+        "Цвет": "розовый",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "TCL",
+        "model": "50P635",
+        "screen_diagonal": "50\"",
+        "color": "розовый",
+        "resolution": "4K UHD"
+      }
+    },
+    {
+      "ID": "S000648",
+      "card": {
+        "Title": "Ноутбук ASUS Zenbook 14 UX3405MA Purple",
+        "Description": "Стильный дизайн и высокая производительность. Оперативная память 16 ГБ, встроенная память 512 ГБ. Процессор Intel Celeron N4500 справится с любыми задачами. Официальная гарантия производителя."
+      },
+      "category": "Ноутбук",
+      "attributes": {
+        "Диагональ": "14 дюйм",
+        "Марка": "ASUS",
+        "Модель": "Zenbook 14 UX3405MA",
+        "Цвет товара": "фиолетовый",
+        "Оперативная память": "16 ГБ",
+        "Объем памяти": "512 ГБ"
+      },
+      "labels": {
+        "brand": "ASUS",
+        "model": "Zenbook 14 UX3405MA",
+        "screen_diagonal": "14\"",
+        "color": "фиолетовый",
+        "ram": "16 ГБ",
+        "storage": "512 ГБ",
+        "cpu": "Intel Celeron N4500"
+      }
+    },
+    {
+      "ID": "S000649",
+      "card": {
+        "Title": "Планшет Apple iPad Air 5 6/64 ГБ 10090 мАч Gold",
+        "Description": "В комплекте зарядное устройство и документация. В комплекте зарядное устройство и документация."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Диагональ экрана": "8.3 дюйм",
+        "Оперативная память": "6 ГБ"
+      },
+      "labels": {
+        "brand": "Apple",
+        "model": "iPad Air 5",
+        "ram": "6 ГБ",
+        "storage": "64 ГБ",
+        "screen_diagonal": "8.3\"",
+        "battery": "10090 мАч",
+        "color": "золотой"
+      }
+    },
+    {
+      "ID": "S000650",
+      "card": {
+        "Title": "Планшет Huawei MatePad 11.5 8+256GB 11''",
+        "Description": "Официальная гарантия производителя. Вес 190 г."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Производитель": "Huawei",
+        "Модель": "MatePad 11.5",
+        "ОЗУ": "8 ГБ",
+        "Страна производства": "Китай",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "Huawei",
+        "model": "MatePad 11.5",
+        "ram": "8 ГБ",
+        "storage": "256 ГБ",
+        "screen_diagonal": "11\""
+      }
+    },
+    {
+      "ID": "S000651",
+      "card": {
+        "Title": "Телевизор Haier S4 золотой",
+        "Description": "Отличный выбор для работы и учёбы. Экран 55 дюйма. Разрешение HD. Вес 190 г."
+      },
+      "category": "Телевизор",
+      "attributes": {
+        "Цвет товара": "Gold",
+        "Страна производства": "Вьетнам",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "Haier",
+        "model": "S4",
+        "color": "золотой",
+        "screen_diagonal": "55\"",
+        "resolution": "HD"
+      }
+    },
+    {
+      "ID": "S000652",
+      "card": {
+        "Title": "Смартфон realme C67 5160 мАч белый",
+        "Description": "Официальная гарантия производителя. Быстрая доставка по всей России."
+      },
+      "category": "Смартфон",
+      "attributes": {
+        "Модель": "C67",
+        "Цвет товара": "белая",
+        "Накопитель": "512 ГБ",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "realme",
+        "model": "C67",
+        "battery": "5160 мАч",
+        "color": "белый",
+        "storage": "512 ГБ"
+      }
+    },
+    {
+      "ID": "S000653",
+      "card": {
+        "Title": "Ноутбук HP 250 G10 32/256GB Intel Core i7-13620H White",
+        "Description": "Быстрая доставка по всей России. Дисплей с диагональю 13,3 дюйма. Вес 190 г."
+      },
+      "category": "Ноутбук",
+      "attributes": {
+        "Производитель": "HP",
+        "Модель": "250 G10",
+        "Цвет товара": "белая",
+        "Оперативная память": "32 ГБ",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "HP",
+        "model": "250 G10",
+        "ram": "32 ГБ",
+        "storage": "256 ГБ",
+        "cpu": "Intel Core i7-13620H",
+        "color": "белый",
+        "screen_diagonal": "13.3\""
+      }
+    },
+    {
+      "ID": "S000654",
+      "card": {
+        "Title": "Планшет Samsung Galaxy Tab A9+ 6/128GB белый",
+        "Description": "Гарантия 12 месяцев. Аккумулятор 10090 мА·ч. Толщина 8,2 мм."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Диагональ экрана": "12.4 дюйм",
+        "Бренд": "Samsung",
+        "Страна производства": "Китай"
+      },
+      "labels": {
+        "brand": "Samsung",
+        "model": "Galaxy Tab A9+",
+        "ram": "6 ГБ",
+        "storage": "128 ГБ",
+        "screen_diagonal": "12.4\"",
+        "color": "белый",
+        "battery": "10090 мАч"
+      }
+    },
+    {
+      "ID": "S000655",
+      "card": {
+        "Title": "Смартфон realme C67 6/64 белый",
+        "Description": "Вес 190 г. Экран 6,1 дюймов. Стильный дизайн и высокая производительность."
+      },
+      "category": "Смартфон",
+      "attributes": {
+        "Емкость аккумулятора": "4500 мАч",
+        "Страна производства": "Вьетнам",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "realme",
+        "model": "C67",
+        "ram": "6 ГБ",
+        "storage": "64 ГБ",
+        "battery": "4500 мАч",
+        "color": "белый",
+        "screen_diagonal": "6.1\""
+      }
+    },
+    {
+      "ID": "S000656",
+      "card": {
+        "Title": "Телевизор TCL 50P635 зелёный",
+        "Description": "Толщина 8,2 мм. Стильный дизайн и высокая производительность."
+      },
+      "category": "Телевизор",
+      "attributes": {
+        "Диагональ экрана": "32 дюйм",
+        "Марка": "TCL",
+        "Страна производства": "Китай",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "TCL",
+        "model": "50P635",
+        "screen_diagonal": "32\"",
+        "color": "зеленый"
+      }
+    },
+    {
+      "ID": "S000657",
+      "card": {
+        "Title": "Ультрабук Lenovo ThinkBook 16 G6 32/256GB 15.6\" фиолетовый",
+        "Description": "Официальная гарантия производителя. Толщина 8,2 мм."
+      },
+      "category": "Ноутбук",
+      "attributes": {
+        "Процессор": "AMD Ryzen 5 7520U",
+        "Цвет": "Purple",
+        "Встроенная память": "256 ГБ"
+      },
+      "labels": {
+        "brand": "Lenovo",
+        "model": "ThinkBook 16 G6",
+        "ram": "32 ГБ",
+        "storage": "256 ГБ",
+        "screen_diagonal": "15.6\"",
+        "cpu": "AMD Ryzen 5 7520U",
+        "color": "фиолетовый"
+      }
+    },
+    {
+      "ID": "S000658",
+      "card": {
+        "Title": "Телевизор Haier S1 50'' красный",
+        "Description": "Официальная гарантия производителя. Гарантия 12 месяцев."
+      },
+      "category": "Телевизор",
+      "attributes": {
+        "Разрешение экрана": "Full HD",
+        "Бренд": "Haier",
+        "Страна производства": "Вьетнам"
+      },
+      "labels": {
+        "brand": "Haier",
+        "model": "S1",
+        "screen_diagonal": "50\"",
+        "resolution": "Full HD",
+        "color": "красный"
+      }
+    },
+    {
+      "ID": "S000659",
+      "card": {
+        "Title": "Ультрабук MSI Modern 15 B13M 32 ГБ/1 ТБ Gold",
+        "Description": "В комплекте зарядное устройство и документация. Гарантия 12 месяцев."
+      },
+      "category": "Ноутбук",
+      "attributes": {
+        "ОЗУ": "32 ГБ",
+        "Встроенная память": "1 ТБ",
+        "Страна производства": "Китай",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "MSI",
+        "model": "Modern 15 B13M",
+        "ram": "32 ГБ",
+        "storage": "1 ТБ",
+        "color": "золотой"
+      }
+    },
+    {
+      "ID": "S000660",
+      "card": {
+        "Title": "Телевизор Hisense 65U7KQ FHD черная",
+        "Description": "Гарантия 12 месяцев. Быстрая доставка по всей России."
+      },
+      "category": "Телевизор",
+      "attributes": {
+        "Диагональ экрана": "43 дюйм"
+      },
+      "labels": {
+        "brand": "Hisense",
+        "model": "65U7KQ",
+        "screen_diagonal": "43\"",
+        "resolution": "Full HD",
+        "color": "черный"
+      }
+    },
+    {
+      "ID": "S000661",
+      "card": {
+        "Title": "Ультрабук MSI Modern 15 B13M 32/512 ГБ 13,3\" Blue",
+        "Description": "Гарантия 12 месяцев. Стильный дизайн и высокая производительность."
+      },
+      "category": "Ноутбук",
+      "attributes": {
+        "Процессор": "AMD Ryzen 5 7520U",
+        "Модель": "Modern 15 B13M",
+        "Цвет": "синий",
+        "ОЗУ": "32 ГБ",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "MSI",
+        "model": "Modern 15 B13M",
+        "ram": "32 ГБ",
+        "storage": "512 ГБ",
+        "screen_diagonal": "13.3\"",
+        "cpu": "AMD Ryzen 5 7520U",
+        "color": "синий"
+      }
+    },
+    {
+      "ID": "S000662",
+      "card": {
+        "Title": "Планшет Huawei MatePad SE 8 ГБ/256 ГБ 11\"",
+        "Description": "Стильный дизайн и высокая производительность. В комплекте зарядное устройство и документация."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Емкость аккумулятора": "8000 мАч",
+        "Марка": "Huawei",
+        "Модель": "Huawei MatePad SE",
+        "ОЗУ": "8 ГБ",
+        "Объем памяти": "256 ГБ"
+      },
+      "labels": {
+        "brand": "Huawei",
+        "model": "MatePad SE",
+        "ram": "8 ГБ",
+        "storage": "256 ГБ",
+        "screen_diagonal": "11\"",
+        "battery": "8000 мАч"
+      }
+    },
+    {
+      "ID": "S000663",
+      "card": {
+        "Title": "Планшет Samsung Galaxy Tab A9+ 10090 мАч белый",
+        "Description": "Отличный выбор для работы и учёбы. Отличный выбор для работы и учёбы."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Модель": "Samsung Galaxy Tab A9+",
+        "Цвет": "белый",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "Samsung",
+        "model": "Galaxy Tab A9+",
+        "battery": "10090 мАч",
+        "color": "белый"
+      }
+    },
+    {
+      "ID": "S000664",
+      "card": {
+        "Title": "Ультрабук Acer Swift Go 14 32/1 ТБ синяя",
+        "Description": "Вес 190 г. Гарантия 12 месяцев."
+      },
+      "category": "Ноутбук",
+      "attributes": {
+        "Процессор": "Intel Core i5-1235U",
+        "Модель": "Swift Go 14",
+        "ОЗУ": "32 ГБ",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "Acer",
+        "model": "Swift Go 14",
+        "ram": "32 ГБ",
+        "storage": "1 ТБ",
+        "cpu": "Intel Core i5-1235U",
+        "color": "синий"
+      }
+    },
+    {
+      "ID": "S000665",
+      "card": {
+        "Title": "Планшет Apple iPad mini 6 6/128GB 10090 мАч фиолетовый",
+        "Description": "Вес 190 г. Официальная гарантия производителя."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Бренд": "Apple"
+      },
+      "labels": {
+        "brand": "Apple",
+        "model": "iPad mini 6",
+        "ram": "6 ГБ",
+        "storage": "128 ГБ",
+        "battery": "10090 мАч",
+        "color": "фиолетовый"
+      }
+    },
+    {
+      "ID": "S000666",
+      "card": {
+        "Title": "Планшет Huawei MatePad 11.5 4/128 10.9'' Purple",
+        "Description": "Официальная гарантия производителя. Стильный дизайн и высокая производительность."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Цвет": "Purple",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "Huawei",
+        "model": "MatePad 11.5",
+        "ram": "4 ГБ",
+        "storage": "128 ГБ",
+        "screen_diagonal": "10.9\"",
+        "color": "фиолетовый"
+      }
+    },
+    {
+      "ID": "S000667",
+      "card": {
+        "Title": "Телевизор Hisense 43A6K 50\" HD",
+        "Description": "Гарантия 12 месяцев. В комплекте зарядное устройство и документация."
+      },
+      "category": "Телевизор",
+      "attributes": {
+        "Производитель": "Hisense",
+        "Цвет товара": "серебристый"
+      },
+      "labels": {
+        "brand": "Hisense",
+        "model": "43A6K",
+        "screen_diagonal": "50\"",
+        "resolution": "HD",
+        "color": "серебристый"
+      }
+    },
+    {
+      "ID": "S000668",
+      "card": {
+        "Title": "Смартфон Tecno Spark 20 8/64 ГБ 6.7\" чёрного",
+        "Description": "Стильный дизайн и высокая производительность. Отличный выбор для работы и учёбы."
+      },
+      "category": "Смартфон",
+      "attributes": {
+        "Емкость аккумулятора": "5160 мАч",
+        "Модель": "Spark 20",
+        "Цвет товара": "Black",
+        "ОЗУ": "8 ГБ",
+        "Страна производства": "Китай"
+      },
+      "labels": {
+        "brand": "Tecno",
+        "model": "Spark 20",
+        "ram": "8 ГБ",
+        "storage": "64 ГБ",
+        "screen_diagonal": "6.7\"",
+        "battery": "5160 мАч",
+        "color": "черный"
+      }
+    },
+    {
+      "ID": "S000669",
+      "card": {
+        "Title": "Телевизор Samsung UE50CU7100UXRU Gold",
+        "Description": "Вес 190 г. Толщина 8,2 мм."
+      },
+      "category": "Телевизор",
+      "attributes": {
+        "Диагональ": "55 дюйм",
+        "Разрешение экрана": "HD",
+        "Модель": "UE50CU7100UXRU",
+        "Страна производства": "Вьетнам",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "Samsung",
+        "model": "UE50CU7100UXRU",
+        "screen_diagonal": "55\"",
+        "resolution": "HD",
+        "color": "золотой"
+      }
+    },
+    {
+      "ID": "S000670",
+      "card": {
+        "Title": "Планшет Apple iPad mini 6 7040 мАч фиолетовый",
+        "Description": "Толщина 8,2 мм. Отличный выбор для работы и учёбы."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Диагональ": "12.4 дюйм",
+        "Модель": "iPad mini 6",
+        "Цвет": "фиолетовый",
+        "Объем памяти": "256 ГБ"
+      },
+      "labels": {
+        "brand": "Apple",
+        "model": "iPad mini 6",
+        "screen_diagonal": "12.4\"",
+        "battery": "7040 мАч",
+        "color": "фиолетовый",
+        "storage": "256 ГБ"
+      }
+    },
+    {
+      "ID": "S000671",
+      "card": {
+        "Title": "Смартфон realme C67 8+512GB 6,7\" серебристый",
+        "Description": "Гарантия 12 месяцев. В комплекте зарядное устройство и документация."
+      },
+      "category": "Смартфон",
+      "attributes": {
+        "Модель": "C67",
+        "ОЗУ": "8 ГБ",
+        "Страна производства": "Вьетнам"
+      },
+      "labels": {
+        "brand": "realme",
+        "model": "C67",
+        "ram": "8 ГБ",
+        "storage": "512 ГБ",
+        "screen_diagonal": "6.7\"",
+        "color": "серебристый"
+      }
+    },
+    {
+      "ID": "S000672",
+      "card": {
+        "Title": "Планшет Xiaomi Pad 6 8000 мАч фиолетовый",
+        "Description": "Вес 190 г. Стильный дизайн и высокая производительность."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Страна производства": "Вьетнам",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "Xiaomi",
+        "model": "Pad 6",
+        "battery": "8000 мАч",
+        "color": "фиолетовый"
+      }
+    },
+    {
+      "ID": "S000673",
+      "card": {
+        "Title": "Телефон realme C67 6+64GB 5160 мАч розовый",
+        "Description": "Быстрая доставка по всей России. В комплекте зарядное устройство и документация."
+      },
+      "category": "Смартфон",
+      "attributes": {
+        "Производитель": "realme",
+        "Модель": "C67",
+        "Цвет": "розовый",
+        "Встроенная память": "64 ГБ",
+        "Страна производства": "Индия",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "realme",
+        "model": "C67",
+        "ram": "6 ГБ",
+        "storage": "64 ГБ",
+        "battery": "5160 мАч",
+        "color": "розовый"
+      }
+    },
+    {
+      "ID": "S000674",
+      "card": {
+        "Title": "Телевизор LG 55UR78006LK 50\" Green",
+        "Description": "В комплекте зарядное устройство и документация. Разрешение 4K UHD. Быстрая доставка по всей России."
+      },
+      "category": "Телевизор",
+      "attributes": {
+        "Производитель": "LG",
+        "Цвет товара": "зелёный",
+        "Страна производства": "Индия"
+      },
+      "labels": {
+        "brand": "LG",
+        "model": "55UR78006LK",
+        "screen_diagonal": "50\"",
+        "color": "зеленый",
+        "resolution": "4K UHD"
+      }
+    },
+    {
+      "ID": "S000675",
+      "card": {
+        "Title": "Планшет Apple iPad mini 6 6 ГБ/256 ГБ Blue",
+        "Description": "Быстрая доставка по всей России. Официальная гарантия производителя."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Диагональ": "8.3 дюйм"
+      },
+      "labels": {
+        "brand": "Apple",
+        "model": "iPad mini 6",
+        "ram": "6 ГБ",
+        "storage": "256 ГБ",
+        "screen_diagonal": "8.3\"",
+        "color": "синий"
+      }
+    },
+    {
+      "ID": "S000676",
+      "card": {
+        "Title": "Телефон Apple iPhone 15 6,1\" Pink",
+        "Description": "В комплекте зарядное устройство и документация. Аккумулятор 4500 mAh. Стильный дизайн и высокая производительность."
+      },
+      "category": "Смартфон",
+      "attributes": {
+        "Модель": "Apple iPhone 15",
+        "Цвет товара": "Pink",
+        "Объем памяти": "64 ГБ",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "Apple",
+        "model": "iPhone 15",
+        "screen_diagonal": "6.1\"",
+        "color": "розовый",
+        "storage": "64 ГБ",
+        "battery": "4500 мАч"
+      }
+    },
+    {
+      "ID": "S000677",
+      "card": {
+        "Title": "Ультрабук Acer Swift Go 14 16/512 17.3\" Intel Celeron N4500 розовый",
+        "Description": "Толщина 8,2 мм. Официальная гарантия производителя."
+      },
+      "category": "Ноутбук",
+      "attributes": {
+        "Бренд": "Acer",
+        "Модель": "Swift Go 14",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "Acer",
+        "model": "Swift Go 14",
+        "ram": "16 ГБ",
+        "storage": "512 ГБ",
+        "screen_diagonal": "17.3\"",
+        "cpu": "Intel Celeron N4500",
+        "color": "розовый"
+      }
+    },
+    {
+      "ID": "S000678",
+      "card": {
+        "Title": "Телевизор Hisense 65U7KQ 50\"",
+        "Description": "Стильный дизайн и высокая производительность. Разрешение Full HD. Отличный выбор для работы и учёбы."
+      },
+      "category": "Телевизор",
+      "attributes": {
+        "Цвет": "серебристый",
+        "Страна производства": "Китай"
+      },
+      "labels": {
+        "brand": "Hisense",
+        "model": "65U7KQ",
+        "screen_diagonal": "50\"",
+        "color": "серебристый",
+        "resolution": "Full HD"
+      }
+    },
+    {
+      "ID": "S000679",
+      "card": {
+        "Title": "Телевизор TCL 65C745 HD Gold",
+        "Description": "Официальная гарантия производителя. Официальная гарантия производителя."
+      },
+      "category": "Телевизор",
+      "attributes": {
+        "Бренд": "TCL",
+        "Цвет товара": "Gold",
+        "Страна производства": "Индия"
+      },
+      "labels": {
+        "brand": "TCL",
+        "model": "65C745",
+        "resolution": "HD",
+        "color": "золотой"
+      }
+    },
+    {
+      "ID": "S000680",
+      "card": {
+        "Title": "Телевизор Haier S4 50'' Graphite",
+        "Description": "Быстрая доставка по всей России. Гарантия 12 месяцев."
+      },
+      "category": "Телевизор",
+      "attributes": {
+        "Разрешение экрана": "Full HD",
+        "Цвет товара": "серый"
+      },
+      "labels": {
+        "brand": "Haier",
+        "model": "S4",
+        "screen_diagonal": "50\"",
+        "resolution": "Full HD",
+        "color": "серый"
+      }
+    },
+    {
+      "ID": "S000681",
+      "card": {
+        "Title": "Планшет Samsung Galaxy Tab A9+",
+        "Description": "Вес 190 г. Аккумулятор 10090 mAh. Стильный дизайн и высокая производительность."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Марка": "Samsung",
+        "Модель": "Galaxy Tab A9+",
+        "ОЗУ": "6 ГБ"
+      },
+      "labels": {
+        "brand": "Samsung",
+        "model": "Galaxy Tab A9+",
+        "ram": "6 ГБ",
+        "battery": "10090 мАч"
+      }
+    },
+    {
+      "ID": "S000682",
+      "card": {
+        "Title": "Телевизор Hisense 65U7KQ Red",
+        "Description": "Стильный дизайн и высокая производительность. Дисплей с диагональю 50 дюйма. Разрешение Full HD. Быстрая доставка по всей России."
+      },
+      "category": "Телевизор",
+      "attributes": {
+        "Модель": "65U7KQ",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "Hisense",
+        "model": "65U7KQ",
+        "color": "красный",
+        "screen_diagonal": "50\"",
+        "resolution": "Full HD"
+      }
+    },
+    {
+      "ID": "S000683",
+      "card": {
+        "Title": "Телевизор LG 55UR78006LK 43\" Pink",
+        "Description": "Вес 190 г. Стильный дизайн и высокая производительность."
+      },
+      "category": "Телевизор",
+      "attributes": {
+        "Разрешение экрана": "HD",
+        "Бренд": "LG"
+      },
+      "labels": {
+        "brand": "LG",
+        "model": "55UR78006LK",
+        "screen_diagonal": "43\"",
+        "resolution": "HD",
+        "color": "розовый"
+      }
+    },
+    {
+      "ID": "S000684",
+      "card": {
+        "Title": "Телефон Apple iPhone 15 Pro Max 8/128 ГБ 6000 мАч зелёный",
+        "Description": "Официальная гарантия производителя. В комплекте зарядное устройство и документация."
+      },
+      "category": "Смартфон",
+      "attributes": {
+        "Бренд": "Apple",
+        "ОЗУ": "8 ГБ",
+        "Накопитель": "128 ГБ",
+        "Страна производства": "Китай"
+      },
+      "labels": {
+        "brand": "Apple",
+        "model": "iPhone 15 Pro Max",
+        "ram": "8 ГБ",
+        "storage": "128 ГБ",
+        "battery": "6000 мАч",
+        "color": "зеленый"
+      }
+    },
+    {
+      "ID": "S000685",
+      "card": {
+        "Title": "Телефон realme C67 8/128 6,8\" Purple",
+        "Description": "Гарантия 12 месяцев. Вес 190 г."
+      },
+      "category": "Смартфон",
+      "attributes": {
+        "Емкость аккумулятора": "6000 мАч",
+        "Марка": "realme",
+        "Цвет": "Purple",
+        "Оперативная память": "8 ГБ",
+        "Встроенная память": "128 ГБ",
+        "Страна производства": "Китай"
+      },
+      "labels": {
+        "brand": "realme",
+        "model": "C67",
+        "ram": "8 ГБ",
+        "storage": "128 ГБ",
+        "screen_diagonal": "6.8\"",
+        "battery": "6000 мАч",
+        "color": "фиолетовый"
+      }
+    },
+    {
+      "ID": "S000686",
+      "card": {
+        "Title": "Планшет Huawei MatePad SE",
+        "Description": "Стильный дизайн и высокая производительность. Стильный дизайн и высокая производительность."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Модель": "MatePad SE",
+        "Оперативная память": "6 ГБ",
+        "Объем памяти": "256 ГБ"
+      },
+      "labels": {
+        "brand": "Huawei",
+        "model": "MatePad SE",
+        "ram": "6 ГБ",
+        "storage": "256 ГБ"
+      }
+    },
+    {
+      "ID": "S000687",
+      "card": {
+        "Title": "Телефон Xiaomi 14T Pro 6+256GB 6.67\" 5160 мАч White",
+        "Description": "Толщина 8,2 мм. Вес 190 г."
+      },
+      "category": "Смартфон",
+      "attributes": {
+        "Цвет товара": "White",
+        "ОЗУ": "6 ГБ",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "Xiaomi",
+        "model": "14T Pro",
+        "ram": "6 ГБ",
+        "storage": "256 ГБ",
+        "screen_diagonal": "6.67\"",
+        "battery": "5160 мАч",
+        "color": "белый"
+      }
+    },
+    {
+      "ID": "S000688",
+      "card": {
+        "Title": "Планшет Apple iPad Air 5 8+128GB серый",
+        "Description": "Быстрая доставка по всей России. Диагональ экрана 12,4 дюйма. Толщина 8,2 мм."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Цвет товара": "серый",
+        "Страна производства": "Вьетнам"
+      },
+      "labels": {
+        "brand": "Apple",
+        "model": "iPad Air 5",
+        "ram": "8 ГБ",
+        "storage": "128 ГБ",
+        "color": "серый",
+        "screen_diagonal": "12.4\""
+      }
+    },
+    {
+      "ID": "S000689",
+      "card": {
+        "Title": "Телевизор TCL 65C745 32\" Silver",
+        "Description": "Вес 190 г. Отличный выбор для работы и учёбы."
+      },
+      "category": "Телевизор",
+      "attributes": {
+        "Страна производства": "Индия"
+      },
+      "labels": {
+        "brand": "TCL",
+        "model": "65C745",
+        "screen_diagonal": "32\"",
+        "color": "серебристый"
+      }
+    },
+    {
+      "ID": "S000690",
+      "card": {
+        "Title": "Ультрабук Lenovo IdeaPad Slim 3 15IAH8 8/256GB 15.6'' AMD Ryzen 7 7730U Green",
+        "Description": "Официальная гарантия производителя. В комплекте зарядное устройство и документация."
+      },
+      "category": "Ноутбук",
+      "attributes": {
+        "Марка": "Lenovo",
+        "Цвет товара": "зелёный",
+        "ОЗУ": "8 ГБ",
+        "Объем памяти": "256 ГБ",
+        "Страна производства": "Индия"
+      },
+      "labels": {
+        "brand": "Lenovo",
+        "model": "IdeaPad Slim 3 15IAH8",
+        "ram": "8 ГБ",
+        "storage": "256 ГБ",
+        "screen_diagonal": "15.6\"",
+        "cpu": "AMD Ryzen 7 7730U",
+        "color": "зеленый"
+      }
+    },
+    {
+      "ID": "S000691",
+      "card": {
+        "Title": "Смартфон realme C67 8 ГБ/256 ГБ 5000 мАч Blue",
+        "Description": "В комплекте зарядное устройство и документация. Диагональ экрана 6,67 дюйма. Стильный дизайн и высокая производительность."
+      },
+      "category": "Смартфон",
+      "attributes": {
+        "Марка": "realme",
+        "Модель": "realme C67",
+        "Цвет": "Blue",
+        "Накопитель": "256 ГБ",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "realme",
+        "model": "C67",
+        "ram": "8 ГБ",
+        "storage": "256 ГБ",
+        "battery": "5000 мАч",
+        "color": "синий",
+        "screen_diagonal": "6.67\""
+      }
+    },
+    {
+      "ID": "S000692",
+      "card": {
+        "Title": "Ультрабук Lenovo IdeaPad Slim 3 15IAH8 8 ГБ/512 ГБ 15,6\" Silver",
+        "Description": "Стильный дизайн и высокая производительность. Быстрая доставка по всей России."
+      },
+      "category": "Ноутбук",
+      "attributes": {
+        "Процессор": "Intel Core i5-1235U",
+        "Модель": "IdeaPad Slim 3 15IAH8",
+        "Страна производства": "Китай"
+      },
+      "labels": {
+        "brand": "Lenovo",
+        "model": "IdeaPad Slim 3 15IAH8",
+        "ram": "8 ГБ",
+        "storage": "512 ГБ",
+        "screen_diagonal": "15.6\"",
+        "cpu": "Intel Core i5-1235U",
+        "color": "серебристый"
+      }
+    },
+    {
+      "ID": "S000693",
+      "card": {
+        "Title": "Телевизор LG OLED48C3RLA серый",
+        "Description": "Вес 190 г. Официальная гарантия производителя."
+      },
+      "category": "Телевизор",
+      "attributes": {
+        "Разрешение экрана": "HD",
+        "Модель": "OLED48C3RLA"
+      },
+      "labels": {
+        "brand": "LG",
+        "model": "OLED48C3RLA",
+        "resolution": "HD",
+        "color": "серый"
+      }
+    },
+    {
+      "ID": "S000694",
+      "card": {
+        "Title": "Планшет Huawei MatePad SE 11\" 7040 мАч",
+        "Description": "Быстрая доставка по всей России. Оперативная память 4 ГБ, встроенная память 64 ГБ. Стильный дизайн и высокая производительность."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Модель": "MatePad SE",
+        "Накопитель": "64 ГБ"
+      },
+      "labels": {
+        "brand": "Huawei",
+        "model": "MatePad SE",
+        "screen_diagonal": "11\"",
+        "battery": "7040 мАч",
+        "storage": "64 ГБ",
+        "ram": "4 ГБ"
+      }
+    },
+    {
+      "ID": "S000695",
+      "card": {
+        "Title": "Телефон HONOR 90 Lite 4+512GB 6.67''",
+        "Description": "Стильный дизайн и высокая производительность. Аккумулятор 5 160 mAh. Толщина 8,2 мм."
+      },
+      "category": "Смартфон",
+      "attributes": {
+        "Цвет товара": "золотой",
+        "Встроенная память": "512 ГБ",
+        "Страна производства": "Китай",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "HONOR",
+        "model": "90 Lite",
+        "ram": "4 ГБ",
+        "storage": "512 ГБ",
+        "screen_diagonal": "6.67\"",
+        "color": "золотой",
+        "battery": "5160 мАч"
+      }
+    },
+    {
+      "ID": "S000696",
+      "card": {
+        "Title": "Ультрабук Acer Swift Go 14 16/512GB 14\" фиолетовый",
+        "Description": "Официальная гарантия производителя. Процессор Intel Core i7-13620H справится с любыми задачами. Быстрая доставка по всей России."
+      },
+      "category": "Ноутбук",
+      "attributes": {
+        "Бренд": "Acer",
+        "Цвет": "Purple",
+        "Оперативная память": "16 ГБ",
+        "Страна производства": "Индия"
+      },
+      "labels": {
+        "brand": "Acer",
+        "model": "Swift Go 14",
+        "ram": "16 ГБ",
+        "storage": "512 ГБ",
+        "screen_diagonal": "14\"",
+        "color": "фиолетовый",
+        "cpu": "Intel Core i7-13620H"
+      }
+    },
+    {
+      "ID": "S000697",
+      "card": {
+        "Title": "Телевизор Samsung UE50CU7100UXRU HD Ready черная",
+        "Description": "Отличный выбор для работы и учёбы. Толщина 8,2 мм."
+      },
+      "category": "Телевизор",
+      "attributes": {},
+      "labels": {
+        "brand": "Samsung",
+        "model": "UE50CU7100UXRU",
+        "resolution": "HD",
+        "color": "черный"
+      }
+    },
+    {
+      "ID": "S000698",
+      "card": {
+        "Title": "Планшет Xiaomi Redmi Pad SE 4 ГБ/128 ГБ 8000 мАч",
+        "Description": "Официальная гарантия производителя. Быстрая доставка по всей России."
+      },
+      "category": "Планшет",
+      "attributes": {
+        "Производитель": "Xiaomi",
+        "ОЗУ": "4 ГБ"
+      },
+      "labels": {
+        "brand": "Xiaomi",
+        "model": "Redmi Pad SE",
+        "ram": "4 ГБ",
+        "storage": "128 ГБ",
+        "battery": "8000 мАч"
+      }
+    },
+    {
+      "ID": "S000699",
+      "card": {
+        "Title": "Телефон Tecno Spark 20 5160 мАч White",
+        "Description": "В комплекте зарядное устройство и документация. Диагональ экрана 6,1 дюйма. В комплекте зарядное устройство и документация."
+      },
+      "category": "Смартфон",
+      "attributes": {
+        "Модель": "Spark 20",
+        "Страна производства": "Китай"
+      },
+      "labels": {
+        "brand": "Tecno",
+        "model": "Spark 20",
+        "battery": "5160 мАч",
+        "color": "белый",
+        "screen_diagonal": "6.1\""
+      }
+    },
+    {
+      "ID": "S000700",
+      "card": {
+        "Title": "Телевизор Samsung QE55Q60CAUXRU 4K UHD серебристый",
+        "Description": "Вес 190 г. Быстрая доставка по всей России."
+      },
+      "category": "Телевизор",
+      "attributes": {
+        "Диагональ": "32 дюйм",
+        "Страна производства": "Индия",
+        "Гарантия": "12 мес."
+      },
+      "labels": {
+        "brand": "Samsung",
+        "model": "QE55Q60CAUXRU",
+        "screen_diagonal": "32\"",
+        "resolution": "4K UHD",
+        "color": "серебристый"
+      }
+    }
+  ]
+}

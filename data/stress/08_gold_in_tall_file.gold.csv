@@ -1,0 +1,882 @@
+id,attribute,value
+S001001,brand,Acer
+S001001,model,Aspire 5 A515-58M
+S001001,ram,16 ГБ
+S001001,storage,256 ГБ
+S001001,color,фиолетовый
+S001001,cpu,Intel Core i7-13620H
+S001002,brand,Samsung
+S001002,model,Galaxy S24 Ultra
+S001002,ram,4 ГБ
+S001002,storage,256 ГБ
+S001002,screen_diagonal,"6.67"""
+S001002,battery,5000 мАч
+S001003,brand,TCL
+S001003,model,65C745
+S001003,screen_diagonal,"43"""
+S001003,resolution,Full HD
+S001003,color,серебристый
+S001004,brand,Samsung
+S001004,model,Galaxy Tab A9+
+S001004,battery,8000 мАч
+S001004,ram,4 ГБ
+S001004,storage,128 ГБ
+S001004,screen_diagonal,"10.9"""
+S001005,brand,Samsung
+S001005,model,Galaxy S24
+S001005,ram,8 ГБ
+S001005,storage,64 ГБ
+S001005,screen_diagonal,"6.1"""
+S001005,battery,4500 мАч
+S001005,color,серый
+S001006,brand,Xiaomi
+S001006,model,Pad 6
+S001006,ram,8 ГБ
+S001006,storage,256 ГБ
+S001006,screen_diagonal,"12.4"""
+S001006,battery,7040 мАч
+S001006,color,розовый
+S001007,brand,TCL
+S001007,model,50P635
+S001007,screen_diagonal,"50"""
+S001007,resolution,4K UHD
+S001008,brand,Tecno
+S001008,model,Camon 30
+S001008,battery,5160 мАч
+S001008,color,фиолетовый
+S001008,ram,6 ГБ
+S001008,storage,256 ГБ
+S001008,screen_diagonal,"6.67"""
+S001009,brand,realme
+S001009,model,C67
+S001009,ram,4 ГБ
+S001009,storage,64 ГБ
+S001009,battery,4500 мАч
+S001009,color,зеленый
+S001010,brand,LG
+S001010,model,55UR78006LK
+S001010,screen_diagonal,"55"""
+S001010,color,серый
+S001011,brand,Xiaomi
+S001011,model,Pad 6
+S001011,ram,6 ГБ
+S001011,storage,256 ГБ
+S001011,screen_diagonal,"12.4"""
+S001011,battery,7040 мАч
+S001011,color,розовый
+S001012,brand,Samsung
+S001012,model,Galaxy A15
+S001012,ram,8 ГБ
+S001012,storage,256 ГБ
+S001012,battery,5160 мАч
+S001012,color,розовый
+S001013,brand,Apple
+S001013,model,MacBook Air 13
+S001013,ram,16 ГБ
+S001013,storage,512 ГБ
+S001013,screen_diagonal,"17.3"""
+S001013,color,серый
+S001014,brand,Lenovo
+S001014,model,ThinkBook 16 G6
+S001014,ram,8 ГБ
+S001014,storage,256 ГБ
+S001014,screen_diagonal,"16"""
+S001014,cpu,Intel Core i5-1235U
+S001014,color,черный
+S001015,brand,Hisense
+S001015,model,43A6K
+S001015,resolution,4K UHD
+S001015,color,розовый
+S001015,screen_diagonal,"50"""
+S001016,brand,Huawei
+S001016,model,MatePad 11.5
+S001016,screen_diagonal,"10.9"""
+S001016,battery,7040 мАч
+S001016,ram,8 ГБ
+S001016,storage,128 ГБ
+S001017,brand,Tecno
+S001017,model,Camon 30
+S001017,ram,12 ГБ
+S001017,storage,512 ГБ
+S001017,screen_diagonal,"6.67"""
+S001017,color,зеленый
+S001018,brand,Samsung
+S001018,model,Galaxy Tab A9+
+S001018,ram,8 ГБ
+S001018,storage,256 ГБ
+S001018,screen_diagonal,"10.9"""
+S001018,battery,8000 мАч
+S001018,color,зеленый
+S001019,brand,Hisense
+S001019,model,65U7KQ
+S001019,resolution,HD
+S001019,color,серебристый
+S001019,screen_diagonal,"55"""
+S001020,brand,Samsung
+S001020,model,Galaxy Tab S9 FE
+S001020,color,фиолетовый
+S001020,ram,6 ГБ
+S001020,storage,128 ГБ
+S001020,screen_diagonal,"10.9"""
+S001020,battery,10090 мАч
+S001021,brand,Haier
+S001021,model,S1
+S001021,resolution,Full HD
+S001021,color,синий
+S001022,brand,Haier
+S001022,model,S1
+S001022,screen_diagonal,"55"""
+S001022,resolution,HD
+S001023,brand,LG
+S001023,model,55UR78006LK
+S001023,screen_diagonal,"50"""
+S001023,resolution,4K UHD
+S001024,brand,HONOR
+S001024,model,X8b
+S001024,battery,5000 мАч
+S001024,color,зеленый
+S001024,ram,12 ГБ
+S001024,storage,512 ГБ
+S001024,screen_diagonal,"6.7"""
+S001025,brand,MSI
+S001025,model,Modern 15 B13M
+S001025,ram,16 ГБ
+S001025,storage,512 ГБ
+S001025,screen_diagonal,"16"""
+S001025,cpu,AMD Ryzen 5 7520U
+S001025,color,серый
+S001026,brand,Samsung
+S001026,model,Galaxy S24 Ultra
+S001026,screen_diagonal,"6.5"""
+S001026,battery,5000 мАч
+S001026,color,серебристый
+S001027,brand,Acer
+S001027,model,Aspire 5 A515-58M
+S001027,ram,32 ГБ
+S001027,storage,512 ГБ
+S001027,screen_diagonal,"14"""
+S001027,color,синий
+S001027,cpu,AMD Ryzen 7 7730U
+S001028,brand,Lenovo
+S001028,model,IdeaPad Slim 3 15IAH8
+S001028,ram,8 ГБ
+S001028,storage,256 ГБ
+S001028,cpu,Intel Core i7-13620H
+S001028,color,красный
+S001028,screen_diagonal,"16"""
+S001029,brand,HP
+S001029,model,Pavilion 15-eg3000
+S001029,ram,8 ГБ
+S001029,storage,1 ТБ
+S001029,cpu,AMD Ryzen 7 7730U
+S001029,color,золотой
+S001029,screen_diagonal,"13.3"""
+S001030,brand,Samsung
+S001030,model,Galaxy Tab S9 FE
+S001030,ram,8 ГБ
+S001030,storage,128 ГБ
+S001030,color,фиолетовый
+S001030,screen_diagonal,"10.9"""
+S001030,battery,10090 мАч
+S001031,brand,Hisense
+S001031,model,43A6K
+S001031,color,белый
+S001031,screen_diagonal,"55"""
+S001032,brand,Apple
+S001032,model,MacBook Air 13
+S001032,ram,8 ГБ
+S001032,storage,512 ГБ
+S001032,cpu,AMD Ryzen 7 7730U
+S001032,color,розовый
+S001033,brand,Huawei
+S001033,model,MatePad SE
+S001033,ram,8 ГБ
+S001033,storage,256 ГБ
+S001033,color,красный
+S001034,brand,Tecno
+S001034,model,Spark 20
+S001034,battery,5160 мАч
+S001034,color,черный
+S001034,ram,8 ГБ
+S001034,storage,256 ГБ
+S001034,screen_diagonal,"6.7"""
+S001035,brand,Apple
+S001035,model,iPad Air 5
+S001035,battery,8000 мАч
+S001035,color,белый
+S001035,storage,256 ГБ
+S001036,brand,Hisense
+S001036,model,65U7KQ
+S001036,color,зеленый
+S001037,brand,Samsung
+S001037,model,Galaxy A15
+S001037,ram,6 ГБ
+S001037,storage,64 ГБ
+S001037,screen_diagonal,"6.5"""
+S001037,battery,5000 мАч
+S001038,brand,TCL
+S001038,model,50P635
+S001038,color,серый
+S001039,brand,Hisense
+S001039,model,65U7KQ
+S001039,screen_diagonal,"32"""
+S001039,resolution,4K UHD
+S001039,color,серебристый
+S001040,brand,Huawei
+S001040,model,MatePad 11.5
+S001040,screen_diagonal,"11"""
+S001040,battery,8000 мАч
+S001040,color,красный
+S001040,ram,8 ГБ
+S001040,storage,64 ГБ
+S001041,brand,ASUS
+S001041,model,Zenbook 14 UX3405MA
+S001041,ram,8 ГБ
+S001041,storage,512 ГБ
+S001041,screen_diagonal,"16"""
+S001041,cpu,Intel Core i5-1235U
+S001041,color,красный
+S001042,brand,Huawei
+S001042,model,MatePad 11.5
+S001042,ram,6 ГБ
+S001042,storage,256 ГБ
+S001042,screen_diagonal,"12.4"""
+S001042,color,серебристый
+S001043,brand,Samsung
+S001043,model,UE50CU7100UXRU
+S001043,color,зеленый
+S001043,screen_diagonal,"55"""
+S001044,brand,HP
+S001044,model,250 G10
+S001044,ram,16 ГБ
+S001044,storage,1 ТБ
+S001044,screen_diagonal,"15.6"""
+S001044,cpu,Intel Celeron N4500
+S001044,color,серый
+S001045,brand,Hisense
+S001045,model,65U7KQ
+S001045,screen_diagonal,"55"""
+S001045,color,красный
+S001046,brand,Huawei
+S001046,model,MatePad SE
+S001046,ram,4 ГБ
+S001046,storage,128 ГБ
+S001046,color,серебристый
+S001047,brand,LG
+S001047,model,OLED48C3RLA
+S001047,screen_diagonal,"43"""
+S001047,resolution,Full HD
+S001047,color,серый
+S001048,brand,Apple
+S001048,model,iPad mini 6
+S001048,battery,8000 мАч
+S001048,color,фиолетовый
+S001049,brand,Samsung
+S001049,model,Galaxy A15
+S001049,screen_diagonal,"6.1"""
+S001049,battery,4500 мАч
+S001049,color,зеленый
+S001049,ram,12 ГБ
+S001049,storage,128 ГБ
+S001050,brand,Hisense
+S001050,model,65U7KQ
+S001050,resolution,Full HD
+S001050,color,зеленый
+S001051,brand,LG
+S001051,model,55UR78006LK
+S001051,screen_diagonal,"50"""
+S001051,resolution,4K UHD
+S001052,brand,Lenovo
+S001052,model,IdeaPad Slim 3 15IAH8
+S001052,screen_diagonal,"16"""
+S001052,color,красный
+S001052,ram,8 ГБ
+S001052,storage,256 ГБ
+S001052,cpu,Intel Core i5-1235U
+S001053,brand,Apple
+S001053,model,MacBook Air 13
+S001053,ram,16 ГБ
+S001053,storage,256 ГБ
+S001053,cpu,Intel Core i5-1235U
+S001053,color,золотой
+S001053,screen_diagonal,"15.6"""
+S001054,brand,Samsung
+S001054,model,Galaxy Tab S9 FE
+S001054,ram,6 ГБ
+S001054,storage,256 ГБ
+S001054,battery,7040 мАч
+S001054,color,зеленый
+S001054,screen_diagonal,"10.9"""
+S001055,brand,MSI
+S001055,model,Modern 15 B13M
+S001055,ram,16 ГБ
+S001055,storage,256 ГБ
+S001055,screen_diagonal,"16"""
+S001055,color,золотой
+S001056,brand,Tecno
+S001056,model,Spark 20
+S001056,ram,12 ГБ
+S001056,storage,64 ГБ
+S001056,screen_diagonal,"6.5"""
+S001056,color,золотой
+S001056,battery,6000 мАч
+S001057,brand,HP
+S001057,model,250 G10
+S001057,ram,8 ГБ
+S001057,storage,1 ТБ
+S001057,screen_diagonal,"16"""
+S001057,cpu,Intel Celeron N4500
+S001057,color,фиолетовый
+S001058,brand,Samsung
+S001058,model,Galaxy A15
+S001058,ram,6 ГБ
+S001058,storage,64 ГБ
+S001058,screen_diagonal,"6.1"""
+S001058,battery,5000 мАч
+S001058,color,розовый
+S001059,brand,Xiaomi
+S001059,model,Pad 6
+S001059,ram,4 ГБ
+S001059,storage,128 ГБ
+S001059,color,зеленый
+S001060,brand,Samsung
+S001060,model,Galaxy A15
+S001060,ram,6 ГБ
+S001060,storage,256 ГБ
+S001060,battery,6000 мАч
+S001060,color,черный
+S001061,brand,Huawei
+S001061,model,MatePad 11.5
+S001061,ram,6 ГБ
+S001061,storage,64 ГБ
+S001061,battery,10090 мАч
+S001061,color,зеленый
+S001061,screen_diagonal,"12.4"""
+S001062,brand,Apple
+S001062,model,iPad mini 6
+S001062,screen_diagonal,"8.3"""
+S001062,battery,7040 мАч
+S001063,brand,Huawei
+S001063,model,MatePad SE
+S001063,ram,8 ГБ
+S001063,storage,64 ГБ
+S001063,color,серый
+S001063,screen_diagonal,"12.4"""
+S001063,battery,7040 мАч
+S001064,brand,Apple
+S001064,model,iPad mini 6
+S001064,ram,6 ГБ
+S001064,storage,128 ГБ
+S001064,screen_diagonal,"11"""
+S001064,battery,8000 мАч
+S001064,color,золотой
+S001065,brand,Samsung
+S001065,model,Galaxy Tab S9 FE
+S001065,ram,4 ГБ
+S001065,storage,256 ГБ
+S001065,battery,8000 мАч
+S001065,color,серебристый
+S001065,screen_diagonal,"12.4"""
+S001066,brand,Huawei
+S001066,model,MatePad SE
+S001066,ram,6 ГБ
+S001066,storage,128 ГБ
+S001066,color,черный
+S001066,screen_diagonal,"12.4"""
+S001066,battery,7040 мАч
+S001067,brand,Tecno
+S001067,model,Camon 30
+S001067,ram,12 ГБ
+S001067,storage,128 ГБ
+S001067,battery,5160 мАч
+S001067,color,фиолетовый
+S001067,screen_diagonal,"6.67"""
+S001068,brand,Samsung
+S001068,model,Galaxy A15
+S001068,ram,4 ГБ
+S001068,storage,128 ГБ
+S001068,color,золотой
+S001068,screen_diagonal,"6.67"""
+S001068,battery,5000 мАч
+S001069,brand,Huawei
+S001069,model,MatePad SE
+S001069,screen_diagonal,"12.4"""
+S001069,battery,7040 мАч
+S001069,color,черный
+S001069,ram,8 ГБ
+S001070,brand,HONOR
+S001070,model,X8b
+S001070,ram,6 ГБ
+S001070,storage,64 ГБ
+S001070,screen_diagonal,"6.8"""
+S001070,color,фиолетовый
+S001070,battery,5160 мАч
+S001071,brand,Lenovo
+S001071,model,ThinkBook 16 G6
+S001071,color,серебристый
+S001071,storage,256 ГБ
+S001071,ram,32 ГБ
+S001071,cpu,Intel Core i5-1235U
+S001072,brand,TCL
+S001072,model,65C745
+S001072,screen_diagonal,"50"""
+S001072,resolution,Full HD
+S001072,color,черный
+S001073,brand,Samsung
+S001073,model,UE50CU7100UXRU
+S001073,color,золотой
+S001073,screen_diagonal,"32"""
+S001073,resolution,Full HD
+S001074,brand,Samsung
+S001074,model,Galaxy Tab S9 FE
+S001074,ram,8 ГБ
+S001074,storage,64 ГБ
+S001074,color,розовый
+S001075,brand,Acer
+S001075,model,Aspire 5 A515-58M
+S001075,ram,32 ГБ
+S001075,storage,512 ГБ
+S001075,cpu,AMD Ryzen 7 7730U
+S001075,color,фиолетовый
+S001075,screen_diagonal,"17.3"""
+S001076,brand,Xiaomi
+S001076,model,14T Pro
+S001076,ram,8 ГБ
+S001076,storage,256 ГБ
+S001076,screen_diagonal,"6.1"""
+S001076,battery,6000 мАч
+S001076,color,синий
+S001077,brand,Apple
+S001077,model,iPhone 13
+S001077,screen_diagonal,"6.5"""
+S001077,color,розовый
+S001077,ram,12 ГБ
+S001077,storage,512 ГБ
+S001077,battery,5000 мАч
+S001078,brand,Samsung
+S001078,model,Galaxy Tab S9 FE
+S001078,ram,4 ГБ
+S001078,storage,256 ГБ
+S001078,screen_diagonal,"10.9"""
+S001078,battery,7040 мАч
+S001079,brand,Apple
+S001079,model,iPhone 13
+S001079,ram,12 ГБ
+S001079,storage,128 ГБ
+S001079,battery,5000 мАч
+S001079,color,фиолетовый
+S001079,screen_diagonal,"6.5"""
+S001080,brand,Apple
+S001080,model,iPad mini 6
+S001080,ram,8 ГБ
+S001080,storage,64 ГБ
+S001080,battery,8000 мАч
+S001080,color,белый
+S001081,brand,Xiaomi
+S001081,model,Pad 6
+S001081,ram,4 ГБ
+S001081,storage,128 ГБ
+S001081,battery,10090 мАч
+S001081,color,фиолетовый
+S001082,brand,ASUS
+S001082,model,Vivobook 15 X1504ZA
+S001082,ram,16 ГБ
+S001082,storage,256 ГБ
+S001082,cpu,Intel Core i5-1235U
+S001082,color,серебристый
+S001083,brand,Hisense
+S001083,model,65U7KQ
+S001083,resolution,4K UHD
+S001083,screen_diagonal,"43"""
+S001084,brand,HP
+S001084,model,250 G10
+S001084,ram,32 ГБ
+S001084,storage,1 ТБ
+S001084,screen_diagonal,"13.3"""
+S001084,cpu,AMD Ryzen 7 7730U
+S001085,brand,Tecno
+S001085,model,Camon 30
+S001085,ram,4 ГБ
+S001085,storage,256 ГБ
+S001085,screen_diagonal,"6.67"""
+S001085,battery,5160 мАч
+S001085,color,красный
+S001086,brand,realme
+S001086,model,C67
+S001086,ram,8 ГБ
+S001086,storage,128 ГБ
+S001086,screen_diagonal,"6.8"""
+S001086,color,фиолетовый
+S001087,brand,TCL
+S001087,model,65C745
+S001088,brand,ASUS
+S001088,model,Vivobook 15 X1504ZA
+S001088,ram,8 ГБ
+S001088,storage,512 ГБ
+S001088,cpu,AMD Ryzen 5 7520U
+S001088,color,синий
+S001089,brand,Haier
+S001089,model,S1
+S001089,screen_diagonal,"43"""
+S001089,color,серый
+S001089,resolution,Full HD
+S001090,brand,LG
+S001090,model,OLED48C3RLA
+S001090,screen_diagonal,"32"""
+S001090,resolution,4K UHD
+S001090,color,синий
+S001091,brand,Huawei
+S001091,model,MatePad SE
+S001091,ram,4 ГБ
+S001091,storage,128 ГБ
+S001091,screen_diagonal,"8.3"""
+S001091,battery,8000 мАч
+S001091,color,красный
+S001092,brand,Haier
+S001092,model,S4
+S001092,screen_diagonal,"55"""
+S001092,resolution,Full HD
+S001092,color,красный
+S001093,brand,ASUS
+S001093,model,Vivobook 15 X1504ZA
+S001093,cpu,Intel Core i5-1235U
+S001093,color,красный
+S001093,ram,16 ГБ
+S001093,storage,512 ГБ
+S001093,screen_diagonal,"17.3"""
+S001094,brand,Huawei
+S001094,model,MatePad 11.5
+S001094,ram,4 ГБ
+S001094,storage,128 ГБ
+S001094,screen_diagonal,"10.9"""
+S001094,battery,10090 мАч
+S001095,brand,LG
+S001095,model,55UR78006LK
+S001095,screen_diagonal,"50"""
+S001095,resolution,Full HD
+S001095,color,синий
+S001096,brand,realme
+S001096,model,C67
+S001096,ram,12 ГБ
+S001096,storage,64 ГБ
+S001096,screen_diagonal,"6.67"""
+S001096,battery,6000 мАч
+S001096,color,серый
+S001097,brand,ASUS
+S001097,model,Zenbook 14 UX3405MA
+S001097,ram,32 ГБ
+S001097,storage,1 ТБ
+S001097,color,зеленый
+S001097,screen_diagonal,"17.3"""
+S001097,cpu,Intel Celeron N4500
+S001098,brand,Xiaomi
+S001098,model,Redmi 13C
+S001098,ram,6 ГБ
+S001098,storage,128 ГБ
+S001098,screen_diagonal,"6.7"""
+S001098,battery,4500 мАч
+S001098,color,зеленый
+S001099,brand,Acer
+S001099,model,Swift Go 14
+S001099,ram,32 ГБ
+S001099,storage,256 ГБ
+S001099,screen_diagonal,"16"""
+S001099,cpu,Intel Core i5-1235U
+S001099,color,фиолетовый
+S001100,brand,Haier
+S001100,model,S1
+S001100,screen_diagonal,"50"""
+S001100,color,золотой
+S001100,resolution,HD
+S001101,brand,LG
+S001101,model,55UR78006LK
+S001101,resolution,4K UHD
+S001101,screen_diagonal,"55"""
+S001102,brand,Apple
+S001102,model,MacBook Air 13
+S001102,ram,32 ГБ
+S001102,storage,256 ГБ
+S001102,screen_diagonal,"13.3"""
+S001103,brand,Apple
+S001103,model,MacBook Air 13
+S001103,ram,16 ГБ
+S001103,storage,1 ТБ
+S001103,screen_diagonal,"16"""
+S001103,cpu,Intel Core i5-1235U
+S001103,color,серебристый
+S001104,brand,Samsung
+S001104,model,QE55Q60CAUXRU
+S001104,screen_diagonal,"50"""
+S001104,resolution,HD
+S001104,color,черный
+S001105,brand,Samsung
+S001105,model,UE50CU7100UXRU
+S001105,screen_diagonal,"55"""
+S001105,resolution,HD
+S001105,color,белый
+S001106,brand,Lenovo
+S001106,model,ThinkBook 16 G6
+S001106,ram,8 ГБ
+S001106,storage,256 ГБ
+S001106,screen_diagonal,"13.3"""
+S001106,cpu,AMD Ryzen 7 7730U
+S001106,color,серый
+S001107,brand,HONOR
+S001107,model,90 Lite
+S001107,screen_diagonal,"6.67"""
+S001107,battery,5160 мАч
+S001107,color,белый
+S001107,ram,8 ГБ
+S001107,storage,512 ГБ
+S001108,brand,HONOR
+S001108,model,90 Lite
+S001108,ram,4 ГБ
+S001108,storage,64 ГБ
+S001108,screen_diagonal,"6.8"""
+S001108,color,серебристый
+S001108,battery,6000 мАч
+S001109,brand,Hisense
+S001109,model,65U7KQ
+S001109,screen_diagonal,"32"""
+S001109,resolution,HD
+S001109,color,серебристый
+S001110,brand,Samsung
+S001110,model,Galaxy A15
+S001110,ram,12 ГБ
+S001110,storage,128 ГБ
+S001110,screen_diagonal,"6.1"""
+S001110,battery,5160 мАч
+S001110,color,розовый
+S001111,brand,LG
+S001111,model,55UR78006LK
+S001111,screen_diagonal,"32"""
+S001111,resolution,Full HD
+S001111,color,серый
+S001112,brand,Hisense
+S001112,model,43A6K
+S001112,screen_diagonal,"50"""
+S001112,color,черный
+S001113,brand,Samsung
+S001113,model,Galaxy Tab S9 FE
+S001113,ram,8 ГБ
+S001113,storage,256 ГБ
+S001113,screen_diagonal,"12.4"""
+S001113,battery,7040 мАч
+S001113,color,фиолетовый
+S001114,brand,ASUS
+S001114,model,Zenbook 14 UX3405MA
+S001114,ram,16 ГБ
+S001114,storage,512 ГБ
+S001114,screen_diagonal,"14"""
+S001114,cpu,AMD Ryzen 5 7520U
+S001114,color,серый
+S001115,brand,ASUS
+S001115,model,Vivobook 15 X1504ZA
+S001115,ram,8 ГБ
+S001115,storage,256 ГБ
+S001115,screen_diagonal,"17.3"""
+S001115,color,золотой
+S001116,brand,HP
+S001116,model,250 G10
+S001116,ram,8 ГБ
+S001116,storage,1 ТБ
+S001116,screen_diagonal,"15.6"""
+S001116,cpu,Intel Core i5-1235U
+S001117,brand,Apple
+S001117,model,iPad mini 6
+S001117,ram,8 ГБ
+S001117,storage,64 ГБ
+S001117,screen_diagonal,"12.4"""
+S001117,color,черный
+S001117,battery,10090 мАч
+S001118,brand,Samsung
+S001118,model,Galaxy S24 Ultra
+S001118,ram,4 ГБ
+S001118,storage,512 ГБ
+S001118,battery,5000 мАч
+S001118,color,золотой
+S001119,brand,Apple
+S001119,model,iPad Air 5
+S001119,screen_diagonal,"10.9"""
+S001119,color,фиолетовый
+S001119,ram,8 ГБ
+S001119,storage,64 ГБ
+S001120,brand,LG
+S001120,model,OLED48C3RLA
+S001120,resolution,HD
+S001120,color,золотой
+S001121,brand,Samsung
+S001121,model,Galaxy Tab A9+
+S001121,ram,4 ГБ
+S001121,storage,128 ГБ
+S001121,battery,10090 мАч
+S001121,color,серебристый
+S001121,screen_diagonal,"11"""
+S001122,brand,Huawei
+S001122,model,MatePad 11.5
+S001122,ram,6 ГБ
+S001122,storage,128 ГБ
+S001122,screen_diagonal,"8.3"""
+S001122,color,синий
+S001123,brand,Tecno
+S001123,model,Spark 20
+S001123,screen_diagonal,"6.1"""
+S001123,color,синий
+S001123,storage,128 ГБ
+S001123,ram,4 ГБ
+S001124,brand,Samsung
+S001124,model,Galaxy Tab A9+
+S001124,ram,4 ГБ
+S001124,storage,64 ГБ
+S001124,color,синий
+S001124,battery,10090 мАч
+S001125,brand,HP
+S001125,model,Pavilion 15-eg3000
+S001125,ram,8 ГБ
+S001125,storage,256 ГБ
+S001125,screen_diagonal,"16"""
+S001125,color,серебристый
+S001126,brand,Xiaomi
+S001126,model,Pad 6
+S001126,ram,8 ГБ
+S001126,storage,64 ГБ
+S001126,screen_diagonal,"12.4"""
+S001126,battery,10090 мАч
+S001126,color,черный
+S001127,brand,TCL
+S001127,model,50P635
+S001127,resolution,4K UHD
+S001127,color,золотой
+S001127,screen_diagonal,"65"""
+S001128,brand,HP
+S001128,model,250 G10
+S001128,ram,16 ГБ
+S001128,storage,512 ГБ
+S001128,color,золотой
+S001129,brand,ASUS
+S001129,model,Vivobook 15 X1504ZA
+S001129,ram,8 ГБ
+S001129,storage,256 ГБ
+S001129,screen_diagonal,"14"""
+S001129,cpu,Intel Celeron N4500
+S001129,color,белый
+S001130,brand,HONOR
+S001130,model,X8b
+S001130,ram,6 ГБ
+S001130,storage,128 ГБ
+S001130,battery,4500 мАч
+S001130,color,серебристый
+S001130,screen_diagonal,"6.1"""
+S001131,brand,MSI
+S001131,model,Modern 15 B13M
+S001131,ram,32 ГБ
+S001131,storage,256 ГБ
+S001131,cpu,Intel Core i5-1235U
+S001131,color,серебристый
+S001132,brand,Xiaomi
+S001132,model,Redmi 13C
+S001132,ram,4 ГБ
+S001132,storage,512 ГБ
+S001132,screen_diagonal,"6.1"""
+S001132,color,фиолетовый
+S001133,brand,Xiaomi
+S001133,model,14T Pro
+S001133,ram,6 ГБ
+S001133,storage,64 ГБ
+S001133,color,розовый
+S001133,screen_diagonal,"6.7"""
+S001134,brand,MSI
+S001134,model,Modern 15 B13M
+S001134,ram,32 ГБ
+S001134,storage,256 ГБ
+S001134,screen_diagonal,"16"""
+S001134,cpu,AMD Ryzen 7 7730U
+S001135,brand,HP
+S001135,model,250 G10
+S001135,ram,16 ГБ
+S001135,storage,1 ТБ
+S001135,cpu,AMD Ryzen 7 7730U
+S001135,color,синий
+S001136,brand,Acer
+S001136,model,Swift Go 14
+S001136,screen_diagonal,"16"""
+S001136,cpu,AMD Ryzen 7 7730U
+S001136,color,белый
+S001136,ram,32 ГБ
+S001136,storage,512 ГБ
+S001137,brand,Apple
+S001137,model,iPad mini 6
+S001137,ram,8 ГБ
+S001137,storage,128 ГБ
+S001137,screen_diagonal,"10.9"""
+S001138,brand,LG
+S001138,model,55UR78006LK
+S001138,resolution,4K UHD
+S001138,color,розовый
+S001138,screen_diagonal,"55"""
+S001139,brand,Tecno
+S001139,model,Camon 30
+S001139,color,красный
+S001139,ram,6 ГБ
+S001139,battery,6000 мАч
+S001140,brand,Acer
+S001140,model,Swift Go 14
+S001140,ram,32 ГБ
+S001140,storage,256 ГБ
+S001140,screen_diagonal,"16"""
+S001140,color,черный
+S001140,cpu,AMD Ryzen 7 7730U
+S001141,brand,Apple
+S001141,model,iPad mini 6
+S001141,ram,8 ГБ
+S001141,storage,128 ГБ
+S001141,battery,7040 мАч
+S001141,color,серебристый
+S001141,screen_diagonal,"10.9"""
+S001142,brand,Samsung
+S001142,model,Galaxy Tab A9+
+S001142,ram,4 ГБ
+S001142,storage,256 ГБ
+S001142,color,черный
+S001142,screen_diagonal,"8.3"""
+S001143,brand,HP
+S001143,model,250 G10
+S001143,ram,32 ГБ
+S001143,storage,256 ГБ
+S001143,color,синий
+S001143,screen_diagonal,"17.3"""
+S001144,brand,MSI
+S001144,model,Modern 15 B13M
+S001144,ram,32 ГБ
+S001144,storage,1 ТБ
+S001144,screen_diagonal,"17.3"""
+S001144,cpu,Intel Celeron N4500
+S001144,color,зеленый
+S001145,brand,HONOR
+S001145,model,90 Lite
+S001145,battery,6000 мАч
+S001145,color,золотой
+S001145,ram,12 ГБ
+S001145,storage,256 ГБ
+S001146,brand,TCL
+S001146,model,65C745
+S001146,screen_diagonal,"50"""
+S001146,color,белый
+S001147,brand,Xiaomi
+S001147,model,14T Pro
+S001147,ram,4 ГБ
+S001147,storage,64 ГБ
+S001147,screen_diagonal,"6.67"""
+S001147,battery,6000 мАч
+S001148,brand,HONOR
+S001148,model,90 Lite
+S001148,ram,8 ГБ
+S001148,storage,256 ГБ
+S001148,color,золотой
+S001148,battery,5000 мАч
+S001149,brand,MSI
+S001149,model,Modern 15 B13M
+S001149,ram,8 ГБ
+S001150,brand,Apple
+S001150,model,iPhone 15 Pro Max
+S001150,color,красный

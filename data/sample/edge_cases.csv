@@ -1,0 +1,11 @@
+id,title,description,attributes,category,brand,model,storage,ram,screen_diagonal,battery,color
+E1,Чехол для смартфона Samsung Galaxy S24 силиконовый прозрачный,Подходит только для Galaxy S24. Не подходит для S24 Ultra.,,,,,,,,,
+E2,Смартфон,,,,,,,,,,
+E3,,,,,,,,,,,
+E4,iPhone 15 128GB Pink,"Экран 6,1″ Super Retina XDR",,,Apple,iPhone 15,128 ГБ,,"6.1""",,розовый
+E5,Смартфон Xiaomi Redmi Note 13 Pro 8/256 ГБ зелёный,Версии: 8/256 ГБ и 12/512 ГБ. Аккумулятор 5 100 мА·ч.,"{""Цвет"": ""Forest Green""}",,Xiaomi,Redmi Note 13 Pro,256 ГБ,8 ГБ,,5100 мАч,зеленый
+E6,Ноутбук Lenovo IdeaPad Slim 3 15IAH8 15.6' i5-12450H 16GB 512GB SSD серый,"Дата выпуска 10/2024, частота обновления 60 Гц",,,Lenovo,IdeaPad Slim 3 15IAH8,512 ГБ,16 ГБ,"15.6""",,серый
+E7,"Телевизор 43"" Hisense 43A6K 4K UHD Smart TV","Диагональ 43 дюйма (109 см), разрешение 3840x2160",,,Hisense,43A6K,,,"43""",,
+E8,СМАРТФОН SAMSUNG GALAXY A15 4/128GB BLUE,ЭКРАН 6.5 ДЮЙМОВ,"Бренд=SAMSUNG;Цвет=СИНИЙ",,Samsung,Galaxy A15,128 ГБ,4 ГБ,"6.5""",,синий
+E9,Смартфон Samsung Galaxy S24 8/256GB,Отличный смартфон,"{""Бренд"": ""Apple"", ""Цвет"": ""чёрный""}",,Samsung,Galaxy S24,256 ГБ,8 ГБ,,,черный
+E10,Планшет Huawei MatePad 11.5 6/128 ГБ Wi-Fi Space Gray,Экран 11.5 дюйма 120 Гц,,,Huawei,MatePad 11.5,128 ГБ,6 ГБ,"11.5""",,серый
