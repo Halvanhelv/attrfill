@@ -1,0 +1,10 @@
+{
+  "ok": true,
+  "training_cards": 33562,
+  "test_cards": 1997,
+  "development_train": 28142,
+  "validation": 5420,
+  "quarantined": 418,
+  "cross_split_key_overlap": 0,
+  "test_sha256": "6528369df229ae379469052921f298c8496a6503aef8a6d87c81648338cc8d07"
+}

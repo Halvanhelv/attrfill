@@ -1,0 +1,26 @@
+{
+  "exact_counts_match": true,
+  "without_git": true,
+  "runs": {
+    "baseline": {
+      "complete": true,
+      "cards": 1997,
+      "seconds": 16.56,
+      "source_provenance": "sha256-only archive",
+      "output_sha256": {
+        "predictions.csv": "da46db4b689085350304039304830eb2ac9a97338f2167722fc3d8e6137cd0cc",
+        "report.json": "05dd2da6db4cfa02f2dd9767e8695dfea600e4d13776c53ff958e7b5c0259a52"
+      }
+    },
+    "candidate": {
+      "complete": true,
+      "cards": 1997,
+      "seconds": 30.928,
+      "source_provenance": "sha256-only archive",
+      "output_sha256": {
+        "predictions.csv": "6cf19d3f949db38a2c36b9bd631c601343e6bbb85d55c3b11c210c4be55753bb",
+        "report.json": "0a5b870cbfb52df7bbca7ccb516d1bea23043ff3dcd51e8e0979c3215ba4cdf9"
+      }
+    }
+  }
+}

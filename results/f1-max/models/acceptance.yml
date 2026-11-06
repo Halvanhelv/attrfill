@@ -1,0 +1,7 @@
+# Publication controls for the pilot, independent of learned model artifacts.
+# These are review gates, not a claim that the remaining values meet 99% precision.
+version: 2026-10-21-pilot
+minimum_confidence: 0.98
+manual_review:
+  attributes: [model, color]
+  categories: [laptop, generic]

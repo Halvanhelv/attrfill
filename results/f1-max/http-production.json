@@ -1,0 +1,152 @@
+[
+  {
+    "check": "pages_and_assets",
+    "ok": true,
+    "seconds": 0.24787649999780115,
+    "detail": {
+      "pages": 5,
+      "assets": 29
+    }
+  },
+  {
+    "check": "single_card",
+    "ok": true,
+    "seconds": 15.628863749996526,
+    "detail": {
+      "saved": true,
+      "url": "/cards/1"
+    }
+  },
+  {
+    "check": "batch_review_export",
+    "ok": true,
+    "seconds": 16.80050429199764,
+    "detail": {
+      "cards": 10,
+      "review_persisted_in_export": true,
+      "changed": [
+        [
+          "E1",
+          "brand",
+          "Readiness correction"
+        ]
+      ]
+    }
+  },
+  {
+    "check": "malformed_upload",
+    "ok": true,
+    "seconds": 1.068147958998452,
+    "detail": {
+      "failed_batch_page_renders": true,
+      "path": "/batches/2"
+    }
+  },
+  {
+    "check": "api_boundaries_500",
+    "ok": true,
+    "seconds": 0.1879474589950405,
+    "detail": {
+      "accepted_batch": 500,
+      "invalid_cases": 3
+    }
+  },
+  {
+    "check": "api_concurrency",
+    "ok": true,
+    "seconds": 0.17954945800011046,
+    "detail": {
+      "requests": 32,
+      "clients": 8,
+      "p50_seconds": 0.034145666992117185,
+      "p95_seconds": 0.04969045799225569
+    }
+  },
+  {
+    "check": "html_escape",
+    "ok": true,
+    "seconds": 0.03983162500662729,
+    "detail": {
+      "raw_script_absent": true
+    }
+  },
+  {
+    "check": "csrf_rejected",
+    "ok": true,
+    "seconds": 0.0041151249897666276,
+    "detail": {
+      "missing_token_rejected": true
+    }
+  },
+  {
+    "check": "accessory_device_attributes",
+    "ok": true,
+    "seconds": 0.005723249996663071,
+    "detail": {
+      "device_attributes_not_published": true
+    }
+  },
+  {
+    "check": "csv_formula",
+    "ok": true,
+    "seconds": 1.0725385830010055,
+    "detail": {
+      "formula_neutralized": true
+    }
+  },
+  {
+    "check": "group_review_export_undo",
+    "ok": true,
+    "seconds": 1.247899583002436,
+    "detail": {
+      "cards": 3,
+      "one_group_decision": true,
+      "export_updated": true,
+      "undo_restores_export": true
+    }
+  },
+  {
+    "check": "stale_decision_conflict",
+    "ok": true,
+    "seconds": 1.1783594580047065,
+    "detail": {
+      "stale_reject_refused": true,
+      "group_value_kept": true
+    }
+  },
+  {
+    "check": "group_scope_tokens_replay",
+    "ok": true,
+    "seconds": 1.2112554580089636,
+    "detail": {
+      "listed": 2,
+      "different_description_excluded": true,
+      "tampered_refused": true,
+      "purpose_checked": true,
+      "replay_refused": true
+    }
+  },
+  {
+    "check": "export_matches_decisions",
+    "ok": true,
+    "seconds": 1.1999319169990486,
+    "detail": {
+      "approved_kept_value": true,
+      "rejected_became_missing": true,
+      "confirmed_blank_stays_missing": true,
+      "other_values_unchanged": true
+    }
+  },
+  {
+    "check": "json_noise_empty",
+    "ok": true,
+    "seconds": 4.433609917003196,
+    "detail": {
+      "json_cards": 100,
+      "jsonl_cards": 100,
+      "noise_seconds": 0.67,
+      "malformed_json": 400,
+      "empty_card_refused": true
+    }
+  }
+]

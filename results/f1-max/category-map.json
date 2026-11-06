@@ -1,0 +1,15 @@
+{
+  "Смартфоны": "smartphone",
+  "iPhone": "smartphone",
+  "Ноутбуки": "laptop",
+  "Планшеты": "tablet",
+  "Телевизоры": "tv",
+  "Мониторы": "monitor",
+  "Смарт-часы": "smartwatch",
+  "Наушники": "headphones",
+  "Холодильники": "refrigerator",
+  "Стиральные машины": "washing_machine",
+  "Пылесосы напольные": "vacuum",
+  "Пылесосы вертикальные": "vacuum",
+  "Роботы-пылесосы": "vacuum"
+}

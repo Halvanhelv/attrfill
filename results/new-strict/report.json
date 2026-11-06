@@ -1,0 +1,410 @@
+{
+  "cards": 1455,
+  "asked_model": 0,
+  "evaluated_at": "2026-10-22T23:22:03Z",
+  "acceptance_mode": "strict",
+  "acceptance_policy": "2026-10-21-pilot",
+  "partial_gold": true,
+  "macro_f1": 0.6601,
+  "attributes": {
+    "brand": {
+      "cards": 1455,
+      "gold": 1455,
+      "predicted": 1442,
+      "correct": 1425,
+      "exact": 1278,
+      "accepted": 1325,
+      "accepted_correct": 1315,
+      "review": 117,
+      "missing": 13,
+      "precision": 0.9882,
+      "recall": 0.9794,
+      "f1": 0.9838,
+      "coverage": 0.9911,
+      "accepted_precision": 0.9925,
+      "review_share": 0.0804
+    },
+    "model": {
+      "cards": 1455,
+      "gold": 1455,
+      "predicted": 1438,
+      "correct": 1390,
+      "exact": 1026,
+      "accepted": 0,
+      "accepted_correct": 0,
+      "review": 1438,
+      "missing": 17,
+      "precision": 0.9666,
+      "recall": 0.9553,
+      "f1": 0.9609,
+      "coverage": 0.9883,
+      "accepted_precision": 0.0,
+      "review_share": 0.9883
+    },
+    "volume": {
+      "cards": 211,
+      "gold": 211,
+      "predicted": 95,
+      "correct": 54,
+      "exact": 54,
+      "accepted": 0,
+      "accepted_correct": 0,
+      "review": 95,
+      "missing": 116,
+      "precision": 0.5684,
+      "recall": 0.2559,
+      "f1": 0.3529,
+      "coverage": 0.4502,
+      "accepted_precision": 0.0,
+      "review_share": 0.4502
+    },
+    "color": {
+      "cards": 1382,
+      "gold": 1382,
+      "predicted": 866,
+      "correct": 761,
+      "exact": 682,
+      "accepted": 0,
+      "accepted_correct": 0,
+      "review": 866,
+      "missing": 516,
+      "precision": 0.8788,
+      "recall": 0.5507,
+      "f1": 0.6771,
+      "coverage": 0.6266,
+      "accepted_precision": 0.0,
+      "review_share": 0.6266
+    },
+    "power": {
+      "cards": 723,
+      "gold": 723,
+      "predicted": 195,
+      "correct": 101,
+      "exact": 101,
+      "accepted": 0,
+      "accepted_correct": 0,
+      "review": 195,
+      "missing": 528,
+      "precision": 0.5179,
+      "recall": 0.1397,
+      "f1": 0.22,
+      "coverage": 0.2697,
+      "accepted_precision": 0.0,
+      "review_share": 0.2697
+    },
+    "screen_type": {
+      "cards": 256,
+      "gold": 256,
+      "predicted": 256,
+      "correct": 171,
+      "exact": 165,
+      "accepted": 7,
+      "accepted_correct": 7,
+      "review": 249,
+      "missing": 0,
+      "precision": 0.668,
+      "recall": 0.668,
+      "f1": 0.668,
+      "coverage": 1.0,
+      "accepted_precision": 1.0,
+      "review_share": 0.9727
+    },
+    "storage": {
+      "cards": 103,
+      "gold": 103,
+      "predicted": 89,
+      "correct": 83,
+      "exact": 83,
+      "accepted": 32,
+      "accepted_correct": 32,
+      "review": 57,
+      "missing": 14,
+      "precision": 0.9326,
+      "recall": 0.8058,
+      "f1": 0.8646,
+      "coverage": 0.8641,
+      "accepted_precision": 1.0,
+      "review_share": 0.5534
+    },
+    "ram": {
+      "cards": 109,
+      "gold": 109,
+      "predicted": 92,
+      "correct": 85,
+      "exact": 85,
+      "accepted": 37,
+      "accepted_correct": 37,
+      "review": 55,
+      "missing": 17,
+      "precision": 0.9239,
+      "recall": 0.7798,
+      "f1": 0.8458,
+      "coverage": 0.844,
+      "accepted_precision": 1.0,
+      "review_share": 0.5046
+    },
+    "screen_diagonal": {
+      "cards": 537,
+      "gold": 537,
+      "predicted": 398,
+      "correct": 364,
+      "exact": 364,
+      "accepted": 83,
+      "accepted_correct": 83,
+      "review": 315,
+      "missing": 139,
+      "precision": 0.9146,
+      "recall": 0.6778,
+      "f1": 0.7786,
+      "coverage": 0.7412,
+      "accepted_precision": 1.0,
+      "review_share": 0.5866
+    },
+    "battery": {
+      "cards": 285,
+      "gold": 285,
+      "predicted": 104,
+      "correct": 98,
+      "exact": 98,
+      "accepted": 84,
+      "accepted_correct": 81,
+      "review": 20,
+      "missing": 181,
+      "precision": 0.9423,
+      "recall": 0.3439,
+      "f1": 0.5039,
+      "coverage": 0.3649,
+      "accepted_precision": 0.9643,
+      "review_share": 0.0702
+    },
+    "resolution": {
+      "cards": 390,
+      "gold": 390,
+      "predicted": 343,
+      "correct": 284,
+      "exact": 258,
+      "accepted": 14,
+      "accepted_correct": 14,
+      "review": 329,
+      "missing": 47,
+      "precision": 0.828,
+      "recall": 0.7282,
+      "f1": 0.7749,
+      "coverage": 0.8795,
+      "accepted_precision": 1.0,
+      "review_share": 0.8436
+    },
+    "refresh_rate": {
+      "cards": 378,
+      "gold": 378,
+      "predicted": 312,
+      "correct": 271,
+      "exact": 271,
+      "accepted": 17,
+      "accepted_correct": 17,
+      "review": 295,
+      "missing": 66,
+      "precision": 0.8686,
+      "recall": 0.7169,
+      "f1": 0.7855,
+      "coverage": 0.8254,
+      "accepted_precision": 1.0,
+      "review_share": 0.7804
+    },
+    "cpu": {
+      "cards": 85,
+      "gold": 85,
+      "predicted": 27,
+      "correct": 25,
+      "exact": 11,
+      "accepted": 0,
+      "accepted_correct": 0,
+      "review": 27,
+      "missing": 58,
+      "precision": 0.9259,
+      "recall": 0.2941,
+      "f1": 0.4464,
+      "coverage": 0.3176,
+      "accepted_precision": 0.0,
+      "review_share": 0.3176
+    },
+    "connection": {
+      "cards": 108,
+      "gold": 108,
+      "predicted": 108,
+      "correct": 72,
+      "exact": 47,
+      "accepted": 7,
+      "accepted_correct": 6,
+      "review": 101,
+      "missing": 0,
+      "precision": 0.6667,
+      "recall": 0.6667,
+      "f1": 0.6667,
+      "coverage": 1.0,
+      "accepted_precision": 0.8571,
+      "review_share": 0.9352
+    },
+    "load": {
+      "cards": 189,
+      "gold": 189,
+      "predicted": 75,
+      "correct": 73,
+      "exact": 73,
+      "accepted": 3,
+      "accepted_correct": 3,
+      "review": 72,
+      "missing": 114,
+      "precision": 0.9733,
+      "recall": 0.3862,
+      "f1": 0.553,
+      "coverage": 0.3968,
+      "accepted_precision": 1.0,
+      "review_share": 0.381
+    },
+    "spin_speed": {
+      "cards": 188,
+      "gold": 188,
+      "predicted": 62,
+      "correct": 60,
+      "exact": 60,
+      "accepted": 0,
+      "accepted_correct": 0,
+      "review": 62,
+      "missing": 126,
+      "precision": 0.9677,
+      "recall": 0.3191,
+      "f1": 0.4799,
+      "coverage": 0.3298,
+      "accepted_precision": 0.0,
+      "review_share": 0.3298
+    }
+  },
+  "variants": {
+    "out_of_scope_labels": {
+      "ram": 129,
+      "refresh_rate": 38,
+      "storage": 201
+    },
+    "in_range_values": {},
+    "macro_f1_in_scope": 0.6601,
+    "macro_f1_all_labels": 0.6093,
+    "macro_f1_range_aware": 0.6601,
+    "macro_f1_all_labels_range_aware": 0.6093
+  },
+  "calibration": {
+    "0.0": {
+      "values": 202,
+      "correct": 59
+    },
+    "0.5": {
+      "values": 354,
+      "correct": 216
+    },
+    "0.7": {
+      "values": 522,
+      "correct": 428
+    },
+    "0.8": {
+      "values": 668,
+      "correct": 563
+    },
+    "0.9": {
+      "values": 467,
+      "correct": 440
+    },
+    "0.95": {
+      "values": 3689,
+      "correct": 3611
+    }
+  },
+  "totals": {
+    "cards": 1455,
+    "asked_model": 0,
+    "macro_f1": 0.66,
+    "traffic_f1": 0.952,
+    "exact": 0.876,
+    "accepted_precision": 0.991,
+    "coverage": 0.751,
+    "review": 0.547,
+    "weakest": "power 0.22"
+  },
+  "segments": [
+    {
+      "title": "Планшет",
+      "values": 216,
+      "f1": 0.6331,
+      "coverage": 0.5648,
+      "review": 0.3333
+    },
+    {
+      "title": "Холодильник",
+      "values": 989,
+      "f1": 0.705,
+      "coverage": 0.635,
+      "review": 0.4186
+    },
+    {
+      "title": "Пылесос",
+      "values": 1113,
+      "f1": 0.7262,
+      "coverage": 0.6208,
+      "review": 0.3621
+    },
+    {
+      "title": "Стиральная машина",
+      "values": 1113,
+      "f1": 0.7488,
+      "coverage": 0.6703,
+      "review": 0.496
+    },
+    {
+      "title": "Умные часы",
+      "values": 513,
+      "f1": 0.7509,
+      "coverage": 0.6355,
+      "review": 0.3665
+    },
+    {
+      "title": "Смартфон",
+      "values": 444,
+      "f1": 0.7661,
+      "coverage": 0.6757,
+      "review": 0.4279
+    },
+    {
+      "title": "Ноутбук",
+      "values": 269,
+      "f1": 0.7854,
+      "coverage": 0.7323,
+      "review": 0.7323
+    },
+    {
+      "title": "Телевизор",
+      "values": 1610,
+      "f1": 0.8063,
+      "coverage": 0.9242,
+      "review": 0.7708
+    },
+    {
+      "title": "Наушники",
+      "values": 665,
+      "f1": 0.8365,
+      "coverage": 0.8947,
+      "review": 0.6045
+    },
+    {
+      "title": "Монитор",
+      "values": 922,
+      "f1": 0.8434,
+      "coverage": 0.8774,
+      "review": 0.6876
+    }
+  ],
+  "all_output_statuses": {
+    "accepted": 1613,
+    "review": 4674,
+    "missing": 2601
+  },
+  "error_examples_first_200": []
+}

@@ -1,0 +1,36 @@
+{
+  "input_sha256": "b75f5420b670cc00c96f9a481adc877fb1ca519cf420073e82c951f11e71a144",
+  "cards": 33560,
+  "by_category": {
+    "refrigerator": 2183,
+    "tablet": 2008,
+    "monitor": 1693,
+    "smartphone": 11741,
+    "laptop": 3355,
+    "vacuum": 3255,
+    "smartwatch": 2364,
+    "headphones": 2694,
+    "washing_machine": 1607,
+    "tv": 2660
+  },
+  "labelled_values": {
+    "brand": 33559,
+    "model": 33560,
+    "volume": 2049,
+    "color": 31201,
+    "power": 7596,
+    "storage": 15922,
+    "ram": 12570,
+    "screen_diagonal": 21644,
+    "resolution": 16948,
+    "refresh_rate": 12965,
+    "battery": 11549,
+    "screen_type": 3467,
+    "cpu": 11180,
+    "connection": 1417,
+    "load": 1591,
+    "spin_speed": 1581
+  },
+  "output_sha256": "985a671b4bb8f470ed4a73ba0f94f1f75a3b58427c448ad1ed619658d6e34fa2",
+  "scope": "Input-only title/description/category; training labels in a separate map; handwritten categories only."
+}

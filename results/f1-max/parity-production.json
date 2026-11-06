@@ -1,0 +1,8 @@
+{
+  "ok": true,
+  "queries": 48,
+  "checked_predictions": 254,
+  "maximum_score_error": 0.0000003155172505486803,
+  "typed_rejections": 1,
+  "differences": []
+}
